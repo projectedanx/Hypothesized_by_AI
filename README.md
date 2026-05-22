@@ -30,6 +30,7 @@ The hypothesized **Pluriversal Sovereign Core** synthesizes the following key ar
 ## Repository Structure
 
 This repository acts as the central knowledge graph for the architecture's theoretical components. Key documents include:
+- `LEXICON.md`: Stores PDL v1.0 decorators and core cognitive pattern definitions.
 - `Continuous Concept-Token Attention.md`: Details latent continuous reasoning.
 - `Fractal Holographic Sparse Training (FHST) Compute Pipeline Report Kimi K2.6.md`: Outlines the sparse compute layer.
 - `Implementation details of Distinction Engine DE11.md`: Covers probabilistic distinction algebra.
