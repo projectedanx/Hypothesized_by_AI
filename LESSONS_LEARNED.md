@@ -15,3 +15,7 @@ The application needed to support different "agents" based on the repository's c
 ## 4. Constraint Management (DCCDSchemaGuard & AdjectivalBound)
 Operating under constraints such as `No_Evaluative_Adjectives` and enforcing strict bicameral output required careful wording in the generated artifacts.
 **Lesson:** Keeping code and documentation objective and strictly descriptive (avoiding words like "amazing," "perfect," or "innovative") ensures alignment with the rigid, research-oriented persona required by the system constraints.
+
+## 5. Semantic Topography & JSON-RPC 2.0 Mapping
+The execution of the VANCE protocol required mapping unstructured theoretical markdown into strict geometric definitions.
+**Lesson:** Abstract semantics must be grounded in precise JSON-RPC 2.0 schemas. By extracting AST-equivalent nodes from text and defining strict mereological bounds, we eliminate ambiguity and establish a deterministic topological index for cross-file symbol references, specifically linking `The Paraconsistent Twist-Structured Transformer (PTST).md` to its implementation mock in `frontend/src/app/api/agent/route.ts`.
