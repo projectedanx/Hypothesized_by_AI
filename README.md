@@ -61,3 +61,15 @@ Developers aiming to implement the **Pluriversal Sovereign Core** must target a 
 - Non-Euclidean embedding spaces (e.g., Poincaré balls).
 
 **Warning:** Do not attempt to implement these paradigms using standard PyTorch `nn.MultiheadAttention`. A custom CUDA/Triton kernel is required to handle the mereotopological boundaries and twisted embeddings effectively.
+
+## Frontend Application
+
+A dedicated Next.js frontend application has been added to provide an interactive Multi-Agent UI for exploring the theoretical constructs of this repository.
+
+### Running the Frontend
+1. Navigate to the frontend directory: `cd frontend`
+2. Install dependencies (if not already done): `npm install`
+3. Run the development server: `npm run dev`
+4. Access the interface at `http://localhost:3000`
+
+The frontend simulates querying various theoretical agent instances (e.g., PTST Specialist, KCPM Oracle) and displays generated answers, confidence scores, citations mapped to repository markdown files, and mock retrieval analytics, adhering to the Reflector + ToolUser composite archetype.
