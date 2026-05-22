@@ -45,7 +45,8 @@ export default function Home() {
   const agents = [
     { id: 'pluriversal_architect', name: 'Pluriversal Architect Agent' },
     { id: 'ptst_specialist', name: 'PTST Specialist (Twist-Structured)' },
-    { id: 'kcpm_oracle', name: 'KCPM Oracle (Kuramoto-Cortical)' }
+    { id: 'kcpm_oracle', name: 'KCPM Oracle (Kuramoto-Cortical)' },
+    { id: 'lexicon_navigator', name: 'Lexicon Navigator (Cognitive Bytecode)' }
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -229,7 +230,7 @@ export default function Home() {
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Ask about paraconsistent architectures, TDA routing, or continuous reasoning..."
+              placeholder="Ask about paraconsistent architectures, TDA routing, cognitive bytecode, or continuous reasoning..."
               className="flex-1 p-4 bg-gray-50 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:bg-white transition-all shadow-sm text-sm"
               disabled={isLoading}
             />

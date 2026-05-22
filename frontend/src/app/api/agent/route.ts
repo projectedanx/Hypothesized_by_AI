@@ -36,6 +36,24 @@ export async function POST(req: Request) {
           relevance_score: 0.88
         }
       ];
+        } else if (agent_type === 'lexicon_navigator') {
+      answer += "Through the Human-AI Symbiosis Engine, structural determinism merges with human tacit knowledge without forcing collapse, frequently invoking Paraconsistent Scarring (PAT-002) to safely archive logical contradictions without triggering Principle of Explosion.";
+      citations = [
+        {
+          doc_id: "LEXICON.md",
+          doc_title: "LEXICON.md — DRP-LEXICON-992",
+          url: "https://github.com/repo/LEXICON.md",
+          text_snippet: "PAT-002 · Paraconsistent Scarring: The process of converting logical contradictions (β₁ persistent loops) into executable VSA hypervectors (Symbolic Scars) stored in the Scar Tissue Archive (STA).",
+          relevance_score: 0.98
+        },
+        {
+          doc_id: "LEXICON.md",
+          doc_title: "LEXICON.md — DRP-LEXICON-992",
+          url: "https://github.com/repo/LEXICON.md",
+          text_snippet: "PAT-011 · Human-AI Symbiosis Engine: The deliberate fusion of human non-obvious analytical lenses with rigid AI specification blocks.",
+          relevance_score: 0.96
+        }
+      ];
     } else {
       answer += "The Pluriversal Architect ensures structural determinism across non-destructive boundaries. ";
       citations = [
