@@ -1,0 +1,206 @@
+{
+  "@context": {
+    "name": "http://schema.org/name",
+    "entity": "http://example.org/entity",
+    "implementsPattern": "http://example.org/implementsPattern",
+    "dependsOn": "http://example.org/dependsOn",
+    "hidesComplexityOf": "http://example.org/hidesComplexityOf",
+    "observes": "http://example.org/observes",
+    "mediates": "http://example.org/mediates",
+    "type": "@type"
+  },
+  "@graph": [
+    {
+      "@id": "UniversityCouncil",
+      "type": "GoverningBody",
+      "name": "University Council / Board",
+      "implementsPattern": [
+        "Singleton"
+      ],
+      "dependsOn": [],
+      "hidesComplexityOf": [
+        "ExecutiveManagement"
+      ]
+    },
+    {
+      "@id": "ExecutiveManagement",
+      "type": "CompositeNode",
+      "name": "Executive Management (Rector/President, Provost, CFO)",
+      "implementsPattern": [
+        "Composite",
+        "Mediator"
+      ],
+      "dependsOn": [
+        "Faculties",
+        "CentralAdministration"
+      ],
+      "hidesComplexityOf": []
+    },
+    {
+      "@id": "Faculties",
+      "type": "CompositeNode",
+      "name": "Faculties and Schools",
+      "implementsPattern": [
+        "Composite"
+      ],
+      "dependsOn": [
+        "Departments"
+      ],
+      "hidesComplexityOf": []
+    },
+    {
+      "@id": "Departments",
+      "type": "OrganizationalUnit",
+      "name": "Departments and Programs",
+      "implementsPattern": [
+        "Composite"
+      ],
+      "dependsOn": [],
+      "hidesComplexityOf": []
+    },
+    {
+      "@id": "StudentPortal",
+      "type": "Interface",
+      "name": "Student Portal / SIS Front-End",
+      "implementsPattern": [
+        "Facade"
+      ],
+      "dependsOn": [
+        "EnrollmentService",
+        "FeesAndBilling",
+        "CurriculumSystem",
+        "SupportServices"
+      ],
+      "hidesComplexityOf": [
+        "LegacyFinance",
+        "LegacyRecords",
+        "DepartmentWorkarounds"
+      ]
+    },
+    {
+      "@id": "EnrollmentService",
+      "type": "Service",
+      "name": "Enrollment and Registration Service",
+      "implementsPattern": [
+        "Factory",
+        "Iterator"
+      ],
+      "dependsOn": [
+        "CurriculumSystem",
+        "Departments"
+      ],
+      "hidesComplexityOf": []
+    },
+    {
+      "@id": "FeesAndBilling",
+      "type": "Service",
+      "name": "Fees, Billing, and Subscription-like Services",
+      "implementsPattern": [
+        "Strategy",
+        "DarkPattern:RoachMotel",
+        "DarkPattern:ForcedContinuity"
+      ],
+      "dependsOn": [
+        "FinanceSystem"
+      ],
+      "hidesComplexityOf": [
+        "CancellationProcesses"
+      ]
+    },
+    {
+      "@id": "FinanceSystem",
+      "type": "Platform",
+      "name": "Enterprise Finance and ERP Platform",
+      "implementsPattern": [
+        "GodObject"
+      ],
+      "dependsOn": [],
+      "hidesComplexityOf": []
+    },
+    {
+      "@id": "CentralIT",
+      "type": "Platform",
+      "name": "Central IT and Data Warehouse",
+      "implementsPattern": [
+        "GodObject",
+        "Mediator"
+      ],
+      "dependsOn": [
+        "InfrastructureProviders"
+      ],
+      "hidesComplexityOf": [
+        "ShadowSystems"
+      ]
+    },
+    {
+      "@id": "ComplianceLayer",
+      "type": "Process",
+      "name": "Compliance and Quality-Assurance Stack",
+      "implementsPattern": [
+        "Decorator"
+      ],
+      "dependsOn": [
+        "Departments",
+        "Faculties",
+        "ExecutiveManagement"
+      ],
+      "hidesComplexityOf": []
+    },
+    {
+      "@id": "FacultySenate",
+      "type": "GovernanceBody",
+      "name": "Faculty Senate and Committees",
+      "implementsPattern": [
+        "Observer"
+      ],
+      "observes": [
+        "ExecutiveManagement",
+        "ComplianceLayer",
+        "CurriculumSystem"
+      ],
+      "dependsOn": []
+    },
+    {
+      "@id": "StudentAssociation",
+      "type": "GovernanceBody",
+      "name": "Student Association",
+      "implementsPattern": [
+        "Observer"
+      ],
+      "observes": [
+        "StudentPortal",
+        "FeesAndBilling"
+      ],
+      "dependsOn": []
+    },
+    {
+      "@id": "ResearchOffice",
+      "type": "Service",
+      "name": "Research Office",
+      "implementsPattern": [
+        "Mediator",
+        "Proxy"
+      ],
+      "dependsOn": [
+        "Faculties",
+        "ExecutiveManagement"
+      ],
+      "mediates": [
+        "ExternalFunders",
+        "Regulators"
+      ]
+    },
+    {
+      "@id": "ShadowSystems",
+      "type": "InformalSystem",
+      "name": "Local Shadow Systems and Workarounds",
+      "implementsPattern": [
+        "SpaghettiCode"
+      ],
+      "dependsOn": [
+        "Departments"
+      ],
+      "hidesComplexityOf": []
+    }
+  ]
+}
