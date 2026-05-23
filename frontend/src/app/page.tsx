@@ -43,6 +43,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
 
   const agents = [
+    { id: 'strategic_integration_pm', name: 'Strategic Integration PM (Deterministic)' },
     { id: 'pluriversal_architect', name: 'Pluriversal Architect Agent' },
     { id: 'ptst_specialist', name: 'PTST Specialist (Twist-Structured)' },
     { id: 'kcpm_oracle', name: 'KCPM Oracle (Kuramoto-Cortical)' },

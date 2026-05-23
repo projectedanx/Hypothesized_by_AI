@@ -54,6 +54,24 @@ export async function POST(req: Request) {
           relevance_score: 0.96
         }
       ];
+    } else if (agent_type === 'strategic_integration_pm') {
+      answer += "By embedding the project management persona directly into the AGENTS.md framework and constraining its operational logic via CONSTRAINTS.md, the workflow transitions from a probabilistic natural language request into a mathematically guaranteed execution pipeline. We deploy the Golden Scar Protocol to manage contradictions.";
+      citations = [
+        {
+          doc_id: "CONSTRAINTS.md",
+          doc_title: "Core System Constraints",
+          url: "https://github.com/repo/CONSTRAINTS.md",
+          text_snippet: "The Golden Scar Protocol: When irreconcilable logical conflicts arise, standard resolution is refused. The dominant epistemic frame is assigned a weight of 1.618.",
+          relevance_score: 0.99
+        },
+        {
+          doc_id: "docs/adr/001-deterministic-system-first-pm-persona.md",
+          doc_title: "ADR 001: Deterministic System-First PM Persona",
+          url: "https://github.com/repo/docs/adr/001-deterministic-system-first-pm-persona.md",
+          text_snippet: "We are transitioning from user stories to the Zachman Framework. Entities, capabilities, and events are described deterministically.",
+          relevance_score: 0.97
+        }
+      ];
     } else {
       answer += "The Pluriversal Architect ensures structural determinism across non-destructive boundaries. ";
       citations = [
