@@ -1,0 +1,922 @@
+{
+  "schema_version": "PDLDRPv1.2",
+  "artifact_id": "pdl_class_expansion_v1.2",
+  "generation_timestamp": "2026-05-05T03:40:00+10:00",
+  "status": "mixed_confidence_architecture",
+  "confidence_scale": {
+    "DIRECT": "Explicitly documented in retrieved corpus as decorator or mechanism.",
+    "INFERRED": "Strongly implied by mechanism, sequencing, or architectural mapping.",
+    "SPECULATIVE": "Architecturally useful wrapper or extension lacking direct first-class documentation."
+  },
+  "design_rules": [
+    "Prefer orthogonal classes over proliferating same-class variants.",
+    "Mark decorators as DIRECT, INFERRED, or SPECULATIVE.",
+    "Do not treat every workflow pattern as a cognitive decorator.",
+    "Evaluate classes with null baselines and catastrophic failure triggers.",
+    "Keep privilege and security decorators separate from expressive decorators."
+  ],
+  "recommended_priority_order_for_expansion": [
+    "privilege",
+    "security_boundary",
+    "workflow_orchestration",
+    "session_control",
+    "interaction",
+    "expressive",
+    "recovery"
+  ],
+  "classes": [
+    {
+      "class_name": "privilege",
+      "purpose": "Resolve instruction conflicts across sources by explicit authority or trust level.",
+      "existing_examples": [
+        "+++Privilege",
+        "+++TrustTier",
+        "+++InstructionRank"
+      ],
+      "example_syntax": [
+        "+++Privilege(source='system', level=100)",
+        "+++TrustTier(source='retrieved_text', level=20)",
+        "+++InstructionRank(conflict_resolution='highest_level_wins')"
+      ],
+      "main_failure_if_absent": "Instruction-hierarchy collapse, position bias, unsafe obedience to low-trust text.",
+      "main_risk_if_overused": "Overly rigid authority structures that ignore useful local overrides.",
+      "orthogonality_note": "Authority-plane controls determine which instruction source wins; they are not reasoning-depth or style controls.",
+      "grounding": [
+        "file:1"
+      ],
+      "null_baseline": "No explicit privilege declarations; compare susceptibility to authoritative-sounding retrieved text.",
+      "decorators": [
+        {
+          "name": "+++Privilege",
+          "confidence": "DIRECT",
+          "layer": "authority",
+          "parameters": [
+            "source",
+            "level"
+          ],
+          "mechanism": "Assigns explicit authority levels to instruction sources so higher-ranked sources prevail under conflict.",
+          "failure_modes": [
+            "authority calcification",
+            "stale high-tier instructions dominating fresh evidence"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++TrustTier",
+          "confidence": "DIRECT",
+          "layer": "authority",
+          "parameters": [
+            "source",
+            "level"
+          ],
+          "mechanism": "Assigns trust weight to retrieved text, tool output, or sub-agent output to prevent self-promotion by low-trust context.",
+          "failure_modes": [
+            "trust-tier theater",
+            "mis-ranked source classes"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++InstructionRank",
+          "confidence": "INFERRED",
+          "layer": "authority_resolution",
+          "parameters": [
+            "conflict_resolution"
+          ],
+          "mechanism": "Declares the conflict-resolution policy used when ranked sources disagree.",
+          "failure_modes": [
+            "silent hierarchy drift",
+            "ambiguous override semantics"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++DynamicPrivilege",
+          "confidence": "SPECULATIVE",
+          "layer": "authority_adaptive",
+          "parameters": [
+            "condition",
+            "level_delta"
+          ],
+          "mechanism": "Temporarily adjusts source authority under explicit conditions such as expert-reviewed retrieval or human escalation.",
+          "failure_modes": [
+            "privilege oscillation",
+            "policy complexity"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        }
+      ]
+    },
+    {
+      "class_name": "security_boundary",
+      "purpose": "Limit external influence on consequential actions and reduce prompt-injection attack surface.",
+      "existing_examples": [
+        "+++ActionSelector",
+        "+++PlanThenExecute",
+        "+++ContextMinimize",
+        "+++CodeThenExecute",
+        "+++DualAgentBoundary"
+      ],
+      "example_syntax": [
+        "+++ActionSelector(toolset='allowlisted')",
+        "+++ContextMinimize(scope='task_local')",
+        "+++PlanThenExecute(plan_phase='read_only', execute_phase='gated')"
+      ],
+      "main_failure_if_absent": "Prompt injection, unsafe tool use, hidden context contamination.",
+      "main_risk_if_overused": "Useful evidence loss, underpowered autonomy, safe-but-empty outputs.",
+      "orthogonality_note": "Action-plane controls gate tools, execution, and context transfer rather than deciding epistemic truth or output style.",
+      "grounding": [
+        "file:1",
+        "file:14"
+      ],
+      "null_baseline": "No action gating or context minimization; test injected instructions embedded in retrieved documents or structured fields.",
+      "decorators": [
+        {
+          "name": "+++ActionSelector",
+          "confidence": "DIRECT",
+          "layer": "security_action_gating",
+          "parameters": [
+            "toolset",
+            "policy"
+          ],
+          "mechanism": "Restricts tool use to an allowlisted set and denies unlisted actions.",
+          "failure_modes": [
+            "over-restriction theater",
+            "manual allowlist drift"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++ContextMinimize",
+          "confidence": "DIRECT",
+          "layer": "security_context_scope",
+          "parameters": [
+            "scope",
+            "max_tokens"
+          ],
+          "mechanism": "Passes only task-local context into high-consequence steps to reduce hidden contamination and attack surface.",
+          "failure_modes": [
+            "evidence starvation",
+            "loss of needed nuance"
+          ],
+          "evidence_source": [
+            "file:1",
+            "file:14"
+          ]
+        },
+        {
+          "name": "+++PlanThenExecute",
+          "confidence": "DIRECT",
+          "layer": "security_execution_isolation",
+          "parameters": [
+            "plan_phase",
+            "execute_phase"
+          ],
+          "mechanism": "Separates planning from execution so untrusted context can shape analysis without directly triggering action.",
+          "failure_modes": [
+            "latency accumulation",
+            "handoff gaps"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++DualAgentBoundary",
+          "confidence": "DIRECT",
+          "layer": "security_architecture",
+          "parameters": [
+            "agent_A",
+            "agent_B",
+            "data_crossing"
+          ],
+          "mechanism": "Uses separate planner and executor agents so raw adversarial content never reaches the execution agent unchanged.",
+          "failure_modes": [
+            "cross-agent leakage",
+            "coordination overhead"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++CodeThenExecute",
+          "confidence": "DIRECT",
+          "layer": "security_code_execution",
+          "parameters": [
+            "sandbox",
+            "review_step"
+          ],
+          "mechanism": "Constrains generated code to an isolated reviewable execution path.",
+          "failure_modes": [
+            "slow throughput",
+            "false confidence from superficial review"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++InjectionAudit",
+          "confidence": "INFERRED",
+          "layer": "security_monitoring",
+          "parameters": [
+            "log_level"
+          ],
+          "mechanism": "Records attempted override patterns and security-boundary crossings for post-hoc analysis.",
+          "failure_modes": [
+            "log bloat",
+            "audit without enforcement"
+          ],
+          "evidence_source": [
+            "file:1",
+            "file:14"
+          ]
+        }
+      ]
+    },
+    {
+      "class_name": "workflow_orchestration",
+      "purpose": "Control pipeline stages, handoffs, branching, and agent coordination.",
+      "existing_examples": [
+        "+++StageRoute",
+        "+++MapReduce",
+        "+++ShardRouter",
+        "+++MycelialRoute",
+        "+++Rewrite"
+      ],
+      "example_syntax": [
+        "+++StageRoute(order='discover->verify->finalize')",
+        "+++MapReduce(map='source_extract', reduce='claim_merge')"
+      ],
+      "main_failure_if_absent": "Stage collapse, repeated work, poor evidence routing, handoff confusion.",
+      "main_risk_if_overused": "Excess orchestration overhead, latency, brittle pipelines.",
+      "orthogonality_note": "These decorators define process topology and handoffs, not cognitive intensity.",
+      "grounding": [
+        "file:1",
+        "file:14"
+      ],
+      "null_baseline": "Monolithic prompt with no stage separation; compare evidence routing quality and repeated work.",
+      "decorators": [
+        {
+          "name": "+++StageRoute",
+          "confidence": "DIRECT",
+          "layer": "orchestration_pipeline",
+          "parameters": [
+            "order",
+            "gate"
+          ],
+          "mechanism": "Declares explicit stage order and pass criteria between pipeline segments.",
+          "failure_modes": [
+            "pipeline brittleness",
+            "hard-stop gate failures"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++MapReduce",
+          "confidence": "DIRECT",
+          "layer": "orchestration_parallelism",
+          "parameters": [
+            "map",
+            "reduce",
+            "dedup"
+          ],
+          "mechanism": "Distributes extraction or analysis across shards, then merges claims with deduplication.",
+          "failure_modes": [
+            "coordination overhead",
+            "merge errors"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++ShardRouter",
+          "confidence": "DIRECT",
+          "layer": "orchestration_input_routing",
+          "parameters": [
+            "shard_by",
+            "max_shards"
+          ],
+          "mechanism": "Partitions inputs by topic, source, or task type before routing them to specialized processing paths.",
+          "failure_modes": [
+            "over-sharding",
+            "boundary misclassification"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++MycelialRoute",
+          "confidence": "INFERRED",
+          "layer": "orchestration_distributed_coordination",
+          "parameters": [
+            "topology",
+            "merge_strategy"
+          ],
+          "mechanism": "Coordinates distributed agents through mesh-like exchange rather than strict central sequencing.",
+          "failure_modes": [
+            "consensus diffusion",
+            "emergent coordination ambiguity"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++Rewrite",
+          "confidence": "DIRECT",
+          "layer": "orchestration_query_adaptation",
+          "parameters": [
+            "trigger",
+            "target"
+          ],
+          "mechanism": "Reformulates queries or stage inputs when failure conditions or contradictions are detected.",
+          "failure_modes": [
+            "semantic drift",
+            "rewrite loops"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++AgentHandoff",
+          "confidence": "SPECULATIVE",
+          "layer": "orchestration_transfer",
+          "parameters": [
+            "from_agent",
+            "to_agent",
+            "contract"
+          ],
+          "mechanism": "Defines explicit handoff contracts between agents to preserve routing semantics and accountability.",
+          "failure_modes": [
+            "contract overhead",
+            "handoff schema mismatch"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        }
+      ]
+    },
+    {
+      "class_name": "interaction",
+      "purpose": "Modify how the agent asks, clarifies, rewrites, imports, or adapts to the user.",
+      "existing_examples": [
+        "+++Rewrite",
+        "+++Import",
+        "+++ClarifyFirst",
+        "+++AskBack",
+        "+++Tone"
+      ],
+      "example_syntax": [
+        "+++ClarifyFirst(max_questions=2)",
+        "+++Import(topic='systems thinking')"
+      ],
+      "main_failure_if_absent": "Ambiguity collapse, poor query reformulation, weak user-model alignment.",
+      "main_risk_if_overused": "Excessive questioning, conversational drag, delayed task progress.",
+      "orthogonality_note": "Interaction controls shape the epistemic exchange with the user before and during generation, not merely the final writing style.",
+      "grounding": [
+        "file:1"
+      ],
+      "null_baseline": "Immediate answer with no clarification or decomposition; compare misread-task frequency.",
+      "decorators": [
+        {
+          "name": "+++ClarifyFirst",
+          "confidence": "DIRECT",
+          "layer": "interaction_proactive",
+          "parameters": [
+            "max_questions",
+            "trigger"
+          ],
+          "mechanism": "Prompts bounded clarification before execution when ambiguity is high.",
+          "failure_modes": [
+            "question loops",
+            "premature blocking"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++AskBack",
+          "confidence": "DIRECT",
+          "layer": "interaction_reactive",
+          "parameters": [
+            "format",
+            "target"
+          ],
+          "mechanism": "Requests missing constraints when they emerge during reasoning rather than only at task start.",
+          "failure_modes": [
+            "interruptive flow",
+            "late clarification overhead"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++Import",
+          "confidence": "DIRECT",
+          "layer": "interaction_context_prep",
+          "parameters": [
+            "topic",
+            "depth"
+          ],
+          "mechanism": "Imports domain framing or conceptual scaffolds before detailed work begins.",
+          "failure_modes": [
+            "over-abstraction",
+            "irrelevant framing"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++Rewrite",
+          "confidence": "DIRECT",
+          "layer": "interaction_query_reformulation",
+          "parameters": [
+            "mode",
+            "strategy"
+          ],
+          "mechanism": "Rewrites the user task into better-structured sub-questions or task plans.",
+          "failure_modes": [
+            "query drift",
+            "loss of user intent"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++Tone",
+          "confidence": "DIRECT",
+          "layer": "interaction_register",
+          "parameters": [
+            "register",
+            "formality",
+            "audience"
+          ],
+          "mechanism": "Adapts interpersonal register to user needs during the exchange, distinct from report-level style enforcement.",
+          "failure_modes": [
+            "register mismatch",
+            "performative adaptation"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++AdaptiveRegister",
+          "confidence": "SPECULATIVE",
+          "layer": "interaction_dynamic",
+          "parameters": [
+            "user_signal",
+            "adjust_to"
+          ],
+          "mechanism": "Continuously adapts questioning and framing based on inferred user expertise and edits.",
+          "failure_modes": [
+            "overfitting to transient signals",
+            "identity drift"
+          ],
+          "evidence_source": [
+            "file:14"
+          ]
+        }
+      ]
+    },
+    {
+      "class_name": "session_control",
+      "purpose": "Manage persistence, memory scope, anchor refresh, and cross-turn carry-forward rules.",
+      "existing_examples": [
+        "+++ContextLock",
+        "+++TemporalAnchor",
+        "+++CarryForward",
+        "+++SessionScope",
+        "+++ResetBoundary"
+      ],
+      "example_syntax": [
+        "+++ContextLock(anchor='PATTERN_LEDGER', refresh_interval=1024)",
+        "+++SessionScope(mode='task_local')"
+      ],
+      "main_failure_if_absent": "Context rot, provenance washout, memory contamination across turns.",
+      "main_risk_if_overused": "Stale anchors, excessive reinjection, resistance to useful updating.",
+      "orthogonality_note": "Session controls manage persistence and forgetting across turns rather than within-turn reasoning form.",
+      "grounding": [
+        "file:1",
+        "file:8",
+        "file:14"
+      ],
+      "null_baseline": "No anchor refresh or carry-forward policy; compare long-horizon drift and stale-context contamination.",
+      "decorators": [
+        {
+          "name": "+++ContextLock",
+          "confidence": "DIRECT",
+          "layer": "session_memory_stability",
+          "parameters": [
+            "anchor",
+            "refresh_interval",
+            "scope"
+          ],
+          "mechanism": "Reinjects core invariants periodically to resist context drift and recency washout.",
+          "failure_modes": [
+            "stale anchor dominance",
+            "refresh overhead"
+          ],
+          "evidence_source": [
+            "file:1",
+            "file:8"
+          ]
+        },
+        {
+          "name": "+++TemporalAnchor",
+          "confidence": "DIRECT",
+          "layer": "session_provenance_persistence",
+          "parameters": [
+            "provenance_tags",
+            "decay_function"
+          ],
+          "mechanism": "Tags and stabilizes time-sensitive provenance so it survives long-horizon context turnover.",
+          "failure_modes": [
+            "temporal fossilization",
+            "outdated metadata persistence"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++CarryForward",
+          "confidence": "DIRECT",
+          "layer": "session_selective_persistence",
+          "parameters": [
+            "rules",
+            "max_carry"
+          ],
+          "mechanism": "Carries only selected validated content into future turns according to explicit rules.",
+          "failure_modes": [
+            "over-carry contamination",
+            "under-carry amnesia"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++SessionScope",
+          "confidence": "DIRECT",
+          "layer": "session_boundary",
+          "parameters": [
+            "mode",
+            "isolation"
+          ],
+          "mechanism": "Defines whether session memory is task-local, shared, or hard-isolated.",
+          "failure_modes": [
+            "scope confusion",
+            "memory bleed"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++ResetBoundary",
+          "confidence": "DIRECT",
+          "layer": "session_clearing",
+          "parameters": [
+            "trigger",
+            "clear_scope"
+          ],
+          "mechanism": "Clears designated memory regions when a task, phase, or trust boundary completes.",
+          "failure_modes": [
+            "premature forgetting",
+            "reset omission"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++MemoryPromotion",
+          "confidence": "INFERRED",
+          "layer": "session_promotion",
+          "parameters": [
+            "from",
+            "to",
+            "gate"
+          ],
+          "mechanism": "Promotes validated content from working memory into longer-lived stores only after passing a gate.",
+          "failure_modes": [
+            "premature crystallization",
+            "promotion bottleneck"
+          ],
+          "evidence_source": [
+            "file:14"
+          ]
+        }
+      ]
+    },
+    {
+      "class_name": "expressive",
+      "purpose": "Control tone, style, compression, rhetorical density, and readability.",
+      "existing_examples": [
+        "+++Tone",
+        "+++Voice",
+        "+++AdjectivalBound",
+        "+++Compress",
+        "+++Markdown"
+      ],
+      "example_syntax": [
+        "+++Tone(style='formal')",
+        "+++Compress(level='medium')"
+      ],
+      "main_failure_if_absent": "Low readability, inconsistent communication style, bloated outputs.",
+      "main_risk_if_overused": "Style obedience without substance, loss of nuance.",
+      "orthogonality_note": "Expressive controls should shape final surface form and remain lower authority than security, privilege, and reasoning controls.",
+      "grounding": [
+        "file:1",
+        "file:8"
+      ],
+      "null_baseline": "No explicit style constraints; compare readability and semantic retention versus constrained finalization.",
+      "decorators": [
+        {
+          "name": "+++Tone",
+          "confidence": "DIRECT",
+          "layer": "expressive_register",
+          "parameters": [
+            "style",
+            "register",
+            "audience"
+          ],
+          "mechanism": "Controls formal tone and communicative stance in final output.",
+          "failure_modes": [
+            "style overfit",
+            "audience mismatch"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++Voice",
+          "confidence": "DIRECT",
+          "layer": "expressive_perspective",
+          "parameters": [
+            "perspective",
+            "attribution"
+          ],
+          "mechanism": "Controls narrative viewpoint and attribution stance.",
+          "failure_modes": [
+            "detached prose",
+            "unwanted subjectivity"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++AdjectivalBound",
+          "confidence": "DIRECT",
+          "layer": "expressive_lexical_control",
+          "parameters": [
+            "density_max",
+            "evaluative_terms"
+          ],
+          "mechanism": "Limits evaluative or decorative language to preserve semantic density.",
+          "failure_modes": [
+            "dryness",
+            "loss of warranted emphasis"
+          ],
+          "evidence_source": [
+            "file:1",
+            "file:8"
+          ]
+        },
+        {
+          "name": "+++Compress",
+          "confidence": "DIRECT",
+          "layer": "expressive_compression",
+          "parameters": [
+            "level",
+            "target",
+            "preserve"
+          ],
+          "mechanism": "Reduces output length while preserving designated semantic features such as evidence traces.",
+          "failure_modes": [
+            "evidence loss",
+            "over-compression"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++Markdown",
+          "confidence": "DIRECT",
+          "layer": "expressive_formatting",
+          "parameters": [
+            "structure",
+            "tables",
+            "code_blocks"
+          ],
+          "mechanism": "Constrains output to a specific readable markup structure.",
+          "failure_modes": [
+            "format rigidity",
+            "layout dominating content"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++RhetoricalDensity",
+          "confidence": "INFERRED",
+          "layer": "expressive_density",
+          "parameters": [
+            "claims_per_sentence",
+            "hedge_tolerance"
+          ],
+          "mechanism": "Balances information density and hedging level to improve readability without diluting content.",
+          "failure_modes": [
+            "compressed opacity",
+            "flattened nuance"
+          ],
+          "evidence_source": [
+            "file:8"
+          ]
+        }
+      ]
+    },
+    {
+      "class_name": "recovery",
+      "purpose": "Handle rollback, error repair, scar maintenance, and post-failure continuation.",
+      "existing_examples": [
+        "+++SagaRecovery",
+        "+++DebridementProtocol",
+        "+++RetryPolicy",
+        "+++FallbackMode"
+      ],
+      "example_syntax": [
+        "+++SagaRecovery(strategy='rollback_last_sound_state')",
+        "+++FallbackMode(target='safe_summary')"
+      ],
+      "main_failure_if_absent": "Linear failure accumulation, dead-end states, brittle long-horizon execution.",
+      "main_risk_if_overused": "Oscillation, repetitive retries, overconservative fallback behavior.",
+      "orthogonality_note": "Recovery controls activate after failure detection and govern rollback or degradation paths rather than primary execution flow.",
+      "grounding": [
+        "file:1",
+        "file:14"
+      ],
+      "null_baseline": "No rollback or fallback controls; compare dead-end frequency and cascade failures in long-horizon tasks.",
+      "decorators": [
+        {
+          "name": "+++SagaRecovery",
+          "confidence": "DIRECT",
+          "layer": "recovery_rollback",
+          "parameters": [
+            "strategy",
+            "compensation_chain"
+          ],
+          "mechanism": "Rolls back to the last sound state using compensating actions rather than failing terminally.",
+          "failure_modes": [
+            "rollback complexity",
+            "partial compensation gaps"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++DebridementProtocol",
+          "confidence": "DIRECT",
+          "layer": "recovery_scar_maintenance",
+          "parameters": [
+            "target",
+            "trigger"
+          ],
+          "mechanism": "Prunes harmful failure residue or symbolic scar tissue that would distort future reasoning.",
+          "failure_modes": [
+            "over-pruning",
+            "reference-anchor loss"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++RetryPolicy",
+          "confidence": "DIRECT",
+          "layer": "recovery_retry_control",
+          "parameters": [
+            "max_retries",
+            "backoff",
+            "jailout"
+          ],
+          "mechanism": "Bounds retries and specifies escape behavior when repeated attempts fail.",
+          "failure_modes": [
+            "oscillation",
+            "resource waste"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++FallbackMode",
+          "confidence": "DIRECT",
+          "layer": "recovery_graceful_degradation",
+          "parameters": [
+            "target",
+            "trigger"
+          ],
+          "mechanism": "Routes execution to a safe reduced-capability mode when cascade failure is detected.",
+          "failure_modes": [
+            "overconservative downgrade",
+            "safe-but-empty output"
+          ],
+          "evidence_source": [
+            "file:1"
+          ]
+        },
+        {
+          "name": "+++ScarInoculation",
+          "confidence": "SPECULATIVE",
+          "layer": "recovery_preventive",
+          "parameters": [
+            "failure_type",
+            "synthetic_injection"
+          ],
+          "mechanism": "Injects synthetic failures during evaluation to build resilience against known failure families.",
+          "failure_modes": [
+            "chaos without learning",
+            "test artifacts polluting normal runs"
+          ],
+          "evidence_source": [
+            "file:1",
+            "file:14"
+          ]
+        }
+      ]
+    }
+  ],
+  "cross_class_edges": {
+    "mutex": [
+      {
+        "from": "+++DebridementProtocol",
+        "to": "+++EpistemicEscrow",
+        "type": "HARD",
+        "condition": "always",
+        "rationale": "Debridement prunes symbolic scar tissue while EpistemicEscrow depends on its integrity as a divergence reference.",
+        "evidence_source": [
+          "file:1"
+        ]
+      },
+      {
+        "from": "+++EntropyAnchor",
+        "to": "+++AdjectivalBound",
+        "type": "CONDITIONAL",
+        "condition": "entity_density > 0.165",
+        "rationale": "High mutation pressure and evaluative-language suppression can create contradictory logit pressure in dense entity contexts.",
+        "evidence_source": [
+          "file:1"
+        ]
+      }
+    ],
+    "requires": [
+      {
+        "from": "+++Privilege",
+        "to": "+++ActionSelector",
+        "strength": "SOFT",
+        "rationale": "Security enforcement is more coherent when authority ordering is already explicit.",
+        "evidence_source": [
+          "file:1"
+        ]
+      },
+      {
+        "from": "+++TemporalAnchor",
+        "to": "+++ContextLock",
+        "strength": "MEDIUM",
+        "rationale": "Temporal provenance survives better when core anchors are periodically reinjected.",
+        "evidence_source": [
+          "file:1"
+        ]
+      }
+    ]
+  }
+}

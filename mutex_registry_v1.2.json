@@ -1,0 +1,78 @@
+{
+  "schema_version": "PDLDRPv1.2",
+  "artifact_id": "mutex_registry_v1.2",
+  "generation_timestamp": "2026-05-05T03:48:00+10:00",
+  "source_artifacts": [
+    "pdl_class_expansion_v1.2.json"
+  ],
+  "registry_policy": {
+    "HARD": "Do not co-activate under the stated scope.",
+    "CONDITIONAL": "Co-activation permitted only outside the stated trigger condition.",
+    "SOFT": "Not strictly forbidden, but co-activation increases risk or complexity.",
+    "SEQUENCING_CONFLICT": "Can coexist only if staged in different phases or reordered."
+  },
+  "edges": [
+    {
+      "from": "+++DebridementProtocol",
+      "to": "+++EpistemicEscrow",
+      "edge_type": "HARD",
+      "condition": "always",
+      "scope": "same active inference pass",
+      "rationale": "Debridement prunes symbolic scar tissue while EpistemicEscrow depends on scar integrity as a divergence reference.",
+      "resolution_strategy": "Stage EpistemicEscrow during synthesis and DebridementProtocol only in explicit maintenance windows.",
+      "evidence_source": [
+        "file:1"
+      ]
+    },
+    {
+      "from": "+++EntropyAnchor",
+      "to": "+++AdjectivalBound",
+      "edge_type": "CONDITIONAL",
+      "condition": "entity_density > 0.165",
+      "scope": "dense entity contexts",
+      "rationale": "High mutation pressure and evaluative-language suppression can create contradictory logit pressure in dense contexts.",
+      "resolution_strategy": "Use one at a time or stage-gate EntropyAnchor before final expressive cleanup.",
+      "evidence_source": [
+        "file:1",
+        "file:8"
+      ]
+    },
+    {
+      "from": "+++ContextLock(scope='full_session')",
+      "to": "+++DualAgentBoundary",
+      "edge_type": "SOFT",
+      "condition": "security_sensitive_tasks",
+      "scope": "planner executor separation",
+      "rationale": "Full-session reinjection can leak planner-side context across the isolation boundary maintained by a dual-agent design.",
+      "resolution_strategy": "Reduce ContextLock scope to task-local or reinject only validated summaries across the boundary.",
+      "evidence_source": [
+        "file:1",
+        "file:14"
+      ]
+    },
+    {
+      "from": "+++ClarifyFirst",
+      "to": "+++StageRoute(order='retrieve_first')",
+      "edge_type": "SEQUENCING_CONFLICT",
+      "condition": "multi_turn_or_ambiguous_tasks",
+      "scope": "pipeline entry",
+      "rationale": "Clarification requires a user round-trip, while retrieve-first routing assumes immediate progression into retrieval.",
+      "resolution_strategy": "Insert ClarifyFirst as Stage 0 before retrieval or switch to a clarify-then-route pipeline.",
+      "evidence_source": [
+        "file:1"
+      ]
+    }
+  ],
+  "summary_counts": {
+    "HARD": 1,
+    "CONDITIONAL": 1,
+    "SOFT": 1,
+    "SEQUENCING_CONFLICT": 1,
+    "total": 4
+  },
+  "normalization_notes": [
+    "HARD and CONDITIONAL edges are the primary operational registry types for automatic validation.",
+    "SOFT and SEQUENCING_CONFLICT entries are retained as advisory planning constraints.",
+    "Edge directions are treated as symmetric unless the from/to fields encode scoped parameterization."
+  ]
+}
