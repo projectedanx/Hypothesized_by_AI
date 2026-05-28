@@ -1,0 +1,108 @@
+{
+  "generation_timestamp": "2026-03-26T03:30:47.045574+00:00",
+  "sha256": "b16a27e62db2a594cf3cecdd3a4d49007be07f88a5447e842c0f8e4f9b957777",
+  "pattern": "urn:drp:topology:failure_mode:topological_tearing",
+  "total_queries": 20,
+  "queries": [
+    {
+      "id": "Q01",
+      "type": "GROUNDING",
+      "query": "vibe coding generative UI context window collapse layout destruction"
+    },
+    {
+      "id": "Q02",
+      "type": "GROUNDING",
+      "query": "attention budget zero-sum thermodynamic LLM inference token allocation"
+    },
+    {
+      "id": "Q03",
+      "type": "GROUNDING",
+      "query": "lost in the middle LLM context dilution U-shaped performance degradation"
+    },
+    {
+      "id": "Q04",
+      "type": "GROUNDING",
+      "query": "UI-Bench text-to-app benchmark v0 Lovable Bolt quality evaluation 2025"
+    },
+    {
+      "id": "Q05",
+      "type": "CROSS_DOMAIN",
+      "query": "conversational inertia diagonal attention multi-turn LLM constraint exploration"
+    },
+    {
+      "id": "Q06",
+      "type": "CROSS_DOMAIN",
+      "query": "summarization drift context rot AI agent memory compression distortion"
+    },
+    {
+      "id": "Q07",
+      "type": "CROSS_DOMAIN",
+      "query": "context saturation threshold Anthropic 75% quality peak utilization 2025"
+    },
+    {
+      "id": "Q08",
+      "type": "ADVERSARIAL",
+      "query": "multi-axis simultaneous edit generative UI failure mode regression template"
+    },
+    {
+      "id": "Q09",
+      "type": "ADVERSARIAL",
+      "query": "LLM softmax crowding positional under-training encoding saturation long context"
+    },
+    {
+      "id": "Q10",
+      "type": "ADVERSARIAL",
+      "query": "AI code generation satisfaction failure unmet requirements brittle edge cases"
+    },
+    {
+      "id": "Q11",
+      "type": "FALSIFICATION",
+      "query": "multi-modal simultaneous edit success single inference pass UI generation 2025"
+    },
+    {
+      "id": "Q12",
+      "type": "FALSIFICATION",
+      "query": "generative UI four orthogonal changes single pass no layout collapse"
+    },
+    {
+      "id": "Q13",
+      "type": "GROUNDING",
+      "query": "incremental prompting one change at a time vibe coding best practice isolation"
+    },
+    {
+      "id": "Q14",
+      "type": "GROUNDING",
+      "query": "Lovable plan mode prompt by component atomic vocabulary modular prompting"
+    },
+    {
+      "id": "Q15",
+      "type": "GROUNDING",
+      "query": "vibe coding prompt engineering modular feature-by-feature iterative refinement"
+    },
+    {
+      "id": "Q16",
+      "type": "CROSS_DOMAIN",
+      "query": "KV cache management context compression sliding window attention generative UI"
+    },
+    {
+      "id": "Q17",
+      "type": "CROSS_DOMAIN",
+      "query": "non-attention LLM ultra-long context horizon quadratic scaling elimination"
+    },
+    {
+      "id": "Q18",
+      "type": "RELATIONAL",
+      "query": "vibe coding technical debt context accumulation architectural inconsistency 2025"
+    },
+    {
+      "id": "Q19",
+      "type": "RELATIONAL",
+      "query": "dynamic generative UI adaptive layout intent-driven design 2026 real-time"
+    },
+    {
+      "id": "Q20",
+      "type": "ADVERSARIAL",
+      "query": "prompt complexity adjectival density simultaneous constraint conflict AI generation failure"
+    }
+  ]
+}

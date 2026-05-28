@@ -1,0 +1,114 @@
+{
+  "artifact": "pattern_inventory.json",
+  "generation_timestamp": "2026-03-27T05:07:00Z",
+  "sha256": "64306996deb755a668e1c45e52e79f524c607e12ecc5421acd4a2ed3896bc13b",
+  "patterns": [
+    {
+      "pattern_id": "PAT-001",
+      "name": "ISR_Constraint",
+      "type": "Structural",
+      "domain": "Embedded RTOS / Interrupt Architecture",
+      "operational_definition": "All ISR bodies must complete within a bounded, deterministic execution window with zero blocking calls.",
+      "measurement_proxy": "AST-scan detecting vTaskDelay, printf, HAL_Delay, or xSemaphoreTake (non-FromISR variant) inside IRQ_Handler scopes.",
+      "task_conditioned_baseline": "WCET of ISR \u2264 5\u00b5s on Cortex-M4 @ 168 MHz; escalates to \u2264 1\u00b5s for hard real-time audio or motor-control ISRs.",
+      "freertos_version": "FreeRTOS Kernel v11.1.0 LTS (until 2026-06-30)",
+      "standards_reference": "MISRA C:2025 Rule 8.13 (pointer qualifiers) + MISRA Dir 4.1 (runtime determinism)",
+      "boundary_conditions": "Applies exclusively in IRQ_Handler / ISR context. Non-interrupt code may use blocking APIs.",
+      "diagnostic_test": "DCCDSchemaGuard AST-scan: reject if blocking token appears in IRQ_Handler subtree.",
+      "expected_artifacts": [
+        "Deferred-work queue configs",
+        "xQueueSendFromISR wrappers",
+        "Semaphore release stubs"
+      ]
+    },
+    {
+      "pattern_id": "PAT-002",
+      "name": "Memory_Stasis",
+      "type": "Causal",
+      "domain": "Memory Management / Long-Running IoT",
+      "operational_definition": "No dynamic heap allocation post-main() in continuous execution paths. All task stacks, buffers, and queues declared as static arrays.",
+      "measurement_proxy": "Memory-map diff at T+0h vs T+72h; heap watermark via xPortGetFreeHeapSize() and uxTaskGetStackHighWaterMark().",
+      "task_conditioned_baseline": "Heap growth post-main() = 0 bytes for devices with >90 day uptime requirement.",
+      "freertos_version": "FreeRTOS Kernel v11.1.0 LTS \u2014 StaticTask_t / StaticQueue_t APIs",
+      "standards_reference": "MISRA C:2025 Rule 21.3 (dynamic allocation prohibited in safety-critical code)",
+      "boundary_conditions": "Relaxed only for boot-time initialization before scheduler start. Non-critical data-plane code may use heap2/heap4 with bounded alloc.",
+      "diagnostic_test": "malloc/calloc/free call-graph scan post-main-entry. Memory map shows dynamic region frozen.",
+      "expected_artifacts": [
+        "static StackType_t task_stacks[]",
+        "StaticTask_t task_buffers[]",
+        "StaticQueue_t q_buffers[]",
+        "Memory pool configs"
+      ]
+    },
+    {
+      "pattern_id": "PAT-003",
+      "name": "Concurrency_Lock",
+      "type": "Relational",
+      "domain": "RTOS Concurrency / Race Condition Prevention",
+      "operational_definition": "All shared mutable state between RTOS tasks or between ISRs and tasks must be mediated via FreeRTOS queue, mutex, or event-group primitives.",
+      "measurement_proxy": "CFDI (Context-Free Dependency Index) scan: flag any global volatile variable read in task context without mutex guard.",
+      "task_conditioned_baseline": "Zero unguarded global volatile accesses visible across task boundaries in production builds.",
+      "freertos_version": "FreeRTOS Kernel v11.1.0 LTS \u2014 xSemaphoreCreateMutex, xQueueCreate, xEventGroupCreate",
+      "standards_reference": "MISRA C:2025 Dir 4.7 (volatile access integrity) + CERT C CON43-C",
+      "boundary_conditions": "ISR-to-task communication: only *FromISR variants allowed. Mutex not usable from ISR \u2014 use binary semaphore or queue.",
+      "diagnostic_test": "Static analyzer (e.g., Polyspace, PC-lint Plus) with MISRA C:2025 concurrent-access rule set.",
+      "expected_artifacts": [
+        "FreeRTOS queue configurations",
+        "Mutex handles",
+        "EventGroup bit masks",
+        "volatile + __DSB() memory barrier usage"
+      ]
+    },
+    {
+      "pattern_id": "PAT-004",
+      "name": "Watchdog_Omnipresence",
+      "type": "Structural",
+      "domain": "Hardware Watchdog / System Resilience",
+      "operational_definition": "Hardware Watchdog Timer (WDT/IWDG) must be configured, enabled, and fed within every idle/main task cycle. Absence = fatal architectural defect.",
+      "measurement_proxy": "Code scan: presence of HAL_IWDG_Refresh() / esp_task_wdt_reset() in every task that could block the WDT feed path.",
+      "task_conditioned_baseline": "WDT timeout \u2264 1s for safety-critical tasks; \u2264 8s for non-critical telemetry.",
+      "standards_reference": "ESP-IDF v6.0 esp_task_wdt API; STM32 HAL IWDG API; Zephyr watchdog subsystem (wdt_feed)",
+      "boundary_conditions": "Not required in test/debug build configurations where reset would obscure debugging. Must be re-enabled for release builds.",
+      "diagnostic_test": "Build artifact analysis: strip debug flags, verify WDT init + feed in all task while(1) loops.",
+      "expected_artifacts": [
+        "IWDG_HandleTypeDef definitions",
+        "esp_task_wdt_config_t structs",
+        "WDT feed calls per task"
+      ]
+    },
+    {
+      "pattern_id": "PAT-005",
+      "name": "Volatile_Mandate",
+      "type": "Structural",
+      "domain": "Compiler Optimization / ISR-Main Shared State",
+      "operational_definition": "Any C variable mutated inside an ISR and read in non-ISR context MUST be declared volatile to prevent compiler reordering/caching.",
+      "measurement_proxy": "AST-scan: variables assigned within IRQ_Handler scope cross-referenced against non-ISR read sites; missing volatile qualifier flagged.",
+      "task_conditioned_baseline": "100% volatile compliance on ISR-shared variables for MISRA C:2025 required-rule conformance.",
+      "standards_reference": "MISRA C:2025 Rule 8.13; ISO C11 \u00a76.7.3 volatile semantics; ARM Cortex-M Architecture TRM \u00a7B3.5",
+      "boundary_conditions": "Applies to plain C. In Embedded Rust, replace volatile with core::sync::atomic (AtomicU32, AtomicBool) with Ordering::SeqCst.",
+      "diagnostic_test": "Compile with -Wall -Wextra -Werror; also GCC -Wsuggest-attribute=const flags potential volatile misuse.",
+      "expected_artifacts": [
+        "volatile uint32_t isr_flag declarations",
+        "Atomic<T> Rust equivalents",
+        "Memory barrier __DMB() stubs"
+      ]
+    },
+    {
+      "pattern_id": "PAT-006",
+      "name": "OTA_Dual_Bank",
+      "type": "Causal",
+      "domain": "Firmware Update Safety / Rollback Architecture",
+      "operational_definition": "Over-The-Air update architecture must employ dual-bank flash layout with atomic commit and automatic rollback on boot failure.",
+      "measurement_proxy": "Linker script analysis: two independent OTA partition slots; boot counter in NVS; rollback logic in bootloader.",
+      "task_conditioned_baseline": "OTA success rate \u2265 99.95% across fleet; failed update auto-reverts within 3 boot attempts.",
+      "standards_reference": "ESP-IDF v6.0 OTA API (esp_ota_ops.h); MCUboot for Zephyr; STM32 custom dual-bank HAL",
+      "boundary_conditions": "Requires \u2265 2\u00d7 application flash size. Single-bank MCUs require external SPI flash staging.",
+      "diagnostic_test": "HIL test: interrupt power during OTA write at 50%, 75%, 99% completion; verify rollback on next boot.",
+      "expected_artifacts": [
+        "partition_table.csv",
+        "bootloader rollback config",
+        "esp_ota_get_running_partition() guard"
+      ]
+    }
+  ]
+}

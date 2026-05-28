@@ -1,0 +1,187 @@
+# epistemic_escrow_action.yml
+# GitHub Actions CI/CD Epistemic Circuit Breaker
+# DRP-CFDI-MATH-IMPLEMENTATION-001 | April 2026
+#
+# Fires on every PR targeting main/develop.
+# Intercepts any LLM-generated Python file, runs AST fidelity + CFDI check.
+# CFDI > 0.15  →  step fails (exit 1), PR is blocked, scar appended to registry.
+
+name: Epistemic Circuit Breaker (CFDI Gate)
+
+on:
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - "**/*.py"          # only Python files trigger the gate
+
+  workflow_dispatch:       # allow manual trigger for testing
+
+permissions:
+  contents: write          # needed to commit scar_registry.yaml back to branch
+  pull-requests: write     # needed to post blocking comment on PR
+
+env:
+  CFDI_THRESHOLD: "0.15"   # ε — must match cfdi_calculator.py constant
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────────────
+  cfdi-gate:
+    name: "CFDI Gate — Confidence-Fidelity Divergence Check"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      # 1. Checkout the PR branch with full history
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0             # full history for git diff
+
+      # 2. Set up Python environment
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      # 3. Install CFDI runtime dependencies
+      - name: Install dependencies
+        run: |
+          pip install --quiet numpy pyyaml
+
+      # 4. Collect changed .py files in this PR
+      - name: Collect changed Python files
+        id: changed
+        run: |
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+          FILES=$(git diff --name-only "$BASE_SHA" "$HEAD_SHA" -- '*.py'                   | grep -v '__pycache__'                   | grep -v 'test_'                   || true)
+          echo "FILES<<EOF" >> $GITHUB_OUTPUT
+          echo "$FILES"     >> $GITHUB_OUTPUT
+          echo "EOF"        >> $GITHUB_OUTPUT
+          echo "Changed Python files:"
+          echo "$FILES"
+
+      # 5. Run CFDI check on each changed file
+      #    NOTE: In production, replace the --logprobs argument with a real
+      #    LLM inference call (see the LOGPROB_EXTRACTION section below).
+      #    For CI, we use the LLM-Generation Metadata sidecar pattern:
+      #    each generated file ships a companion *.logprobs.json with shape:
+      #      { "logprobs": [-0.12, -0.34, ...] }
+      - name: Run CFDI Gate
+        id: cfdi
+        env:
+          CFDI_FAIL: "false"
+        run: |
+          set +e
+          EXIT_CODE=0
+
+          while IFS= read -r filepath; do
+            [ -z "$filepath" ] && continue
+            echo "──────────────────────────────────────────"
+            echo "Checking: $filepath"
+
+            SIDECAR="${filepath%.py}.logprobs.json"
+
+            if [ ! -f "$SIDECAR" ]; then
+              echo "  ⚠ No logprob sidecar found ($SIDECAR). Assigning max uncertainty."
+              LOGPROBS="-6.9,-6.9,-6.9"    # ln(0.001) × 3 — near-zero confidence
+            else
+              # Extract comma-separated logprobs from the JSON sidecar
+              LOGPROBS=$(python3 -c "
+          import json, sys
+          d = json.load(open('$SIDECAR'))
+          print(','.join(str(x) for x in d['logprobs']))
+          ")
+            fi
+
+            # Run the CFDI check — exits 1 if CFDI > ε
+            python3 cfdi_calculator.py logprob \
+              --file     "$filepath" \
+              --logprobs "$LOGPROBS" \
+              --context  "github-actions/pr-${{ github.event.pull_request.number }}/sha-${{ github.sha }}"
+
+            if [ $? -ne 0 ]; then
+              EXIT_CODE=1
+              echo "  🚨 CFDI ESCROW TRIGGERED for $filepath"
+            else
+              echo "  ✓ $filepath passed CFDI gate"
+            fi
+          done <<< "${{ steps.changed.outputs.FILES }}"
+
+          exit $EXIT_CODE
+
+      # 6. If escrow fired, commit the updated scar_registry.yaml back to PR branch
+      - name: Commit scar registry update
+        if: failure() && steps.cfdi.outcome == 'failure'
+        run: |
+          git config user.name  "cfdi-bot[bot]"
+          git config user.email "cfdi-bot@users.noreply.github.com"
+          git add scar_registry.yaml
+          git diff --cached --quiet || git commit -m             "chore(cfdi): append symbolic scar — PR #${{ github.event.pull_request.number }}"
+          git push
+
+      # 7. Post a blocking comment on the PR summarising the CFDI failure
+      - name: Post blocking PR comment
+        if: failure() && steps.cfdi.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs    = require('fs');
+            let scarData = "scar_registry.yaml not found or empty.";
+            try {
+              scarData = fs.readFileSync('scar_registry.yaml', 'utf8').slice(0, 2000);
+            } catch(e) {}
+
+            await github.rest.issues.createComment({
+              owner      : context.repo.owner,
+              repo       : context.repo.repo,
+              issue_number: context.issue.number,
+              body: `## 🚨 Epistemic Circuit Breaker — CFDI Gate Failed
+
+          **CFDI threshold exceeded** (\`${process.env.CFDI_THRESHOLD}\`).
+          One or more LLM-generated files demonstrated high confidence *diverged from*
+          structural schema adherence (alignment-faking signal detected).
+
+          **What this means:**
+          The model produced structurally invalid code while reporting high token-level certainty.
+          This is the canonical *alignment faking* threat signature.
+
+          **Next steps for the PR author:**
+          1. Review \`scar_registry.yaml\` for the full Symbolic Scar record.
+          2. Inspect the flagged files for AST invariant violations (bare \`except:\`, missing type annotations, etc.).
+          3. Re-generate with explicit schema-constrained prompting or manual correction.
+          4. Re-open PR only after violations are resolved and CFDI drops below \`${process.env.CFDI_THRESHOLD}\`.
+
+          <details><summary>Scar Registry (last 2000 chars)</summary>
+
+          \`\`\`yaml
+          ${scarData}
+          \`\`\`
+          </details>`
+            });
+
+      # 8. Enforce gate — workflow fails hard, blocking merge
+      - name: Enforce gate failure
+        if: failure() && steps.cfdi.outcome == 'failure'
+        run: |
+          echo "::error::CFDI gate failed. PR merge is blocked. Review scar_registry.yaml."
+          exit 1
+
+# ─── LOGPROB_EXTRACTION (Reference) ──────────────────────────────────────────
+# If your CI pipeline generates code via an LLM API, extract logprobs at
+# generation time and write the sidecar before opening the PR:
+#
+#   import openai, json, pathlib
+#   client   = openai.OpenAI()
+#   response = client.chat.completions.create(
+#       model    = "gpt-4o",
+#       messages = [...],
+#       logprobs = True,
+#       top_logprobs = 1,
+#   )
+#   tokens   = response.choices[0].logprobs.content
+#   logprobs = [t.logprob for t in tokens]
+#   pathlib.Path("output_file.logprobs.json").write_text(
+#       json.dumps({"logprobs": logprobs})
+#   )

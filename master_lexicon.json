@@ -1,0 +1,3775 @@
+[
+    {
+        "term": "12x12 Silk Overhead",
+        "categories": "Technical Gear",
+        "sub_categories": "Lighting Gear",
+        "aesthetic_impact": "Massive sunlight diffusion",
+        "technical_trait": "Softening harsh midday sun, huge catchlights"
+    },
+    {
+        "term": "15-Blade Circular Aperture",
+        "categories": "Technical Gear",
+        "sub_categories": "Aperture Mechanics",
+        "aesthetic_impact": "Perfectly round bokeh at all stops",
+        "technical_trait": "Eliminates polygonal out-of-focus highlights"
+    },
+    {
+        "term": "22-Degree Ice Halo",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Ethereal ring around the sun/moon",
+        "technical_trait": "Light refracting through hexagonal ice crystals in cirrus clouds"
+    },
+    {
+        "term": "Abbe Number Dispersion",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Chromatic separation intensity",
+        "technical_trait": "Metric determining how much a specific glass type splits white light into a rainbow"
+    },
+    {
+        "term": "Action Axis (180-Degree Rule)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Spatial geography retention",
+        "technical_trait": "Imaginary line maintaining left/right screen direction"
+    },
+    {
+        "term": "Advection Fog Bank",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Heavy rolling fog over surfaces",
+        "technical_trait": "Warm, moist air sliding horizontally over a cold surface"
+    },
+    {
+        "term": "Aeolian Sand Ripples",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Perfect geometric ridges on dunes",
+        "technical_trait": "Saltation of sand grains driven by steady, unidirectional wind"
+    },
+    {
+        "term": "Aerosolized Moisture Plume",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "High-pressure mist, rainbow potential",
+        "technical_trait": "Liquid mechanically sheared into microscopic airborne droplets"
+    },
+    {
+        "term": "Agfa Vista 200",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Color Negative",
+        "aesthetic_impact": "Intense reds and deep blues",
+        "technical_trait": "High contrast budget emulsion, blocky shadow transitions"
+    },
+    {
+        "term": "Airborne Spore/Pollen Density",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Textured, floating micro-debris",
+        "technical_trait": "Biological particulates catching light in extreme macro/backlit conditions"
+    },
+    {
+        "term": "Airglow Chemiluminescence",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Faint, persistent atmospheric green glow",
+        "technical_trait": "Chemical reactions in the upper atmosphere preventing a completely dark night sky"
+    },
+    {
+        "term": "Albedo Base Color",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Pure unlit material color",
+        "technical_trait": "The intrinsic color of a surface devoid of all directional lighting or shadows"
+    },
+    {
+        "term": "Albedo Map PBR Workflow",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Strictly non-lit color data",
+        "technical_trait": "Providing pure flat color values without baked-in ambient occlusion or highlights"
+    },
+    {
+        "term": "Alpenglow Mountain Illumination",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Rosy, glowing peaks against dark sky",
+        "technical_trait": "Indirect backscattering of red light after the sun has set at elevation"
+    },
+    {
+        "term": "Ambient Occlusion (Micro-shadows)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Deep corner grounding",
+        "technical_trait": "Crevices and tight geometry blocking ambient light from reaching the surface"
+    },
+    {
+        "term": "Anabatic Wind Updraft",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Rising thermal haze along mountains",
+        "technical_trait": "Warm air ascending slopes due to solar heating"
+    },
+    {
+        "term": "Anamorphic Mumps",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Faces widening when focusing close",
+        "technical_trait": "Variable squeeze ratio across the focus distance"
+    },
+    {
+        "term": "Anamorphic Oval Iris",
+        "categories": "Technical Gear",
+        "sub_categories": "Aperture Mechanics",
+        "aesthetic_impact": "Forces waterfall/oval bokeh even on spherical",
+        "technical_trait": "Vertical stretching of out-of-focus elements"
+    },
+    {
+        "term": "Anamorphic Squeeze (2x)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Widescreen cinematic aspect ratio",
+        "technical_trait": "Horizontal field of view doubled while vertical remains constant"
+    },
+    {
+        "term": "Angenieux EZ-1 30-90mm T2.0",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Fast zoom, swappable rear optical block",
+        "technical_trait": "S35 to Full Frame adaptability, beautiful roll-off"
+    },
+    {
+        "term": "Angenieux Optimo 24-290mm T2.8",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Versatile zoom range, consistent color",
+        "technical_trait": "Slightly warm tone, classic zoom tracking"
+    },
+    {
+        "term": "Anisotropic Specular Highlights",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Stretched, brushed-metal reflections",
+        "technical_trait": "Micro-scratches causing highlights to smear perpendicular to the grain direction"
+    },
+    {
+        "term": "Anti-Crepuscular Convergence",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Rays converging at the opposite horizon",
+        "technical_trait": "Perspective illusion of parallel light shafts meeting at the antisolar point"
+    },
+    {
+        "term": "Aputure Light Dome II",
+        "categories": "Technical Gear",
+        "sub_categories": "Lighting Gear",
+        "aesthetic_impact": "Standard softbox diffusion",
+        "technical_trait": "Smooth falloff, double-diffusion layering"
+    },
+    {
+        "term": "Arc Shot (360 Degree Tracking)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Heroic emphasis, rotational dizziness",
+        "technical_trait": "Camera revolves in a perfect radius around a central nodal point"
+    },
+    {
+        "term": "ARRI ALEV III Super 35 Sensor",
+        "categories": "Technical Gear",
+        "sub_categories": "Sensor Types",
+        "aesthetic_impact": "Industry standard dynamic range, filmic highlight roll-off",
+        "technical_trait": "14+ stops DR, dual gain architecture"
+    },
+    {
+        "term": "ARRI Signature Prime 47mm T1.8",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Smooth skin rendering, magnesium housing",
+        "technical_trait": "Telecentric design, zero chromatic aberration"
+    },
+    {
+        "term": "ARRI Skypanel S60-C",
+        "categories": "Technical Gear",
+        "sub_categories": "Lighting Gear",
+        "aesthetic_impact": "Soft, wrapping LED light",
+        "technical_trait": "Perfect color rendition, wide beam angle"
+    },
+    {
+        "term": "ARRI Trinity Hybrid Stabilizer",
+        "categories": "Technical Gear",
+        "sub_categories": "Stabilization Gear",
+        "aesthetic_impact": "Low-to-high sweep transitions",
+        "technical_trait": "Combination of Steadicam and electronic gimbal"
+    },
+    {
+        "term": "ARRI Ultra Prime 8R T2.8",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Extreme wide angle, rectilinear",
+        "technical_trait": "Zero barrel distortion on extreme wide"
+    },
+    {
+        "term": "Astigmatism (Optical)",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Stretched, cross-like blur at edges",
+        "technical_trait": "Sagittal and tangential rays focusing at different planes"
+    },
+    {
+        "term": "Astronomical Twilight (-18\u00b0)",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Inky blue/black, faint starlight",
+        "technical_trait": "Sun geometric center is 18 degrees below the horizon, zero solar scatter"
+    },
+    {
+        "term": "Atlas Orion Series 65mm T2.0",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Modern anamorphic with vintage characteristics",
+        "technical_trait": "Waterfall bokeh, controlled blue/amber streaking"
+    },
+    {
+        "term": "Atmospheric Light Pillars",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Vertical beams over ground light sources",
+        "technical_trait": "Reflection of light off the base of falling ice crystals in frigid air"
+    },
+    {
+        "term": "Atmospheric Perspective",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Washed out, desaturated background mountains",
+        "technical_trait": "Cumulative scattering of light over immense Z-axis distances"
+    },
+    {
+        "term": "Aurora Ionospheric Excitation",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Neon green/red curtain structures",
+        "technical_trait": "Solar wind electrons colliding with oxygen and nitrogen in the upper atmosphere"
+    },
+    {
+        "term": "Back-Illuminated (BSI) Sensor",
+        "categories": "Technical Gear",
+        "sub_categories": "Sensor Types",
+        "aesthetic_impact": "High light gathering efficiency",
+        "technical_trait": "Cleaner shadows in extreme low light"
+    },
+    {
+        "term": "Backing Paper Mottling",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Ghostly numbers/textures on film",
+        "technical_trait": "120 film backing paper interacting with emulsion due to moisture"
+    },
+    {
+        "term": "Backlight (Hair Light)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Halo effect, depth cue",
+        "technical_trait": "Light placed directly behind the subject aiming at the back of the head"
+    },
+    {
+        "term": "Ball Lightning Plasma Confinement",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Floating, glowing, unstable sphere",
+        "technical_trait": "Unexplained luminous electrical phenomenon with self-sustaining magnetic containment"
+    },
+    {
+        "term": "Barchan Dune Migration",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Crescent-shaped sand structures",
+        "technical_trait": "Wind shaping sand into a curve with horns pointing downwind"
+    },
+    {
+        "term": "Barrel Distortion",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Bulging center, curved straight lines",
+        "technical_trait": "Negative radial distortion, common in wide lenses"
+    },
+    {
+        "term": "Base Fog (Dmin)",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Chemical Processes",
+        "aesthetic_impact": "Milky, elevated shadows",
+        "technical_trait": "Expired film emulsion degradation"
+    },
+    {
+        "term": "Bausch & Lomb Super Baltar 35mm",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Godfather look, heavy blooming on highlights",
+        "technical_trait": "Low micro-contrast, extreme character, glowing highlights"
+    },
+    {
+        "term": "Bayer Demosaicing Artifacts",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Zipper patterns on sharp diagonal edges",
+        "technical_trait": "Algorithmic color guessing errors"
+    },
+    {
+        "term": "Bayer Pattern Color Filter Array",
+        "categories": "Technical Gear",
+        "sub_categories": "Sensor Types",
+        "aesthetic_impact": "Standard digital color interpolation",
+        "technical_trait": "Requires demosaicing algorithm processing"
+    },
+    {
+        "term": "Beam Splitter Glass",
+        "categories": "Technical Gear",
+        "sub_categories": "Misc Optics",
+        "aesthetic_impact": "Teleprompter rig, ghost reflections",
+        "technical_trait": "Slight light transmission loss, double-image artifact"
+    },
+    {
+        "term": "Beckmann Distribution Model",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Harsh, analytical reflections",
+        "technical_trait": "Sharp highlight falloff on polished, non-organic surfaces"
+    },
+    {
+        "term": "Beer-Lambert Absorption Law",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Depth-based color darkening",
+        "technical_trait": "Light intensity decreasing exponentially the deeper it travels through a colored medium"
+    },
+    {
+        "term": "Bellows Focusing System",
+        "categories": "Technical Gear",
+        "sub_categories": "Misc Optics",
+        "aesthetic_impact": "Continuous macro adjustment",
+        "technical_trait": "Extreme magnification capabilities"
+    },
+    {
+        "term": "Bioluminescent Phytoplankton Agitation",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Neon blue glowing wake",
+        "technical_trait": "Mechanical stress triggering a luciferin-luciferase reaction in ocean water"
+    },
+    {
+        "term": "Bipack In-Camera Masking",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Surreal double exposures",
+        "technical_trait": "Running two strips of film through the gate simultaneously"
+    },
+    {
+        "term": "Birefringence (Double Refraction)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Prismatic internal doubling",
+        "technical_trait": "Light splitting into two distinct polarized rays upon entering a crystal"
+    },
+    {
+        "term": "Blackbody Color Temperature (3200K)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Warm, tungsten interior light",
+        "technical_trait": "Calculated based on heating a perfect black-body radiator to a specific Kelvin"
+    },
+    {
+        "term": "Blackbody Color Temperature (5600K)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Cool, daylight exterior light",
+        "technical_trait": "Standardized daylight balance matching mid-day sun"
+    },
+    {
+        "term": "Blackbody Radiation Glow",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Visible red/orange heat emission",
+        "technical_trait": "Thermal radiation emitted by matter based on extreme temperature"
+    },
+    {
+        "term": "Blackmagic URSA 12K Super 35",
+        "categories": "Technical Gear",
+        "sub_categories": "Sensor Types",
+        "aesthetic_impact": "Custom RGBW sensor array, non-Bayer pattern",
+        "technical_trait": "Symmetrical color resolution, film-like grain structure"
+    },
+    {
+        "term": "Bleach Bypass (Skip Bleach)",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Chemical Processes",
+        "aesthetic_impact": "Desaturated, high contrast, gritty",
+        "technical_trait": "Retained silver in emulsion alongside color dyes"
+    },
+    {
+        "term": "Blizzard Whiteout Albedo",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Total loss of spatial geometry, 100% reflectance",
+        "technical_trait": "High wind snow suspension obliterating the horizon line"
+    },
+    {
+        "term": "Blue Hour Ozone Absorption",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Cool, penetrating cyan/magenta tones",
+        "technical_trait": "Chappuis absorption bands dominating light transmission post-sunset"
+    },
+    {
+        "term": "Boom Up / Boom Down",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Fluid vertical reveals",
+        "technical_trait": "Arcing vertical motion pivoting from a fulcrum"
+    },
+    {
+        "term": "Bounce Board (Beadboard)",
+        "categories": "Technical Gear",
+        "sub_categories": "Lighting Gear",
+        "aesthetic_impact": "Soft, directional fill",
+        "technical_trait": "Organic light return, slight warmth if unbleached"
+    },
+    {
+        "term": "BRDF (Bidirectional Reflectance Distribution)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Physically correct material logic",
+        "technical_trait": "The master equation defining how light reflects off an opaque surface"
+    },
+    {
+        "term": "Brewster's Angle",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Maximum polarization reflection",
+        "technical_trait": "The specific angle of incidence where reflected light is perfectly polarized"
+    },
+    {
+        "term": "Broad Lighting",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Widening the face",
+        "technical_trait": "The side of the face turned *toward* the camera receives the main key light"
+    },
+    {
+        "term": "Bromide Drag",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Chemical Processes",
+        "aesthetic_impact": "Vertical streaks from highlights",
+        "technical_trait": "Uneven chemical flow during stand development"
+    },
+    {
+        "term": "Broncolor Para 222",
+        "categories": "Technical Gear",
+        "sub_categories": "Lighting Gear",
+        "aesthetic_impact": "Massive parabolic wrapping light",
+        "technical_trait": "3D light modeling, simultaneous hard center and soft edge"
+    },
+    {
+        "term": "BSSRDF (Bidirectional Scattering)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Physically correct flesh/wax logic",
+        "technical_trait": "The master equation defining how light enters, scatters, and exits a translucent surface"
+    },
+    {
+        "term": "Burn in / Flash frame",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Overexposed transition frames",
+        "technical_trait": "Camera motor spooling up/down causing variable exposure"
+    },
+    {
+        "term": "Butterfly Lighting (Paramount)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Glamour, high cheekbones",
+        "technical_trait": "Key light directly above and slightly in front of subject, creating a butterfly shadow under the nose"
+    },
+    {
+        "term": "C-41 Color Negative Process",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Chemical Processes",
+        "aesthetic_impact": "Standard still photography contrast",
+        "technical_trait": "Higher gamma than ECN-2, specific dye coupling"
+    },
+    {
+        "term": "C-Stand with Gobo Arm",
+        "categories": "Technical Gear",
+        "sub_categories": "Lighting Gear",
+        "aesthetic_impact": "Precise flag placement",
+        "technical_trait": "Shadow manipulation, hard light cutting"
+    },
+    {
+        "term": "Canon EF 85mm f/1.2L II USM",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "Dreamy shallow depth of field, portrait isolation",
+        "technical_trait": "Massive front element, distinct red ring contrast"
+    },
+    {
+        "term": "Canon FD 50mm f/1.4 S.S.C.",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "Vintage film look, warm tones",
+        "technical_trait": "Super Spectra Coating, moderate barrel distortion"
+    },
+    {
+        "term": "Canon K35 24mm T1.5",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Vintage glow, low contrast, gold/magenta flares",
+        "technical_trait": "Aspherical vintage glass, iconic 70s look"
+    },
+    {
+        "term": "Capillary Wave Detail",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "High-frequency water ripples",
+        "technical_trait": "Tiny surface disruptions governed strictly by surface tension rather than gravity"
+    },
+    {
+        "term": "Capillary Wave Surface Tension",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Micro-ripples on puddles",
+        "technical_trait": "High-frequency water surface disruption dominated by surface tension"
+    },
+    {
+        "term": "Catchlight Placement",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Life in the eyes",
+        "technical_trait": "Specific reflection of the key light source localized entirely within the subject's cornea"
+    },
+    {
+        "term": "Caustic Light Projection",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Dancing light pools",
+        "technical_trait": "Concentrated light focused through a curved refractive surface (e.g., water ripples)"
+    },
+    {
+        "term": "Cavitation Vapor Bubbles",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Boiling wake behind high-speed underwater objects",
+        "technical_trait": "Pressure dropping below vapor pressure causing rapid phase change"
+    },
+    {
+        "term": "Center Punch Framing",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Authoritative focus, confrontational",
+        "technical_trait": "Subject absolute center on X and Y axes"
+    },
+    {
+        "term": "Chemiluminescence Emission",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Cold, chemical light",
+        "technical_trait": "Light generated directly by a chemical reaction without generating heat (e.g., glow sticks)"
+    },
+    {
+        "term": "Chiaroscuro Contrast",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Painterly volume rendering",
+        "technical_trait": "Extreme interplay of light and dark areas pushing tangible volume"
+    },
+    {
+        "term": "Chimera Pancake Lantern",
+        "categories": "Technical Gear",
+        "sub_categories": "Lighting Gear",
+        "aesthetic_impact": "360-degree ambient room fill",
+        "technical_trait": "Omnidirectional soft source, raised black levels"
+    },
+    {
+        "term": "Choker Shot",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Claustrophobic tension",
+        "technical_trait": "Frame cuts tight at forehead and chin"
+    },
+    {
+        "term": "Chromatic Noise",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Splotchy purple/green spots in dark areas",
+        "technical_trait": "Low signal-to-noise ratio in specific color channels"
+    },
+    {
+        "term": "Cinestill 400D",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Specialty Negative",
+        "aesthetic_impact": "Versatile daylight cinematic, soft palette",
+        "technical_trait": "Dynamic range bias towards overexposure, fine grain halation"
+    },
+    {
+        "term": "CineStill 50D",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Specialty Negative",
+        "aesthetic_impact": "Daylight cinematic, ultra-fine grain",
+        "technical_trait": "Remjet removed, soft halation on bright highlights"
+    },
+    {
+        "term": "CineStill 800T",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Specialty Negative",
+        "aesthetic_impact": "Cinematic nightscapes, strong red halation",
+        "technical_trait": "Remjet layer removed, blooming around practical lights"
+    },
+    {
+        "term": "CineStill BwXX",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Specialty Negative",
+        "aesthetic_impact": "Moody, dramatic contrast",
+        "technical_trait": "Based on Kodak Double-X 5222, variable ISO grain"
+    },
+    {
+        "term": "Circle of Confusion 0.02mm",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Threshold of human visual sharpness",
+        "technical_trait": "Calculated limit where a point of light becomes a discernible blur circle"
+    },
+    {
+        "term": "Circle of Confusion 0.03mm",
+        "categories": "Technical Gear",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Standard 35mm film blur calculation",
+        "technical_trait": "Defines acceptable sharpness threshold"
+    },
+    {
+        "term": "Circumzenithal Arc",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Upside-down rainbow near the zenith",
+        "technical_trait": "Light entering the flat top of ice crystals and exiting the side prism"
+    },
+    {
+        "term": "Civil Twilight (-6\u00b0)",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Soft, shadowless ambient blue",
+        "technical_trait": "Terrestrial objects are clearly defined without artificial light"
+    },
+    {
+        "term": "Clearcoat Multi-Lobe Specular",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Wet look over rough material",
+        "technical_trait": "A perfectly smooth reflective layer sitting on top of a rough diffuse layer (e.g., car paint)"
+    },
+    {
+        "term": "Clearcoat Roughness Mask",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Scratched wet-look variations",
+        "technical_trait": "Isolating high-frequency micro-scratches strictly to the top transparent layer"
+    },
+    {
+        "term": "Close Up (CU)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Emotional transmission",
+        "technical_trait": "Frame isolates the face, cutting at neck/shoulders"
+    },
+    {
+        "term": "CMOS Smear",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Vertical highlight streaks",
+        "technical_trait": "Readout artifact from extreme overexposure"
+    },
+    {
+        "term": "Coanda Effect Adhesion",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Fluid clinging to curved surfaces",
+        "technical_trait": "Asymmetrical pressure distribution keeping rain/smoke attached to geometries"
+    },
+    {
+        "term": "Color Rendering Index (CRI 98+)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Perfect, full-spectrum color bounce",
+        "technical_trait": "Quantitative measure of a light's ability to reveal true colors vs a natural source"
+    },
+    {
+        "term": "Color Shift (Expired Film)",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Magenta or green shadow dominance",
+        "technical_trait": "Uneven degradation of RGB dye layers over time"
+    },
+    {
+        "term": "Comatic Aberration (Coma)",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Smeared, comet-like stars at edges",
+        "technical_trait": "Off-axis point sources distorting into tail shapes"
+    },
+    {
+        "term": "Convection Plumes",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Rising, turbulent air distortion",
+        "technical_trait": "Buoyant transfer of heat carrying visible moisture or distorting light"
+    },
+    {
+        "term": "Cooke Anamorphic/i 50mm T2.3",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Classic anamorphic oval bokeh, blue horizontal flares",
+        "technical_trait": "Anamorphic squeeze 2x, barrel distortion"
+    },
+    {
+        "term": "Cooke S4/i Prime 18mm T2.0",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Cooke Look, warm skin tones, smooth focus falloff",
+        "technical_trait": "Pronounced organic bokeh, gentle distortion"
+    },
+    {
+        "term": "Cowboy Shot (Medium Full)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Stalemate tension, holster-ready",
+        "technical_trait": "Frame cuts subject mid-thigh"
+    },
+    {
+        "term": "Crab Dolly Move",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Perpendicular creep",
+        "technical_trait": "Dolly chassis moving 90-degrees to the lens axis"
+    },
+    {
+        "term": "Crash Zoom",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Comedic timing, sudden shock",
+        "technical_trait": "Snap manual zoom from wide to telephoto in under 0.5 seconds"
+    },
+    {
+        "term": "Crepuscular Ray Volume",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Divine, volumetric light shafts",
+        "technical_trait": "Sunlight streaming through cloud gaps, rendered visible by dust/moisture"
+    },
+    {
+        "term": "Cross-Cutting Vectors",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Intersecting narrative tension",
+        "technical_trait": "Opposing directional gazes linking disparate spatial locations"
+    },
+    {
+        "term": "Cross-Polarized Lighting",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Flat, texture-only scanning",
+        "technical_trait": "Polarizer on the light source and perpendicular polarizer on the lens, killing all specularity"
+    },
+    {
+        "term": "Cross-Processing (X-Pro)",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Chemical Processes",
+        "aesthetic_impact": "Wild color shifts, extreme contrast",
+        "technical_trait": "Developing E-6 film in C-41 chemistry, unpredictable hues"
+    },
+    {
+        "term": "Crowd Multiplication Pass",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Massive scale simulation",
+        "technical_trait": "Locked off camera with repeating subject placement across the X-axis"
+    },
+    {
+        "term": "Crown Flash Ice Alignment",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Dancing, shifting light above a storm",
+        "technical_trait": "Electric fields re-orienting ice crystals, causing shifting sun reflections"
+    },
+    {
+        "term": "Cucoloris (Cookie) Wood/Cello",
+        "categories": "Technical Gear",
+        "sub_categories": "Lighting Gear",
+        "aesthetic_impact": "Dappled light simulation",
+        "technical_trait": "Leaf/branch shadow patterns on background"
+    },
+    {
+        "term": "Cyanobacteria Mat Discoloration",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Vibrant yellow/orange/green geothermal rims",
+        "technical_trait": "Thermophilic bacteria thriving in extreme temperature gradients"
+    },
+    {
+        "term": "De-clicked Iris Ring",
+        "categories": "Technical Gear",
+        "sub_categories": "Aperture Mechanics",
+        "aesthetic_impact": "Smooth exposure racking",
+        "technical_trait": "No stepped exposure shifts"
+    },
+    {
+        "term": "Dedolight DLH4",
+        "categories": "Technical Gear",
+        "sub_categories": "Lighting Gear",
+        "aesthetic_impact": "Precision micro-lighting, zero spill",
+        "technical_trait": "Aspheric lens optics, razor-sharp shadow cuts"
+    },
+    {
+        "term": "Deep Focus (f/22)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Environmental context, absolute clarity",
+        "technical_trait": "Hyperfocal utilization, high diffraction, zero out-of-focus areas"
+    },
+    {
+        "term": "Defocus Transition Roll-off",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Organic spatial blending",
+        "technical_trait": "The gradient smoothness transitioning from critical focus to circle of confusion"
+    },
+    {
+        "term": "Depth of Field Far Limit",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Calculated background blur threshold",
+        "technical_trait": "The exact millimeter where acceptable sharpness ends"
+    },
+    {
+        "term": "Depth of Field Near Limit",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Calculated foreground blur threshold",
+        "technical_trait": "The exact millimeter where acceptable sharpness begins"
+    },
+    {
+        "term": "Dermal Hemoglobin Backscatter",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Deep red/pink fleshy undertones",
+        "technical_trait": "Red wavelengths dominating the internal volumetric scatter before reflecting back"
+    },
+    {
+        "term": "Developer Exhaustion",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Chemical Processes",
+        "aesthetic_impact": "Muddy shadows, uneven density",
+        "technical_trait": "Depleted chemical agents, oxidized developer"
+    },
+    {
+        "term": "Diamond Dust Ice Precipitation",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Sparkling, floating micro-crystals",
+        "technical_trait": "Ground-level vapor deposition in extreme sub-zero, clear-sky conditions"
+    },
+    {
+        "term": "Dichroic Fog",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Metallic sheen on shadows",
+        "technical_trait": "Silver deposition during fixing process"
+    },
+    {
+        "term": "Dielectric Medium Absorption",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Non-metallic colored glass",
+        "technical_trait": "Light traveling through a non-conductor, absorbing specific wavelengths internally"
+    },
+    {
+        "term": "Dielectric Reflectance (F0 4%)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "White reflections, colored diffuse",
+        "technical_trait": "Insulators having white, un-tinted highlights regardless of object color"
+    },
+    {
+        "term": "Diffraction Softening",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Overall loss of sharpness at closed apertures",
+        "technical_trait": "Light waves scattering as they pass through small iris hole"
+    },
+    {
+        "term": "Digital Noise (High ISO)",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Chroma noise, random RGB speckles",
+        "technical_trait": "Amplified sensor readout noise in low light"
+    },
+    {
+        "term": "Diopter +1 / +2 / +3",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Macro magnification without light loss",
+        "technical_trait": "Convex meniscus filter altering the minimum focusing distance"
+    },
+    {
+        "term": "Diopter +2 Close-Up Filter",
+        "categories": "Technical Gear",
+        "sub_categories": "Optical Filters",
+        "aesthetic_impact": "Macro capability on standard lenses",
+        "technical_trait": "Edge softness, spherical aberration at borders"
+    },
+    {
+        "term": "Displacement Mapping",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Physical geometric extrusion",
+        "technical_trait": "Altering the actual 3D silhouette based on a height map, casting real shadows"
+    },
+    {
+        "term": "DJI Ronin 4D 4-Axis",
+        "categories": "Technical Gear",
+        "sub_categories": "Stabilization Gear",
+        "aesthetic_impact": "Z-axis elimination, robotic precision",
+        "technical_trait": "Hyper-smooth, lack of footstep translation"
+    },
+    {
+        "term": "Dolly Track with Pneumatic Wheels",
+        "categories": "Technical Gear",
+        "sub_categories": "Stabilization Gear",
+        "aesthetic_impact": "Classic push-in, linear movement",
+        "technical_trait": "Perfectly flat Z-axis tracking"
+    },
+    {
+        "term": "Dolly Zoom (Vertigo Effect)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Psychological rupture, reality bending",
+        "technical_trait": "Simultaneous Z-axis dolly and counter-focal length zoom"
+    },
+    {
+        "term": "Double Focus Artifact",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Dreamlike, overlapping focal planes",
+        "technical_trait": "Beam-splitter or dual optical path rendering two sharp depths simultaneously"
+    },
+    {
+        "term": "Drone Aerial Orthogonal",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Geometric mapping, mechanical flight",
+        "technical_trait": "Z-axis unconstrained aerial translation with stabilized gimbal"
+    },
+    {
+        "term": "Dry Microburst",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Exploding dust ring with no rain",
+        "technical_trait": "Precipitation evaporating mid-air, causing a massive, dry downburst of cold air"
+    },
+    {
+        "term": "Dual Pixel CMOS AF",
+        "categories": "Technical Gear",
+        "sub_categories": "Sensor Types",
+        "aesthetic_impact": "Phase detection focus mapping",
+        "technical_trait": "Split pixel structure"
+    },
+    {
+        "term": "Dust and Lint",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Sharp, dark silhouettes",
+        "technical_trait": "Debris physically sitting on the film plane during scan"
+    },
+    {
+        "term": "Dust Devil Convective Updraft",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Swirling, localized dirt vortex",
+        "technical_trait": "Intense daytime surface heating creating a spinning column of air"
+    },
+    {
+        "term": "Dutch Angle (Canted Escarpment)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Angles & Elevation",
+        "aesthetic_impact": "Psychological unease, spatial disorientation",
+        "technical_trait": "Z-axis rotational roll off-plumb by 15-45 degrees"
+    },
+    {
+        "term": "E-6 Reversal Process",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Chemical Processes",
+        "aesthetic_impact": "Positive slide generation",
+        "technical_trait": "Extreme contrast, zero tolerance for exposure errors"
+    },
+    {
+        "term": "Earthshine Lunar Glow (Ashen Light)",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Faint illumination of the moon's dark side",
+        "technical_trait": "Sunlight bouncing off Earth's oceans/clouds onto the lunar surface"
+    },
+    {
+        "term": "Easyrig Vario 5",
+        "categories": "Technical Gear",
+        "sub_categories": "Stabilization Gear",
+        "aesthetic_impact": "Tethered handheld look",
+        "technical_trait": "Suspended weight physics, tether point pivot"
+    },
+    {
+        "term": "ECN-2 Processing",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Chemical Processes",
+        "aesthetic_impact": "True motion picture color baseline",
+        "technical_trait": "Low gamma, flat log-like color space"
+    },
+    {
+        "term": "Efflorescence (Salt Stains)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Chalky white structural bleeding",
+        "technical_trait": "Dissolved salts migrating to the surface of porous brick/concrete and crystallizing"
+    },
+    {
+        "term": "Emulsion Scratches",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Continuous horizontal/vertical lines",
+        "technical_trait": "Physical damage to film passing through camera gate"
+    },
+    {
+        "term": "Epidermal Forward Scattering",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Skin glow on grazing angles",
+        "technical_trait": "High-frequency forward transmission of light through the uppermost dead skin cells"
+    },
+    {
+        "term": "Extreme Close Up (ECU)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Sensory obsession",
+        "technical_trait": "Frame isolates a single facial feature (e.g., eyes only)"
+    },
+    {
+        "term": "Extreme Wide Shot (EWS)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Geographic isolation, dwarfed subject",
+        "technical_trait": "Subject occupies <5% of vertical frame height"
+    },
+    {
+        "term": "F-Stop f/64",
+        "categories": "Technical Gear",
+        "sub_categories": "Aperture Mechanics",
+        "aesthetic_impact": "Infinite depth of field, Ansel Adams style",
+        "technical_trait": "Noticeable diffraction softening, deep focus"
+    },
+    {
+        "term": "Faraday Effect Magneto-Optics",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Magnetic light rotation",
+        "technical_trait": "Magnetic fields altering the polarization plane of light within a dielectric"
+    },
+    {
+        "term": "Fata Morgana Superior Mirage",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Floating, inverted castles/ships",
+        "technical_trait": "Complex thermal inversion layering bending light rays down to the viewer"
+    },
+    {
+        "term": "Field Curvature",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Edges out of focus when center is sharp",
+        "technical_trait": "Focal plane is curved like a bowl rather than flat"
+    },
+    {
+        "term": "Film Grain (RMS 12)",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Distinct, organic noise structure",
+        "technical_trait": "Random silver halide crystal distribution"
+    },
+    {
+        "term": "Film Halation",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Red glowing aura around bright lights",
+        "technical_trait": "Light penetrating emulsion and reflecting off the base"
+    },
+    {
+        "term": "Film Splice Flash",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Sudden white frame with tape marks",
+        "technical_trait": "Physical cut and join between two rolls of film"
+    },
+    {
+        "term": "Fire Whirl (Firenado)",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Spinning pillar of flame",
+        "technical_trait": "Intense convective heat combining with turbulent crosswinds"
+    },
+    {
+        "term": "Fixed Pattern Noise",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Grid-like stationary noise in deep shadows",
+        "technical_trait": "Sensor manufacturing variations revealed by high gain"
+    },
+    {
+        "term": "Flange Focal Distance (Back Focus)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Infinite focus calibration",
+        "technical_trait": "Exact micrometer distance from lens mount to sensor plane"
+    },
+    {
+        "term": "Flashpoint Vapor Ignition",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Transparent, rippling heat before fire",
+        "technical_trait": "Volatile gases reaching ignition temperature without visible flame yet"
+    },
+    {
+        "term": "Floating Element Design",
+        "categories": "Technical Gear",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Consistent sharpness across focus range",
+        "technical_trait": "Complex internal lens grouping shifts"
+    },
+    {
+        "term": "Floor-Level Perspective",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Angles & Elevation",
+        "aesthetic_impact": "Ground-texture emphasis, stalking feeling",
+        "technical_trait": "Camera nodal point positioned at 0-5 inches from floor plane"
+    },
+    {
+        "term": "Fluid Head Pan Resistance",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Smooth mechanical horizontal drift",
+        "technical_trait": "Viscous dampening eliminating human micro-jitters during X-axis rotation"
+    },
+    {
+        "term": "Fluorescence Wavelength Shift",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Neon glowing under UV",
+        "technical_trait": "Material absorbing high-energy invisible UV light and re-emitting it as visible visible light"
+    },
+    {
+        "term": "Focal Plane Skew",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Disorienting selective focus",
+        "technical_trait": "Non-parallel alignment of sensor and subject planes"
+    },
+    {
+        "term": "Focus Breathing Artifact",
+        "categories": "Technical Gear",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Slight zooming effect when focusing",
+        "technical_trait": "Field of view shift, organic lens movement"
+    },
+    {
+        "term": "Focus Breathing Compression",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Subtle claustrophobia during focus pulls",
+        "technical_trait": "Focal length micro-zoom as internal element groups shift"
+    },
+    {
+        "term": "Focus Puller's Marks",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Clinical sharpness transition",
+        "technical_trait": "Pre-measured distance tape alignment mapping to specific lens barrel degrees"
+    },
+    {
+        "term": "Foma Fomapan 400",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "B&W Negative",
+        "aesthetic_impact": "Eastern Bloc vintage look, low contrast",
+        "technical_trait": "High base fog, beautiful classic halation"
+    },
+    {
+        "term": "Footroom Allowance",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Grounding for motion",
+        "technical_trait": "Space at the bottom of the frame to anchor full body movement"
+    },
+    {
+        "term": "Foreground Repoussoir",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Depth layering, voyeurism",
+        "technical_trait": "Dark/out-of-focus framing element on image edge pushing eye to center"
+    },
+    {
+        "term": "Foreshortening Distortion",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Aggressive 3D protrusion",
+        "technical_trait": "Wide angle lens exaggerating the size of objects close to the glass"
+    },
+    {
+        "term": "Formatt Hitech Firecrest ND",
+        "categories": "Technical Gear",
+        "sub_categories": "Optical Filters",
+        "aesthetic_impact": "Perfect color-neutral exposure reduction",
+        "technical_trait": "Zero IR pollution shift in deep shadows"
+    },
+    {
+        "term": "Foveon X3 Direct Image Sensor",
+        "categories": "Technical Gear",
+        "sub_categories": "Sensor Types",
+        "aesthetic_impact": "Incredible micro-contrast, no color interpolation",
+        "technical_trait": "Zero moire artifacts, true per-pixel color"
+    },
+    {
+        "term": "Freezing Rain Glaciation",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Glassy, heavy ice-coating on surfaces",
+        "technical_trait": "Supercooled liquid droplets freezing instantly upon mechanical impact"
+    },
+    {
+        "term": "Fresnel Effect Grazing Angle",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Edge-only reflectivity",
+        "technical_trait": "Surfaces becoming approaching 100% reflective when viewed at extreme shallow angles"
+    },
+    {
+        "term": "Fresnel Hard Light Collimation",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Crisp, razor-sharp shadow cuts",
+        "technical_trait": "Small relative source size focusing parallel light rays through stepped glass"
+    },
+    {
+        "term": "Frost Flowers (Ice Ribbons)",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Extruded, delicate ice petals",
+        "technical_trait": "Capillary action pushing sap/water out of plant stems in freezing temps"
+    },
+    {
+        "term": "Fujifilm Acros 100 II",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "B&W Negative",
+        "aesthetic_impact": "Flawless smooth gradients, inky blacks",
+        "technical_trait": "Super Fine-Sigma grain technology, zero reciprocity failure"
+    },
+    {
+        "term": "Fujifilm C200",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Color Negative",
+        "aesthetic_impact": "Budget cinematic look, warm greens",
+        "technical_trait": "Classic cubic grain, distinct red channel roll-off"
+    },
+    {
+        "term": "Fujifilm Eterna 500T",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Motion Picture",
+        "aesthetic_impact": "Ultra-low contrast, flat cinematic baseline",
+        "technical_trait": "Washed-out shadows, extreme highlight retention"
+    },
+    {
+        "term": "Fujifilm GF 110mm f/2 R LM WR",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "Medium format compression, biting sharpness",
+        "technical_trait": "Smooth out-of-focus transition, high contrast"
+    },
+    {
+        "term": "Fujifilm Natura 1600",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Color Negative",
+        "aesthetic_impact": "Luminous skin tones in extreme low light",
+        "technical_trait": "NP (Natural Photo) technology, cyan-biased shadows"
+    },
+    {
+        "term": "Fujifilm Neopan 1600",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "B&W Negative",
+        "aesthetic_impact": "High contrast street photography",
+        "technical_trait": "Deep shadow crushing, distinct mid-sized grain"
+    },
+    {
+        "term": "Fujifilm Pro 400H",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Color Negative",
+        "aesthetic_impact": "Cyan/green pastel shadows, airy highlights",
+        "technical_trait": "4th color layer technology, distinct overexposure curve"
+    },
+    {
+        "term": "Fujifilm Provia 100F",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Color Reversal (Slide)",
+        "aesthetic_impact": "Lifelike precision, moderate contrast",
+        "technical_trait": "RMS granularity of 8, ultra-fine resolution"
+    },
+    {
+        "term": "Fujifilm Reala 100",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Color Negative",
+        "aesthetic_impact": "Accurate skin reproduction under mixed light",
+        "technical_trait": "CS (Color Specific) 4-layer emulsion"
+    },
+    {
+        "term": "Fujifilm Superia X-TRA 400",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Color Negative",
+        "aesthetic_impact": "Gritty street look, magenta/green shifts",
+        "technical_trait": "4th color layer, prominent grain in mixed lighting"
+    },
+    {
+        "term": "Fujifilm Velvia 50",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Color Reversal (Slide)",
+        "aesthetic_impact": "Hyper-saturated landscapes, intense greens/magentas",
+        "technical_trait": "Extreme contrast, blocky shadows if underexposed"
+    },
+    {
+        "term": "Fujinon Premista 28-100mm T2.9",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Large format zoom, minimal breathing",
+        "technical_trait": "Color matched to prime lenses, high dynamic range preservation"
+    },
+    {
+        "term": "Fulgurite Glass Fusion",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Shattered, glassy tubes in sand",
+        "technical_trait": "Lightning strike melting silica sand into amorphous glass instantly"
+    },
+    {
+        "term": "Galactic Cirrus Dust",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Faint, ghostly stellar background structures",
+        "technical_trait": "Interstellar dust clouds reflecting the combined light of the Milky Way"
+    },
+    {
+        "term": "Galvanic Corrosion Mapping",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Localized metallic decay",
+        "technical_trait": "Pitting and destruction where two different metals contact in an electrolyte"
+    },
+    {
+        "term": "Gate Weave",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Slight vertical/horizontal jitter in motion",
+        "technical_trait": "Imperfect mechanical registration of film in projector gate"
+    },
+    {
+        "term": "Geared Head (Panavision)",
+        "categories": "Technical Gear",
+        "sub_categories": "Stabilization Gear",
+        "aesthetic_impact": "Mechanical, precise, repeatable moves",
+        "technical_trait": "Stepped diagonal panning, classic Hollywood feel"
+    },
+    {
+        "term": "Geared Head Diagonal",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Perfect 45-degree mechanical tracking",
+        "technical_trait": "Simultaneous operation of pan and tilt wheels for stepped diagonal lines"
+    },
+    {
+        "term": "Geothermal Steam Venting",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "High-velocity, opaque white exhaust",
+        "technical_trait": "Subterranean superheated water expanding rapidly into atmospheric pressure"
+    },
+    {
+        "term": "Ghosting Flare",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Distinct, repeating geometric shapes",
+        "technical_trait": "Aperture blade reflections on lens element coatings"
+    },
+    {
+        "term": "Glan-Taylor Prism Birefringence",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Extreme optical splitting",
+        "technical_trait": "Isolating specific polarizations for analytical physics applications"
+    },
+    {
+        "term": "Global Shutter Mechanism",
+        "categories": "Technical Gear",
+        "sub_categories": "Sensor Types",
+        "aesthetic_impact": "Zero motion skew, perfect flash sync",
+        "technical_trait": "Slightly reduced base dynamic range"
+    },
+    {
+        "term": "Glory (Optical Phenomenon)",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Rainbow halo around the viewer's shadow",
+        "technical_trait": "Backscattering of light by microscopic droplets in mist"
+    },
+    {
+        "term": "Gobo Shadow Breakup",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Patterned, environmental light",
+        "technical_trait": "Physical stencil placed in front of light to cast shadows (blinds, leaves)"
+    },
+    {
+        "term": "Golden Hour Long-Path Absorption",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Warm, honey-toned extreme shadow lengths",
+        "technical_trait": "Atmosphere stripping blue light, transmitting only red/yellow wavelengths"
+    },
+    {
+        "term": "Golden Ratio (Fibonacci) Framing",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Classical geometric harmony",
+        "technical_trait": "Visual weight distributed along the 1:1.618 logarithmic spiral"
+    },
+    {
+        "term": "Graupel Bounce Accumulation",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Styrofoam-like soft hail",
+        "technical_trait": "Supercooled water droplets freezing onto falling snowflakes"
+    },
+    {
+        "term": "Green Flash Dispersion",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Emerald burst at the horizon line",
+        "technical_trait": "Refractive separation of solar spectrum as the sun dips below the horizon"
+    },
+    {
+        "term": "Green/Magenta Tint Shift (Duv)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Sickly fluorescent or pure LED",
+        "technical_trait": "Deviation from the perfect Planckian locus on the blackbody curve"
+    },
+    {
+        "term": "Greenland Ice Sheet Albedo",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Blindingly pure white vastness",
+        "technical_trait": "Maximized shortwave radiation reflectance on unpolluted ice"
+    },
+    {
+        "term": "Ground-Splash Micro-Droplets",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Aura of water at ankle level",
+        "technical_trait": "Kinetic impact of macro-droplets shattering into secondary aerosol"
+    },
+    {
+        "term": "Haboob Dust Wall",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Apocalyptic, solid wall of sand",
+        "technical_trait": "Intense microburst pushing a massive gravity current of dust"
+    },
+    {
+        "term": "Handheld Micro-Jitters",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Documentary realism, organic imperfection",
+        "technical_trait": "Unstabilized human breathing and heartbeat transferring to sensor"
+    },
+    {
+        "term": "Handheld Shoulder Rig",
+        "categories": "Technical Gear",
+        "sub_categories": "Stabilization Gear",
+        "aesthetic_impact": "Documentary grittiness, human connection",
+        "technical_trait": "Micro-jitters, breathing-induced vertical sway"
+    },
+    {
+        "term": "Hasselblad 100c Medium Format Sensor",
+        "categories": "Technical Gear",
+        "sub_categories": "Sensor Types",
+        "aesthetic_impact": "Unmatched color depth, true 16-bit color",
+        "technical_trait": "Massive dynamic range, slow readout speed"
+    },
+    {
+        "term": "Hasselblad HC 100mm f/2.2",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "Medium format rendering, precise tonality",
+        "technical_trait": "Leaf shutter synchronization, smooth tonal transitions"
+    },
+    {
+        "term": "Hawk V-Lite Anamorphic 45mm",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Squeezed bokeh, sharp center, vintage feel",
+        "technical_trait": "1.3x or 2x squeeze, distinctive Hawk coating flares"
+    },
+    {
+        "term": "Haze-Induced Rayleigh Fade",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Loss of macro-contrast over distance",
+        "technical_trait": "Progressive occlusion of Z-depth due to molecular oxygen scattering"
+    },
+    {
+        "term": "Headroom Allowance",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Subject grounding",
+        "technical_trait": "Specific percentage of negative space between subject's skull and top frame"
+    },
+    {
+        "term": "Heiligenschein Effect",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Glowing aura around the subject's head",
+        "technical_trait": "Dew drops acting as retroreflectors bouncing light straight back"
+    },
+    {
+        "term": "Helicoid Focus Mechanism",
+        "categories": "Technical Gear",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Tactile manual focus tracking",
+        "technical_trait": "Precise barrel extension"
+    },
+    {
+        "term": "Helicopter Gimbal (Shotover)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "High-altitude stabilized tracking",
+        "technical_trait": "Multi-axis gyro stabilization counteracting rotor vibration"
+    },
+    {
+        "term": "Hemispherical Dome Light",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Even, outdoor overcast simulation",
+        "technical_trait": "Infinite sphere casting uniform, shadowless light inward from all angles"
+    },
+    {
+        "term": "High-Angle (Bird's Eye View)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Angles & Elevation",
+        "aesthetic_impact": "Subject vulnerability, geographic mapping",
+        "technical_trait": "Y-axis positive elevation looking down, ground isolated"
+    },
+    {
+        "term": "High-Key Lighting Ratio (1:1)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Upbeat, shadowless, flat",
+        "technical_trait": "Fill light intensity exactly matching key light, eliminating all contrast"
+    },
+    {
+        "term": "Hoarfrost Needle Crystallization",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Spiky, fragile ice structures",
+        "technical_trait": "Direct vapor-to-solid deposition on freezing surfaces"
+    },
+    {
+        "term": "Horizon Line (Lower Third)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Airy freedom, sky dominance",
+        "technical_trait": "Horizon placed low, emphasizing weather and atmosphere"
+    },
+    {
+        "term": "Horizon Line (Upper Third)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Grounded weight, earth dominance",
+        "technical_trait": "Horizon placed high, compressing the sky"
+    },
+    {
+        "term": "Hydraulic Jump Turbulance",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Violent, frothing stationary wave",
+        "technical_trait": "High-velocity liquid abruptly slowing and rising in height"
+    },
+    {
+        "term": "Hydroplaning Surface Layer",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Mirror-like sheen on asphalt",
+        "technical_trait": "Continuous, unbroken film of water preventing ground texture rendering"
+    },
+    {
+        "term": "Hyperfocal Distance Focus",
+        "categories": "Technical Gear, Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Maximum depth of field for landscapes | Maximum usable depth of field",
+        "technical_trait": "Near foreground to infinity sharpness | Focus set where everything from half the distance to infinity is sharp"
+    },
+    {
+        "term": "Ilford Delta 3200",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "B&W Negative",
+        "aesthetic_impact": "Extreme low-light, atmospheric texture",
+        "technical_trait": "Massive grain structure, low base contrast"
+    },
+    {
+        "term": "Ilford FP4 Plus 125",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "B&W Negative",
+        "aesthetic_impact": "Silky midtones, high acutance",
+        "technical_trait": "Fine grain, excellent exposure latitude"
+    },
+    {
+        "term": "Ilford HP5 Plus 400",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "B&W Negative",
+        "aesthetic_impact": "Versatile classic B&W, moderate contrast",
+        "technical_trait": "Traditional grain structure, immense push-processing latitude"
+    },
+    {
+        "term": "Ilford SFX 200",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "B&W Near-Infrared",
+        "aesthetic_impact": "Dark dramatic skies, glowing skin",
+        "technical_trait": "Extended red sensitivity up to 740nm"
+    },
+    {
+        "term": "Image-Based Lighting (IBL)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Hyper-realistic environmental matching",
+        "technical_trait": "Using a 32-bit HDRI panorama to define all incoming light and reflection data"
+    },
+    {
+        "term": "Index of Refraction (IOR 1.5)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Standard glass/plastic reflectiveness",
+        "technical_trait": "Ratio of the speed of light in a vacuum to the speed in the material"
+    },
+    {
+        "term": "Inferior Mirage Heat Shimmer",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Water-like reflections on hot asphalt",
+        "technical_trait": "Hot surface air bending skylight upward into the viewer's eye"
+    },
+    {
+        "term": "Infinity Focus",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Landscape and celestial clarity",
+        "technical_trait": "Lens elements retracted to parallelize incoming light rays"
+    },
+    {
+        "term": "Infrared Converted Sensor (720nm)",
+        "categories": "Technical Gear",
+        "sub_categories": "Sensor Types",
+        "aesthetic_impact": "Surreal landscape tones, white foliage",
+        "technical_trait": "Block visible light, distinct IR glow"
+    },
+    {
+        "term": "Insert Shot",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Narrative clue emphasis",
+        "technical_trait": "Isolated tight framing of a specific prop or mechanical action"
+    },
+    {
+        "term": "Instax Mini",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Instant Film",
+        "aesthetic_impact": "High contrast, sharp edges, cold tones",
+        "technical_trait": "Integral film pack, distinct white border frame"
+    },
+    {
+        "term": "Inverse-Square Law Falloff",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Rapid light decay",
+        "technical_trait": "Illumination intensity dropping exponentially inversely proportional to the square of the distance"
+    },
+    {
+        "term": "IR Cut Filter",
+        "categories": "Technical Gear",
+        "sub_categories": "Optical Filters",
+        "aesthetic_impact": "Preventing magenta pollution in blacks",
+        "technical_trait": "Correcting digital sensor near-IR sensitivity"
+    },
+    {
+        "term": "IronGlass Rehoused Helios 44-2 58mm",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Swirly bokeh, subject isolation",
+        "technical_trait": "Petzval-like bokeh, low edge sharpness"
+    },
+    {
+        "term": "Irradiance Map Computation",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Accurate ambient light gathering",
+        "technical_trait": "Pre-calculated hemisphere of incoming light for diffuse surfaces"
+    },
+    {
+        "term": "Isometric Perspective",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Video game/technical diagram logic",
+        "technical_trait": "30-degree camera elevation retaining parallel non-converging lines"
+    },
+    {
+        "term": "Isotropic Specular Lobe",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Perfectly circular highlights",
+        "technical_trait": "Uniform microscopic surface roughness scattering light equally in all directions"
+    },
+    {
+        "term": "JPEG Compression Artifacts",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Blocky, localized detail loss",
+        "technical_trait": "8x8 pixel macroblock quantization"
+    },
+    {
+        "term": "Katabatic Wind Flow",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Rushing, heavy, freezing fog",
+        "technical_trait": "High-density cold air draining gravitationally down a topographic slope"
+    },
+    {
+        "term": "Kelvin-Helmholtz Instability",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Ocean-wave shaped cloud structures",
+        "technical_trait": "Velocity shear in a continuous fluid causing rolling vortex dynamics"
+    },
+    {
+        "term": "Kerr Effect Electro-Optics",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Electric light manipulation",
+        "technical_trait": "Changes in the refractive index of a material in response to an applied electric field"
+    },
+    {
+        "term": "Keystone Effect Correction",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Architectural perfection",
+        "technical_trait": "Tilt-shift lens making all vertical lines parallel despite angle"
+    },
+    {
+        "term": "Kino Flo 4Bank Fluorescent",
+        "categories": "Technical Gear",
+        "sub_categories": "Lighting Gear",
+        "aesthetic_impact": "Wrapping, linear soft light",
+        "technical_trait": "Distinctive rectangular eye-light reflection"
+    },
+    {
+        "term": "Kodak Aerochrome",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Infrared Color",
+        "aesthetic_impact": "Hot pink/red foliage, dark skies",
+        "technical_trait": "Color infrared sensitive, requires yellow/orange filter"
+    },
+    {
+        "term": "Kodak Double-X 5222",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "B&W Motion Picture",
+        "aesthetic_impact": "Classic Hollywood cinema noir look",
+        "technical_trait": "Unpredictable halation, gritty contrast curve"
+    },
+    {
+        "term": "Kodak Ektachrome E100",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Color Reversal (Slide)",
+        "aesthetic_impact": "Incredible true-to-life color, high contrast",
+        "technical_trait": "Zero grain perception, extremely narrow exposure latitude"
+    },
+    {
+        "term": "Kodak Ektar 100",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Kodak Color Negative",
+        "aesthetic_impact": "Ultra-vivid saturation, intense reds/blues",
+        "technical_trait": "Highest resolution color negative, micro-contrast"
+    },
+    {
+        "term": "Kodak Ektar H35",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Specialty Negative",
+        "aesthetic_impact": "Half-frame vintage aesthetic",
+        "technical_trait": "Pronounced vertical grain orientation, low dynamic range"
+    },
+    {
+        "term": "Kodak Full-Frame CCD Sensor (Vintage)",
+        "categories": "Technical Gear",
+        "sub_categories": "Sensor Types",
+        "aesthetic_impact": "Organic film-like rendering, distinct magenta cast",
+        "technical_trait": "Low dynamic range, beautiful base ISO colors"
+    },
+    {
+        "term": "Kodak Gold 200",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Kodak Color Negative",
+        "aesthetic_impact": "Nostalgic warmth, yellow bias",
+        "technical_trait": "Classic consumer grain structure, golden hour glow"
+    },
+    {
+        "term": "Kodak Kodachrome 64",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Color Reversal (Slide)",
+        "aesthetic_impact": "Iconic archival color, dense blacks",
+        "technical_trait": "K-14 subtractive reversal process, microscopic dye clouds"
+    },
+    {
+        "term": "Kodak Portra 160",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Kodak Color Negative",
+        "aesthetic_impact": "Subtle saturation, low contrast",
+        "technical_trait": "Micro-fine grain, optimal for studio scanning"
+    },
+    {
+        "term": "Kodak Portra 400",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Kodak Color Negative",
+        "aesthetic_impact": "Warm skin tones, pastel highlights",
+        "technical_trait": "T-GRAIN emulsion, forgiving overexposure"
+    },
+    {
+        "term": "Kodak Portra 800",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Kodak Color Negative",
+        "aesthetic_impact": "Punchy colors, slightly raised black levels",
+        "technical_trait": "Distinct chunky grain structure in shadows"
+    },
+    {
+        "term": "Kodak Pro Image 100",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Kodak Color Negative",
+        "aesthetic_impact": "Muted, classic 90s portrait look",
+        "technical_trait": "Heat-resistant emulsion, moderate sharpness"
+    },
+    {
+        "term": "Kodak T-MAX 400",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "B&W Negative",
+        "aesthetic_impact": "Clinical sharpness, smooth tonality",
+        "technical_trait": "Tabular grain emulsion, high resolving power"
+    },
+    {
+        "term": "Kodak T-MAX P3200",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "B&W Negative",
+        "aesthetic_impact": "Extreme low-light texture, distinct grain",
+        "technical_trait": "Golf-ball sized grain, beautiful mid-tones"
+    },
+    {
+        "term": "Kodak Tri-X 400",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "B&W Negative",
+        "aesthetic_impact": "Classic gritty photojournalism look",
+        "technical_trait": "Classic cubic grain, high contrast, deep blacks"
+    },
+    {
+        "term": "Kodak Ultramax 400",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Kodak Color Negative",
+        "aesthetic_impact": "High contrast, versatile lighting response",
+        "technical_trait": "Pronounced grain, slightly cool shadow shift"
+    },
+    {
+        "term": "Kodak Vision3 250D 5207",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Kodak Motion Picture",
+        "aesthetic_impact": "Daylight balanced, natural skin tones",
+        "technical_trait": "Moderate grain, high exposure latitude"
+    },
+    {
+        "term": "Kodak Vision3 500T 5219",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Kodak Motion Picture",
+        "aesthetic_impact": "Tungsten balanced, exceptional shadow detail",
+        "technical_trait": "Fine grain in highlights, blue-bias in daylight"
+    },
+    {
+        "term": "Kodak Vision3 50D 5203",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Kodak Motion Picture",
+        "aesthetic_impact": "Ultra-fine grain, rich saturation",
+        "technical_trait": "Slowest color negative, extreme resolving power"
+    },
+    {
+        "term": "Kowa Prominar Anamorphic",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Low contrast, easily flared, lightweight",
+        "technical_trait": "Warm yellow/orange flares, distinct spherical aberration"
+    },
+    {
+        "term": "Lambert's Cosine Law",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Mathematical spherical shading",
+        "technical_trait": "Radiant intensity is directly proportional to the cosine of the angle between light and surface normal"
+    },
+    {
+        "term": "Lambertian Diffuse Reflectance",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Chalky, perfectly matte surface",
+        "technical_trait": "Ideal matte surface that scatters incident light equally in all entire hemispheres"
+    },
+    {
+        "term": "Laminar Flow Smoke",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Perfectly smooth, glass-like smoke streams",
+        "technical_trait": "Uninterrupted fluid dynamics with zero turbulent mixing"
+    },
+    {
+        "term": "Large Format 65mm Digital",
+        "categories": "Technical Gear",
+        "sub_categories": "Sensor Types",
+        "aesthetic_impact": "Immersive field of view, extreme depth separation",
+        "technical_trait": "Specific 65mm focal plane compression"
+    },
+    {
+        "term": "Lead Room (Nose Room)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Open future, vector of motion",
+        "technical_trait": "Negative space provided in the direction the subject is looking/moving"
+    },
+    {
+        "term": "Leica Noctilux-M 50mm f/0.95 ASPH",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "The 'Leica Look', extreme subject pop",
+        "technical_trait": "Vignetting wide open, distinct background swirl"
+    },
+    {
+        "term": "Leica Summicron-M 35mm f/2",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "Street photography standard, punchy micro-contrast",
+        "technical_trait": "Corner falloff, 3D pop effect"
+    },
+    {
+        "term": "Leica Summilux-C 21mm T1.4",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Incredible low light performance, punchy contrast",
+        "technical_trait": "Compact profile, minimal color fringing"
+    },
+    {
+        "term": "Leitz Thalia 35mm",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Large format coverage, classic Leica look",
+        "technical_trait": "Smooth transitioning out of focus areas, 60mm image circle"
+    },
+    {
+        "term": "Lens Breathing",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Field of view shift during focus pull",
+        "technical_trait": "Focal length change as internal elements move"
+    },
+    {
+        "term": "Lens Compression",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Flattened spatial relations",
+        "technical_trait": "Telephoto lens causing background elements to appear massive and close"
+    },
+    {
+        "term": "Lens Nodal Slide",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Mechanics",
+        "aesthetic_impact": "Zero distortion panoramas",
+        "technical_trait": "Calibrating the lens entrance pupil over the tripod rotation axis"
+    },
+    {
+        "term": "Lens Whacking (Free-lensing)",
+        "categories": "Technical Gear",
+        "sub_categories": "Misc Optics",
+        "aesthetic_impact": "Disconnected lens, light leaks",
+        "technical_trait": "Unpredictable focal plane, extreme organic light bleed"
+    },
+    {
+        "term": "Lenticular Cloud Station",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "UFO-like stacked disk clouds",
+        "technical_trait": "Stable, standing waves of air forming over mountain peaks"
+    },
+    {
+        "term": "Light Leaks (Bellows)",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Soft, localized fogging",
+        "technical_trait": "Pinholes in camera bellows letting stray light hit film"
+    },
+    {
+        "term": "Light Leaks (Hinge)",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Sharp red streaks on film edge",
+        "technical_trait": "Failing light seals on camera back door"
+    },
+    {
+        "term": "Linear Light Decay",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Unnatural, flat light throw",
+        "technical_trait": "Light intensity dropping directly 1:1 with distance, ignoring physical reality"
+    },
+    {
+        "term": "Linear Polarizer Filter",
+        "categories": "Technical Gear",
+        "sub_categories": "Optical Filters",
+        "aesthetic_impact": "Reflection elimination, sky darkening",
+        "technical_trait": "Deepened blue skies, removal of specular bounce"
+    },
+    {
+        "term": "Lomo Square Front Anamorphic",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Wild geometric distortion, chaotic flares",
+        "technical_trait": "Pincushion distortion, uncorrected optical flaws"
+    },
+    {
+        "term": "Lomo Standard Speed 50mm",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Soviet era optical design, gritty texture",
+        "technical_trait": "Swirly bokeh, heavy chromatic aberration on edges"
+    },
+    {
+        "term": "LomoChrome Metropolis",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Experimental",
+        "aesthetic_impact": "Desaturated, high contrast, gritty",
+        "technical_trait": "Muted color palette, aggressive halation"
+    },
+    {
+        "term": "LomoChrome Purple",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Experimental",
+        "aesthetic_impact": "Surreal psychedelic landscapes",
+        "technical_trait": "Shifts greens to purple/magenta, false-color emulsion"
+    },
+    {
+        "term": "Lomography Color Negative 800",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Specialty Negative",
+        "aesthetic_impact": "Vibrant, slightly unhinged colors",
+        "technical_trait": "Chunky grain, color shifts in deep shadows"
+    },
+    {
+        "term": "Longitudinal Chromatic Aberration (LoCA)",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Color fringing in out-of-focus areas",
+        "technical_trait": "Green fringing behind focal plane, magenta in front"
+    },
+    {
+        "term": "Loop Lighting",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Slightly mysterious, shadowed",
+        "technical_trait": "Key light lowered and moved further side than Rembrandt, casting nose shadow down to lip"
+    },
+    {
+        "term": "Low-Angle (Worm's Eye View)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Angles & Elevation",
+        "aesthetic_impact": "Subject dominance, monumental scale",
+        "technical_trait": "Y-axis negative elevation, extreme converging verticals"
+    },
+    {
+        "term": "Low-Key Lighting Ratio (8:1)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Noir, extreme shadow dominance",
+        "technical_trait": "Key light is eight times brighter than the fill, creating deep black voids"
+    },
+    {
+        "term": "Low-Mode Steadicam",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Floating ground-level pursuit",
+        "technical_trait": "Gimbal inverted to place the lens inches from the terrain"
+    },
+    {
+        "term": "Lunar Corona Diffraction",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Multi-colored rings tight to the moon",
+        "technical_trait": "Quantum diffraction of light around individual water droplets"
+    },
+    {
+        "term": "Lunar Terminator Line",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Extreme crater contrast, harsh division",
+        "technical_trait": "The moving dividing line between the illuminated and unilluminated lunar surface"
+    },
+    {
+        "term": "Lux Illuminance",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Absolute light brightness metric",
+        "technical_trait": "Measure of luminous flux per unit area on a surface"
+    },
+    {
+        "term": "Mach Stem Shockwave",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Invisible, destructive wall of pressure",
+        "technical_trait": "Intersection of an incident shockwave and a reflected shockwave"
+    },
+    {
+        "term": "Macro 1:1 Focus",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Microscopic revelation, abstract texture",
+        "technical_trait": "Lens entrance pupil extended for life-size sensor projection"
+    },
+    {
+        "term": "Macro 1:1 Reproduction Ratio",
+        "categories": "Technical Gear",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Life-size sensor projection",
+        "technical_trait": "Paper-thin depth of field, extreme detail reveal"
+    },
+    {
+        "term": "Macro Extension Tube (25mm)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Extreme focal plane shift",
+        "technical_trait": "Physical air-gap separating lens from sensor to eliminate infinity focus"
+    },
+    {
+        "term": "Macro Extension Tubes",
+        "categories": "Technical Gear",
+        "sub_categories": "Misc Optics",
+        "aesthetic_impact": "Extreme close up without glass elements",
+        "technical_trait": "Light loss, razor thin focal plane"
+    },
+    {
+        "term": "Mamiya Sekor C 80mm f/1.9",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "Fastest medium format lens, distinct roll-off",
+        "technical_trait": "Shallow DOF on 645, subtle glowing highlights"
+    },
+    {
+        "term": "Mammatus Cloud Down-Drafts",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Bulging, cellular pouch-like skies",
+        "technical_trait": "Sinking cold, moist air pockets beneath an anvil cloud"
+    },
+    {
+        "term": "Matte Box French Flag",
+        "categories": "Technical Gear",
+        "sub_categories": "Optical Filters",
+        "aesthetic_impact": "Blocking extreme overhead sun flares",
+        "technical_trait": "High contrast retention, no lens wash"
+    },
+    {
+        "term": "Mechanical Vignetting",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Hard black corners",
+        "technical_trait": "Physical obstruction from matte boxes or filters"
+    },
+    {
+        "term": "Medium Close Up (MCU)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Intimate engagement",
+        "technical_trait": "Frame cuts subject at the chest/shoulders"
+    },
+    {
+        "term": "Medium Shot (MS)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Neutral conversational framing",
+        "technical_trait": "Frame cuts subject at the waist"
+    },
+    {
+        "term": "Metallic Reflectance (F0)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Colored reflections, zero diffuse",
+        "technical_trait": "Conductors reflecting light with specific tinting based on the metal's base color"
+    },
+    {
+        "term": "Metallic Roughness Workflow",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Modern engine standard rendering",
+        "technical_trait": "Defining materials strictly through base color, metallic binary, and roughness maps"
+    },
+    {
+        "term": "Metamerism Color Matching",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Colors shifting under different lights",
+        "technical_trait": "Two materials appearing identical under daylight but drastically different under tungsten"
+    },
+    {
+        "term": "Methane Clathrate Bubbles",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Frozen white discs suspended in dark ice",
+        "technical_trait": "Methane gas trapped and frozen within a molecular lattice of water"
+    },
+    {
+        "term": "Meyer-Optik Trioplan 100mm f/2.8",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "Soap bubble bokeh, dreamy atmosphere",
+        "technical_trait": "Over-corrected spherical aberration, low contrast"
+    },
+    {
+        "term": "Micro-Contrast Focus Peaking",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Textural pop, high-frequency detail",
+        "technical_trait": "Maximum acutance rendering on fine surface structures"
+    },
+    {
+        "term": "Microburst Downdraft",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Violent, localized rain bomb",
+        "technical_trait": "Intense column of sinking cooled air slamming the ground"
+    },
+    {
+        "term": "Microfacet Roughness GGX",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Realistic blurred reflections",
+        "technical_trait": "Statistical distribution of microscopic mirrors determining highlight spread"
+    },
+    {
+        "term": "Mie Phase Function Anisotropy",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Directional cloudy volume",
+        "technical_trait": "Forward-biased scattering inside dense, milky materials like wax or milk"
+    },
+    {
+        "term": "Mie Scattering Fog",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Thick, white, opaque atmosphere",
+        "technical_trait": "Light scattered equally across all wavelengths by large water droplets"
+    },
+    {
+        "term": "Mitchell Mount Tie-Down",
+        "categories": "Technical Gear",
+        "sub_categories": "Stabilization Gear",
+        "aesthetic_impact": "Rock solid camera lockdown",
+        "technical_trait": "Zero vibration on locked-off shots"
+    },
+    {
+        "term": "Mole-Richardson 10K Fresnel",
+        "categories": "Technical Gear",
+        "sub_categories": "Lighting Gear",
+        "aesthetic_impact": "Hard, punchy sunlight simulation",
+        "technical_trait": "Crisp shadows, distinct glass fresnel lens pattern"
+    },
+    {
+        "term": "Motion Blur Shutter Angle (360)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Smeary, dreamlike temporal movement",
+        "technical_trait": "Sensor exposed for the entire frame duration during movement"
+    },
+    {
+        "term": "Motion Blur Shutter Angle (45)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Staccato, hyper-crisp combat movement",
+        "technical_trait": "Sensor exposed for a fraction of the frame, freezing individual movement ticks"
+    },
+    {
+        "term": "Motion Control Robot Arm (Bolt)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Superhuman precision, temporal freezing",
+        "technical_trait": "Pre-programmed high-speed macro mechanical movement"
+    },
+    {
+        "term": "Motivated Practical Lighting",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Diegetic realistic light",
+        "technical_trait": "Lighting appearing to originate entirely from visible props (lamps, candles) in the scene"
+    },
+    {
+        "term": "Multiple-Scattering Integration",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Soft, glowing internal volume",
+        "technical_trait": "Photons bouncing millions of times inside a medium before escaping"
+    },
+    {
+        "term": "Mustache Distortion",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Wavy horizon lines",
+        "technical_trait": "Complex mix of barrel and pincushion distortion"
+    },
+    {
+        "term": "Nadir Angle",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Angles & Elevation",
+        "aesthetic_impact": "Extreme towering effect, ceiling geometry",
+        "technical_trait": "Absolute 90-degree upward Y-axis pitch"
+    },
+    {
+        "term": "Nautical Twilight (-12\u00b0)",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Deep blue silhouette isolation",
+        "technical_trait": "Horizon is faintly visible, atmosphere scatters a dark blue gradient"
+    },
+    {
+        "term": "Needle Ice Extrusion",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Vertical columns of ice pushing up dirt",
+        "technical_trait": "Sub-surface groundwater freezing and expanding upward through porous soil"
+    },
+    {
+        "term": "Negative Fill",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Deepening contrast on one side",
+        "technical_trait": "Placing black flags to absorb ambient bounce and force absolute darkness on the shadow side"
+    },
+    {
+        "term": "Negative Fill (Floppy)",
+        "categories": "Technical Gear",
+        "sub_categories": "Lighting Gear",
+        "aesthetic_impact": "Deepening shadows, increasing contrast",
+        "technical_trait": "Absorbing ambient bounce, creating shape"
+    },
+    {
+        "term": "Negative Space Dominance",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Isolation, existential dread",
+        "technical_trait": ">80% of frame consists of empty/uniform background data"
+    },
+    {
+        "term": "Newton's Rings",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Rainbow concentric circles",
+        "technical_trait": "Interference pattern between film base and scanner glass"
+    },
+    {
+        "term": "Nikon AI-s 105mm f/2.5",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "Classic portrait rendering, crisp focus",
+        "technical_trait": "Legendary resolving power, cool color rendition"
+    },
+    {
+        "term": "Nikon NIKKOR Z 58mm f/0.95 S Noct",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "Absolute darkness penetration, ultra-thin DOF",
+        "technical_trait": "Zero sagittal coma flare, massive glass rendering"
+    },
+    {
+        "term": "Noctilucent Cloud Reflection",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Electric blue clouds long after dark",
+        "technical_trait": "Ice crystals in the mesosphere catching sunlight while the earth is completely dark"
+    },
+    {
+        "term": "Nodal Point Alignment",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Angles & Elevation",
+        "aesthetic_impact": "Zero parallax panoramic stitching",
+        "technical_trait": "Lens rotated exactly on its optical entrance pupil"
+    },
+    {
+        "term": "Nodal Point Pan",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Spatial mapping without shifting perspective",
+        "technical_trait": "Rotating the sensor precisely on the lens optical center"
+    },
+    {
+        "term": "Normal Mapping",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Fake geometric micro-detail",
+        "technical_trait": "Bending surface normals to simulate depth without changing the actual silhouette"
+    },
+    {
+        "term": "Oblique Angle",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Angles & Elevation",
+        "aesthetic_impact": "Dynamic diagonal energy",
+        "technical_trait": "Non-orthogonal alignment to primary architectural lines"
+    },
+    {
+        "term": "OConnor 2575D Fluid Head",
+        "categories": "Technical Gear",
+        "sub_categories": "Stabilization Gear",
+        "aesthetic_impact": "Heavy cinema tracking, perfect counterbalance",
+        "technical_trait": "Smooth pans and tilts, zero backlash"
+    },
+    {
+        "term": "Optical Activity Rotatory Power",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Twisting light waves",
+        "technical_trait": "Chiral molecules rotating the orientation of linearly polarized light passing through"
+    },
+    {
+        "term": "Optical Viewfinder (Director's)",
+        "categories": "Technical Gear",
+        "sub_categories": "Misc Optics",
+        "aesthetic_impact": "Pre-visualization composition",
+        "technical_trait": "Ground glass framing lines"
+    },
+    {
+        "term": "Optical Vignetting",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Gradual light falloff towards corners",
+        "technical_trait": "Cat's eye/swirling bokeh at image edges wide open"
+    },
+    {
+        "term": "Oren-Nayar Reflectance",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Rough, dusty, moon-like surface",
+        "technical_trait": "Micro-roughness model accounting for shadowing and masking of microscopic pits"
+    },
+    {
+        "term": "Orographically Lifted Fog",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Fog crawling up mountain sides",
+        "technical_trait": "Air forced to ascend a topological barrier, cooling to its dew point"
+    },
+    {
+        "term": "Orthogonal Projection",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Flat graphic novel aesthetic",
+        "technical_trait": "Telephoto compression removing all Z-axis depth cues"
+    },
+    {
+        "term": "Orwo Wolfen NC500",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Color Motion Picture",
+        "aesthetic_impact": "Desaturated, earthy tones, cinematic",
+        "technical_trait": "Non-remjet color negative, coarse grain structure"
+    },
+    {
+        "term": "Over-the-Shoulder (Clean)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Angles & Elevation",
+        "aesthetic_impact": "Isolated conversational view",
+        "technical_trait": "Camera positioned behind subject without rendering their mass"
+    },
+    {
+        "term": "Over-the-Shoulder (Dirty)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Angles & Elevation",
+        "aesthetic_impact": "Conversational intimacy, spatial relation",
+        "technical_trait": "Foreground subject shoulder/head intruding edge of frame"
+    },
+    {
+        "term": "Ozone Depletion UV Transmission",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Harsh, stark, high-contrast sunlight",
+        "technical_trait": "Lack of O3 absorption causing higher UV radiation and brutal highlight clipping"
+    },
+    {
+        "term": "P+S Technik Evolution 2X",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Kowa anamorphic recreation, small footprint",
+        "technical_trait": "Warm flare, strong astigmatism at edges"
+    },
+    {
+        "term": "Panavision C-Series Anamorphic",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Vintage anamorphic flares, soft edges",
+        "technical_trait": "Distinctive edge falloff, horizontal streaking"
+    },
+    {
+        "term": "Panavision Primo 70 Series",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Ultra-high resolution, matched colorimetry",
+        "technical_trait": "70mm large format sensor coverage, micro-contrast"
+    },
+    {
+        "term": "Panavision T-Series Anamorphic",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "High contrast anamorphic, sharp center",
+        "technical_trait": "Controlled flaring, edge-to-edge sharpness"
+    },
+    {
+        "term": "Pancro Mitchell Diffusion",
+        "categories": "Technical Gear",
+        "sub_categories": "Optical Filters",
+        "aesthetic_impact": "Classic golden-era Hollywood glow",
+        "technical_trait": "Resolving power intact while softening features"
+    },
+    {
+        "term": "Parallax Occlusion Mapping",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Deep texture without geometry",
+        "technical_trait": "Ray-tracing texture coordinates to simulate steep depth from an angle"
+    },
+    {
+        "term": "Parallax Shift",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "3D depth cue generation",
+        "technical_trait": "Foreground objects moving faster across the sensor than background objects"
+    },
+    {
+        "term": "Parhelia (Sun Dogs)",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Bright glowing spots flanking the sun",
+        "technical_trait": "Plate-shaped ice crystals acting as prisms aligning horizontally"
+    },
+    {
+        "term": "Participating Media Density",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Foggy liquid or gas suspension",
+        "technical_trait": "Mathematical coefficient determining how quickly light is absorbed vs scattered"
+    },
+    {
+        "term": "Patina / Surface Oxidation",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Aged, green-tinted metal",
+        "technical_trait": "Chemical weathering creating a rough, non-conductive dielectric layer over metal"
+    },
+    {
+        "term": "Pentax 67 105mm f/2.4",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "Iconic medium format portrait look, smooth gradients",
+        "technical_trait": "Radioactive thoriated glass, yellow color shift, massive bokeh"
+    },
+    {
+        "term": "Perspective Distortion (Extension)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Exaggerated Z-axis space",
+        "technical_trait": "Ultra-wide lens rendering foreground massive and background infinitesimally small"
+    },
+    {
+        "term": "Petrichor Aerosolization",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Mist rising from dry earth at first rain",
+        "technical_trait": "Geosmin released from soil via the mechanical impact of raindrops"
+    },
+    {
+        "term": "Petzval 85mm f/2.2 Art Lens",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "Extreme swirly bokeh, center sharpness only",
+        "technical_trait": "Waterhouse aperture plates, brass housing optical traits"
+    },
+    {
+        "term": "Phase One Schneider Kreuznach 80mm",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "Unparalleled resolving power, true color",
+        "technical_trait": "Medium format depth, micro-detail on surfaces"
+    },
+    {
+        "term": "Phosphorescence Persistence",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Glow in the dark logic",
+        "technical_trait": "Delayed, slow release of absorbed photons after the light source is removed"
+    },
+    {
+        "term": "Photon Mapping",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Accurate caustic calculation",
+        "technical_trait": "Shooting packets of light from the source and storing them where they hit surfaces"
+    },
+    {
+        "term": "Pincushion Distortion",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Sucked-in center, bowed edges",
+        "technical_trait": "Positive radial distortion, common in telephoto"
+    },
+    {
+        "term": "Pinhole Camera Body Cap",
+        "categories": "Technical Gear",
+        "sub_categories": "Misc Optics",
+        "aesthetic_impact": "Infinite depth of field, infinite softness",
+        "technical_trait": "Extreme diffraction, heavy vignetting, zero glass rendering"
+    },
+    {
+        "term": "Pixel Pitch Aliasing/Moire",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Rainbow interference patterns on textures",
+        "technical_trait": "Sensor resolution interacting with high-frequency detail"
+    },
+    {
+        "term": "Plane of Critical Focus",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Absolute maximum optical resolution",
+        "technical_trait": "The exact 2D planar slice of space mapping perfectly to the sensor"
+    },
+    {
+        "term": "Plumb Vertical Alignment",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Angles & Elevation",
+        "aesthetic_impact": "Architectural precision, structural weight",
+        "technical_trait": "Zero pitch/roll, sensor plane perfectly parallel to gravity"
+    },
+    {
+        "term": "PM2.5 Industrial Smog",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Oppressive, yellow-brown urban air",
+        "technical_trait": "Microscopic combustion particulates absorbing blue light"
+    },
+    {
+        "term": "Point of View (POV)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Angles & Elevation",
+        "aesthetic_impact": "Subjective embodiment",
+        "technical_trait": "Camera perfectly occupying the interocular axis of the subject"
+    },
+    {
+        "term": "Polarized Light Filtering",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Elimination of glare",
+        "technical_trait": "Blocking light waves oscillating in specific orientations, cutting through reflections"
+    },
+    {
+        "term": "Polaroid 600",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Instant Film",
+        "aesthetic_impact": "Punchy contrast, classic square format",
+        "technical_trait": "Faster development, slight magenta bias in cold weather"
+    },
+    {
+        "term": "Polaroid SX-70 Instant",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Instant Film",
+        "aesthetic_impact": "Dreamy, low contrast, pastel shifts",
+        "technical_trait": "Chemical diffusion transfer, temperature-dependent color shifts"
+    },
+    {
+        "term": "Polygonal Patterned Ground",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Geometric cracks in freezing mud",
+        "technical_trait": "Repeated freeze-thaw cycles sorting stones and cracking permafrost"
+    },
+    {
+        "term": "Prism Filter",
+        "categories": "Technical Gear",
+        "sub_categories": "Misc Optics",
+        "aesthetic_impact": "Fractured light, kaleidoscopic imagery",
+        "technical_trait": "Refracted light rays, geometric image doubling"
+    },
+    {
+        "term": "Profile Angle (90-Degree Lateral)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Angles & Elevation",
+        "aesthetic_impact": "Emotional detachment, 2D planar motion",
+        "technical_trait": "Perfect perpendicular X-axis alignment to subject face"
+    },
+    {
+        "term": "Profoto B1X Strobe",
+        "categories": "Technical Gear",
+        "sub_categories": "Lighting Gear",
+        "aesthetic_impact": "High-speed flash freezing",
+        "technical_trait": "Micro-second illumination, perfect motion stopping"
+    },
+    {
+        "term": "Pull Processing -1 Stop",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Chemical Processes",
+        "aesthetic_impact": "Muted contrast, pastel tones",
+        "technical_trait": "Reduced development time, compressed highlights"
+    },
+    {
+        "term": "Push Processing +2 Stops",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Chemical Processes",
+        "aesthetic_impact": "Increased contrast, amplified grain",
+        "technical_trait": "Extended development time, lifted base fog"
+    },
+    {
+        "term": "Pyrotechnic Smoke Dispersion",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Opaque, heavy, chemical-tinted smoke",
+        "technical_trait": "Combustion byproducts creating dense particulate volumetric occlusion"
+    },
+    {
+        "term": "Rack Focus",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Directing viewer attention across Z-depth",
+        "technical_trait": "Active mechanical shift of the focal plane from near to far"
+    },
+    {
+        "term": "Rack Focus Transition",
+        "categories": "Technical Gear",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Shifting audience attention",
+        "technical_trait": "Breathing artifacts, plane of critical focus shifting"
+    },
+    {
+        "term": "Radiation Fog Ground Layer",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Spooky, ankle-deep mist",
+        "technical_trait": "Overnight terrestrial heat radiation trapping cold air at the dew point"
+    },
+    {
+        "term": "Radiometry vs Photometry",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Physics vs Human Perception",
+        "technical_trait": "Measurement of actual electromagnetic energy vs energy weighted by human eye sensitivity"
+    },
+    {
+        "term": "Radiosity Bounces",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Color bleeding between objects",
+        "technical_trait": "Calculating the diffuse reflection of light between adjacent colored surfaces"
+    },
+    {
+        "term": "Rainbow Primary Bow (42\u00b0)",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Crisp, full-spectrum arc",
+        "technical_trait": "Single internal reflection within spherical raindrops"
+    },
+    {
+        "term": "Rainbow Secondary Bow (51\u00b0)",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Fainter, color-reversed arc",
+        "technical_trait": "Double internal reflection with Alexander's Band of dark sky between bows"
+    },
+    {
+        "term": "Ray Marching Volume Steps",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Dense, accurate smoke shadows",
+        "technical_trait": "Sampling light absorption at precise mathematical intervals through a 3D volume"
+    },
+    {
+        "term": "Rayleigh Scattering Haze",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Blue-tinted distant atmosphere",
+        "technical_trait": "Short-wavelength light scattered by atmospheric gases"
+    },
+    {
+        "term": "Rayleigh Volumetric Scattering",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Blue-tinted internal light",
+        "technical_trait": "Short-wavelength dominance in microscopic suspended particles within a translucent medium"
+    },
+    {
+        "term": "RED Monstro 8K VV Sensor",
+        "categories": "Technical Gear",
+        "sub_categories": "Sensor Types",
+        "aesthetic_impact": "VistaVision large format, extreme resolution without plastic look",
+        "technical_trait": "Clean shadows, massive data rate footprint"
+    },
+    {
+        "term": "Rembrandt Lighting",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Classic dramatic portraiture",
+        "technical_trait": "Key light placed high and to one side, creating a distinct triangle of light on the shadow cheek"
+    },
+    {
+        "term": "Remjet Halation",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Chemical Processes",
+        "aesthetic_impact": "Red glowing auras around light sources",
+        "technical_trait": "Removal of anti-halation backing layer"
+    },
+    {
+        "term": "Reticulation",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Chemical Processes",
+        "aesthetic_impact": "Cracked, micro-fractured emulsion",
+        "technical_trait": "Extreme temperature shifts during chemical baths"
+    },
+    {
+        "term": "Retroreflection",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Blinding direct-bounce light",
+        "technical_trait": "Micro-prisms bounding light directly back to the exact source angle (e.g., safety tape)"
+    },
+    {
+        "term": "Reverse Angle",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Dialog continuity",
+        "technical_trait": "Exact 180-degree flip of the spatial axis for conversational cutting"
+    },
+    {
+        "term": "Rim Lighting (Kicker)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Separating subject from background",
+        "technical_trait": "Hard light placed behind subject grazing the edge of hair/shoulders"
+    },
+    {
+        "term": "Rime Ice Deposition",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Thick, wind-directed ice buildup",
+        "technical_trait": "Supercooled fog freezing on the windward side of objects"
+    },
+    {
+        "term": "Rollei Crossbird 200",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Color Reversal (Slide)",
+        "aesthetic_impact": "Golden yellow cast, extremely punchy",
+        "technical_trait": "Designed for cross-processing, intense contrast amplification"
+    },
+    {
+        "term": "Rollei Infrared 400",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "B&W Infrared",
+        "aesthetic_impact": "Wood effect (white foliage), black skies",
+        "technical_trait": "Sensitivity up to 820nm, high resolving power"
+    },
+    {
+        "term": "Rolling Shutter Jello Effect",
+        "categories": "Technical Gear",
+        "sub_categories": "Sensor Types",
+        "aesthetic_impact": "Slanted vertical lines on pans",
+        "technical_trait": "CMOS readout delay distortion"
+    },
+    {
+        "term": "Rolling Shutter Skew",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Slanted vertical lines in motion",
+        "technical_trait": "Sequential line-by-line sensor readout delay"
+    },
+    {
+        "term": "Rule of Thirds Intersection",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Balanced organic asymmetry",
+        "technical_trait": "Subject perfectly aligned on one of four 3x3 grid intersections"
+    },
+    {
+        "term": "Russian Arm Pursuit",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "High-speed automotive tracking",
+        "technical_trait": "Gyro-stabilized crane mounted to a moving vehicle, aggressive aerodynamics"
+    },
+    {
+        "term": "Saharan Dust Suspension",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Sepia-toned, gritty atmospheric filter",
+        "technical_trait": "Mineral dust aerosols reducing visibility and warming the air layer"
+    },
+    {
+        "term": "Saltation Grain Trajectory",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Low-flying, bouncing sand",
+        "technical_trait": "Wind picking up and dropping grains, causing a chain reaction of impacts"
+    },
+    {
+        "term": "Scanner Banding",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Faint, regular horizontal stripes",
+        "technical_trait": "Stepper motor imperfections during digital film scanning"
+    },
+    {
+        "term": "Scheimpflug Principle (Tilt)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Slanted focal plane, miniature effect",
+        "technical_trait": "Lens standard tilted relative to sensor plane to alter focus depth"
+    },
+    {
+        "term": "Schlick's Approximation",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Accurate edge reflection curve",
+        "technical_trait": "Mathematical curve defining the rapid transition from diffuse to reflective at grazing angles"
+    },
+    {
+        "term": "Schlieren Deflection",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Wavy, distorted visual background",
+        "technical_trait": "Index of refraction changes due to localized fluid density/temperature shifts"
+    },
+    {
+        "term": "Schneider Hollywood Black Magic",
+        "categories": "Technical Gear",
+        "sub_categories": "Optical Filters",
+        "aesthetic_impact": "Skin softening with micro-contrast retention",
+        "technical_trait": "HD-diminishing, filmic glow without heavy fog"
+    },
+    {
+        "term": "Sea Salt Aerosol Haze",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Coastal atmospheric thickness",
+        "technical_trait": "Hygroscopic salt particles swelling with moisture near oceans"
+    },
+    {
+        "term": "Sea Smoke Evaporation",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Wispy, ghostly fog dancing over water",
+        "technical_trait": "Freezing air sliding over relatively warm ocean water"
+    },
+    {
+        "term": "Sensor Blooming",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Highlights bleeding into adjacent pixels",
+        "technical_trait": "Charge overflow in CCD/CMOS pixel wells"
+    },
+    {
+        "term": "Shadow Terminator Softening",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Organic planet/skin shadow lines",
+        "technical_trait": "Smoothing the harsh geometry transition line between illuminated and shadowed polygons"
+    },
+    {
+        "term": "Shallow Depth of Field (f/1.2)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Subject isolation, spatial separation",
+        "technical_trait": "Paper-thin focal plane, rapid circle of confusion expansion"
+    },
+    {
+        "term": "Sheen Fabric BRDF",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Velvet / Silk edge catching",
+        "technical_trait": "Specialized micro-cylinder rendering that bounces light perpendicular to normal at grazing angles"
+    },
+    {
+        "term": "Short Lighting",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Slimming, moody faces",
+        "technical_trait": "The side of the face turned *away* from the camera receives the main key light"
+    },
+    {
+        "term": "Short Siding",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Trapped feeling, blocked future",
+        "technical_trait": "Subject framed with their nose/gaze immediately hitting the edge of frame"
+    },
+    {
+        "term": "Single-Scattering Albedo",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Hard, opaque object definition",
+        "technical_trait": "Photon reflects exactly once upon hitting a surface without penetrating"
+    },
+    {
+        "term": "Sintered Snow Crust",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Hard, reflective snow surface",
+        "technical_trait": "Wind-packing and temperature cycling bonding ice grains together"
+    },
+    {
+        "term": "Sleet Micro-Impacts",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Rebounding, hard ice pellets",
+        "technical_trait": "Refrozen melted snow bouncing off solid surfaces"
+    },
+    {
+        "term": "Smoldering Peat Smoke",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Low-hanging, blueish-gray haze",
+        "technical_trait": "Incomplete biological combustion releasing heavy aromatic hydrocarbons"
+    },
+    {
+        "term": "Snell's Law of Refraction",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Precise water/glass bending",
+        "technical_trait": "Mathematical formula defining the exact degree light bends when passing between different mediums"
+    },
+    {
+        "term": "Snorricam Mount",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Claustrophobic subjective lock",
+        "technical_trait": "Camera physically strapped to subject, background moves while subject is static"
+    },
+    {
+        "term": "Softbox Diffusion Scattering",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Wrapping, gentle shadows",
+        "technical_trait": "Large relative source size creating broad, gradual shadow transitions"
+    },
+    {
+        "term": "Solar Eclipse Penumbra",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Uncanny, sharp-edged dim daylight",
+        "technical_trait": "Partial occlusion of the solar disk creating weird, crescent-shaped shadows"
+    },
+    {
+        "term": "Solarization (Sabattier Effect)",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Chemical Processes",
+        "aesthetic_impact": "Tone reversal on image edges",
+        "technical_trait": "Partial re-exposure to light during the development phase"
+    },
+    {
+        "term": "Sonoluminescence",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Sound-wave induced light flashes",
+        "technical_trait": "Imploding cavitation bubbles in a liquid emitting microscopic bursts of light"
+    },
+    {
+        "term": "Sony FE 135mm f/1.8 GM",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "Clinical edge-to-edge sharpness, clean bokeh",
+        "technical_trait": "Extreme micro-contrast, zero chromatic aberration"
+    },
+    {
+        "term": "Sony Venice 2 Full-Frame Sensor",
+        "categories": "Technical Gear",
+        "sub_categories": "Sensor Types",
+        "aesthetic_impact": "High base ISO capability, natural skin tones",
+        "technical_trait": "Dual Base ISO 800/3200 noise profile"
+    },
+    {
+        "term": "Source Four Leko Ellipsoidal",
+        "categories": "Technical Gear",
+        "sub_categories": "Lighting Gear",
+        "aesthetic_impact": "Projected patterns, sharp cuts",
+        "technical_trait": "Internal shutter blades, optical projection"
+    },
+    {
+        "term": "Spalling / Concrete Delamination",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Flaking, exposed aggregate",
+        "technical_trait": "Surface failure where chunks break away due to internal pressure or freezing"
+    },
+    {
+        "term": "Spectral Rendering",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Perfect prism color separation",
+        "technical_trait": "Calculating light using physical nanometer wavelengths rather than RGB values"
+    },
+    {
+        "term": "Specular Breakup (Normal Map)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Gritty, imperfect shininess",
+        "technical_trait": "High-frequency micro-bumping disrupting a perfectly smooth reflection lobe"
+    },
+    {
+        "term": "Specular Color Bleed",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Tinted reflections bouncing",
+        "technical_trait": "Metallic surfaces casting their specific color onto neighboring geometry"
+    },
+    {
+        "term": "Specular Glossiness Workflow",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Legacy complex reflection logic",
+        "technical_trait": "Defining materials through diffuse color, RGB specular color, and inverted glossiness"
+    },
+    {
+        "term": "Spherical Aberration",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Dreamy, glowing softness wide open",
+        "technical_trait": "Light rays at lens edges focus closer than center rays"
+    },
+    {
+        "term": "Spherical Harmonics Approximation",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Fast, soft ambient bounce",
+        "technical_trait": "Mathematical shortcut for rendering complex global illumination using low-frequency spherical basis functions"
+    },
+    {
+        "term": "Split Diopter",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Surreal dual-plane sharpness",
+        "technical_trait": "Half-convex glass attachment, sharp extreme foreground and background, blurred middle"
+    },
+    {
+        "term": "Split Diopter Filter",
+        "categories": "Technical Gear",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Dual focal planes, surreal depth",
+        "technical_trait": "Visible blur line between two distinct focus areas"
+    },
+    {
+        "term": "Split Lighting",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Harsh bilateral division",
+        "technical_trait": "Key light exactly 90-degrees to the side, slicing the face exactly in half (lit/shadow)"
+    },
+    {
+        "term": "Sprite Ionization Flashes",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Red, jellyfish-like tendrils in the mesosphere",
+        "technical_trait": "Cold plasma discharges triggered by massive lower-troposphere lightning strikes"
+    },
+    {
+        "term": "Sprocket Hole Light Bleed",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Red/orange leaks from image edges",
+        "technical_trait": "Light entering the 35mm canister through film gate"
+    },
+    {
+        "term": "Squall Line Shelf Cloud",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Ominous, solid wall of dark clouds",
+        "technical_trait": "Dense, wedge-shaped boundary created by thunderstorm downdrafts"
+    },
+    {
+        "term": "St. Elmo's Fire Corona Discharge",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Spidery blue/purple plasma glow",
+        "technical_trait": "Pointed objects ionizing the air in an intense electric field during a storm"
+    },
+    {
+        "term": "Stalactite Drip-stone Deposition",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Hanging, calcified mineral structures",
+        "technical_trait": "Slow precipitation of calcium carbonate from dripping water"
+    },
+    {
+        "term": "Stand Development",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Chemical Processes",
+        "aesthetic_impact": "High edge contrast (acutance)",
+        "technical_trait": "Zero agitation, localized chemical exhaustion"
+    },
+    {
+        "term": "Star Filter 4-Point",
+        "categories": "Technical Gear",
+        "sub_categories": "Optical Filters",
+        "aesthetic_impact": "Cheesy 70s specular highlights",
+        "technical_trait": "Cross-screen light diffraction"
+    },
+    {
+        "term": "Static Marks",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Lightning-like black streaks",
+        "technical_trait": "Static electricity discharge during film winding in dry cold"
+    },
+    {
+        "term": "Steadicam One-Shot Sweep",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Immersive continuity, flowing space",
+        "technical_trait": "Inertially stabilized, human-paced multi-axis translation"
+    },
+    {
+        "term": "Steadicam Zephyr",
+        "categories": "Technical Gear",
+        "sub_categories": "Stabilization Gear",
+        "aesthetic_impact": "Fluid, floating camera movement",
+        "technical_trait": "Slight inertial drift, organic human pacing"
+    },
+    {
+        "term": "Stratospheric Aerosol Injection",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "High-altitude chalky sky",
+        "technical_trait": "Sulfur dioxide reflecting solar radiation in the upper atmosphere"
+    },
+    {
+        "term": "Streak Filter 2mm Blue",
+        "categories": "Technical Gear",
+        "sub_categories": "Optical Filters",
+        "aesthetic_impact": "Fake anamorphic flaring",
+        "technical_trait": "Horizontal light scattering from point sources"
+    },
+    {
+        "term": "Sub-framing (Frame within Frame)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Voyeuristic trapping",
+        "technical_trait": "Architectural elements (doorways, windows) creating a secondary border"
+    },
+    {
+        "term": "Sub-Glacial Meltwater Plume",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Opaque, milky water mixing",
+        "technical_trait": "High-pressure, silt-laden water forcefully entering an ocean body"
+    },
+    {
+        "term": "Sub-Pixel Micro-polygon Displacement",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Infinite surface detail",
+        "technical_trait": "Geometry tessellated smaller than a single screen pixel for ultimate tangibility"
+    },
+    {
+        "term": "Sub-Surface Glare Ice",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Deep, dark, translucent ice",
+        "technical_trait": "Air-bubble-free freezing allowing light to penetrate before reflecting"
+    },
+    {
+        "term": "Sublimation Vapor Plumes",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Dense, ground-hugging smoke",
+        "technical_trait": "Solid to gas phase transition, rapid cooling of ambient air"
+    },
+    {
+        "term": "Subsurface Scattering (SSS) Radius",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Fleshy, translucent tangibility",
+        "technical_trait": "Light penetrating the surface, scattering internally, and exiting at a different point"
+    },
+    {
+        "term": "Sun Pillar Hexagonal Reflection",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Vertical shaft of light above the setting sun",
+        "technical_trait": "Light reflecting off the bottom faces of falling, flat ice crystals"
+    },
+    {
+        "term": "Supercell Mesocyclone",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Massive, rotating storm structure",
+        "technical_trait": "Deep, persistently rotating updraft within a severe thunderstorm"
+    },
+    {
+        "term": "Supersonic Shockwave Condensation",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Prandtl-Glauert singularity cone",
+        "technical_trait": "Rapid pressure drop behind a shock wave condensing moisture instantly"
+    },
+    {
+        "term": "Surface Tension Meniscus",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Curved liquid edges",
+        "technical_trait": "Fluid curving up against a solid object due to adhesive forces"
+    },
+    {
+        "term": "Symmetrical Composition",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Artificial order, rigidity",
+        "technical_trait": "Mirror-image geometry on either side of the Y-axis"
+    },
+    {
+        "term": "T-Grain (Tabular Grain)",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Smoother, flatter noise profile",
+        "technical_trait": "Engineered flat silver halide crystals for higher resolution"
+    },
+    {
+        "term": "T-Stop T1.0 Maximum Aperture",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Razor-thin optical plane",
+        "technical_trait": "Maximum theoretical light transmission before spherical aberration breakdown"
+    },
+    {
+        "term": "T-Stop T1.3 Transmission",
+        "categories": "Technical Gear",
+        "sub_categories": "Aperture Mechanics",
+        "aesthetic_impact": "Exact light transmission, shallow depth",
+        "technical_trait": "Calculated optical density, minimal diffraction"
+    },
+    {
+        "term": "Technocrane 50ft Telescopic",
+        "categories": "Technical Gear",
+        "sub_categories": "Stabilization Gear",
+        "aesthetic_impact": "Sweeping spatial reveals",
+        "technical_trait": "Linear Z-axis push-ins, slight boom sway"
+    },
+    {
+        "term": "Technocrane Telescoping",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Sweeping omnipotence, unconstrained Z-axis",
+        "technical_trait": "Retracting/extending boom arm, complex 3D spatial curves"
+    },
+    {
+        "term": "Telescopic Boom Extension",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Linear mechanical reveal",
+        "technical_trait": "Z-axis unspooling of a crane arm without base movement"
+    },
+    {
+        "term": "Thermocline Refraction",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Meteorological Optics",
+        "aesthetic_impact": "Underwater blurry horizontal division",
+        "technical_trait": "Light bending drastically across two distinct temperature layers in water"
+    },
+    {
+        "term": "Thin-Film Interference",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Iridescent soap-bubble colors",
+        "technical_trait": "Light waves reflecting off the top and bottom of a microscopic layer and cancelling/amplifying"
+    },
+    {
+        "term": "Three-Quarter Profile",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Angles & Elevation",
+        "aesthetic_impact": "Classic portraiture, volume rendering",
+        "technical_trait": "45-degree horizontal offset from subject's midline"
+    },
+    {
+        "term": "Three-Shot Staging",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Triangular group dynamic",
+        "technical_trait": "Three subjects arranged in depth, utilizing Z-axis stacking"
+    },
+    {
+        "term": "Tidal Bore Translation",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Leading wave of rushing water",
+        "technical_trait": "Incoming tide forming a wave that travels up a narrow river or bay"
+    },
+    {
+        "term": "Tiffen Black Pro-Mist 1/4",
+        "categories": "Technical Gear",
+        "sub_categories": "Optical Filters",
+        "aesthetic_impact": "Highlight blooming, contrast reduction",
+        "technical_trait": "Halation around light sources, pastel shadows"
+    },
+    {
+        "term": "Tilt-Shift Lens Mechanism",
+        "categories": "Technical Gear",
+        "sub_categories": "Misc Optics",
+        "aesthetic_impact": "Perspective control, miniature effect",
+        "technical_trait": "Altered plane of focus, converging lines correction"
+    },
+    {
+        "term": "Tornadic Inflow Jet",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Visible bands of clouds rushing inward",
+        "technical_trait": "High-speed air being sucked into the low-pressure base of a tornado"
+    },
+    {
+        "term": "Torrential Monsoon Sheer",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Diagonal, heavy, blinding rain",
+        "technical_trait": "High-volume macro-droplets driven by sustained unidirectional wind"
+    },
+    {
+        "term": "Total Internal Reflection (TIR)",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Underwater mirror surface",
+        "technical_trait": "Light hitting a medium boundary at a shallow angle and perfectly reflecting back inside"
+    },
+    {
+        "term": "Translucency Thickness Map",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Variable light bleed",
+        "technical_trait": "Thin edges glowing intensely while thick volumes remain opaque (e.g., ears, leaves)"
+    },
+    {
+        "term": "Transmittance Color Tinting",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Material Surface Response",
+        "aesthetic_impact": "Stained glass internal shadowing",
+        "technical_trait": "Specific RGB wavelength absorption as light passes through colored transparent volumes"
+    },
+    {
+        "term": "Transverse Chromatic Aberration (TCA)",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Color fringing at image edges",
+        "technical_trait": "Lateral magnification differences of color wavelengths"
+    },
+    {
+        "term": "Travertine Terrace Formation",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Stepped, vibrant mineral pools",
+        "technical_trait": "Rapid precipitation of calcium carbonate from geothermal hot springs"
+    },
+    {
+        "term": "Triboluminescence",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Flashing upon mechanical breaking",
+        "technical_trait": "Light generated by the breaking of chemical bonds through friction or crushing"
+    },
+    {
+        "term": "Turbulent Eddy Cascades",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Chaotic, fractal smoke dispersion",
+        "technical_trait": "Energy dissipating from large scale motion down to micro-swirls"
+    },
+    {
+        "term": "Two-Shot Framing",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Relational dynamic",
+        "technical_trait": "Two subjects co-existing within the same focal and frame boundaries"
+    },
+    {
+        "term": "Tyndall Effect Particulates",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Visible, tangible light beams",
+        "technical_trait": "Light scattering by colloidal particles in a fine suspension"
+    },
+    {
+        "term": "Unmotivated Expressive Lighting",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Theatrical, psychological coloring",
+        "technical_trait": "Light existing purely for emotional impact without a logical in-world source"
+    },
+    {
+        "term": "UV Haze Filter",
+        "categories": "Technical Gear",
+        "sub_categories": "Optical Filters",
+        "aesthetic_impact": "Atmospheric perspective reduction",
+        "technical_trait": "Cutting UV spectrum, slight contrast bump"
+    },
+    {
+        "term": "Vanishing Point Convergence",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Inevitable destination",
+        "technical_trait": "All architectural lines receding to a single geometric point"
+    },
+    {
+        "term": "Vantage One4 50mm T1.4",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Spherical prime with subtle anamorphic feel",
+        "technical_trait": "Slight edge detuning, shallow depth of field"
+    },
+    {
+        "term": "Variable ND Filter",
+        "categories": "Technical Gear",
+        "sub_categories": "Optical Filters",
+        "aesthetic_impact": "Smooth exposure racking, cross-polarization",
+        "technical_trait": "Slight 'X' pattern artifacting on wide angles"
+    },
+    {
+        "term": "Veiling Glare",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Optical Imperfections",
+        "aesthetic_impact": "Loss of overall contrast from light scatter",
+        "technical_trait": "Internal reflection bouncing across multiple lens elements"
+    },
+    {
+        "term": "Vignette Falloff Curve",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Natural eye-guidance to center",
+        "technical_trait": "Radial exposure reduction mathematically linked to lens iris diameter"
+    },
+    {
+        "term": "Virga Rain Curtain",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Precipitation",
+        "aesthetic_impact": "Hanging streaks of rain not hitting ground",
+        "technical_trait": "Precipitation evaporating in a dry air layer mid-fall"
+    },
+    {
+        "term": "Visual Weight Imbalance",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Uneasy tension",
+        "technical_trait": "Massing high contrast/large elements exclusively on one side of the Y-axis"
+    },
+    {
+        "term": "Voigtlander Nokton 35mm f/1.2",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "Classic rendering, high vignette wide open",
+        "technical_trait": "Spherical aberration glow at f/1.2"
+    },
+    {
+        "term": "Volcanic Ash Fall (Tephra)",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Particulate Suspension",
+        "aesthetic_impact": "Monochromatic, abrasive air quality",
+        "technical_trait": "Silicate glass shards blocking solar radiation"
+    },
+    {
+        "term": "Volcanic Lightning (Dirty Thunderstorm)",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Red/orange ash intersected by purple arcs",
+        "technical_trait": "Static electricity generated by friction of colliding ash particles"
+    },
+    {
+        "term": "Volumetric Emission Nodes",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Lighting Physics",
+        "aesthetic_impact": "Self-illuminating smoke/fire",
+        "technical_trait": "Participating media that both scatters incoming light and generates its own photons"
+    },
+    {
+        "term": "Volumetric Gobo Projection",
+        "categories": "Lighting & Surface Details",
+        "sub_categories": "Cinematic Setup",
+        "aesthetic_impact": "Slicing shafts of smoke",
+        "technical_trait": "Gobo pattern interacting with participating media to create 3D light shafts"
+    },
+    {
+        "term": "Vortex Ring Propagation",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Perfectly circular, traveling smoke ring",
+        "technical_trait": "Poloidal fluid flow moving through a stationary medium"
+    },
+    {
+        "term": "Vortex Shedding (Von K\u00e1rm\u00e1n)",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Thermodynamics",
+        "aesthetic_impact": "Swirling, alternating smoke/fog patterns",
+        "technical_trait": "Oscillating flow of fluid separating past a blunt geometric object"
+    },
+    {
+        "term": "Washi Film 'W'",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Experimental B&W",
+        "aesthetic_impact": "Ethereal, fragile texture",
+        "technical_trait": "Handcrafted on Kozo Japanese paper, organic texture"
+    },
+    {
+        "term": "Water Spots (Drying Marks)",
+        "categories": "Authentic Imperfections & Film Stocks",
+        "sub_categories": "Physical Imperfections",
+        "aesthetic_impact": "Faint circular stains",
+        "technical_trait": "Mineral residue left after chemical wash drying"
+    },
+    {
+        "term": "Waterhouse Stops",
+        "categories": "Technical Gear",
+        "sub_categories": "Aperture Mechanics",
+        "aesthetic_impact": "Custom shaped bokeh, vintage restriction",
+        "technical_trait": "Fixed aperture plates, sharp starbursts"
+    },
+    {
+        "term": "Whip Pan (Swish Pan)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Kinetic transition, frantic energy",
+        "technical_trait": "High-velocity X-axis rotation causing heavy motion blur"
+    },
+    {
+        "term": "Wide Shot (WS)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Environmental context, full body",
+        "technical_trait": "Subject's entire physical mass contained within frame boundaries"
+    },
+    {
+        "term": "Wingtip Vortices",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Fluid Dynamics",
+        "aesthetic_impact": "Trailing twin tornadoes of mist",
+        "technical_trait": "High pressure air rolling over the wing to the low pressure top"
+    },
+    {
+        "term": "Wire-Cam Flying Rig",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Stadium-scale linear flying",
+        "technical_trait": "Cable-suspended Z/X-axis translation"
+    },
+    {
+        "term": "X-Axis Lateral Tracking",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Journey, temporal progression",
+        "technical_trait": "Perpendicular left/right physical translation"
+    },
+    {
+        "term": "Y-Axis Pedestal Move",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Vertical reveal, scale establishment",
+        "technical_trait": "Vertical lift/drop of camera body without tilting"
+    },
+    {
+        "term": "Z-Axis Optical Translation",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Zooming without moving camera",
+        "technical_trait": "Altering focal length to simulate movement, altering perspective compression"
+    },
+    {
+        "term": "Z-Axis Pull-Out",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Abandonment, contextual reveal",
+        "technical_trait": "Linear physical camera translation backward along the Z-axis"
+    },
+    {
+        "term": "Z-Axis Push-In",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Movement",
+        "aesthetic_impact": "Increasing tension, internal realization",
+        "technical_trait": "Linear physical camera translation forward along the Z-axis"
+    },
+    {
+        "term": "Z-Depth Stacking",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Spatial Composition",
+        "aesthetic_impact": "Dense world-building",
+        "technical_trait": "Multiple subjects layered on distinct Z-axis focal planes"
+    },
+    {
+        "term": "Zeiss Master Prime 35mm T1.3",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Clinical sharpness, zero breathing",
+        "technical_trait": "Aspherical elements, perfect geometry"
+    },
+    {
+        "term": "Zeiss Otus 85mm f/1.4",
+        "categories": "Technical Gear",
+        "sub_categories": "Photography Lenses",
+        "aesthetic_impact": "Apochromatic correction, flawless sharpness",
+        "technical_trait": "Zero color fringing, brutal resolution"
+    },
+    {
+        "term": "Zeiss Super Speed Mk III 50mm T1.3",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Triangular bokeh at T2.8, vintage soft wide open",
+        "technical_trait": "Classic 80s halation, distinct iris shape"
+    },
+    {
+        "term": "Zeiss Supreme Prime Radiance",
+        "categories": "Technical Gear",
+        "sub_categories": "Cinema Lenses",
+        "aesthetic_impact": "Controlled ghosting, warm flares",
+        "technical_trait": "T* blue coating modification, predictable flaring"
+    },
+    {
+        "term": "Zenith Angle (Top-Down)",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Camera Angles & Elevation",
+        "aesthetic_impact": "Omniscient detachment, flat spatial mapping",
+        "technical_trait": "Absolute 90-degree downward Y-axis pitch"
+    },
+    {
+        "term": "Zodiacal Interplanetary Dust Light",
+        "categories": "Atmospheric Aesthetics & Environment",
+        "sub_categories": "Celestial Illumination",
+        "aesthetic_impact": "Faint, glowing triangular wedge in the sky",
+        "technical_trait": "Sunlight scattering off cosmic dust in the ecliptic plane"
+    },
+    {
+        "term": "Zone Focusing",
+        "categories": "Cinematography, Angles, & Focus",
+        "sub_categories": "Focus Mechanics",
+        "aesthetic_impact": "Spontaneous street capture",
+        "technical_trait": "Pre-calculated depth of field brackets without active focusing"
+    }
+]

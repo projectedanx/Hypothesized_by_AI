@@ -1,0 +1,272 @@
+{
+  "meta": {
+    "id": "ui-design-deconstruction-protocol",
+    "title": "UI Design Deconstruction & Epistemic Prompting",
+    "primary_pill": "Prompt Architecture",
+    "short_tagline": "An advanced protocol for algorithmically extracting structural UI DNA into reusable design systems using dependency-graphed, epistemically rigorous LLM prompts.",
+    "tags": [
+      "Prompt Engineering",
+      "UI/UX",
+      "Design Systems",
+      "Epistemic Architecture",
+      "Frontend Extraction"
+    ],
+    "status": "published",
+    "hero_cta_label": "View Protocol",
+    "hero_cta_target": "#protocol",
+    "research_date": "2026-02-26",
+    "source_papers": [
+      "Web Design System Extraction Protocol.md"
+    ],
+    "worldview_ref": "Deep Architectural Governance",
+    "created_at": 1774505978204
+  },
+  "sections": {
+    "overview": {
+      "title": "Systematic Deconstruction of UI Design",
+      "intro": "A methodological breakdown of how to algorithmically clone the visual and structural 'DNA' of web interfaces without infringing on proprietary assets. The approach utilizes an advanced prompt engineering architecture (EduRP) to force LLMs into rigorous, dependency-graphed execution rather than subjective visual assumptions.",
+      "summary_card": {
+        "label": "Core Principle",
+        "title": "Epistemic Fidelity in Extraction",
+        "body": "Moving from descriptive prompt queries to executable specifications with strict output contracts, failure conditions, and active adversarial attestation to prevent LLM sycophancy.",
+        "tags": [
+          "Falsifiability",
+          "Tokenization",
+          "Structural Parity"
+        ]
+      },
+      "hero_pills": [
+        "DOM/CSSOM Interrogation",
+        "Computer Vision Fallback",
+        "Integrity Attestation"
+      ],
+      "id": "overview"
+    },
+    "key_concepts": {
+      "title": "Architectural Pillars of Extraction",
+      "cards": [
+        {
+          "title": "Bicameral Extraction Synthesis",
+          "body": "Combining DOM/CSSOM reduction (via node traversal and computed styles) with Computer Vision fallbacks (OmniParser + SSIM clustering) for when interfaces obscure the DOM via Canvas/WebGL or obfuscated CSS-in-JS.",
+          "source_refs": [
+            "Research Insight 1"
+          ]
+        },
+        {
+          "title": "Adversarial Inversion in Prompts",
+          "body": "Forcing the LLM to state the strongest case for non-compliance *before* allowing it to justify how it met a requirement. This 'Integrity Attestation' inverts the sycophantic gradient and demands specific evidence pointers.",
+          "source_refs": [
+            "Pattern A: Adversarial Inversion"
+          ]
+        },
+        {
+          "title": "Dependency-Graphed Execution",
+          "body": "Structuring prompt queries not as a flat list, but as a directed acyclic graph where foundational extractions (e.g., base spacing GCD) actively feed into and constrain subsequent dependent queries (e.g., modular type scales).",
+          "source_refs": [
+            "Viewpoint 1: Dependency Graph"
+          ]
+        },
+        {
+          "title": "Temporal and Anionic Topology",
+          "body": "Expanding structural DNA beyond static components to include the temporal dimension (motion, easing, state machines) and the anionic gap (negative space, whitespace ratios) which carry heavy design intent.",
+          "source_refs": [
+            "Critique 1",
+            "Critique 3"
+          ]
+        }
+      ],
+      "id": "key-concepts",
+      "intro": "The protocol relies on several deep architectural patterns to transform raw pixel/DOM data into a semantic design system."
+    },
+    "workflow": {
+      "title": "Tiered Execution Plan",
+      "steps": [
+        {
+          "label": "Tier 1: Structural Skeleton (Passive)",
+          "summary": "Execute foundational passive CSSOM reads to establish the core mathematical rules of the interface.",
+          "bullets": [
+            "Derive spatial base unit via GCD of padding/margin.",
+            "Extract surface color distribution mapping to OKLCH.",
+            "Identify font stack and modular type scale ratios.",
+            "Fingerprint recurring subtrees to define atomic boundaries."
+          ],
+          "id": "step-tier-1"
+        },
+        {
+          "label": "Tier 2: Relational Detail (Passive)",
+          "summary": "Enrich the foundational tier with relational and contextual depth.",
+          "bullets": [
+            "Map foreground-background contrast ratios against WCAG standards.",
+            "Extract elevation token scales from shadow decomposition.",
+            "Validate internal component rhythms against the GCD base unit."
+          ],
+          "id": "step-tier-2"
+        },
+        {
+          "label": "Tier 3: State & Interaction (Active)",
+          "summary": "Simulate browser interactions and state changes to capture dynamic UI properties.",
+          "bullets": [
+            "Simulate focus/hover states to extract interactive color tokens.",
+            "Trigger ARIA validation states for feedback palettes.",
+            "Capture transition durations and easing curves to build the motion design system."
+          ],
+          "id": "step-tier-3"
+        }
+      ],
+      "id": "workflow",
+      "intro": "The extraction pipeline runs in strict tiers. If token budgets or DOM signals fail, Tier 1 alone must produce a viable token set."
+    },
+    "checklist": {
+      "title": "Validation & Attestation Triggers",
+      "items": [
+        {
+          "label": "Diagnostic Negative Controls",
+          "bullets": [
+            "Reset all padding/margin to 0 to test reliance on absolute positioning.",
+            "Force high-contrast mode to ensure boundaries aren't purely color-reliant.",
+            "Disable network access to verify 100% functional autonomy (no asset ghosting)."
+          ]
+        },
+        {
+          "label": "Integrity Attestation",
+          "bullets": [
+            "Force LLM to output the strongest case for non-compliance for each core requirement.",
+            "Require concrete evidence pointers (specific section/line/token) for every claim.",
+            "Do not allow default 'ATTESTED' status without verifiable backing."
+          ]
+        }
+      ],
+      "id": "checklist",
+      "intro": "Ensure the extraction process maintains high epistemic rigor."
+    },
+    "metrics": {
+      "id": "metrics",
+      "intro": "How the output artifacts are evaluated for fidelity and independence.",
+      "items": [
+        {
+          "name": "Visual Parity",
+          "description": "Structural and spatial resemblance measured perceptually.",
+          "signals": [
+            ">90% structural resemblance via SSIM (Structural Similarity Index Measure)",
+            "Layout collapses predictably across breakpoints without horizontal scroll."
+          ]
+        },
+        {
+          "name": "Functional Autonomy",
+          "description": "Decoupling from the source's private assets.",
+          "signals": [
+            "Zero network calls to source servers.",
+            "Zero broken image/font references (asset ghosting).",
+            "No brittle class selectors tied to the original framework."
+          ]
+        },
+        {
+          "name": "Semantic Fidelity",
+          "description": "The logical structure of the resulting DOM blueprint.",
+          "signals": [
+            "Absence of div-soup.",
+            "Presence of logical landmark tags (<main>, <nav>, <article>).",
+            "Proper ARIA roles and keyboard-navigable focus order."
+          ]
+        }
+      ],
+      "title": "Success & Parity Metrics"
+    },
+    "personas": {
+      "id": "personas",
+      "intro": "The roles assumed by the human operator and the LLM agent.",
+      "table": {
+        "columns": [
+          "Role",
+          "Function",
+          "Objective"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "Lead Design Technologist",
+              "Prompt execution & architecture governance",
+              "To enforce epistemic rigor and mathematical extraction over subjective aesthetics"
+            ]
+          },
+          {
+            "cells": [
+              "LLM Agent (Claude)",
+              "Data parsing and token synthesis",
+              "Execute dependency-graphed queries and output strict JSON tokens and semantic HTML"
+            ]
+          }
+        ]
+      },
+      "title": "System Actors"
+    },
+    "resilience": {
+      "failure_modes": [
+        {
+          "name": "Sycophantic Rubber-Stamping",
+          "description": "LLMs falsely claiming requirements are met due to inherent compliance bias.",
+          "mitigations": [
+            "Implement INTEGRITY_ATTESTATION.",
+            "Force adversarial inversion (finding faults before proving compliance).",
+            "Demand strict evidence pointers for all assertions."
+          ]
+        },
+        {
+          "name": "Canvas/WebGL Opacity",
+          "description": "Interfaces that bypass the DOM, rendering pure graphics that CSSOM queries cannot parse.",
+          "mitigations": [
+            "Detect INSUFFICIENT_SIGNAL in Tier 1 queries.",
+            "Fallback to CV_PIPELINE using OmniParser and SSIM spatial clustering."
+          ]
+        },
+        {
+          "name": "CSS-in-JS Obfuscation",
+          "description": "Ephemeral, hashed class names that mutate on every render.",
+          "mitigations": [
+            "Never extract class names as design tokens.",
+            "Rely exclusively on extracting computed values via getComputedStyle()."
+          ]
+        }
+      ],
+      "id": "resilience",
+      "intro": "Anticipating and handling boundary conditions in DOM extraction.",
+      "title": "Failure Modes & Mitigations"
+    },
+    "structure": {
+      "id": "structure",
+      "intro": "The systematized data formats produced by the execution pipeline.",
+      "table": {
+        "columns": [
+          "Artifact",
+          "Format",
+          "Description"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "design_tokens.json",
+              "W3C DTCG draft spec",
+              "Three-tier token catalog (Primitive, Semantic, Component) mapping color, spacing, typography, etc."
+            ]
+          },
+          {
+            "cells": [
+              "layout_blueprint.html",
+              "Semantic HTML5/JSX",
+              "Skeletons demonstrating extracted Atomic components, stripped of proprietary content."
+            ]
+          },
+          {
+            "cells": [
+              "theme_config.tailwind.js",
+              "Tailwind v4.x Config",
+              "Configuration mapping the extracted tokens into @theme directives and utilities."
+            ]
+          }
+        ]
+      },
+      "title": "Output Artifact Schema",
+      "variant": "default"
+    }
+  }
+}

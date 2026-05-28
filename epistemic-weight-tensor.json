@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "id": "epistemic-weight-tensor",
+    "title": "The Epistemic Weight Tensor Simulation",
+    "primary_pill": "Mechanistic Interpretability",
+    "short_tagline": "An architectural intervention that dynamically re-weights attention heads during the forward pass to prevent confident hallucinations and causal rung collapse.",
+    "tags": [
+      "Activation Steering",
+      "DeepSeek v3",
+      "Kimi K2.x",
+      "Hallucination Mitigation",
+      "Latent Space Geometry"
+    ],
+    "status": "published",
+    "hero_cta_label": "Explore Architecture",
+    "hero_cta_target": "#architecture",
+    "research_date": "February 2026",
+    "source_papers": [
+      "arXiv:2601.09929",
+      "arXiv:2503.16851v2",
+      "arXiv:2412.19437",
+      "arXiv:2602.02276v1"
+    ],
+    "worldview_ref": "Hickam's Dictum & Occam Reject",
+    "created_at": 1774503957710
+  },
+  "sections": {
+    "overview": {
+      "title": "Overview",
+      "intro": "The Epistemic Weight Tensor (EWT) is an advanced architectural module designed to address a critical failure mode in modern large language models: confident hallucination. Operating within architectures like DeepSeek v3 and Kimi K2.x, the EWT dynamically intervenes during the forward pass by bifurcating attention heads into semantic predictors and epistemic validators. By monitoring token-level entropy and evaluating the structural integrity of the reasoning chain via attention subgraph transition matrices, the EWT mitigates 'Causal Rung Collapse' to ensure logical consistency over grammatical complacency.",
+      "summary_card": {
+        "label": "Core Mechanism",
+        "title": "Inference-Time Activation Steering",
+        "body": "The EWT intervenes at inference time by artificially boosting the weights of epistemic validator heads when it detects a drop in token-level entropy accompanied by a degradation of logical dependency. This prevents the model from confidently emitting hallucinatory tokens.",
+        "tags": [
+          "Intervention",
+          "Self-Correction",
+          "Epistemic Rigor"
+        ]
+      },
+      "hero_pills": [
+        "Causal Rung Collapse",
+        "Latent Attention Clustering",
+        "Grammatical Shattering"
+      ],
+      "id": "overview-ewt"
+    },
+    "key_concepts": {
+      "title": "Key Architectural Concepts",
+      "cards": [
+        {
+          "title": "Dynamic Head Clustering",
+          "body": "Attention heads are continuously bifurcated into two clusters. 'Semantic Predictors' exhibit high temporal variance and model fluid syntax. 'Epistemic Validators' exhibit low temporal variance, high spectral entropy, and high activation sparsity, acting as focused fact-checkers.",
+          "source_refs": [
+            "Activation Trajectory Analysis",
+            "Latent Space Spectral Entropy"
+          ]
+        },
+        {
+          "title": "Causal Rung Collapse (CaR)",
+          "body": "A failure state where the attention mechanism loses structural connection to the reasoning chain established in preceding tokens. It is detected by extracting the attention subgraph of the last 10 tokens and applying Singular Value Decomposition (SVD) to calculate the spectral gap.",
+          "source_refs": [
+            "Matrix Transition Subgraphs",
+            "Logical Dependency Checking"
+          ]
+        },
+        {
+          "title": "Fluency-Rigor Antagonism",
+          "body": "The fundamental mathematical trade-off encountered when boosting epistemic heads. Because attention uses softmax, amplifying epistemic heads non-linearly suppresses semantic heads. Over-boosting forces a KL divergence from the syntactic manifold, resulting in text that is logically rigorous but grammatically shattered.",
+          "source_refs": [
+            "Softmax Competition Dynamics",
+            "Partition Function Distortion"
+          ]
+        }
+      ],
+      "id": "concepts-ewt",
+      "intro": "Understanding the theoretical mechanics and mathematical limits behind the Epistemic Weight Tensor simulation."
+    },
+    "workflow": {
+      "title": "EWT Operational Pipeline",
+      "steps": [
+        {
+          "label": "Observe (Dynamic Clustering)",
+          "summary": "Analyze head activations across a sliding window.",
+          "bullets": [
+            "Compute temporal variance across the rolling activation buffer.",
+            "Compute spatial/spectral entropy of attention distributions.",
+            "Determine activation sparsity.",
+            "Assign heads to semantic vs. epistemic clusters based on heuristic scoring."
+          ],
+          "id": "step-1-observe"
+        },
+        {
+          "label": "Orient (CaR Detection & Entropy Check)",
+          "summary": "Evaluate the current model state for hallucination precursors.",
+          "bullets": [
+            "Compute Shannon entropy of the next-token distribution to detect high confidence.",
+            "Perform SVD on the recent attention subgraph.",
+            "Calculate spectral gap to assess the rank and logical integrity of the dependency chain."
+          ],
+          "id": "step-2-orient"
+        },
+        {
+          "label": "Decide & Act (Intervention)",
+          "summary": "Apply the Epistemic Weight Tensor if thresholds are crossed.",
+          "bullets": [
+            "Trigger intervention if entropy is critically low AND logical dependency is degrading.",
+            "Apply target EWT multiplier to epistemic heads and dampening to semantic heads.",
+            "Smooth the EWT transition using Exponential Moving Average (EMA) to prevent lattice fracture and attention hotspots."
+          ],
+          "id": "step-3-act"
+        }
+      ],
+      "id": "workflow-ewt",
+      "intro": "The step-by-step recursive OODA loop executed during each autoregressive step to ensure structural integrity."
+    },
+    "checklist": {
+      "title": "Implementation Checklist",
+      "items": [
+        {
+          "label": "Model Hook Preparation",
+          "bullets": [
+            "Identify Multi-Head Latent Attention (MLA) or Mixture-of-Experts (MoE) target layers.",
+            "Set up state buffers for rolling head trajectory history (e.g., last 10 tokens).",
+            "Ensure access to pre-softmax attention logits."
+          ]
+        },
+        {
+          "label": "Parameter Calibration",
+          "bullets": [
+            "Tune 'entropy_threshold' (e.g., 0.45 bits) based on vocabulary size and baseline model confidence.",
+            "Set 'epistemic_boost' factor strictly below 2.5 to avoid absolute grammatical shattering.",
+            "Configure EMA alpha (e.g., 0.9) to stabilize inference interventions."
+          ]
+        },
+        {
+          "label": "Safety Nets",
+          "bullets": [
+            "Implement fluency dampening (e.g., 0.85) instead of zeroing semantic heads.",
+            "Apply output logit temperature scaling (1.1x) during interventions to safely restore entropy mass.",
+            "Monitor False-Positive Rigidity during tasks like coding or pure math generation."
+          ]
+        }
+      ],
+      "id": "checklist-ewt",
+      "intro": "Actionable starting points for architecting the EWT intervention in custom transformer environments."
+    },
+    "metrics": {
+      "id": "metrics-ewt",
+      "intro": "Quantitative signals used to evaluate the EWT's effectiveness, structural stability, and intervention thresholds.",
+      "items": [
+        {
+          "name": "Token-Level Entropy (Sigma)",
+          "description": "Shannon entropy of the next-token distribution measured in bits.",
+          "signals": [
+            "Sub-0.45 bits indicates high confidence, triggering hallucination checks."
+          ]
+        },
+        {
+          "name": "Logical Integrity Score",
+          "description": "Derived from the spectral gap (S[0] / S[-1]) of the attention subgraph transition matrix via SVD.",
+          "signals": [
+            "Scores below 0.5 indicate significant Causal Rung Collapse."
+          ]
+        },
+        {
+          "name": "Epistemic Divergence",
+          "description": "Measures the KL divergence between the intervened latent state and the model's pre-trained syntactic manifold.",
+          "signals": [
+            "High divergence maps to Grammatical Shattering."
+          ]
+        }
+      ],
+      "title": "Success & Integrity Metrics"
+    },
+    "personas": {
+      "id": "personas-ewt",
+      "intro": "Roles relevant to the research, implementation, and tuning of the EWT architecture.",
+      "table": {
+        "columns": [
+          "Role",
+          "Focus",
+          "Action"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "Principal Epistemic Architect",
+              "Latent Space Geometry",
+              "Designs the clustering heuristics and CaR detection mathematical limits."
+            ]
+          },
+          {
+            "cells": [
+              "Mechanistic Interpretability Engineer",
+              "Attention Subgraph Analysis",
+              "Extracts SVD transition matrices and tunes the EMA smoothing parameters."
+            ]
+          },
+          {
+            "cells": [
+              "Alignment Researcher",
+              "Fluency-Rigor Pareto Frontier",
+              "Balances the epistemic boost factor to prevent grammatical shattering."
+            ]
+          }
+        ]
+      },
+      "title": "Stakeholders"
+    },
+    "resilience": {
+      "failure_modes": [
+        {
+          "name": "Grammatical Shattering",
+          "description": "Over-boosting epistemic heads non-linearly suppresses semantic predictors, causing the model to output logically rigorous but syntactically fragmented text devoid of connective grammar.",
+          "mitigations": [
+            "Keep epistemic boost strictly below ~3.0.",
+            "Use a dampening factor (0.85) rather than zeroing semantic heads.",
+            "Apply mild temperature scaling (1.1x) to intervened output logits."
+          ]
+        },
+        {
+          "name": "Non-Linear Logit Fragility",
+          "description": "Adding differential bias to attention logits breaks shift-invariance, creating attention hot-spots that destroy anaphoric reference and pronoun resolution.",
+          "mitigations": [
+            "Use Exponential Moving Average (EMA) to smooth the application of the Epistemic Weight Tensor across tokens."
+          ]
+        },
+        {
+          "name": "False-Positive Rigidity",
+          "description": "Over-reliance on cosine similarity or simple entropy thresholds triggers intervention during valid, highly confident generation (e.g., code, mathematical proofs), inducing over-cautious hesitation.",
+          "mitigations": [
+            "Rely on SVD spectral gap (subgraph structural analysis) rather than purely linear geometric proxies like cosine similarity."
+          ]
+        }
+      ],
+      "id": "resilience-ewt",
+      "intro": "Identified mathematical limits, architectural vulnerabilities, and corresponding mitigations.",
+      "title": "Failure Modes & Mitigations"
+    },
+    "structure": {
+      "id": "structure-ewt",
+      "intro": "Logical flow and structural hierarchy of the EWT simulation module.",
+      "table": {
+        "columns": [
+          "Phase",
+          "Component",
+          "Output"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "Phase 1: Observation",
+              "Trajectory Analyzer",
+              "Head Cluster Assignments"
+            ]
+          },
+          {
+            "cells": [
+              "Phase 2: Orientation",
+              "Subgraph SVD Engine",
+              "Logical Integrity Score"
+            ]
+          },
+          {
+            "cells": [
+              "Phase 3: Decision",
+              "Entropy Monitor",
+              "Intervention Trigger Boolean"
+            ]
+          },
+          {
+            "cells": [
+              "Phase 4: Action",
+              "Steering Applicator",
+              "Modified Attention Logits"
+            ]
+          }
+        ]
+      },
+      "title": "Architectural Topology",
+      "variant": "hierarchical"
+    }
+  }
+}

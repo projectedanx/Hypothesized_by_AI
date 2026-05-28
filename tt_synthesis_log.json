@@ -1,0 +1,25 @@
+{
+  "generation_timestamp": "2026-03-26T03:30:47.045574+00:00",
+  "sha256": "75dc084d52ec734717a5adac247e6feecbc3dc41e5f4239f0fdd75c6097d27bd",
+  "pattern": "urn:drp:topology:failure_mode:topological_tearing",
+  "collision_resolutions": [
+    {
+      "collision_id": "CR-TT-01",
+      "tension_description": "Topological Tearing frames the problem as a fundamental architectural limit (zero-sum attention thermodynamics). But conversational inertia (arXiv:2602.03664) suggests the failure mode is behavioral not architectural \u2014 a learned attention pattern that can be unlearned via Context Preference Learning (CPL) and clip context techniques.",
+      "resolution": "Both mechanisms co-occur and are not mutually exclusive. Architectural limits (softmax crowding, positional under-training) set the hard ceiling; conversational inertia is a learned behavioral amplifier that accelerates the approach to that ceiling under multi-turn iterative UI generation. Mitigation: CPL + clip context reduce diagonal attention by 7%, which delays but does not eliminate the thermodynamic ceiling. The Incremental Isolation Principle remains necessary regardless of CPL.",
+      "synthesis_rule": "Architectural hard ceiling (P=T/V pressure) + behavioral amplifier (conversational inertia diagonal attention) \u2192 SSI = f(both). Mitigation must address both: isolation protocol (architectural) + CPL/clip (behavioral)."
+    },
+    {
+      "collision_id": "CR-TT-02",
+      "tension_description": "The Incremental Isolation Principle ('One Major Change') conflicts with user workflow expectations in industrial dashboard generation. An industrial dashboard with filter dropdowns, color system, typography, and data visualization is a single conceptual unit. Forcing temporal decoupling requires users to fragment cognitively unified design intent across 4-8 separate turns.",
+      "resolution": "The ontology's framing is operationally correct but the workflow cost is real. The resolution is not to eliminate temporal decoupling but to introduce a semantic segmentation pre-pass: a planning turn (Lovable's 'Plan Mode') that maps the unified design intent into an isolation-compatible execution sequence. This preserves cognitive unity at the planning layer while enforcing the thermodynamic isolation constraint at the execution layer.",
+      "synthesis_rule": "Unified design intent \u2192 Planning turn (semantic decomposition) \u2192 Sequenced isolated execution turns. The planning turn is zero-SSI-risk because it does not modify the geometric manifold; it only annotates the mutation queue."
+    },
+    {
+      "collision_id": "CR-TT-03",
+      "tension_description": "The FalsifiabilityTest specifies that a model processing '4+ simultaneous orthogonal changes across Color, Font, Layout, and Image modalities without SSI > 0.08' would falsify the hypothesis. But the SSI metric as currently defined requires a prior successful baseline generation to measure against, creating a circular dependency: you cannot measure SSI without a functioning layout, which presupposes the isolation protocol.",
+      "resolution": "The SSI must be defined relative to a tool-specific zero-shot baseline (the model's default output for a given component type with no structural context), not the prior successful generation. This makes SSI computable for first-pass generation. The FalsifiabilityTest then becomes: does a first-pass four-axis prompt produce output with SSI (vs zero-shot baseline) < 0.08 for all four axes simultaneously? UI-Bench's TrueSkill evaluation provides the empirical substrate for this measurement.",
+      "synthesis_rule": "SSI_baseline = divergence from zero-shot tool default, not from prior session layout. Falsification threshold remains SSI < 0.08 across all 4 axes simultaneously in a single inference pass."
+    }
+  ]
+}

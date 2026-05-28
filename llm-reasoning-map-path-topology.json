@@ -1,0 +1,310 @@
+{
+  "meta": {
+    "id": "llm-reasoning-map-path-topology",
+    "title": "LLM Reasoning Topology: From Map and Path to Terrain Modification",
+    "primary_pill": "AI Architecture",
+    "short_tagline": "A structural taxonomy of LLM reasoning evolving from static latent maps to dynamic, test-time terrain modification.",
+    "tags": [
+      "LLMs",
+      "Reasoning Architecture",
+      "Latent Space",
+      "Chain of Thought",
+      "Cognitive Topology"
+    ],
+    "status": "published",
+    "hero_cta_label": "Explore the Architecture",
+    "hero_cta_target": "#sec-overview",
+    "research_date": "Q1 2026",
+    "source_papers": [
+      "arxiv:2503.22165",
+      "arxiv:2504.01928",
+      "arxiv:2412.06769",
+      "arxiv:2603.04948",
+      "arxiv:2602.22441"
+    ],
+    "worldview_ref": "Hickam_Orientation & Contrastive_Delta Analysis",
+    "created_at": 1774495387995
+  },
+  "sections": {
+    "overview": {
+      "title": "Overview",
+      "intro": "Current Large Language Model architectures are evolving across three distinct reasoning regimes. Moving beyond the dichotomy of a static 'Map' (latent space) and a sequential 'Path' (Chain of Thought), the frontier now includes dynamic terrain modification during inference.",
+      "summary_card": {
+        "label": "The Three-Act Architecture",
+        "title": "Navigating and Reshaping the Latent Topology",
+        "body": "LLMs have traditionally relied on a frozen latent space (System 1) and linear token generation (System 2). New paradigms introduce test-time gradient descent (System 3), allowing the model to reshape its internal landscape to bridge topological gaps and execute continuous, multi-dimensional search.",
+        "tags": [
+          "System 1",
+          "System 2",
+          "System 3"
+        ]
+      },
+      "hero_pills": [
+        "Latent Space",
+        "Inference Compute",
+        "Terrain Modification"
+      ],
+      "id": "sec-overview"
+    },
+    "key_concepts": {
+      "title": "Key Concepts",
+      "cards": [
+        {
+          "title": "The Linguistic Bottleneck",
+          "body": "Sequential token generation collapses high-dimensional continuous thought into a one-dimensional stream. Forcing rich reasoning into linear tokens destroys structural information present in the latent manifold.",
+          "source_refs": [
+            "arxiv:2412.06769"
+          ]
+        },
+        {
+          "title": "The Binding Problem & Directional Asymmetry",
+          "body": "Transformers lack a bidirectional binding register. Causal language modeling creates asymmetric gradient paths, making relationships one-way and causing the Reversal Curse (e.g., knowing A causes B, but failing to infer B is caused by A).",
+          "source_refs": [
+            "arxiv:2504.01928"
+          ]
+        },
+        {
+          "title": "Continuous Latent Thought (BFS vs DFS)",
+          "body": "Methods like COCONUT feed hidden states directly back as inputs without decoding into tokens. This enables a breadth-first search (BFS) capability across multiple reasoning branches, overcoming the depth-first search (DFS) limits of standard CoT.",
+          "source_refs": [
+            "arxiv:2509.25239"
+          ]
+        },
+        {
+          "title": "System 3: Terrain Modification",
+          "body": "Instead of just finding a path through a frozen map, emerging models use test-time gradient descent in latent space to dynamically reshape their local manifold geometry during a query, actively writing new map contour lines while navigating.",
+          "source_refs": [
+            "arxiv:2603.04948"
+          ]
+        }
+      ],
+      "id": "sec-key-concepts",
+      "intro": "Core architectural paradigms driving the evolution of LLM inference and reasoning capabilities."
+    },
+    "workflow": {
+      "title": "Evolution of Inference Trajectories",
+      "steps": [
+        {
+          "label": "System 0/1: Token Probability Lookup",
+          "summary": "Direct generation via frozen weights and single forward passes.",
+          "bullets": [
+            "Relies entirely on the pre-trained latent map.",
+            "Static traversal with no active path planning.",
+            "Highly vulnerable to topological gaps and the Reversal Curse."
+          ],
+          "id": "step-1"
+        },
+        {
+          "label": "System 1.5: Token-Space CoT",
+          "summary": "Sequential reasoning token generation using an inference-time token budget.",
+          "bullets": [
+            "Creates an explicit, linear path across the static map.",
+            "Forces depth-first search (DFS).",
+            "Subject to the linguistic bottleneck."
+          ],
+          "id": "step-2"
+        },
+        {
+          "label": "System 2: Latent Continuous Reasoning",
+          "summary": "Continuous hidden-state recurrence without tokenizing intermediate steps.",
+          "bullets": [
+            "Operates entirely in latent space.",
+            "Enables multi-dimensional tree traversal and implicit BFS.",
+            "Defers early commitment to specific words until final output."
+          ],
+          "id": "step-3"
+        },
+        {
+          "label": "System 3: Dynamic Terrain Modification",
+          "summary": "Test-time gradient descent locally rewrites the map geometry.",
+          "bullets": [
+            "Perturbs latent weights dynamically at query time.",
+            "Path reshapes local topology, bridging fundamental structural voids.",
+            "Blurs the rigid boundary between training and inference."
+          ],
+          "id": "step-4"
+        }
+      ],
+      "id": "sec-workflow",
+      "intro": "How LLMs navigate from query to answer across progressing generations of cognitive architecture."
+    },
+    "checklist": {
+      "title": "Diagnostic Checklist for Reasoning Failures",
+      "items": [
+        {
+          "label": "Assess the Reversal Curse",
+          "bullets": [
+            "Is the relationship bidirectional in the prompt?",
+            "Does the model fail when querying from object to subject?",
+            "If yes, this indicates a directed weight asymmetry in the latent map."
+          ]
+        },
+        {
+          "label": "Identify Linguistic Bottlenecks",
+          "bullets": [
+            "Does forcing Chain of Thought degrade the nuance of the concept?",
+            "Is the model losing high-dimensional context when outputting tokens?",
+            "Consider testing latent recurrence methods to preserve dimensional richness."
+          ]
+        },
+        {
+          "label": "Evaluate Structural Voids",
+          "bullets": [
+            "Are hallucinations plausible-sounding but ungrounded in fact?",
+            "Is the model confabulating paths that simply do not exist in the training manifold?",
+            "Consider if the underlying binding or mapping is fundamentally missing."
+          ]
+        }
+      ],
+      "id": "sec-checklist",
+      "intro": "Criteria to evaluate whether a model failure is due to weak pathfinding or fundamental topological gaps."
+    },
+    "metrics": {
+      "id": "sec-metrics",
+      "intro": "Quantifiable signals measuring the success of latent pathfinding and terrain modification techniques.",
+      "items": [
+        {
+          "name": "Latent Search Breadth",
+          "description": "Measures the model's ability to maintain superposition of multiple reasoning branches.",
+          "signals": [
+            "Number of implicit BFS branches successfully sustained",
+            "Measurable delay of premature token commitment"
+          ]
+        },
+        {
+          "name": "Test-Time Accuracy Delta",
+          "description": "Improvement in reasoning benchmarks achieved via dynamic adaptation without fine-tuning.",
+          "signals": [
+            "10-40% accuracy improvement over best-of-N baselines",
+            "Reduction in total model calls by up to 40.2%"
+          ]
+        },
+        {
+          "name": "Bidirectional Retrieval Success",
+          "description": "Ability to successfully navigate logically symmetric bindings backward.",
+          "signals": [
+            "Accuracy on B-to-A queries after exclusively training on A-to-B data",
+            "Resolution of query relation sparsity"
+          ]
+        }
+      ],
+      "title": "Reasoning Efficiency & Efficacy Metrics"
+    },
+    "personas": {
+      "id": "sec-personas",
+      "intro": "A comparative view of reasoning regimes based on their interaction with the latent map.",
+      "table": {
+        "columns": [
+          "Regime",
+          "Mechanism",
+          "Map Interaction"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "System 0 (Recall)",
+              "Token probability lookup",
+              "Static traversal, no path planning"
+            ]
+          },
+          {
+            "cells": [
+              "System 1.5 (CoT)",
+              "Sequential reasoning tokens",
+              "Explicit DFS path on static Map"
+            ]
+          },
+          {
+            "cells": [
+              "System 2 (Latent)",
+              "Continuous hidden-state recurrence",
+              "BFS-biased tree traversal within Map"
+            ]
+          },
+          {
+            "cells": [
+              "System 3 (Terrain Mod)",
+              "Test-time gradient descent",
+              "Path dynamically reshapes local Map topology"
+            ]
+          }
+        ]
+      },
+      "title": "Architectural Regimes"
+    },
+    "resilience": {
+      "failure_modes": [
+        {
+          "name": "The Reversal Curse",
+          "description": "Models cannot reason backward from target to source due to directional gradient flows embedded during autoregressive training.",
+          "mitigations": [
+            "Implement bidirectional diffusion architectures or binding registers.",
+            "Utilize dynamic terrain modification (System 3) to build new relational bridges at test time."
+          ]
+        },
+        {
+          "name": "Linguistic Compression Loss",
+          "description": "Information is irrevocably lost when continuous latent vectors are projected into discrete vocabulary tokens during CoT.",
+          "mitigations": [
+            "Deploy continuous latent thought recurrences (e.g., COCONUT).",
+            "Iterate hidden states deeply before generating surface tokens to maintain dimensionality."
+          ]
+        },
+        {
+          "name": "Implicit Pruning in BFS",
+          "description": "Even in latent reasoning models, softmax normalization and learned priors can cause premature suppression of valid reasoning paths.",
+          "mitigations": [
+            "Apply test-time instance-level policy gradients.",
+            "Calibrate reward signals to explicitly maintain search tree diversity during inference."
+          ]
+        }
+      ],
+      "id": "sec-resilience",
+      "intro": "Known vulnerabilities in navigating latent topologies and emerging methods to mitigate them.",
+      "title": "Failure Modes & Mitigations"
+    },
+    "structure": {
+      "id": "sec-structure",
+      "intro": "How abstract components of cognitive navigation correspond to specific neural operations in modern LLMs.",
+      "table": {
+        "columns": [
+          "Metaphor",
+          "Neural Component",
+          "Architectural Function"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "The Map",
+              "Frozen Training Weights",
+              "Static associative landscape of interconnected concepts."
+            ]
+          },
+          {
+            "cells": [
+              "The Path",
+              "Inference Tokens (CoT)",
+              "Linear step-by-step traversal along predefined gradients."
+            ]
+          },
+          {
+            "cells": [
+              "The Multi-lane Highway",
+              "Latent Thought Vectors",
+              "Parallel BFS-biased reasoning deferring token collapse."
+            ]
+          },
+          {
+            "cells": [
+              "Terrain Terraforming",
+              "Test-Time Gradients",
+              "Reshaping manifold geometry locally during active queries."
+            ]
+          }
+        ]
+      },
+      "title": "Anatomy of the Three-Act Architecture",
+      "variant": "table"
+    }
+  }
+}

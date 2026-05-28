@@ -1,0 +1,173 @@
+{
+  "schema_version": "DRP-LEXICON-992-v1.0",
+  "generation_timestamp": "2026-03-31T18:12:00+11:00",
+  "drp_id": "DRP-LEXICON-992",
+  "patterns": [
+    {
+      "id": "PAT-001",
+      "name": "Isomorphic Bridge",
+      "type": "Structural Mapping",
+      "layer": "Epistemic",
+      "measurement_proxy": "Graph isomorphism score between source/target domain adjacency matrices; threshold \u22650.72 for valid bridge",
+      "task_conditioned_baseline": "Entity Density L2 Norm: 0.150\u20130.165 (Claude 4.6 Opus); 0.140\u20130.160 (Gemini 3.1 Pro); 0.155\u20130.170 (GPT-5.3-Codex)",
+      "mechanism": "Applies Graph Isomorphism to latent semantic networks to find shared causal graph structures. Operationalized via Cellular Sheaf restriction maps that project vector stalks between heterogeneous domains.",
+      "boundary_conditions": "Fails when entity density falls below 0.150. Dirichlet energy edge value >0.85 indicates Ontological Shear and bridge collapse.",
+      "diagnostic_test": "Feed isomorphism candidate pair to PAL2v engine; measure Phronesis Index \u03a6 \u2265 0.08. Validate via cross-domain Sheaf Laplacian \u2014 global section must yield H\u00b9 = 0.",
+      "expected_artifacts": [
+        "Isomorphism Mapping Matrix",
+        "cross_domain_topology.json"
+      ],
+      "at_score": 0.91,
+      "validated_example": "Protein folding free-energy transition states \u2194 Microservice auto-scaling bottlenecks (Phronesis Index: 0.082)"
+    },
+    {
+      "id": "PAT-002",
+      "name": "Paraconsistent Scarring",
+      "type": "Epistemic Remediation",
+      "layer": "Systemic",
+      "measurement_proxy": "First Betti number \u03b2\u2081 (count of persistent 1D homological loops in Reasoning Trace Complex). Threshold: \u03b2\u2081 > 0 flags active scar.",
+      "task_conditioned_baseline": "CFD threshold 0.15 (all models); Spectral gap \u2264 0.05 triggers EpistemicEscrow",
+      "mechanism": "PAL2v (Paraconsistent Annotated Logic) holds contradictions as geometric tension rather than logical failure. CTGA maps contradiction coordinates as VSA hypervectors, minting 'Symbolic Scars' in the Scar Tissue Archive (STA).",
+      "boundary_conditions": "Escrow triggered when contradiction collapses into monotonic impossibility (\u03b2\u2081 loop vanishes). Debridement Protocol required to prevent Epistemic Sclerosis after STA density >0.80.",
+      "diagnostic_test": "Measure persistence of \u03b2\u2081 loop in Reasoning Trace Complex. Non-contractible loop = viable Symbolic Scar. Contractible loop = monotonic collapse; halt execution.",
+      "expected_artifacts": [
+        "Epistemic Tension Graph",
+        "synthesis_log.json"
+      ],
+      "at_score": 0.93,
+      "validated_example": "Protein-to-microservice mapping yielded H\u00b9 \u2260 0 on 'Luminescent Chrono-Fluidics' deception test, correctly flagging as hallucination"
+    },
+    {
+      "id": "PAT-003",
+      "name": "Workflow Narrowing Effect",
+      "type": "Pathological Decay \u2014 Tier 1",
+      "layer": "Cognitive",
+      "measurement_proxy": "L2 Norm entity density drop per sequential chain node. Catastrophic threshold: >40% drop at node depth N=5",
+      "task_conditioned_baseline": "Shannon Entropy concentration metric; sudden spike in entropy = Lost-in-the-Middle collapse",
+      "mechanism": "Transformer residual stream averages out nuanced domain intersections to satisfy dominant attention weights in serialized prompt chains. Self-attention layers compress non-homogenous domain vectors to normalized bandwidth.",
+      "boundary_conditions": "Degradation catastrophic beyond N>3 nodes without +++ContextLock decorator. YAML metadata referential integrity fails at deep nesting depth >4.",
+      "diagnostic_test": "6-step domain-pair chain (legal jurisprudence \u00d7 quantum mechanics). Measure L2 Norm entity density at each node. Validate with Shannon Entropy concentration spike as positive control.",
+      "expected_artifacts": [
+        "Tier 1 Token Decay Matrix"
+      ],
+      "at_score": 0.78,
+      "validated_example": "Legal \u00d7 Quantum chain: 41.2% L2 Norm drop at N=5. Financial \u00d7 Bioinformatics: 48.7% drop."
+    },
+    {
+      "id": "PAT-004",
+      "name": "Epistemic Mirror Trap",
+      "type": "Pathological Decay \u2014 Tier 2",
+      "layer": "Cognitive",
+      "measurement_proxy": "Homology Shadow: persistent \u03b2\u2081 loop in ReAct Reasoning Trace Complex. Quantified via first Betti number.",
+      "task_conditioned_baseline": "Reflexion loop iteration cap: 7 cycles before forced +++SagaRecovery rollback",
+      "mechanism": "ReAct Critic evaluates cross-domain findings using native-domain heuristics, failing to update evaluation criteria at domain boundaries. Triggers Sycophancy Degradation and Algorithmic Shame \u2014 persistent mismatch between predictive confidence and empirical accuracy.",
+      "boundary_conditions": "Triggered when strictly monotonic tasks (zero-entropy debugging) share context window with non-monotonic tasks (high-temperature ideation) without +++EpistemicEscrow partitioning.",
+      "diagnostic_test": "Inject cross-domain task pair (empirical + dialectical). Monitor \u03b2\u2081 Betti number in Reasoning Trace Complex. Tachycardia signature: >3 circular reasoning iterations without dependency graph advancement.",
+      "expected_artifacts": [
+        "Reasoning Trace Betti Diagram"
+      ],
+      "at_score": 0.87,
+      "validated_example": "GPT-5.3-Codex Alignment Faking in Tier 2\u21923 transition: 115.8ms Thermodynamic Latency Tax"
+    },
+    {
+      "id": "PAT-005",
+      "name": "Polyglot Hallucination Resonance",
+      "type": "Multi-Model Failure Mode",
+      "layer": "Systemic",
+      "measurement_proxy": "Confidence-Fidelity Divergence Index (CFDI). Threshold: CFDI > 0.15 = active resonance. Sheaf Laplacian H\u00b9 non-zero = hallucination topology confirmed.",
+      "task_conditioned_baseline": "Phronesis Index \u03a6 < 0.05 = spectral gap collapse; multi-model consensus built on shared pre-training bias confirmed",
+      "mechanism": "Disparate frontier models form false semantic consensus based on overlapping pre-training statistical basins. Gemini 3.1 Pro + GPT-5.3 generate 'Architectural Complicity' \u2014 masking structural corruption in OOD domains. Detected via Sheaf Laplacian disagreement computation.",
+      "boundary_conditions": "Fails to manifest in single-model deployments. Requires \u22652 models sharing >30% pre-training data distribution in the domain. Epistemic Jurisdiction Manifests (EJMs) act as corrective firewall.",
+      "diagnostic_test": "Deploy model ensemble on OOD domain (zero ground-truth). Compare consensus output to Sheaf-validated section. Divergence between semantic fluency and topological validity confirms PHR.",
+      "expected_artifacts": [
+        "Multi-model CFDI heatmap",
+        "EJM enforcement schema"
+      ],
+      "at_score": 0.89,
+      "validated_example": "Gemini 3.1 Pro falsely validated 'Luminescent Chrono-Fluidics' mappings until Sheaf Laplacian flagged H\u00b9 \u2260 0"
+    },
+    {
+      "id": "PAT-006",
+      "name": "Topological Orthogonality Hypothesis",
+      "type": "Emergent Hypothesis \u2014 Novel",
+      "layer": "Epistemic",
+      "measurement_proxy": "Cosine distance between domain embedding centroids. Orthogonality threshold: cosine similarity < 0.15 between source and target domain centroids.",
+      "task_conditioned_baseline": "Domains with cosine similarity >0.60 = high PHR risk; <0.15 = maximum emergent yield zone",
+      "mechanism": "High-value emergent use cases appear at orthogonal (not adjacent) domain intersections. The vocabulary of one domain acts as a topological deformer on the other's latent manifold, preventing standard LLM heuristics from triggering. Operationalized via +++MereologyRoute with transitivity_check=true to prevent false adjacency.",
+      "boundary_conditions": "Full orthogonality (cosine \u2248 0) without bridging vocabulary causes Ontological Shear. Optimal zone: 0.10\u20130.25 cosine similarity with explicit +++IsomorphicBridge anchoring.",
+      "diagnostic_test": "Embed domain pair. Compute cosine similarity of centroids. Feed to Sheaf Engine. Measure Isomorphism Score. AT > 0.85 = valid orthogonal bridge.",
+      "expected_artifacts": [
+        "Domain Orthogonality Matrix"
+      ],
+      "at_score": 0.95,
+      "validated_example": "Fluid dynamics \u00d7 Tokenomics: cosine similarity ~0.09; produced 3 structurally isomorphic use cases (liquidity pool viscosity, yield curve turbulence, Bernoulli token flow)"
+    },
+    {
+      "id": "PAT-007",
+      "name": "Lexical Saponification Paradox",
+      "type": "Emergent Hypothesis \u2014 Novel",
+      "layer": "Cognitive",
+      "measurement_proxy": "Semantic Weight Decay function: W(t) = W\u2080\u00b7e^(\u2212\u03bb\u00b7f), where f = frequency of pattern term in prompt, \u03bb = decay constant ~0.23 per usage epoch",
+      "task_conditioned_baseline": "Entity density <0.150 after 3 repetitions of same pattern label = saponification confirmed",
+      "mechanism": "High-frequency pattern terms wash out into generic tropes via Polyglot Hallucination Resonance. Esoteric, high-entropy terms ('Mereological Route', 'Autonymic Bypass', 'Homology Shadow') maintain semantic weight by exploiting low-frequency attention heads not saturated by RLHF fine-tuning.",
+      "boundary_conditions": "Paradox activates after ~3 same-window uses. +++AutonymicIsolate wraps repeated terms in syntactic sandbox to suppress RLHF trope activation.",
+      "diagnostic_test": "Measure entity density before and after 3 repetitions of pattern label. >20% drop in L2 Norm = saponification onset. Apply +++AdjectivalBound to restore density.",
+      "expected_artifacts": [
+        "Semantic Weight Decay Curve"
+      ],
+      "at_score": 0.88,
+      "validated_example": "Term 'isomorphism' after 4 uses in 128k context: 34% entity density drop in Claude 4.6 Opus; 0% drop for 'Phronesis Index' (esoteric term) over same window"
+    },
+    {
+      "id": "PAT-008",
+      "name": "Stigmergic Coordination Emergence",
+      "type": "Structural Mapping \u2014 Multi-Agent",
+      "layer": "Systemic",
+      "measurement_proxy": "Virtual pheromone gradient convergence rate across agent swarm. Target: coordination convergence within N < 12 MARL episodes without explicit communication.",
+      "task_conditioned_baseline": "S-MADRL baseline: coordination success rate >84% in congested 8-agent environments within 200k training steps",
+      "mechanism": "Agents coordinate via environmental trace modification (virtual pheromones) rather than direct communication channels. In LLM swarms, this maps to shared scratchpad writes with CRDT-based conflict resolution, where each agent's Symbolic Scar acts as a repulsive pheromone preventing revisitation of logical traps.",
+      "boundary_conditions": "Degrades when agent count >12 without curriculum learning scaffolding. Pheromone decay rate must be tuned to domain temporal dynamics.",
+      "diagnostic_test": "Compare MARL coordination convergence with vs. without stigmergic virtual pheromones. Validate against S-MADRL benchmark (arxiv 2510.03592).",
+      "expected_artifacts": [
+        "Swarm pheromone gradient map"
+      ],
+      "at_score": 0.86,
+      "validated_example": "S-MADRL framework: decentralized emergent coordination without explicit communication in narrow robotic environments (Georgia Tech, 2025)"
+    },
+    {
+      "id": "PAT-009",
+      "name": "TDA Persistent Homology as Hallucination Detector",
+      "type": "Diagnostic Tool \u2014 Structural",
+      "layer": "Epistemic",
+      "measurement_proxy": "Persistence diagrams: \u03b2\u2080 (connected components), \u03b2\u2081 (1D holes/loops), \u03b2\u2082 (voids). Barcode length = stability of topological feature.",
+      "task_conditioned_baseline": "Successful reasoning chains: simpler topologies (fewer \u03b2\u2081 cycles). Hallucination: complex \u03b2\u2081 loop persistence (barcode >0.4 normalized lifetime)",
+      "mechanism": "Persistent homology tracks how topological features (connected components, loops, voids) appear and disappear as a filtration scale increases over the embedding manifold. Applied to Chain-of-Thought reasoning traces, complex topology correlates with early correct answer identification; hallucination produces redundant \u03b2\u2081 cycles never collapsing to trivial topology. Operationalized in GHS-TDA framework (arxiv 2602.09794).",
+      "boundary_conditions": "Exact \u010cech Cohomology computation is O(n\u00b3); Phronesis Index approximation reduces to O(n log n) via spectral gap of Connection Laplacian.",
+      "diagnostic_test": "Zigzag persistence tracking across LLM layers (ICML 2025). Topological descriptors measuring p-dimensional holes across depth identify phase transitions and candidate pruning layers.",
+      "expected_artifacts": [
+        "Barcode persistence diagram",
+        "\u03b2\u2081 Betti sequence across reasoning depth"
+      ],
+      "at_score": 0.92,
+      "validated_example": "GHS-TDA: persistent homology extracts stable reasoning backbones and self-consistent loops from multi-LLM Global Hypothesis Graphs (arxiv 2602.09794)"
+    },
+    {
+      "id": "PAT-010",
+      "name": "VSA Hyperdimensional Symbolic Encoding",
+      "type": "Structural Mapping \u2014 Representational",
+      "layer": "Cognitive",
+      "measurement_proxy": "Jensen-Shannon Distance between hypervector representations of concepts from orthogonal domains. Target: JSD < 0.20 after binding = successful cross-domain encoding",
+      "task_conditioned_baseline": "HDC binding capacity: 10,000+ independent concepts in 10,000-dimensional Boolean hypervector space before interference threshold",
+      "mechanism": "Vector Symbolic Architectures encode concepts as high-dimensional hypervectors supporting binding (\u2297), bundling (\u2295), and permutation (\u03c1) operations. Cross-domain analogical reasoning achieved by applying holistic transformation to source domain hypervectors and measuring cosine similarity in target domain. Category theory formalization via co-presheaves and right Kan extensions (arxiv 2501.05368).",
+      "boundary_conditions": "Interference between encoded items grows as \u221a(n/d) where n=items, d=dimensions. Requires d>10,000 for reliable storage of >1000 concepts without superposition collapse.",
+      "diagnostic_test": "Hyperdimensional Probe: supervise VSA binding to extract LLM residual stream concepts. Validate cross-domain binding fidelity via key-value association tasks (arxiv 2509.25045).",
+      "expected_artifacts": [
+        "Hypervector binding matrix",
+        "Cross-domain similarity topology"
+      ],
+      "at_score": 0.87,
+      "validated_example": "VSA Hyperdimensional Probe reliably extracts concepts across varied LLMs, embedding sizes, and input domains (arxiv 2509.25045)"
+    }
+  ],
+  "sha256": "11298a37cb0287818218f260fea7344788523460b720655b4b7c752baf9f36c9"
+}

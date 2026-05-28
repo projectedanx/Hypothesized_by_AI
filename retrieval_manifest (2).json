@@ -1,0 +1,187 @@
+{
+  "artifact": "retrieval_manifest.json",
+  "generation_timestamp": "2026-03-27T05:07:00Z",
+  "sha256": "bb765ba36557773bafd72a6e47bbb031501168f964aa3d48a2a06de1cb968d73",
+  "queries": [
+    {
+      "id": "Q01",
+      "query": "FreeRTOS Kernel v11.1.0 LTS static task allocation API",
+      "dialectic_type": "Grounding",
+      "domain": "RTOS"
+    },
+    {
+      "id": "Q02",
+      "query": "ESP-IDF v6.0 breaking changes OTA dual bank partition",
+      "dialectic_type": "Version-Anchor",
+      "domain": "ESP32 Firmware"
+    },
+    {
+      "id": "Q03",
+      "query": "MISRA C:2025 new rules AI generated code pointer unions",
+      "dialectic_type": "Standard-Compliance",
+      "domain": "Coding Standards"
+    },
+    {
+      "id": "Q04",
+      "query": "ARM Cortex-M4 NVIC interrupt latency WCET determinism",
+      "dialectic_type": "Hardware-Grounding",
+      "domain": "ARM Architecture"
+    },
+    {
+      "id": "Q05",
+      "query": "Zephyr RTOS v4.4 memory protection MPU stack overflow",
+      "dialectic_type": "Comparative-RTOS",
+      "domain": "Zephyr"
+    },
+    {
+      "id": "Q06",
+      "query": "FreeRTOS configCHECK_FOR_STACK_OVERFLOW method 2 sentinel",
+      "dialectic_type": "Defect-Pattern",
+      "domain": "Memory Safety"
+    },
+    {
+      "id": "Q07",
+      "query": "Embedded Rust no_std cortex-m-rt AtomicU32 ISR shared state",
+      "dialectic_type": "Language-Alternative",
+      "domain": "Embedded Rust"
+    },
+    {
+      "id": "Q08",
+      "query": "STM32 HAL IWDG watchdog timer independent refresh configuration",
+      "dialectic_type": "Hardware-Peripheral",
+      "domain": "STM32"
+    },
+    {
+      "id": "Q09",
+      "query": "ESP32 brownout detection esp_reset_reason WDT task watchdog",
+      "dialectic_type": "Edge-Case-HW",
+      "domain": "ESP32 Power"
+    },
+    {
+      "id": "Q10",
+      "query": "IoT firmware memory fragmentation heap4 heap5 long uptime 90 days",
+      "dialectic_type": "Causal-Entropy",
+      "domain": "Memory Management"
+    },
+    {
+      "id": "Q11",
+      "query": "RTOS priority inversion mutex ceiling protocol FreeRTOS",
+      "dialectic_type": "Concurrency-Defect",
+      "domain": "Scheduling"
+    },
+    {
+      "id": "Q12",
+      "query": "I2C bus hang recovery STM32 ESP32 clock stretching timeout",
+      "dialectic_type": "Hardware-Edge-Case",
+      "domain": "I2C Bus"
+    },
+    {
+      "id": "Q13",
+      "query": "Nordic nRF5340 softdevice interrupt coexistence FreeRTOS",
+      "dialectic_type": "Platform-Specific",
+      "domain": "Nordic nRF"
+    },
+    {
+      "id": "Q14",
+      "query": "MCUboot dual bank bootloader Zephyr rollback confirmed image",
+      "dialectic_type": "OTA-Safety",
+      "domain": "Bootloader"
+    },
+    {
+      "id": "Q15",
+      "query": "linker script MEMORY regions FLASH RAM STM32 custom section placement",
+      "dialectic_type": "Build-Artifact",
+      "domain": "Linker/Build"
+    },
+    {
+      "id": "Q16",
+      "query": "MISRA C:2025 Rule 21.3 dynamic memory allocation prohibition safety",
+      "dialectic_type": "Standard-Compliance",
+      "domain": "Coding Standards"
+    },
+    {
+      "id": "Q17",
+      "query": "Hardware in the loop HIL testing embedded CI/CD Jenkins GitLab firmware",
+      "dialectic_type": "CI-CD-Integration",
+      "domain": "Testing"
+    },
+    {
+      "id": "Q18",
+      "query": "ESP32 SPI flash write brownout power loss corruption NVS",
+      "dialectic_type": "Edge-Case-HW",
+      "domain": "Flash Safety"
+    },
+    {
+      "id": "Q19",
+      "query": "FreeRTOS xTaskNotifyFromISR event deferred processing pattern",
+      "dialectic_type": "ISR-Design-Pattern",
+      "domain": "RTOS"
+    },
+    {
+      "id": "Q20",
+      "query": "Cortex-M MPU memory protection unit stack guard region setup",
+      "dialectic_type": "Hardware-Security",
+      "domain": "ARM Security"
+    },
+    {
+      "id": "Q21",
+      "query": "Rust embedded embassy async executor no_std cortex-m bare metal 2026",
+      "dialectic_type": "Emerging-Pattern",
+      "domain": "Embedded Rust"
+    },
+    {
+      "id": "Q22",
+      "query": "volatile C11 memory model compiler reorder ISR race condition",
+      "dialectic_type": "Language-Semantic",
+      "domain": "C Language"
+    },
+    {
+      "id": "Q23",
+      "query": "JTAG SWD OpenOCD GDB remote debug STM32 ESP32 breakpoint embedded",
+      "dialectic_type": "Toolchain",
+      "domain": "Debugging"
+    },
+    {
+      "id": "Q24",
+      "query": "buffer overflow stack canary protection embedded ARM no OS",
+      "dialectic_type": "Security",
+      "domain": "Embedded Security"
+    },
+    {
+      "id": "Q25",
+      "query": "FreeRTOS task high water mark uxTaskGetStackHighWaterMark production monitoring",
+      "dialectic_type": "Runtime-Metric",
+      "domain": "RTOS Diagnostics"
+    },
+    {
+      "id": "Q26",
+      "query": "ESP-IDF v6.0 Kconfig partition table NVS encryption secure boot",
+      "dialectic_type": "Security-Config",
+      "domain": "ESP32 Security"
+    },
+    {
+      "id": "Q27",
+      "query": "ISO 26262 ASIL-D embedded software firmware safety lifecycle",
+      "dialectic_type": "Regulatory",
+      "domain": "Functional Safety"
+    },
+    {
+      "id": "Q28",
+      "query": "Zephyr RTOS disaggregated security no TCB FPGA capability architecture 2026",
+      "dialectic_type": "Research-Frontier",
+      "domain": "RTOS Security"
+    },
+    {
+      "id": "Q29",
+      "query": "SPI DMA transfer completion callback STM32 HAL non-blocking",
+      "dialectic_type": "Hardware-Peripheral",
+      "domain": "SPI/DMA"
+    },
+    {
+      "id": "Q30",
+      "query": "EmbedCGen benchmark bare metal C code generation ARM GCC cross-compile Renode",
+      "dialectic_type": "AI-Benchmark",
+      "domain": "LLM Code Generation"
+    }
+  ]
+}

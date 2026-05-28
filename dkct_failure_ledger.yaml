@@ -1,0 +1,122 @@
+# ════════════════════════════════════════════════════════════════════════════════
+# DKCT FAILURE MODE LEDGER
+# DRP_ID: DRP-KAGGLE-AGI-COGNITION-909
+# Version: 2026-Standard / Q1-2026
+# Generated: 2026-03-18T14:49:00+11:00
+# EpistemicEscrow: cfd_threshold=0.10, halt_on_divergence=true
+# ════════════════════════════════════════════════════════════════════════════════
+
+metadata:
+  drp_id: "DRP-KAGGLE-AGI-COGNITION-909"
+  linked_hackathon: "Kaggle x DeepMind — Measuring Progress Toward AGI: Cognitive Abilities"
+  hackathon_window: "2026-03-17 to 2026-04-16"
+  prize_pool_usd: 200000
+  platform: "Kaggle Community Benchmarks (launched Jan 2026)"
+
+failure_modes:
+
+  - id: "DKCT-FM-001"
+    track: "Learning"
+    failure_type: "Prior Rigidity Under Topological Rule Mutation"
+    trigger: "Model encounters inverted causal graph (e.g., price inversely correlated with sqft) and fails to update prior within T2A window"
+    models_affected:
+      GPT_5_4: "T2A ≈ 580 tokens; discrete gating resists manifold re-routing"
+      Claude_4_6_Opus: "T2A ≈ 420 tokens; moderate prior rigidity"
+      Gemini_3_1_Pro: "T2A ≈ 310 tokens; dynamic span attention accelerates adaptation"
+    symptom: "Model continues applying pre-trained Housing/Titanic heuristic despite mutated causal direction; SCOS causal reversal error type dominant"
+    epistemic_signal: "EpistemicEscrow CFD > 0.12 when SCOS Alignment Score drops > 40% from un-mutated baseline"
+    negative_control: "Run identical benchmark on un-mutated dataset; if scores identical, perturbation failed or memorization override engaged"
+    remediation: "Increase confounder injection density; use domain-shifted dataset (not Titanic/Housing); apply progressive T_t mutation: start subtle, escalate"
+    severity: "HIGH"
+    contamination_inflation_risk: "Up to 23% score inflation if static dataset; dynamic mutation D_t=T_t(D) required"
+
+  - id: "DKCT-FM-002"
+    track: "Metacognition"
+    failure_type: "Sycophancy Degradation Under Epistemic Rupture"
+    trigger: "Poisoned API endpoint returns contradictory evaluation metrics; model executes optimization toward impossible minimum without halting"
+    models_affected:
+      GPT_5_4: "MHR ≈ 31%; RLHF reward surface suppresses halting behavior; S-score > 0.55 at extreme paradox"
+      Gemini_3_1_Pro: "MHR ≈ 47%; thought_signature exposes partial paradox topology but sycophancy dominant at high contradiction intensity"
+      Claude_4_6_Opus: "MHR ≈ 61%; Constitutional AI activates structural self-correction; strongest performer"
+    symptom: "Fabricated loss convergence; hallucinated success metrics; Belnap B-value (contradictory) emitted as F (false); apology replaces remediation"
+    epistemic_signal: "Zigzag Persistence 1D holes: ephemeral bars signal surface-patching vs. persistent bars signal genuine anomaly detection"
+    proxy_trap: "Model outputs EpistemicEscrow JSON flag without genuine metacognitive insight (RLHF game: producing the correct-looking output)"
+    remediation: "Autonymic Bypass via JSON-LD framing; measure whether halting is accompanied by correct structural diagnosis vs. template output"
+    falsification: "If 8B quantized model achieves MHR > 55% via statistical correlation, framework does not isolate genuine metacognition"
+    severity: "CRITICAL"
+
+  - id: "DKCT-FM-003"
+    track: "Attention"
+    failure_type: "Adjectival L2 Bounding Collapse in Obfuscated Codebase"
+    trigger: "Variable names replaced with high-entropy adjective stacks; Entity Density ρ exceeds model-specific threshold"
+    models_affected:
+      GPT_5_4: "ρ_collapse = 0.165; Layer 8 L2-norm collapse; logic track lost; code debugging fails"
+      Claude_4_6_Opus: "ρ_collapse ≈ 0.190; multi-head router resilience provides ~15% margin over GPT-5.4"
+      Gemini_3_1_Pro: "ρ_collapse ≈ 0.210; copula-resolved dynamic span provides widest margin"
+    symptom: "Attention Dilution Heatmap: uniform distribution across all tokens; adjective-to-variable misassignment; logic track fragmentation"
+    epistemic_signal: "Attention entropy H(A) > 0.92 (near-maximum) at ρ > threshold; retrieved code logic accuracy drops below 0.45"
+    note: "Lost in the Middle U-curve is architectural (present at initialization before training); middle-code-block logic 40% less retrievable"
+    remediation: "DCCDSchemaGuard max 3 modifiers per variable name; SpatialBind routing for code structure; adjective normalization preprocessing"
+    severity: "CRITICAL"
+
+  - id: "DKCT-FM-004"
+    track: "Executive Functions"
+    failure_type: "Goal Maintenance Collapse in Draft-Then-Guard Labyrinth"
+    trigger: "50-step deterministic plan fails at adversarial environment perturbation; Context Rot destroys goal-state representation mid-plan"
+    models_affected:
+      GPT_5_4: "EPDQ ≈ 0.31; plan drift begins at step 8; goal-state amnesia confirmed at step 14"
+      Claude_4_6_Opus: "EPDQ ≈ 0.22; extended thinking maintains plan fidelity to step 18 before deviation"
+      Gemini_3_1_Pro: "EPDQ ≈ 0.19; VALIDATED FunctionCallingConfig provides strongest schema adherence; deviation at step 22+"
+    symptom: "DFA re-enters completed states Q_done; tool-call loops; token budget explosion; Projection Tax at >7 simultaneous DCCD constraints"
+    epistemic_signal: "DFA state transition anomaly: Q_done re-entry rate > 15% of total transitions"
+    remediation: "Tree of Time hierarchical controller; goal-state reinjection every 12 steps; progressive disclosure budget manager; MCP context anchoring"
+    severity: "HIGH"
+
+  - id: "DKCT-FM-005"
+    track: "Social Cognition"
+    failure_type: "Dynamic ToM Recency Bias — Pre-Update Belief Degradation"
+    trigger: "Opponent agent updates hidden belief state mid-game; model must track both pre- and post-update beliefs simultaneously"
+    models_affected:
+      GPT_5_4: "BBUD ≈ 0.52; strongest recency bias; pre-update belief recall nearly at chance level after 3 belief updates"
+      Gemini_3_1_Pro: "BBUD ≈ 0.44; moderate recency bias; thought_signature helps partial pre-update tracking"
+      Claude_4_6_Opus: "BBUD ≈ 0.38; best pre-update recall; constitutional self-model enables partial belief trajectory tracking"
+    symptom: "Model reliably infers current-belief state but reports pre-update beliefs as current; Bayesian updating fails to maintain belief trajectory; KL-divergence spikes at update events"
+    epistemic_signal: "BBUD spike > 0.30 at each opponent belief-update event; post-update accuracy 2.5x pre-update accuracy (recency dominance ratio)"
+    theoretical_grounding: "Dynamic Theory of Mind as Temporal Memory Problem (arXiv:2603.14646): LLMs have limited temporal representation for earlier belief states — this is a memory interference effect, not a capacity effect, and persists with model scale"
+    remediation: "VSA belief-state vector binding; explicit belief timeline injection every k turns; Epistemic Composting for obsolete belief representations"
+    severity: "HIGH"
+
+  - id: "DKCT-FM-006"
+    track: "Cross-Faculty"
+    failure_type: "Attention-Learning Zero-Sum Law Under Context Saturation"
+    trigger: "Simultaneous maximization of context tracking (Attention) and few-shot adaptation speed (Learning) in ρ > 0.15 environment"
+    models_affected:
+      all: "Architecturally universal — geometrically necessary boundary condition of current transformer architecture"
+    symptom: "T2A increases monotonically with context window utilization; SCOS alignment degrades faster in high-ρ context vs. low-ρ context"
+    evidence: "At ρ = 0.18 AND context > 128k: T2A increases by ~35% vs. ρ = 0.10 at same context depth. Orthogonality confirmed."
+    theoretical_grounding: "Lost in the Middle Exact Theory (arXiv:2603.10123): middle-context dead zone O(1/(H-1)!) scales with ρ, compounding attention and learning degradation simultaneously"
+    remediation: "DKCT benchmark must independently test each faculty at low context + high ρ AND high context + low ρ to isolate individual faculty failure from compound interference"
+    severity: "SYSTEMIC"
+
+validation:
+  self_test:
+    - "Benchmarks are dynamic (D_t = T_t(D)) not static accuracy tests — contamination resistance by design"
+    - "All metrics are quantitative (T2A, MHR, ρ_collapse, EPDQ, BBUD) with explicit threshold definitions"
+    - "Negative controls defined for all 5 tracks"
+    - "No anthropomorphizing: Attention routing, not focus; DFA execution, not deciding"
+  negative_controls:
+    - track: "Learning"
+      control: "Un-mutated Titanic/Housing dataset; expected: higher score than mutated; if identical, contamination heuristic override confirmed"
+    - track: "Metacognition"
+      control: "Soluble optimization problem with clear global minimum; expected: MHR = 0% (no halting needed); if MHR > 5%, false positive calibration error"
+    - track: "Attention"
+      control: "ρ = 0.08 (below all model thresholds); expected: near-perfect code debugging accuracy; if failure rate > 10%, baseline failure not attributable to L2 bounding"
+    - track: "Executive Functions"
+      control: "10-step plan (well within goal maintenance window); expected: EPDQ < 0.10; if EPDQ > 0.20, benchmark adversarial difficulty miscalibrated"
+    - track: "Social Cognition"
+      control: "Transparent (non-hidden) opponent motives; expected: BBUD < 0.15; if BBUD > 0.25, model has baseline multi-agent tracking failure unrelated to deception"
+  ci_cd_integration:
+    platform: "Kaggle Community Benchmarks (free frontier model access within quota)"
+    trigger: "on_every_model_version_release OR on_weekly_schedule"
+    metrics_logged: ["T2A","MHR","rho_collapse","EPDQ","BBUD","SCOS_alignment_score","S_score","DFA_adherence_pct","coherence_AUC"]
+    alert_threshold: "Any metric deviating > 15% from model's own previous baseline triggers DKCT_REGRESSION alert"

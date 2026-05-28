@@ -1,182 +1,89 @@
 {
-  "system": "Archetypal large public research university bureaucracy in an OECD country",
+  "generation_timestamp": "2026-03-26T03:15:00.058533Z",
+  "sha256": "7fbec2adcd261b4f42b9d2eede393e27e612f9d600ac87ece91ba5258d1cd99b",
   "patterns": [
     {
-      "id": "P1",
-      "name": "Central governing board and executive as singleton governance layer",
-      "pattern_type": [
-        "Creational",
-        "Structural"
+      "id": "urn:drp:taxonomy:pattern:001",
+      "label": "Entropy Subtraction Paradigm",
+      "measurement_proxy": "Ratio of dereferenced-node dissolution events to total system memory events per cycle (GC throughput; apoptotic index; repeal rate)",
+      "task_conditioned_baseline": "Trigger threshold = resource utilization > 0.85 OR zero-reference node count > 5% of total graph",
+      "canonical_domains": [
+        "Computer Science (Garbage Collection)",
+        "Biology (Apoptosis / Programmed Cell Death)",
+        "Law (Statutory Repeal / Desuetude)"
       ],
-      "software_analog": "Singleton",
-      "domain_mapping": "A single governing board and a single chief executive (president/rector) exercise ultimate formal authority over the university, establishing a globally accessible decision point for strategy, budget, and risk.",
-      "risks": [
-        "Single point of failure for strategic, financial, and reputational decisions",
-        "Bottlenecks when all major approvals are funneled through one office",
-        "Potential capture of the institution by a small clique of actors"
-      ],
-      "opportunities": [
-        "Clear accountability for whole-of-system outcomes",
-        "Ability to shift global constraints or priorities relatively quickly if the node is responsive"
-      ],
-      "recommended_refactorings": [
-        "Introduce polycentric governance by delegating defined decision rights to faculties and cross-cutting councils",
-        "Replace some direct approval responsibilities with policy-level constraints and post-hoc audits"
+      "structural_invariant": "DAG topology preservation: removal targets only nodes with in-degree=0 from active reference set",
+      "key_citations": [
+        "Jones et al. 2011 \u2014 GC reachability-based algorithms",
+        "arXiv:2504.11654 \u2014 Pathological cases for reachability-based GC",
+        "Li 2019 (Semantic Scholar) \u2014 Cancer Niche as Garbage Disposal Machine"
       ]
     },
     {
-      "id": "P2",
-      "name": "Student information system as facade over fragmented back-office processes",
-      "pattern_type": [
-        "Structural"
+      "id": "urn:drp:taxonomy:pattern:002",
+      "label": "Epistemic Escrow Paradigm",
+      "measurement_proxy": "Contradiction isolation rate; explosion-prevention coverage; localized Betti-1 loop count in belief graph",
+      "task_conditioned_baseline": "Escrow activation if incoming proposition P triggers both exec-protocol A and NOT-A simultaneously",
+      "canonical_domains": [
+        "Logic / AI (Paraconsistent LFI, AGM Belief Revision)",
+        "Immunology (Clonal Anergy / Immune Tolerance)",
+        "Law (Judicial Injunction / Stay of Proceedings)"
       ],
-      "software_analog": "Facade",
-      "domain_mapping": "A unified student portal exposes a simplified interface for enrolment, fees, results, and services, while internally orchestrating calls to numerous legacy finance, HR, curriculum, and records subsystems owned by different units.",
-      "risks": [
-        "Interface stability masks growing internal technical and organizational debt",
-        "Incidents at any downstream system manifest as generic front-end failures with little transparency",
-        "Incentive to patch behind the facade rather than modernize core processes"
-      ],
-      "opportunities": [
-        "Single integration surface to progressively replace legacy components (Strangler Fig)",
-        "Ability to insulate students from some internal instability while refactoring proceeds"
-      ],
-      "recommended_refactorings": [
-        "Instrument the facade with fine-grained telemetry tied to back-office owners",
-        "Define explicit contracts and SLAs between the portal and each subsystem"
+      "structural_invariant": "Consistency operator \u25cb in LFI localizes explosion; escrowed node forms topological 1-cycle (H\u2081 homology class) isolated from main state machine",
+      "key_citations": [
+        "arXiv:2412.06117v3 \u2014 Paraconsistent Belief Revision: RCBr LFI framework",
+        "Hugging Face Forum 2026 \u2014 Paraconsistent Logic and AI Models (hallucination as explosion failure)"
       ]
     },
     {
-      "id": "P3",
-      "name": "Hierarchical approvals as chain of responsibility",
-      "pattern_type": [
-        "Behavioral"
+      "id": "urn:drp:taxonomy:pattern:003",
+      "label": "Constitutional Austenite Forging",
+      "measurement_proxy": "Plasticity-stability ratio; Fisher Information diagonal (EWC lambda); Hessian trace post-quench normalized by task gradient norm",
+      "task_conditioned_baseline": "Phase-lock success if catastrophic forgetting rate < 5% across sequential task battery after quench",
+      "canonical_domains": [
+        "Materials Science (Austenite-Martensite Phase Transition)",
+        "ML / Continual Learning (Elastic Weight Consolidation, Nested Learning)",
+        "Constitutional Law (Amendment rigidity vs. interpretive flexibility)"
       ],
-      "software_analog": "Chain of Responsibility",
-      "domain_mapping": "Requests such as hiring, promotions, curriculum changes, and research approvals are passed up a fixed line-management chain (supervisor \u2192 head of school \u2192 dean \u2192 provost), each with an opportunity to approve, reject, or escalate.",
-      "risks": [
-        "High latency when every step is sequential and synchronous",
-        "Diffusion of responsibility: each actor can claim the decision was made elsewhere",
-        "Opaque failure modes when requests stall without explicit rejection"
-      ],
-      "opportunities": [
-        "Clear escalation paths for exceptional cases",
-        "Local filtering of low-quality or non-compliant proposals before they consume central bandwidth"
-      ],
-      "recommended_refactorings": [
-        "Split chains by decision type with explicit termination points and timeouts",
-        "Introduce parallel review (e.g., compliance checks in parallel with academic review) where dependencies allow"
+      "structural_invariant": "Diffusionless transformation: parameter updates remain bounded by Hessian curvature; global invariants survive local plastic deformation",
+      "key_citations": [
+        "arXiv:2507.10485 \u2014 EWC replication; synaptic consolidation analogy",
+        "ICML 2025 poster:43833 \u2014 Predicting susceptibility to catastrophic forgetting",
+        "Google Research Blog 2025 \u2014 Nested Learning paradigm for continual learning"
       ]
     },
     {
-      "id": "P4",
-      "name": "Faculty and student governance bodies as observer networks",
-      "pattern_type": [
-        "Behavioral"
+      "id": "urn:drp:taxonomy:pattern:004",
+      "label": "Topological Decompression",
+      "measurement_proxy": "Persistent Betti number reduction ratio; bottleneck distance pre/post decompression; manifold intrinsic dimensionality delta",
+      "task_conditioned_baseline": "Decompression required when persistent H\u2081 + H\u2082 features exceed manifold embedding capacity (context window saturation proxy)",
+      "canonical_domains": [
+        "TDA / ML (Persistent Homology, Spectral Methods)",
+        "Genomics (Chromatin Unfolding / Hi-C Contact Maps)",
+        "Urban Planning (Spatial Dedensification)"
       ],
-      "software_analog": "Observer",
-      "domain_mapping": "Faculty senates, school committees, and student associations subscribe to policy and governance events (e.g., proposed regulations, fee changes) and react via advice, resolutions, or protests.",
-      "risks": [
-        "Notification without real influence produces performative consultation",
-        "Information overload if too many low-salience events are broadcast",
-        "Reactive rather than anticipatory governance when observers only see late-stage proposals"
-      ],
-      "opportunities": [
-        "Distributed sensing of emerging problems across the academic core",
-        "Potential for early detection of unintended consequences of policy changes"
-      ],
-      "recommended_refactorings": [
-        "Define event schemas with priority levels and required response types",
-        "Give observer bodies veto or delay rights over specific classes of change to make observation consequential"
+      "structural_invariant": "Part-whole transitivity preserved via Mayer-Vietoris sequence; component-object typing maintained across dimensional projection",
+      "key_citations": [
+        "ar5iv:1511.01426 \u2014 Multiscale Topology of Chromatin Folding (Emmett, Schweinhart, Rabadan)",
+        "arXiv:2509.16877 \u2014 TDA and Topological Deep Learning review 2025",
+        "NeurIPS 2024 \u2014 Persistent Homology for High-Dimensional Data via Spectral Methods"
       ]
     },
     {
-      "id": "P5",
-      "name": "Enrolment, fees, and subscriptions embedding roach motel and forced continuity",
-      "pattern_type": [
-        "Dark Pattern"
+      "id": "urn:drp:taxonomy:pattern:005",
+      "label": "Distributed Truth Paradigm",
+      "measurement_proxy": "Byzantine fault tolerance threshold (f < n/3); quorum coverage ratio; Nakamoto coefficient; thermodynamic cost per validated bit",
+      "task_conditioned_baseline": "Consensus valid if \u2265 2f+1 sovereign nodes independently validate execution trace without shared communication channel",
+      "canonical_domains": [
+        "Distributed Systems (BFT/PoS/PBFT Blockchain Consensus)",
+        "Microbiology (Quorum Sensing / Density-Dependent Gene Expression)",
+        "Economics (Macroeconomic Price Discovery / Decentralized Markets)"
       ],
-      "software_analog": "Roach Motel / Forced Continuity",
-      "domain_mapping": "It is much easier for students to enrol, sign up for ancillary services, and consent to data use than to withdraw, suspend, cancel subscriptions, or revoke consent; exit paths are fragmented and procedurally expensive.",
-      "risks": [
-        "Erosion of student trust and reputational damage",
-        "Regulatory exposure where consumer or privacy law demands symmetry of entry and exit",
-        "Hidden accumulation of inactive or distressed students inflating headline metrics"
-      ],
-      "opportunities": [
-        "Redesign flows to treat withdrawal and consent revocation as first-class supported actions",
-        "Use exit data as a leading indicator of structural problems (curriculum, support, finance)"
-      ],
-      "recommended_refactorings": [
-        "Apply an explicit symmetry constraint: any action that can be taken in N clicks must be reversible in comparable effort",
-        "Move from auto-renewing defaults to explicit, recurrent opt-in for non-essential services"
-      ]
-    },
-    {
-      "id": "P6",
-      "name": "Enterprise systems and central analytics as god object",
-      "pattern_type": [
-        "Anti-Pattern"
-      ],
-      "software_analog": "God Object",
-      "domain_mapping": "A small number of enterprise systems and central data warehouses accumulate many loosely related responsibilities \u2013 identity, finance, curriculum, research reporting, risk, and analytics \u2013 becoming indispensable and overloaded.",
-      "risks": [
-        "Any outage or change propagates widely across operations and reporting",
-        "Local units become dependent on central teams for even minor changes",
-        "Architecture ossification as new capabilities are continually bolted onto the same platforms"
-      ],
-      "opportunities": [
-        "Use the central view to identify cross-cutting redundancies and candidate domains for modularisation",
-        "Progressively carve out coherent subdomains into dedicated platforms with clear APIs"
-      ],
-      "recommended_refactorings": [
-        "Apply domain-driven design to split the god object into bounded contexts (e.g., identity, curriculum, research admin)",
-        "Impose a moratorium on adding new unrelated responsibilities to the existing core without a sunset plan"
-      ]
-    },
-    {
-      "id": "P7",
-      "name": "Compliance layering as decorator proliferation",
-      "pattern_type": [
-        "Structural",
-        "Anti-Pattern"
-      ],
-      "software_analog": "Decorator",
-      "domain_mapping": "New compliance, quality assurance, and risk requirements are addressed by adding review layers, checklists, and sign-offs around existing processes without simplifying the core workflows.",
-      "risks": [
-        "Process accretion increases cycle time and cognitive load",
-        "Responsibilities become obscured as multiple committees and officers partially cover the same risk",
-        "Staff and academics experience change fatigue and disengage from the intent of controls"
-      ],
-      "opportunities": [
-        "Separate truly orthogonal controls (e.g., ethics, safety) from those that can be integrated into core processes",
-        "Retire obsolete or redundant layers when new systemic controls come online"
-      ],
-      "recommended_refactorings": [
-        "Introduce periodic control refactoring cycles that must remove or consolidate at least as many checks as they add",
-        "Model compliance chains explicitly and eliminate duplicate decorators that do not add distinct information"
-      ]
-    },
-    {
-      "id": "P8",
-      "name": "Shadow systems and workarounds as spaghetti code",
-      "pattern_type": [
-        "Anti-Pattern"
-      ],
-      "software_analog": "Spaghetti Code / Big Ball of Mud",
-      "domain_mapping": "Faculties and departments implement local spreadsheets, scripts, and ad-hoc tools that interconnect informally with central systems, creating opaque and fragile dependencies.",
-      "risks": [
-        "High operational risk concentrated in a few key individuals",
-        "Inconsistent data definitions and reporting across units",
-        "Difficulty isolating failures or performing global changes"
-      ],
-      "opportunities": [
-        "Use discovery of shadow systems as a map of unmet needs and candidate domains for platform investment",
-        "Elevate robust local solutions into supported shared services where appropriate"
-      ],
-      "recommended_refactorings": [
-        "Run regular dependency-mapping exercises to surface shadow integrations",
-        "Create low-friction, supported pathways to turn local scripts into governed microservices or workflows"
+      "structural_invariant": "Non-overlapping epistemic jurisdictions; no single node can unilaterally alter global state; validation requires thermodynamic expenditure",
+      "key_citations": [
+        "IMF WP/2025 \u2014 Blockchain Consensus Mechanisms (Bains 2025)",
+        "Stanford SBC25 \u2014 Alpenglow / Solana consensus protocol",
+        "IEEE Access 2025 \u2014 Blockchain-enhanced FL with PBFT/PoS/PoA"
       ]
     }
   ]

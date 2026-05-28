@@ -1,0 +1,132 @@
+version: 2026.Q1-OMEGA
+contract_id: DRP-RSS-CHRONORAG-2603-CxB
+petzold_sequence:
+- SYNDICATE
+- EMBED
+- UPDATE
+- PRUNE
+schema_guard: DCCDSchemaGuard_v3
+agents:
+  RSS_Syndicator:
+    role: SYNDICATE
+    description: Polls external RSS/Atom feeds with ETag-conditional GET. Emits parsed FeedItem structs to the embedding queue.
+    output_schema: FeedItem_v1
+    output_format: Atom XML (RFC-4287) with custom <chrono:decay_weight> extension
+    poll_strategy:
+      method: HTTP_conditional_GET
+      headers:
+      - If-None-Match
+      - If-Modified-Since
+      on_304: SKIP_EMIT
+      on_200: EMIT_DELTA
+      on_error: QUARANTINE_TO_EPISTEMIC_ESCROW
+    internal_feed_output:
+      title: RSS_Syndicator Agent State Feed
+      link: http://internal.scos.local/feeds/syndicator
+      items:
+      - title: POLL_COMPLETE
+        guid: '{feed_url}:{last_etag}:{timestamp}'
+        description: 'Feed polled successfully. Delta items: {count}'
+        pubDate: '{utc_now}'
+        category: AGENT_STATE
+      - title: FEED_QUARANTINE
+        guid: '{feed_url}:QUARANTINE:{timestamp}'
+        description: 'Epistemic Escrow triggered: CFD > 0.15'
+        pubDate: '{utc_now}'
+        category: EPISTEMIC_ALERT
+    dccd_constraints:
+    - MUST parse XML with xml.etree.ElementTree (deterministic)
+    - MUST NOT pass raw XML bytes to LLM for parsing
+    - MUST normalise all pubDate to UTC before emission
+    - MUST map guid to SHA-256 truncated vector_id
+  Embedding_Router:
+    role: EMBED
+    description: 'Routes FeedItems to embedding models. Multimodal routing: text->dense model, enclosure/image->CLIP/multimodal
+      model.'
+    routing_rules:
+      text: text-embedding-3-large OR mxbai-embed-large-v1
+      image_enclosure: CLIP-ViT-L/14
+      audio_enclosure: Whisper-v3 -> text -> text-embedding-3-large
+      application_enclosure: RAW_BYTES_QUARANTINE (no LLM parsing)
+    atom_link_rel_mapping:
+      alternate: primary_text_embed
+      enclosure: multimodal_route_by_mime
+      related: graph_edge_candidate
+      self: SKIP
+    output_schema:
+      vector_id: str (SHA-256[:32] of guid)
+      embedding: List[float] (1536-dim)
+      payload:
+        guid: str
+        pub_date_epoch: float
+        ttl_expiry_epoch: float
+        content_hash: str (SHA-256)
+        category: str
+        source_feed: str
+        decay_domain: str
+    internal_feed_output:
+      title: Embedding_Router State Feed
+      guid_template: embed:{vector_id}:{content_hash}:{timestamp}
+  Temporal_VectorDB_Manager:
+    role: UPDATE
+    description: Manages Qdrant upsert with guid-based identity. Enforces GUID->VectorID 1:1 mapping. Triggers content-hash
+      diffing to prevent redundant re-embedding.
+    upsert_logic:
+      if_guid_exists_same_hash: SKIP (idempotent)
+      if_guid_exists_different_hash: OVERWRITE (UPDATE semantic)
+      if_guid_absent: INSERT (new knowledge)
+    ttl_management:
+      ttl_source: RSS <ttl> tag OR domain default
+      storage_key: ttl_expiry_epoch
+      enforcement: cron_prune_job (every TTL/2 seconds)
+    dccd_constraints:
+    - MUST use Qdrant upsert endpoint (atomic)
+    - MUST store pub_date_epoch as float for range filtering
+    - MUST NOT allow future-dated items beyond +1h skew tolerance
+  Autophagic_Pruner:
+    role: PRUNE
+    description: Periodic agent that deletes expired vectors using Qdrant payload filter on ttl_expiry_epoch. Implements Autophagic
+      Composting.
+    schedule: every {TTL/2} seconds per collection
+    prune_filter:
+      field: ttl_expiry_epoch
+      condition: 'lte: now_epoch'
+    retraction_handling:
+      trigger: upstream feed item deletion OR <guid> reuse with empty description
+      action: IMMEDIATE_DELETE + EMIT_RETRACTION_EVENT_TO_INTERNAL_FEED
+    internal_feed_output:
+      title: Autophagic_Pruner State Feed
+      items:
+      - title: PRUNE_CYCLE_COMPLETE
+        description: 'Vectors pruned: {count}. Collection size: {size}.'
+        category: MAINTENANCE
+  Epistemic_Escrow_Agent:
+    role: QUARANTINE
+    description: 'Intercepts items with CFD > 0.15 OR items that contradict existing vectors. Applies Paraconsistent Logic:
+      both old and new facts quarantined with contradiction flag.'
+    cfd_threshold: 0.15
+    contradiction_detection:
+      method: cosine similarity of new embedding vs existing guid embedding
+      threshold: similarity < 0.3 AND content_hash differs
+      action: QUARANTINE_BOTH + FLAG_FOR_HUMAN_REVIEW
+    astroturfing_detection:
+      description: Epistemic Immune System
+      trigger: '>=50 feeds with cosine similarity > 0.92 within 300-second pubDate window'
+      action: QUARANTINE_CLUSTER + EMIT_DISINFORMATION_ALERT
+chrono_rag_retrieval_contract:
+  query_pipeline:
+  - 1. EMBED query text with same model as corpus
+  - 2. APPLY hard temporal filter if time_window_hours specified
+  - 3. EXECUTE cosine similarity search (top_k * 2 oversample)
+  - '4. APPLY temporal decay re-ranking: S = 0.7*cosine + 0.3*decay_weight'
+  - 5. RETURN top_k results with temporal_decay_weight in payload
+  hallucination_prevention:
+    mechanism: Hard temporal pre-filter eliminates Chronological Saponification
+    fallback: If time_window returns zero results, expand window by 2x and retry once
+failure_modes:
+  malformed_xml: SKIP + LOG + EMIT_ERROR_TO_INTERNAL_FEED
+  missing_guid: GENERATE_SYNTHETIC_GUID = SHA256(feed_url + title + pubDate)
+  missing_pub_date: ASSIGN_EPOCH_ZERO + decay_weight=0.0
+  contradictory_items: PARACONSISTENT_QUARANTINE (both versions retained)
+  dead_feed: MARK_AS_ABANDONED after 3 consecutive failures + TTL_ACCELERATE_ALL_ITEMS
+  timezone_ambiguity: FORCE_UTC_NORMALISATION + LOG_ORIGINAL_TIMEZONE

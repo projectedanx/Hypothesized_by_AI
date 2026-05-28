@@ -1,0 +1,33 @@
+{
+  "generation_timestamp": "2026-03-26T03:30:47.045574+00:00",
+  "sha256": "ca2ad54491dd23825504f8c21620f5e69333b635ddcd9efa8a879daef25dcc9b",
+  "schema_version": "drp-taxonomy-v2",
+  "patterns": [
+    {
+      "id": "urn:drp:topology:failure_mode:topological_tearing",
+      "label": "Topological Tearing in Generative UI",
+      "measurement_proxy": "Semantic Saponification Index (SSI): ratio of generic-template semantic tokens in output to domain-specific structural tokens from prior successful generation. SSI > 0.08 = tearing event. Operationalized as: SSI = (generic_component_count / total_component_count) where generic_component is any component indistinguishable from the model's zero-shot baseline for that component type.",
+      "task_conditioned_baseline": "SSI < 0.08 on validated prior layout, with \u2264 1 orthogonal edit axis per inference pass, and context utilization < 75% of nominal window capacity.",
+      "canonical_domains": [
+        "Generative UI (v0.dev, Lovable, Bolt, Cursor \u2014 multi-axis prompt collapse)",
+        "LLM Attention Theory (Lost-in-the-Middle, Attentional Dilution, Context Rot)",
+        "AI Agent Memory (Summarization Drift, Conversational Inertia)",
+        "Thermodynamics (Zero-sum entropy budget, Phase coherence)"
+      ],
+      "structural_invariant": "The Incremental Isolation Principle (One Major Change thermodynamic limit): layout mutations and aesthetic deformations must occupy temporally decoupled inference turns. Simultaneous multi-axis edits violate the zero-sum attention allocation constraint, fracturing the intrinsic geometric manifold of the generated layout.",
+      "comorbid_factors": [
+        "Attentional Dilution: as context grows, attention per token degrades sub-linearly; accuracy drops 13.9-85% for mid-context information (Lost-in-the-Middle, Stanford/Meta 2023)",
+        "Conversational Inertia: diagonal attention patterns to previous assistant turns constrain generative exploration, causing mode collapse back to baseline templates (arXiv:2602.03664)",
+        "Summarization Drift: multi-turn compression passes silently discard structural specifics, replacing with sanitized generic history (arXiv:2603.07670)",
+        "Context Saturation Threshold: Anthropic engineering data (Sept 2025) identifies 75% utilization as quality peak; sessions at 90%+ produce lower-quality code with increased architectural inconsistencies"
+      ],
+      "key_citations": [
+        "arXiv:2509.10652 (Vibe Coding for UX Design, Li 2025) \u2014 documents brittleness at MVP stage, codebase bloat, context loss above 5000 lines",
+        "arXiv:2508.20410 (UI-Bench, Jung 2025) \u2014 first large-scale benchmark of 10 text-to-app tools, 4,000+ expert judgments revealing systematic quality variance under complex prompts",
+        "Lovable docs 2026 \u2014 'Prompt by component, not page: asking it to generate an entire landing page is like dumping a recipe into a blender'",
+        "diffray.ai/context-dilution 2025 \u2014 context dilution causes 13.9-85% accuracy drops; GPT-3.5-Turbo performance fell *below closed-book baseline* with mid-context placement",
+        "arXiv:2603.00856 (PARCER 2026) \u2014 LLM attention forms U-curve; facts buried in middle ignored; robust architectures require defensive Map-Reduce compression hierarchy"
+      ]
+    }
+  ]
+}

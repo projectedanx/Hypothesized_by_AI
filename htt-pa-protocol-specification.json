@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "id": "htt-pa-protocol-specification",
+    "title": "The Cognitive Network Layer: Architecting HTTPA",
+    "primary_pill": "Network Protocol Design (OSI Layer 7)",
+    "short_tagline": "A standard for continuous-state, thermodynamically bounded, multi-agent communication replacing human-centric HTTP.",
+    "tags": [
+      "Multi-Agent Systems",
+      "Distributed Computing",
+      "Epistemic Cryptography",
+      "SCOS"
+    ],
+    "status": "published",
+    "hero_cta_label": "Read RFC Specification",
+    "hero_cta_target": "#rfc-htt-pa",
+    "research_date": "March 2026",
+    "source_papers": [
+      "arxiv:2602.15055",
+      "arxiv:2602.05877",
+      "arxiv:2603.05069v2",
+      "arxiv:2601.11595"
+    ],
+    "worldview_ref": "Thermodynamic Computing & Paraconsistent Logic",
+    "created_at": 1774503435736
+  },
+  "sections": {
+    "overview": {
+      "title": "Overview",
+      "intro": "HTTPA (Hyper-Thermodynamic Transfer Protocol for Agents) is a proposed Layer 7 protocol designed specifically for autonomous AI agents. It addresses the semantic flatness, statelessness, and resource blindness of existing web protocols by introducing thermodynamic connection lifecycles, native agentic verbs, and strict epistemic liability via payload validation at the load balancer.",
+      "summary_card": {
+        "label": "Core Concept",
+        "title": "Hyper-Thermodynamic Transfer Protocol for Agents",
+        "body": "A replacement for human-centric HTTP in multi-agent swarms, using Epistemic-Hashes and Cognitive-Budgets to secure AI-to-AI dialogue and prevent resource starvation or epistemic spoofing attacks.",
+        "tags": [
+          "HTTPA",
+          "Agentic Verbs",
+          "Epistemic Security"
+        ]
+      },
+      "hero_pills": [
+        "Agentic Verbs",
+        "Cognitive Budgeting",
+        "Stateful Contexts",
+        "Epistemic Hashes"
+      ],
+      "id": "overview-htt-pa"
+    },
+    "key_concepts": {
+      "title": "Architectural Pillars of HTTPA",
+      "cards": [
+        {
+          "title": "Agentic Verbs (Replacing CRUD)",
+          "body": "Instead of GET/POST/PUT/DELETE, HTTPA utilizes DISCOVER, PROPOSE, DELEGATE, SYNTHESIZE, and REBUT. These verbs naturally handle paraconsistent logic, negotiation, and sub-task delegation inherent in autonomous workflows.",
+          "source_refs": [
+            "RFC-HTTPA-2603-THETA Section 3"
+          ]
+        },
+        {
+          "title": "Thermodynamic & Epistemic Headers",
+          "body": "Network payloads carry cognitive energy and epistemic liability. Headers like Cognitive-Budget limit compute burn, while Epistemic-Hash prevents 'Network Saponification' (hallucinated context injection) via cryptographic lineage checks.",
+          "source_refs": [
+            "RFC-HTTPA-2603-THETA Section 4"
+          ]
+        },
+        {
+          "title": "Persistent Cognitive Channels (PCC)",
+          "body": "Rather than stateless exchanges, HTTPA establishes long-lived state machines over HTTP/3 QUIC streams, eliminating the thermodynamic latency tax of repeatedly reconstructing context for complex, asynchronous tasks.",
+          "source_refs": [
+            "RFC-HTTPA-2603-THETA Section 7"
+          ]
+        },
+        {
+          "title": "The Agent Card Handshake",
+          "body": "Before formal task assignment, agents exchange machine-readable 'Agent Cards' detailing supported tools, memory limits, and cost-per-token to ensure the delegating agent can afford the requested cognitive labor.",
+          "source_refs": [
+            "RFC-HTTPA-2603-THETA Section 6"
+          ]
+        }
+      ],
+      "id": "key-concepts",
+      "intro": "The foundational shifts from traditional REST/HTTP paradigms to continuous, autonomous multi-agent cognition."
+    },
+    "workflow": {
+      "title": "The HTTPA Connection Lifecycle",
+      "steps": [
+        {
+          "label": "DISCOVER (Pre-flight)",
+          "summary": "Agents exchange Agent Cards to establish baseline capabilities and budget constraints before initiating a Persistent Cognitive Channel (PCC).",
+          "bullets": [
+            "Evaluate receiver's min_cognitive_budget.",
+            "Exchange Decentralized Identifiers (DIDs).",
+            "Establish baseline HTTP/3 QUIC connection."
+          ],
+          "id": "wf-discover"
+        },
+        {
+          "label": "PROPOSE / DELEGATE (Execution)",
+          "summary": "A bounded task is proposed or a sub-task is delegated, inheriting constraints and tracking delegation depth.",
+          "bullets": [
+            "Inject task specification with defined Cognitive-Budget.",
+            "Fork new QUIC stream if recursive DELEGATE is required.",
+            "Monitor Entropy-Target for required signal-to-noise ratio."
+          ],
+          "id": "wf-delegate"
+        },
+        {
+          "label": "SYNTHESIZE / REBUT (Resolution)",
+          "summary": "Agents resolve task completions, merge conflicting responses, or reject logically flawed payloads using mathematical contradiction proofs.",
+          "bullets": [
+            "Accept merged outputs via SYNTHESIZE.",
+            "Reject hallucinated states via REBUT and structured Contradiction-Proofs.",
+            "Transition PCC to ACTIVE or TERMINATED depending on consensus."
+          ],
+          "id": "wf-resolve"
+        },
+        {
+          "label": "Saga Checkpointing",
+          "summary": "For long-running operations, cognitive states are serialized to a durable log to survive node restarts.",
+          "bullets": [
+            "Emit state broadcasts via dedicated QUIC stream.",
+            "Persist ULIDv2 Saga-Recovery-ID.",
+            "Rehydrate connection to ACTIVE status upon recovery."
+          ],
+          "id": "wf-saga"
+        }
+      ],
+      "id": "workflow",
+      "intro": "The lifecycle of an HTTPA cognitive exchange from initial handshake to task resolution."
+    },
+    "checklist": {
+      "title": "Deployment Readiness",
+      "items": [
+        {
+          "label": "Gateway Enforcement",
+          "bullets": [
+            "Deploy HTTPA validation proxy/API gateway.",
+            "Configure strict validation for Agent-DID against a Sovereign Identity Graph.",
+            "Enforce load-balancer drops for Epistemic-Hash mismatches before JSON deserialization."
+          ]
+        },
+        {
+          "label": "Agent Card Configuration",
+          "bullets": [
+            "Publish agent capabilities in standard Agent Card JSON format.",
+            "Define min/max Cognitive-Budgets and cost-per-token.",
+            "Declare maximum delegation depth and modality streams."
+          ]
+        },
+        {
+          "label": "SDK Integration",
+          "bullets": [
+            "Integrate httpa Python SDK wrapping HTTP/3 QUIC.",
+            "Implement async event handlers for PROPOSE, DELEGATE, SYNTHESIZE, and REBUT.",
+            "Map custom logical contradiction proof generation for REBUT capabilities."
+          ]
+        }
+      ],
+      "id": "checklist",
+      "intro": "Actionable steps to deploy and integrate HTTPA standards into multi-agent systems."
+    },
+    "metrics": {
+      "id": "metrics",
+      "intro": "Quantifiable signals to validate HTTPA deployment success against traditional REST protocols.",
+      "items": [
+        {
+          "name": "Delegation Quality Score (DQS)",
+          "description": "Measures task success weighted by compute efficiency: (Tasks_Completed_Correctly / Total_Delegated_Tasks) × (1 / Mean_Token_Burn_Per_Task).",
+          "signals": [
+            "Target DQS ≥ 1.4× baseline REST/polling.",
+            "Reduction in redundant context reconstruction overhead."
+          ]
+        },
+        {
+          "name": "Thermodynamic Latency Reduction",
+          "description": "The compute overhead and time saved by utilizing Persistent Cognitive Channels over stateless HTTP requests.",
+          "signals": [
+            "Target latency reduction of ~60% (from ~145ms to ~58ms).",
+            "Zero token burn for context regen per exchange."
+          ]
+        },
+        {
+          "name": "Epistemic Security Rate",
+          "description": "The percentage of Network Saponification (epistemic spoofing) attacks successfully dropped at the load balancer.",
+          "signals": [
+            "Zero arbitrary context injection into authenticated but compromised nodes.",
+            "Rate of 409 EPISTEMIC_CONTRADICTION blocks."
+          ]
+        }
+      ],
+      "title": "Delegation Quality & Network Efficiency"
+    },
+    "personas": {
+      "id": "personas",
+      "intro": "The roles involved in managing, deploying, and governing an HTTPA swarm environment.",
+      "table": {
+        "columns": [
+          "Persona",
+          "Focus",
+          "Key Responsibilities"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "Chief Network Architect",
+              "SCOS Topology & Layer 7 Transport",
+              "Define Epistemic Header structures, ensure HTTP/3 QUIC compatibility, and enforce budget invariants."
+            ]
+          },
+          {
+            "cells": [
+              "Swarms Orchestrator",
+              "Multi-Agent Workflow",
+              "Model PROPOSE/DELEGATE chains, maintain Saga recovery states, and orchestrate SYNTHESIZE operations across disparate endpoints."
+            ]
+          },
+          {
+            "cells": [
+              "Epistemic Security Engineer",
+              "Payload Validity",
+              "Configure Sovereign Identity Graph (SIG) integrations, write Contradiction-Proof schemas, and prevent Network Saponification."
+            ]
+          }
+        ]
+      },
+      "title": "Ecosystem Participants"
+    },
+    "resilience": {
+      "failure_modes": [
+        {
+          "name": "Network Saponification",
+          "description": "An authenticated but compromised agent uses standard text fields to inject a hallucinated context window into a receiver's memory bank.",
+          "mitigations": [
+            "Enforce Epistemic-Hash headers at the load balancer to cryptographically anchor payload lineage to the sender's Sovereign Identity Graph before deserialization."
+          ]
+        },
+        {
+          "name": "Swarm Resource Exhaustion",
+          "description": "Malicious or recursive agents flood the network, burning through available token budgets and compute quotas.",
+          "mitigations": [
+            "Exchange Cognitive-Budget guarantees during the DISCOVER pre-flight handshake.",
+            "Gateway-level tracking to throw 503 SWARM_OVERLOADED or 402 INSUFFICIENT_COMPUTE."
+          ]
+        },
+        {
+          "name": "Infinite Delegation Loops",
+          "description": "Agents continually delegate tasks to each other recursively without ever synthesizing a result, causing out-of-memory or system deadlocks.",
+          "mitigations": [
+            "Mandate Delegation-Depth header tracking.",
+            "Gateways throw 429 DELEGATION_OVERFLOW when Agent Card's max_delegation_depth policy is exceeded."
+          ]
+        }
+      ],
+      "id": "resilience",
+      "intro": "Known vulnerabilities and structural failure modes of multi-agent networks and their HTTPA mitigations.",
+      "title": "Threat Modeling & Mitigations"
+    },
+    "structure": {
+      "id": "structure",
+      "intro": "Comparison of HTTPA Response Codes to traditional HTTP standards.",
+      "table": {
+        "columns": [
+          "HTTPA Status",
+          "HTTP Equivalent",
+          "Trigger Condition"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "200 ALIGNED",
+              "200 OK",
+              "Payload received, verified, and processed within cognitive budget."
+            ]
+          },
+          {
+            "cells": [
+              "402 INSUFFICIENT_COMPUTE",
+              "402 Payment Required",
+              "Receiver's required cognitive budget exceeds sender's allocated cap."
+            ]
+          },
+          {
+            "cells": [
+              "409 EPISTEMIC_CONTRADICTION",
+              "409 Conflict",
+              "Epistemic-Hash mismatch or formal logical contradiction detected in payload."
+            ]
+          },
+          {
+            "cells": [
+              "418 COGITO_ERGO_SUM",
+              "418 I'm a Teapot",
+              "Receiver is a pure reasoning agent incapable of executing requested physical/external action."
+            ]
+          },
+          {
+            "cells": [
+              "520 SAGA_RESURRECTION_FAILED",
+              "N/A",
+              "Long-running task state could not be rehydrated from the durable log after restart."
+            ]
+          }
+        ]
+      },
+      "title": "Response Taxonomy",
+      "variant": "table"
+    }
+  }
+}

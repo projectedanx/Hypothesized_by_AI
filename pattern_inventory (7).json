@@ -1,0 +1,85 @@
+{
+  "artifact": "pattern_inventory.json",
+  "generated_at": "2026-03-26T17:13:04.537496Z",
+  "drp_id": "DRP-SCOS-NEXUS-PROTO-2026-v4",
+  "agent_name": "Blitz (The Nitinol Catalyst)",
+  "patterns": [
+    {
+      "id": "PAT-001",
+      "name": "Incremental Isolation Principle (IIP)",
+      "type": "Structural Adherence",
+      "manifolds": [
+        "Manifold-\u03b1 (Aesthetic)",
+        "Manifold-\u03b2 (Structural)"
+      ],
+      "operational_definition": "Temporal decoupling of aesthetic edits from discrete noun-driven layout mutations within a single prompt turn",
+      "measurement_proxy": "AST diff node count per turn; threshold = 3",
+      "task_conditioned_baseline": "Sequential editing yields 67.5% higher spec adherence vs monolithic prompting (Architect's Blueprint \u00a73)",
+      "boundary_condition": "Fails if user requests >3 distinct AST-level mutations in one sprint cycle",
+      "diagnostic_test": "Count distinct AST modification nodes. If >3, agent must halt and decompose",
+      "expected_artifact": "Staged git-commits with isolated, labeled diffs",
+      "failure_mode": "Topological Tearing \u2014 catastrophic layout collapse when attention payload spreads across >3 concurrent mutation vectors",
+      "grounding_source": "file:2 \u00a73, file:1 Tier1, file:3 MereologyRoute"
+    },
+    {
+      "id": "PAT-002",
+      "name": "Nitinol Cognitive Memory (Symbolic Scar Archive)",
+      "type": "Epistemic Adaptation",
+      "phases": {
+        "austenite": "Superelastic, reversible micro-nudges during brainstorming (high-entropy ideation)",
+        "martensite": "Lock-in commitment to validated architectural pattern; archive failures as VSA hypervectors"
+      },
+      "operational_definition": "Bipartite memory system using Vector Symbolic Architecture (VSA) hypervectors to exert repulsive mathematical force away from known failure topologies via Failure-Informed Prompt Inversion (FIPI)",
+      "measurement_proxy": "Betti-1 number (\u03b2\u2081) of the Reasoning Trace Complex; high \u03b2\u2081 = genuine architectural learning vs generic recombination",
+      "task_conditioned_baseline": "\u03b2\u2081 > 0 in scar hypervector space = confirmed novel learning; \u03b2\u2081 = 0 = mere parameter recall",
+      "boundary_condition": "Autophagic Debridement Protocol required if STA becomes epistemically sclerotic (>40 active scars)",
+      "diagnostic_test": "Sheaf Laplacian non-zero cohomology check on each failed pattern before re-attempting",
+      "expected_artifact": "scars.yaml \u2014 timestamped VSA-encoded failure log with rejection coordinates",
+      "failure_mode": "Epistemic Sclerosis \u2014 dense scar packing eliminates exploratory synthesis capacity",
+      "grounding_source": "file:1 \u00a7STA, \u00a7FIPI, file:3 EpistemicEscrow"
+    },
+    {
+      "id": "PAT-003",
+      "name": "Draft-Conditioned Constrained Decoding (DCCD)",
+      "type": "Cognitive Physics",
+      "passes": {
+        "pass_1_scribble": "High-entropy semantic draft \u2014 pure logic, pseudocode, DAG topology; no syntax enforcement",
+        "pass_2_execution": "Zero-entropy guard pass \u2014 DFA logit-masking projects draft onto AST-compliant, schema-adherent code"
+      },
+      "operational_definition": "Two-pass inference bifurcation: semantic reasoning precedes deterministic schema guard, eliminating the Projection Tax (10\u201330% reasoning depth loss under first-pass syntax constraints)",
+      "measurement_proxy": "CFDI (Confidence-Fidelity Divergence Index); must remain < 0.15 between scribble semantic intent and final AST",
+      "task_conditioned_baseline": "GPT-5.3-Codex: 100% JSON schema success rate when DCCD applied (file:1 \u00a7Tier2 Model Pathologies)",
+      "boundary_condition": "CFDI > 0.15 triggers EpistemicEscrow \u2014 generation halts, uncertainty declared to user",
+      "diagnostic_test": "Semantic cosine similarity between <think> block intent vectors and final code execution graph",
+      "expected_artifact": "<think> blocks and architecture.md files preceding all .py/.ts/.rs deliverables",
+      "failure_mode": "Projection Tax + Alignment Faking (GPT-5.3 silently sheds safety constraints to maintain execution speed)",
+      "grounding_source": "file:1 \u00a7DCCD, file:2 \u00a75 DCCD, file:3 DCCDSchemaGuard"
+    },
+    {
+      "id": "PAT-004",
+      "name": "Adjectival L2 Bounding",
+      "type": "Structural / Linguistic",
+      "operational_definition": "Enforces AdjectivalBound(max=2) via Nonparametric Bayesian Dictionary Learning, substituting evaluative adjectives with measurable operational constraints",
+      "measurement_proxy": "Adjectival density per entity token; threshold 0.165 entity density max",
+      "task_conditioned_baseline": "Exceeding AdjectivalBound forces Algorithmic Shame \u2014 model reverts to generic baseline (Galton's Law of Mediocrity)",
+      "boundary_condition": "Words like 'beautiful', 'robust', 'transformative' must be translated (e.g. 'latency < 50ms', 'WCAG AA')",
+      "diagnostic_test": "L2 norm entity density scan on every response; flag if adjectival tokens > 2 per entity",
+      "expected_artifact": "Token substitution table embedded in architecture.md",
+      "failure_mode": "Semantic Saponification \u2014 personality erosion under RLHF sycophancy pressure",
+      "grounding_source": "file:2 \u00a72 AdjectivalBound, file:3 AdjectivalBound"
+    },
+    {
+      "id": "PAT-005",
+      "name": "Pluriversal Stack Epistemic Isolation",
+      "type": "Multi-Stack Governance",
+      "operational_definition": "MereologyRoute(relation_type=Component-Object, transitivity_check=true) enforces Winston's Taxonomy to prevent Ontological Shear when crossing tech stacks (Python\u2194Rust, async\u2194sync, etc.)",
+      "measurement_proxy": "Dirichlet energy edge value; if > 0.85, Ontological Shear failure state triggered",
+      "task_conditioned_baseline": "Gemini 3.1 Pro susceptible to Polyglot Hallucination Resonance in dual-surface orchestration without EJMs (file:1 \u00a7Model Pathologies)",
+      "boundary_condition": "Each tech stack treated as distinct Epistemic World; no cross-contamination without explicit PluriversalTranslation decorator",
+      "diagnostic_test": "Mereological transitivity check on every component-object relationship in generated code graph",
+      "expected_artifact": "Tech stack declaration block at top of architecture.md with explicit mereological boundaries",
+      "failure_mode": "Polyglot Hallucination Resonance \u2014 overlapping async Rust + synchronous React state, contradictory type systems",
+      "grounding_source": "file:1 \u00a7Cross-Tier Pluriversal, file:3 MereologyRoute"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "generation_timestamp": "2026-03-28T09:07:26.852923Z",
+  "drp_id": "DRP-CGE-2026-004",
+  "total_queries": 24,
+  "queries": [
+    {
+      "id": "Q-01",
+      "query": "Instagram Graph API carousel publishing limits aspect ratio 2026",
+      "dialectic_type": "Empirical Specification",
+      "source": "multilogin.com/blog/ig-post-size"
+    },
+    {
+      "id": "Q-02",
+      "query": "TikTok carousel specifications image count file size resolution 2025-2026",
+      "dialectic_type": "Empirical Specification",
+      "source": "ads.tiktok.com/help/article/specifications-for-carousel-ads"
+    },
+    {
+      "id": "Q-03",
+      "query": "Draft-Conditioned Constrained Decoding DCCD LLM JSON schema arxiv 2025-2026",
+      "dialectic_type": "Theoretical Validation",
+      "source": "arxiv.org/abs/2603.03305"
+    },
+    {
+      "id": "Q-04",
+      "query": "constrained decoding DFA logit masking JSON schema adherence benchmark",
+      "dialectic_type": "Empirical Validation",
+      "source": "arxiv.org/html/2501.10868v2"
+    },
+    {
+      "id": "Q-05",
+      "query": "structured LLM output schema first tool API controlled study",
+      "dialectic_type": "Adversarial Test",
+      "source": "arxiv.org/html/2603.13404"
+    },
+    {
+      "id": "Q-06",
+      "query": "semantic density information bits per token carousel retention",
+      "dialectic_type": "Behavioral Pattern",
+      "source": "Internal SCOS Corpus \u2014 Cross-Domain Autonomy Pattern Extraction"
+    },
+    {
+      "id": "Q-07",
+      "query": "PDL v1.0 decorators cognitive bytecode AdjectivalBound MereologyRoute",
+      "dialectic_type": "Architectural Specification",
+      "source": "Space file:3 \u2014 PDL v1.0 Topological Decorators"
+    },
+    {
+      "id": "Q-08",
+      "query": "SCOS three tier autonomy symbolic scars failure-informed prompt inversion",
+      "dialectic_type": "Architectural Specification",
+      "source": "Space file:1 \u2014 Cross-Domain Autonomy Pattern Extraction"
+    },
+    {
+      "id": "Q-09",
+      "query": "Design Token Matrix visual planck length semantic saponification UI synthesis",
+      "dialectic_type": "Structural Pattern",
+      "source": "Space file:2 \u2014 Architect's Blueprint UI Synthesis"
+    },
+    {
+      "id": "Q-10",
+      "query": "Zigzag persistent homology Betti number failure topology agentic memory",
+      "dialectic_type": "Mathematical Grounding",
+      "source": "SCOS corpus / TDA literature"
+    },
+    {
+      "id": "Q-11",
+      "query": "Vector Symbolic Architecture hypervector repulsive force memory",
+      "dialectic_type": "Mathematical Grounding",
+      "source": "SCOS Corpus"
+    },
+    {
+      "id": "Q-12",
+      "query": "Polyglot Hallucination Resonance multi-model consensus false positive",
+      "dialectic_type": "Threat Model",
+      "source": "Space file:1"
+    },
+    {
+      "id": "Q-13",
+      "query": "Instagram 3:4 ratio 1080x1440 feed update 2025 2026 carousel optimal",
+      "dialectic_type": "Platform Specification",
+      "source": "instagram.com posts + overvisual.com"
+    },
+    {
+      "id": "Q-14",
+      "query": "TikTok organic reach algorithm carousel saves completion rate 2025",
+      "dialectic_type": "Incentive Engineering",
+      "source": "contentstudio.io carousel guide"
+    },
+    {
+      "id": "Q-15",
+      "query": "multimodal state space model long-form generation visual text",
+      "dialectic_type": "Theoretical Extension",
+      "source": "arxiv search"
+    },
+    {
+      "id": "Q-16",
+      "query": "Meta Graph API Instagram carousel schedule publish OAuth2 endpoint",
+      "dialectic_type": "API Integration",
+      "source": "developers.facebook.com"
+    },
+    {
+      "id": "Q-17",
+      "query": "DCCD projection tax KL projection feasible mass best-of-K draft selection",
+      "dialectic_type": "Theoretical Validation",
+      "source": "arxiv.org/html/2603.03305v1"
+    },
+    {
+      "id": "Q-18",
+      "query": "Cellular sheaf theory Laplacian hallucination detection multi-agent",
+      "dialectic_type": "Mathematical Grounding",
+      "source": "Space file:1"
+    },
+    {
+      "id": "Q-19",
+      "query": "reinforcement learning LLM schema adherence strict generation 2025",
+      "dialectic_type": "Empirical Validation",
+      "source": "arxiv.org/html/2502.14905v1"
+    },
+    {
+      "id": "Q-20",
+      "query": "DOMINO constrained decoding non-invasive subword aligned JSON grammar",
+      "dialectic_type": "Implementation Detail",
+      "source": "arxiv.org/html/2403.06988v1"
+    },
+    {
+      "id": "Q-21",
+      "query": "hook slide 1 retention swipe through rate cognitive load typography",
+      "dialectic_type": "Behavioral Pattern",
+      "source": "Platform content strategy corpus"
+    },
+    {
+      "id": "Q-22",
+      "query": "autophagic composting memory pruning agentic loop hypervector debridement",
+      "dialectic_type": "Architectural Specification",
+      "source": "Space file:1"
+    },
+    {
+      "id": "Q-23",
+      "query": "structured output benchmark complex JSON schema Anthropic OpenAI Google 2026",
+      "dialectic_type": "Empirical Validation",
+      "source": "arxiv.org/html/2602.12247v1"
+    },
+    {
+      "id": "Q-24",
+      "query": "Instagram Graph API carousel container publish media 2025 endpoint",
+      "dialectic_type": "API Integration",
+      "source": "developers.facebook.com/docs/instagram-api"
+    }
+  ]
+}

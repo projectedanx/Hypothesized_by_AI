@@ -1,0 +1,176 @@
+{
+  "schema_version": "PECE-DRP-v1.0",
+  "generation_timestamp": "2026-03-30T20:16:00+11:00",
+  "total_queries": 28,
+  "queries": [
+    {
+      "id": "Q01",
+      "pattern": "P1-FGD",
+      "dialectic_type": "Adversarial",
+      "query": "encoder-decoder cross-attention causal citation grounding mechanistic interpretability"
+    },
+    {
+      "id": "Q02",
+      "pattern": "P1-FGD",
+      "dialectic_type": "Confirmatory",
+      "query": "decoder-only architecture hallucination beam search source ablation"
+    },
+    {
+      "id": "Q03",
+      "pattern": "P1-FGD",
+      "dialectic_type": "Falsification",
+      "query": "causal reasoning favors encoders decoder limitations logical reasoning 2025"
+    },
+    {
+      "id": "Q04",
+      "pattern": "P1-FGD",
+      "dialectic_type": "Cross-Domain Bridge",
+      "query": "attention head intervention causal interpretability transformer circuits"
+    },
+    {
+      "id": "Q05",
+      "pattern": "P1-FGD",
+      "dialectic_type": "Expansion",
+      "query": "format grounding dissociation decoder citation phantom hallucination"
+    },
+    {
+      "id": "Q06",
+      "pattern": "P2-STT",
+      "dialectic_type": "Confirmatory",
+      "query": "topological graph embeddings vs ESM-2 protein structure memory efficiency accuracy"
+    },
+    {
+      "id": "Q07",
+      "pattern": "P2-STT",
+      "dialectic_type": "Adversarial",
+      "query": "persistent homology protein function prediction topological data analysis"
+    },
+    {
+      "id": "Q08",
+      "pattern": "P2-STT",
+      "dialectic_type": "Falsification",
+      "query": "ESM-2 3B parameter performance degradation larger model protein"
+    },
+    {
+      "id": "Q09",
+      "pattern": "P2-STT",
+      "dialectic_type": "Cross-Domain Bridge",
+      "query": "TopoBind multi-modal antibody antigen binding free energy topology"
+    },
+    {
+      "id": "Q10",
+      "pattern": "P2-STT",
+      "dialectic_type": "Expansion",
+      "query": "Node2Vec GNN protein graph embedding memory scalability proteome"
+    },
+    {
+      "id": "Q11",
+      "pattern": "P3-AUF",
+      "dialectic_type": "Confirmatory",
+      "query": "heteroscedastic Gaussian distribution radar spatial anisotropic uncertainty"
+    },
+    {
+      "id": "Q12",
+      "pattern": "P3-AUF",
+      "dialectic_type": "Adversarial",
+      "query": "crescent-shaped radar measurement uncertainty polar coordinate Cartesian propagation"
+    },
+    {
+      "id": "Q13",
+      "pattern": "P3-AUF",
+      "dialectic_type": "Cross-Domain Bridge",
+      "query": "LiDAR heteroscedastic aleatoric uncertainty 3D object detection KITTI"
+    },
+    {
+      "id": "Q14",
+      "pattern": "P3-AUF",
+      "dialectic_type": "Expansion",
+      "query": "bidirectional domain attention BDA Doppler radar false positive suppression"
+    },
+    {
+      "id": "Q15",
+      "pattern": "P3-AUF",
+      "dialectic_type": "Falsification",
+      "query": "isotropic Gaussian LiDAR radar versus heteroscedastic performance comparison"
+    },
+    {
+      "id": "Q16",
+      "pattern": "P4-HOC",
+      "dialectic_type": "Confirmatory",
+      "query": "Kuramoto oscillatory phase-locking Hebbian learning neural network artificial"
+    },
+    {
+      "id": "Q17",
+      "pattern": "P4-HOC",
+      "dialectic_type": "Adversarial",
+      "query": "Hebbian oscillatory co-learning synchronization gated plasticity convergence Lyapunov"
+    },
+    {
+      "id": "Q18",
+      "pattern": "P4-HOC",
+      "dialectic_type": "Cross-Domain Bridge",
+      "query": "Poincare ball hyperbolic sparse geometry oscillator attention working memory"
+    },
+    {
+      "id": "Q19",
+      "pattern": "P4-HOC",
+      "dialectic_type": "Falsification",
+      "query": "Kuramoto associative memory exponential capacity stable phase locked states"
+    },
+    {
+      "id": "Q20",
+      "pattern": "P4-HOC",
+      "dialectic_type": "Expansion",
+      "query": "CMOS oscillator network machine learning Hebbian forward propagation OscNet"
+    },
+    {
+      "id": "Q21",
+      "pattern": "P5-CIB",
+      "dialectic_type": "Confirmatory",
+      "query": "conditional information bottleneck budget forcing chain-of-thought LLM compression 2026"
+    },
+    {
+      "id": "Q22",
+      "pattern": "P5-CIB",
+      "dialectic_type": "Adversarial",
+      "query": "semantic surprisal token pruning CoT reasoning high entropy peaks preservation"
+    },
+    {
+      "id": "Q23",
+      "pattern": "P5-CIB",
+      "dialectic_type": "Falsification",
+      "query": "information bottleneck Markov property attention transformer violation"
+    },
+    {
+      "id": "Q24",
+      "pattern": "P5-CIB",
+      "dialectic_type": "Cross-Domain Bridge",
+      "query": "latent chain of thought Coconut CIB Lagrangian dual compression vector"
+    },
+    {
+      "id": "Q25",
+      "pattern": "P5-CIB",
+      "dialectic_type": "Expansion",
+      "query": "step entropy bounds conditional mutual information reasoning trace answer"
+    },
+    {
+      "id": "Q26",
+      "pattern": "P6-AGF",
+      "dialectic_type": "Confirmatory",
+      "query": "lost in the middle attention bias long context token position degradation"
+    },
+    {
+      "id": "Q27",
+      "pattern": "P6-AGF",
+      "dialectic_type": "Cross-Domain Bridge",
+      "query": "topological relational graph hub density attention rescue high degree nodes"
+    },
+    {
+      "id": "Q28",
+      "pattern": "P6-AGF",
+      "dialectic_type": "Expansion",
+      "query": "high-throughput laser shock HELIX microflyer autonomous material testing hypothesis validation"
+    }
+  ],
+  "sha256": "c1ca6d9b628fe13aecce55896315b16f886c54ef10df79c7ff33f1710220fdf5"
+}

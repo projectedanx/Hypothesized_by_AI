@@ -1,0 +1,104 @@
+{
+  "generation_timestamp": "2026-03-28T09:07:26.852923Z",
+  "drp_id": "DRP-CGE-2026-004",
+  "agent_identity": "Synthetix-Carousel-Operator [SCO-9]",
+  "patterns": [
+    {
+      "pattern_id": "P-001",
+      "pattern_name": "Sequential Attention Trap (Semantic Bleaching)",
+      "type": "Behavioral / Cognitive",
+      "claim": "Users drop off between Slide 2 and Slide 3 when the semantic delta between consecutive slides falls below a critical density threshold.",
+      "mechanism": "Polysemantic Feature Drift caused by autoregressive token averaging over long slide sequences. The transformer residual stream normalises cross-slide vectors toward dominant attention weights, erasing nuanced inter-slide contrast.",
+      "boundary_conditions": {
+        "semantic_density_floor": 0.65,
+        "swipe_through_target_s1_s2": 0.65,
+        "adjective_density_ceiling": 2
+      },
+      "diagnostic_test": "Shannon entropy H(S_i) per slide token sequence. If H(S_i) - H(S_{i-1}) < 0.10 bits, Bleaching is onset. Cross-validate with bits-per-token (BPT) metric across the slide DAG.",
+      "pdl_remediations": [
+        "+++AdjectivalBound(max_per_entity=2)",
+        "+++ContextLock(anchor='SLIDE_DAG', refresh_interval=1024)",
+        "+++DictionaryAnchor(enforcement='strict')"
+      ],
+      "expected_artifact": "Density-optimised text payloads with BPT > 0.65 per slide"
+    },
+    {
+      "pattern_id": "P-002",
+      "pattern_name": "Draft-Conditioned Constrained Decoding (DCCD) \u2014 Publishing Guard",
+      "type": "Structural Execution",
+      "claim": "Forcing the generative model to output API-ready JSON simultaneously with ideation induces a Projection Tax: a measurable degradation of reasoning depth (up to -24pp structured accuracy vs DCCD baseline).",
+      "mechanism": "Standard token-by-token constrained decoding via DFA logit-masking forces the model to commit to valid-JSON characters before the semantic manifold has resolved, collapsing the feasible probability mass and steering generation toward locally valid but semantically empty trajectories.",
+      "boundary_conditions": {
+        "dccd_accuracy_gain_over_standard": "+24pp (15.2% -> 39.0% on GSM8K, 1B model, arXiv:2603.03305)",
+        "schema_adherence_target": "100%",
+        "api_error_tolerance": 0
+      },
+      "diagnostic_test": "AST parse of carousel_payload_v1.json against the Carousel_API_Manifest schema. Any JSONDecodeError or schema ValidationError triggers +++EpistemicEscrow.",
+      "pdl_remediations": [
+        "+++DCCDSchemaGuard(schema='Carousel_API_Manifest', enforcement='draft_conditioned')",
+        "+++MereologyRoute(relation_type='Component-Object', transitivity_check=True)",
+        "+++EpistemicEscrow(cfd_threshold=0.15, halt_on_divergence=True)"
+      ],
+      "expected_artifact": "100% compliant carousel_payload_v1.json for Meta Graph API and TikTok for Business API"
+    },
+    {
+      "pattern_id": "P-003",
+      "pattern_name": "Visual-Textual Ontological Shear",
+      "type": "Structural / Rendering",
+      "claim": "When background image generation prompts and typographic overlay instructions share a single generation context, Polyglot Hallucination Resonance causes the text render layer to absorb image-domain tokens, producing broken spatial layouts.",
+      "mechanism": "The model fails to maintain mereological separation between the image manifold and the DOM-like typography tree. This causes the Visual Planck Length threshold to be breached: the AI can no longer differentiate adjacent spatial blocks and smooths the layout into visual mush (Entropic Wash).",
+      "boundary_conditions": {
+        "semantic_saponification_index_ceiling": 0.04,
+        "max_ui_directives_per_prompt": 3,
+        "safe_zone_coverage": "85% of 1080x1350 canvas (leaving 157.5px top/bottom margin for platform UI chrome)"
+      },
+      "diagnostic_test": "Pixel-level safe-zone audit against platform chrome overlap maps. Check that all text bounding boxes exist within the 1012x1215 safe region.",
+      "pdl_remediations": [
+        "+++MereologyRoute(relation_type='Component-Object')",
+        "+++SpatialBind(Region_X='108px-972px', Region_Y='135px-1215px', constraint='typography_only')",
+        "+++SeparableGridParse(topology='2D_Matrix')"
+      ],
+      "expected_artifact": "Separated background_prompt string and typography_layer JSON object with pixel-bound y_axis_offset values"
+    },
+    {
+      "pattern_id": "P-004",
+      "pattern_name": "Symbolic Scar \u2014 Failure-Informed Prompt Inversion (FIPI)",
+      "type": "Memory / Autonomous Learning",
+      "claim": "When a carousel underperforms (STR < 0.35 or saves < 0.5% of reach), the hook topology that generated it must be minted as a VSA hypervector repulsive force to prevent recursion into that structural attractor.",
+      "mechanism": "Zigzag Persistent Homology tracks the topological evolution of the narrative DAG across carousels over time. Persistent 1-cycles (Betti-1 loops) in the engagement trace graph mark structural failure modes. These are physicalised as Symbolic Scars in the STA (Scar Tissue Archive) and exert FIPI deflection forces on future generation paths.",
+      "boundary_conditions": {
+        "fipi_trigger_str_threshold": 0.35,
+        "scar_archive_max_capacity": 512,
+        "debridement_interval_days": 30
+      },
+      "diagnostic_test": "Calculate Betti-1 number (\u03b2\u2081) of the engagement trace graph. If \u03b2\u2081 > 0, a persistent failure loop exists and FIPI is activated.",
+      "pdl_remediations": [
+        "+++EpistemicEscrow(cfd_threshold=0.15)",
+        "+++SagaRecovery(strategy='rollback', mode='non_monotonic')",
+        "+++DriftCheck(threshold=0.85)"
+      ],
+      "expected_artifact": "symbolic_scar_registry.jsonl \u2014 append-only log of failed hook topologies"
+    },
+    {
+      "pattern_id": "P-005",
+      "pattern_name": "Platform Algorithmic Rent Extraction \u2014 Attention Score Maximisation",
+      "type": "Platform Capitalism / Incentive Engineering",
+      "claim": "TikTok and Instagram algorithms preferentially boost carousels that maximise dwell time (complete reads), shares, and saves over simple likes/comments. The agent must reverse-engineer this incentive structure to extract organic reach.",
+      "mechanism": "The attention scoring function Att(Q,K) = softmax(QK^T / sqrt(d_k))V maps the platform's prediction of user Q (scrolling intent) against the carousel's K (hook signal). High scores on Slide 1 produce algorithmic boosts; saves/shares trigger secondary distribution waves.",
+      "boundary_conditions": {
+        "caption_hashtag_limit_instagram": 30,
+        "caption_primary_text_chars_instagram": 125,
+        "tiktok_title_chars_optimal": "12-40",
+        "tiktok_max_images": 35,
+        "instagram_max_images": 20,
+        "schedule_optimal_window_utc": "12:00-14:30 weekdays (platform-specific peak)"
+      },
+      "diagnostic_test": "A/B test hook variations against Swipe-Through Rate (STR). Saves-per-impression ratio is the primary organic-reach oracle.",
+      "pdl_remediations": [
+        "+++EntropyAnchor(level='high', focus='causal_explanatory_networks')",
+        "+++AutonymicIsolate(forbidden_patterns=['generic AI emojis', 'welcome to my carousel'])"
+      ],
+      "expected_artifact": "platform_performance_ledger.jsonl \u2014 weekly analytics ingestion from Meta Graph Insights and TikTok Analytics API"
+    }
+  ]
+}

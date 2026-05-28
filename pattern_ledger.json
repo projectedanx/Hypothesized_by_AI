@@ -1,0 +1,215 @@
+{
+  "drp_id": "DRP-PE-2026-001",
+  "version": "1.0.0",
+  "generated": "2026-03-04",
+  "operational_definitions": {
+    "interpretive_fracture": "Output token-level semantic variance measured via BERTScore std-dev across N>=10 seeds at Temperature 0.7",
+    "reasoning_fidelity": "Pass@1 or Pass@k on deterministic benchmark tasks (GSM8K, HumanEval, MATH)",
+    "success_threshold": "delta_improvement > mu_baseline + 1.5 * sigma_baseline within target domain",
+    "prompt_drift": "Performance degradation > 5% when transferring a prompt optimised for Model_A to Model_B without re-engineering"
+  },
+  "patterns": [
+    {
+      "id": "P1",
+      "name": "Reflexion",
+      "type": "Meta-Cognitive Loop",
+      "subtype": "Verbal Reinforcement Learning",
+      "arxiv": "2303.11366",
+      "claim": "Forcing an LLM to generate an internal critique of a failed output prior to regenerating increases Pass@k on deterministic tasks by converting implicit error gradients into explicit semantic tokens.",
+      "mechanism": "Critique tokens shift the probability distribution of the subsequent generation by adding a semantic gradient signal within the context window.",
+      "structural_template": "<TASK>\n{task_description}\n</TASK>\n\n<ATTEMPT>\n{model_output}\n</ATTEMPT>\n\n<REFLECTION>\nIdentify any errors or shortcomings in the attempt above. Be specific about what went wrong and why.\n</REFLECTION>\n\n<REVISED_ATTEMPT>\n{revised_output}\n</REVISED_ATTEMPT>",
+      "variables": {
+        "task_description": "Formal problem statement",
+        "model_output": "Initial generation from prior pass",
+        "revised_output": "Post-critique regeneration"
+      },
+      "empirical_evidence": {
+        "HumanEval_Pass@1": {
+          "Reflexion_GPT4": 0.91,
+          "GPT4_baseline": 0.8,
+          "delta": "+11%",
+          "source": "Shinn et al. 2023 (arXiv:2303.11366)"
+        },
+        "HumanEval_Rust_hardest50": {
+          "Base_model": 0.6,
+          "Reflexion_full": 0.68,
+          "test_gen_only": 0.6,
+          "reflection_only": 0.52,
+          "delta_over_base": "+13.3%"
+        },
+        "sequential_decision_tasks": "Reflexion +14% accuracy without ground truth access; CoT/ReAct fail to improve across trials"
+      },
+      "boundary_conditions": [
+        "Fails if critique capability < generation capability (reflection_only: 0.52 < base 0.60 on HumanEval Rust)",
+        "Fails on tasks requiring external world-knowledge updates without RAG",
+        "Collapses on complex multi-constraint planning: TravelPlanner score 5.56%; Expel variant 0%",
+        "False-positive unit tests cause premature loop termination; false-negatives are preferred",
+        "Diminishing returns plateau after 3 trials; context window saturation risk"
+      ],
+      "diagnostic_test": "Compare trajectory: [Prompt\u2192Output] vs [Prompt\u2192Output\u2192CritiquePrompt\u2192RevisedOutput]. Measure Pass@1 delta across 3 trial rounds.",
+      "expected_artifacts": [
+        "(Failed_Trajectory, Critique, Successful_Trajectory) triple dataset",
+        "Pass@k curve across N trials",
+        "False-positive/negative rate from unit test suite"
+      ],
+      "calibration": {
+        "temperature_logic": 0.0,
+        "temperature_variance": 0.7
+      },
+      "negative_controls": {
+        "NC1": "Insert a factually incorrect critique. If model still succeeds, task does not require reflection; pattern efficacy falsified.",
+        "NC2": "Run without test generation (reflection-only). Expected: degradation to sub-baseline (confirmed: 0.52 vs 0.60)."
+      }
+    },
+    {
+      "id": "P2",
+      "name": "Chain of Density",
+      "type": "Information-Theoretic Constraint",
+      "subtype": "Iterative Compression Optimization",
+      "arxiv": "2309.04269",
+      "claim": "Iteratively prompting a model to rewrite a summary by adding missing entities while keeping length fixed increases semantic density, measurable as entity-to-token ratio.",
+      "mechanism": "Context window acts as a constrained optimization environment, forcing substitution of filler tokens with high-information entity tokens across N iterations.",
+      "structural_template": "Article: {source_article}\n\nYou will generate increasingly concise, entity-dense summaries of the above Article.\n\nRepeat the following 2 steps {N} times.\n\nStep 1. Identify 1-3 informative Entities from the Article which are missing from the previously generated summary and are the most relevant.\nStep 2. Write a new, denser summary of identical length which covers every entity and detail from the previous summary plus the Missing Entities.\n\nA Missing Entity is:\n- Relevant: to the main story\n- Specific: descriptive yet concise (5 words or fewer)\n- Novel: not in the previous summary\n- Faithful: present in the Article\n- Anywhere: located anywhere in the Article\n\nGuidelines:\n- The first summary should be long (~{initial_length} words) yet highly non-specific.\n- Make every word count: rewrite the previous summary to improve flow and make space for additional entities.\n- Make space with fusion, compression, and removal of uninformative phrases.\n- Summaries should become highly dense and concise yet self-contained.\n- Never drop entities from the previous summary. Never include missing information.\n- Each summary should have exactly {target_length} words.\n\nAnswer in JSON. The JSON should be a list (length {N}) of dicts whose keys are 'Missing_Entities' and 'Denser_Summary'.",
+      "variables": {
+        "source_article": "Input text to summarize",
+        "N": "Number of iterations (recommended 3-5; diminishing returns beyond 5)",
+        "initial_length": "Starting summary word count (typically 80-120)",
+        "target_length": "Fixed target length maintained across iterations"
+      },
+      "empirical_evidence": {
+        "entity_density_trend": "Entity count increases monotonically through iterations 1-5; readability (Gunning Fog) degrades after iteration 4",
+        "application_mobile_reviews": "CoD summaries demonstrated greater semantic density vs extractive methods and vanilla prompts (arXiv:2506.14192)",
+        "comparison_CoS": "Chain of Summaries outperforms CoD on downstream QA tasks by optimising for answer-coverage rather than entity density (arXiv:2511.15719)",
+        "cross_model": "Density trajectories vary across LLMs; smaller models show non-monotonic behaviour"
+      },
+      "boundary_conditions": [
+        "Diminishing returns and syntax degradation after 3-5 iterations (telegraphic/over-saturated output)",
+        "Fixed-length constraint poorly supported by models < 7B parameters",
+        "Entity extraction quality depends on model's NER capability; weaker models fuse incorrect entities",
+        "Optimises for entity density, NOT downstream QA accuracy \u2014 these are orthogonal objectives"
+      ],
+      "diagnostic_test": "Measure entity-to-token ratio (ETR) across N iterations. Identify iteration i* where Gunning Fog Index > 15 or BERTScore vs source drops below 0.85.",
+      "expected_artifacts": [
+        "Iteration table: [iteration, token_count, entity_count, ETR, Gunning_Fog, BERTScore]",
+        "Optimal iteration i* per model per domain"
+      ],
+      "calibration": {
+        "temperature_logic": 0.0,
+        "temperature_variance": 0.7
+      },
+      "negative_controls": {
+        "NC1": "Run CoD on a source text with <5 total entities. If ETR still increases, the model is hallucinating entities.",
+        "NC2": "Scramble entity relevance instructions. If density still increases, model is responding to structural format, not semantic constraint."
+      }
+    },
+    {
+      "id": "P3",
+      "name": "Teleprompting (DSPy Signature Optimisation)",
+      "type": "Programmatic Compilation",
+      "subtype": "Gradient-Free Prompt Search",
+      "arxiv": "2310.03714",
+      "claim": "Treating prompts as modular signatures and using BootstrapFewShot to algorithmically select few-shot examples outperforms human-crafted prompt engineering.",
+      "mechanism": "Replaces human intuition with data-driven search over prompt latent space, optimising for a specific metric (exact match, F1, Pass@1) using a teacher model to bootstrap demonstrations.",
+      "structural_template": "# DSPy Signature\nclass {task_name}(dspy.Signature):\n    \"\"\"{instruction}\"\"\"\n    {input_fields}: dspy.InputField(desc=\"{input_desc}\")\n    {output_fields}: dspy.OutputField(desc=\"{output_desc}\")\n\n# Optimizer invocation\noptimizer = dspy.BootstrapFewShot(\n    metric={evaluation_metric},\n    max_bootstrapped_demos={k},\n    max_labeled_demos={m}\n)\noptimized_program = optimizer.compile(\n    student={module},\n    trainset={seed_examples}\n)",
+      "variables": {
+        "task_name": "Camel-case task identifier",
+        "instruction": "Natural language description of the task",
+        "input_fields": "Typed input field name",
+        "output_fields": "Typed output field name",
+        "evaluation_metric": "Python callable returning float in [0,1]",
+        "k": "Max bootstrapped demonstrations (typically 4-8)",
+        "m": "Max labeled demonstrations",
+        "seed_examples": "Unlabelled or labelled training examples (min 50 recommended)"
+      },
+      "empirical_evidence": {
+        "GSM8K_gpt4o_mini": {
+          "unoptimised": "baseline",
+          "BootstrapFewShotWithRandomSearch": "+8% accuracy at -5% inference cost",
+          "source": "LangProBe benchmark (arXiv:2502.20315)"
+        },
+        "general_finding": "Optimizers significantly enhance performance and cost-efficiency across tasks vs raw model predictions",
+        "token_economics": "Few-shot in prompt increases input tokens but eliminates lengthy output reasoning traces; net cost often lower due to input<output pricing"
+      },
+      "boundary_conditions": [
+        "Requires robust, task-specific evaluation metric; ill-defined metrics cause optimizer to exploit proxy measures",
+        "Seed dataset minimum ~50 examples; performance degrades sharply below threshold",
+        "High computational overhead during compilation phase (teacher model inference at scale)",
+        "Compiled prompts are model-specific; recompilation required on model switch (prompt drift risk)",
+        "BootstrapFewShot is locally focused per node; globally suboptimal pipelines may still emerge"
+      ],
+      "diagnostic_test": "Benchmark human-crafted mega-prompt vs DSPy-compiled pipeline with 50 unlabelled seed examples. Track: Pass@1, F1, inference cost, compilation time.",
+      "expected_artifacts": [
+        "Compiled JSON prompt signatures per module",
+        "Optimization loss/accuracy curve across bootstrap rounds",
+        "Cost comparison table: human vs compiled"
+      ],
+      "calibration": {
+        "temperature_logic": 0.0,
+        "temperature_variance": 0.7
+      },
+      "negative_controls": {
+        "NC1": "Compile with a random/shuffled metric (rewards wrong answers). If compiled prompt still outperforms zero-shot, metric sensitivity is insufficient.",
+        "NC2": "Use irrelevant but perfectly formatted few-shot examples. If performance improves, model learns format not logic \u2014 pattern efficacy falsified for that task."
+      }
+    },
+    {
+      "id": "P4",
+      "name": "Graph of Thoughts (GoT)",
+      "type": "Non-Linear Reasoning Topology",
+      "subtype": "DAG-Structured Thought Orchestration",
+      "arxiv": "2308.09687",
+      "claim": "Modelling information as a graph where thoughts are vertices and dependencies are edges allows superior multi-path reasoning via aggregation and refinement operations versus linear Chain-of-Thought.",
+      "mechanism": "Graph structure enables synergistic operations: Aggregation (combining multiple independent thoughts) and Refinement (looping a single thought). Controller script manages the DAG execution externally.",
+      "structural_template": "# GoT Controller (pseudocode)\ngraph = ThoughtGraph()\nroot = graph.add_thought(prompt=INITIAL_DECOMPOSITION_PROMPT, input={task})\n\n# Generate N parallel branches\nbranches = [graph.add_thought(prompt=BRANCH_PROMPT, input=root.output, branch_id=i) for i in range(N)]\n\n# Aggregation step\naggregated = graph.aggregate(thoughts=branches, prompt=AGGREGATION_PROMPT)\n\n# Refinement loop\nfor _ in range(R):\n    refined = graph.refine(thought=aggregated, prompt=REFINEMENT_PROMPT)\n    aggregated = refined\n\nfinal = graph.score_and_select(candidates=[aggregated], metric=SCORING_FUNCTION)",
+      "variables": {
+        "task": "Input problem requiring multi-step decomposition",
+        "INITIAL_DECOMPOSITION_PROMPT": "Instruction to break problem into independent sub-problems",
+        "BRANCH_PROMPT": "Instruction to solve a single sub-problem",
+        "AGGREGATION_PROMPT": "Instruction to merge N branch outputs into a coherent solution",
+        "REFINEMENT_PROMPT": "Instruction to improve a single aggregated thought",
+        "N": "Number of parallel branches (typically 3-6)",
+        "R": "Number of refinement iterations (typically 1-3)",
+        "SCORING_FUNCTION": "Callable to rank candidate thoughts"
+      },
+      "empirical_evidence": {
+        "sorting_task_ChatGPT35": {
+          "GoT_vs_ToT_quality": "+62% sorting quality improvement over ToT",
+          "GoT_vs_CoT_quality": "+70% quality improvement over CoT",
+          "GoT_vs_ToT_cost": ">31% cost reduction vs ToT",
+          "GoT_median_error_vs_CoT_P64": "-65% median error vs CoT",
+          "GoT_median_error_vs_IO_P64": "-83% median error vs IO",
+          "source": "Besta et al. 2023/2024 AAAI (arXiv:2308.09687)"
+        },
+        "multi_agent_GLM_extension": {
+          "accuracy_improvement": "+38%",
+          "token_cost_reduction": "-95.7%",
+          "latency_reduction": "-90.3%",
+          "throughput_gain": "15.1x",
+          "source": "arXiv:2511.01633"
+        },
+        "cost_structure": "GoT costs > IO and CoT baselines due to k thoughts per Generate operation; advantage materialises only at sufficient problem complexity"
+      },
+      "boundary_conditions": [
+        "Token cost far exceeds CoT/IO for small/simple problems; break-even point at approximately P>=32 element sorting",
+        "Requires complex controller orchestration logic OUTSIDE the LLM (Python/API scripts)",
+        "Aggregation quality is bounded by model's ability to synthesise conflicting sub-solutions",
+        "Graph cycles require termination conditions to prevent infinite loops",
+        "Performance advantages diminish or vanish on models < 30B parameters or without instruction fine-tuning"
+      ],
+      "diagnostic_test": "Test on sorting (P={16,32,64,128}) and set intersection tasks. Measure Pass@1 and token cost per complexity level. Identify problem size P* where GoT surpasses CoT in quality/cost ratio.",
+      "expected_artifacts": [
+        "DAG execution graphs in DOT/Graphviz format",
+        "Accuracy vs cost trade-off plot across P values",
+        "Breakeven analysis: GoT vs CoT vs ToT"
+      ],
+      "calibration": {
+        "temperature_logic": 0.0,
+        "temperature_variance": 0.7
+      },
+      "negative_controls": {
+        "NC1": "Replace Aggregation step with random thought selection. If performance equivalent, aggregation adds no value; GoT reduces to ToT.",
+        "NC2": "Run GoT with a scrambled/logically flawed Branch Prompt. If model still succeeds, task does not require graph-level decomposition."
+      }
+    }
+  ]
+}

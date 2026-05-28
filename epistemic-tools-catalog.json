@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "id": "epistemic-tools-catalog",
+    "title": "Pluriversal Catalog of Epistemic Tools",
+    "primary_pill": "Prompt Engineering",
+    "short_tagline": "A diagnostic-therapeutic map reframing prompting techniques as structural prosthetics for LLM architectural deficiencies.",
+    "tags": [
+      "AI-Safety",
+      "Cognitive-Architecture",
+      "Reasoning-Systems",
+      "Epistemic-Tools",
+      "Metacognition"
+    ],
+    "status": "published",
+    "hero_cta_label": "Explore Framework",
+    "hero_cta_target": "https://arxiv.org/html/2402.07927v2",
+    "research_date": "March 2026",
+    "source_papers": [
+      "Wei et al. 2022",
+      "Wang et al. 2022",
+      "Yao et al. 2023",
+      "Zheng et al. 2023",
+      "Anthropic 2022",
+      "SSRN:5339795"
+    ],
+    "worldview_ref": "Dual-Process Cognitive Theory",
+    "created_at": 1774277151316
+  },
+  "sections": {
+    "overview": {
+      "title": "Architectural Repair via Epistemic Tools",
+      "intro": "The Pluriversal Catalog operates as a structural map for AI-human collaboration. It posits that prompt engineering is not merely formatting, but a method of correcting predictable structural deficiencies in autoregressive token predictors. By utilizing specific epistemic tools, users can bridge the gap between what a model natively produces—greedy probabilistic cascades—and what rigorous reasoning requires—scaffolded, search-based, and metacognitive inquiry.",
+      "summary_card": {
+        "label": "CORE THESIS",
+        "title": "Cognitive Reconstruction",
+        "body": "Prompting techniques are piecemeal reconstructions of the human cognitive stack, using token-level context to simulate working memory, deliberative search, and self-correction mechanisms that are absent in the raw model architecture.",
+        "tags": [
+          "Structural-Prosthetics",
+          "Isomorphism",
+          "Neuro-Symbolic"
+        ]
+      },
+      "hero_pills": [
+        "Failure-Mode Focused",
+        "Cognitive Stack Alignment",
+        "Diagnostic Map"
+      ],
+      "id": "epistemic-overview"
+    },
+    "key_concepts": {
+      "title": "Core Epistemic Principles",
+      "cards": [
+        {
+          "title": "Bayesian Evidence Updates",
+          "body": "Few-shot prompting serves as a posterior probability update, conditioning the model's pattern recognition on a narrow semantic target to resolve zero-shot ambiguity and format ignorance.",
+          "source_refs": [
+            "arXiv:2402.07927v2"
+          ]
+        },
+        {
+          "title": "Linear & Exploratory Scaffolding",
+          "body": "Techniques like Chain-of-Thought (CoT) and Tree-of-Thoughts (ToT) act as external working memory, allowing models to externalize intermediate tokens and navigate complex logical branching through hierarchical search.",
+          "source_refs": [
+            "Wei et al. 2022",
+            "Yao et al. 2023"
+          ]
+        },
+        {
+          "title": "Neuro-Symbolic Hybridization",
+          "body": "Program-of-Thoughts (PoT) delegates arithmetic and procedural execution to deterministic external interpreters, separating semantic parsing from syntactic calculation to resolve LLM unreliability in math.",
+          "source_refs": [
+            "Chen et al. 2022"
+          ]
+        },
+        {
+          "title": "Metacognitive Cybernetics",
+          "body": "Self-Refine and Reflexion establish closed-loop feedback systems where the model critiques and revises its own drafts, overcoming the generator-verifier gap and stagnant first-pass logic.",
+          "source_refs": [
+            "Madaan et al. 2023"
+          ]
+        }
+      ],
+      "id": "key-epistemic-concepts",
+      "intro": "The following concepts define the functional layers of the epistemic toolset."
+    },
+    "workflow": {
+      "title": "Operational Tool Implementation",
+      "steps": [
+        {
+          "label": "Diagnostic Mapping",
+          "summary": "Identify the specific failure mode inherent in the task.",
+          "bullets": [
+            "Determine if the error is due to calculation collapse or logic branching.",
+            "Assess if the problem requires real-world data grounding (ReAct) or abstraction (Step-Back)."
+          ],
+          "id": "wf-diagnostic"
+        },
+        {
+          "label": "Scaffold Selection",
+          "summary": "Deploy the structural prosthetic that matches the failure profile.",
+          "bullets": [
+            "Use Self-Consistency for tasks prone to stochastic noise.",
+            "Implement Tree-of-Thoughts for multi-path strategic planning.",
+            "Invoke Program-of-Thoughts for arithmetic-heavy procedural logic."
+          ],
+          "id": "wf-selection"
+        },
+        {
+          "label": "Metacognitive Closure",
+          "summary": "Enforce self-correction loops to refine the output quality.",
+          "bullets": [
+            "Apply a Critique-Revision loop (Self-Refine) to the final output.",
+            "Check for constitutional alignment if the task involves value-laden content."
+          ],
+          "id": "wf-closure"
+        }
+      ],
+      "id": "epistemic-workflow",
+      "intro": "The process of deploying epistemic tools to stabilize LLM reasoning."
+    },
+    "checklist": {
+      "title": "Epistemic Tool Readiness",
+      "items": [
+        {
+          "label": "Contextual Anchoring",
+          "bullets": [
+            "Are there at least 3-5 concrete Input-Output exemplars for few-shot conditioning?",
+            "Has a 'think step-by-step' trigger been embedded to activate latent reasoning?"
+          ]
+        },
+        {
+          "label": "Logic Robustness",
+          "bullets": [
+            "If the problem is hierarchical, are you using Tree-of-Thoughts to allow backtracking?",
+            "If the problem is mathematical, is the model prompted to generate Python code rather than direct answers?"
+          ]
+        },
+        {
+          "label": "Metacognitive Verification",
+          "bullets": [
+            "Is there a secondary prompt to verify the output against the initial constraints?",
+            "Have you implemented a majority-vote mechanism (Self-Consistency) for high-entropy decision nodes?"
+          ]
+        }
+      ],
+      "id": "epistemic-checklist",
+      "intro": "Use this checklist to ensure the prompting architecture is structurally sound."
+    },
+    "metrics": {
+      "id": "performance-metrics",
+      "intro": "Quantitative indicators of tool efficacy in resolving architectural failures.",
+      "items": [
+        {
+          "name": "Benchmark Delta",
+          "description": "The percentage point improvement on standardized reasoning sets (GSM8K, SVAMP) compared to zero-shot baselines.",
+          "signals": [
+            "GSM8K +39pp for CoT",
+            "SCAN 16% to 99% for Least-to-Most"
+          ]
+        },
+        {
+          "name": "Hallucination Reduction",
+          "description": "Reduction in the rate of factually incorrect or logically inconsistent token generation.",
+          "signals": [
+            "GoT reduces hallucinations by 25-30%",
+            "Self-Consistency resolves stochastic noise collapse"
+          ]
+        },
+        {
+          "name": "Schema Adherence",
+          "description": "Frequency with which the model successfully conforms to complex output structures like JSON or YAML.",
+          "signals": [
+            "Structured output adherence >99% with correct conditioning"
+          ]
+        }
+      ],
+      "title": "Success Metrics"
+    },
+    "resilience": {
+      "failure_modes": [
+        {
+          "name": "Greedy Decoding Collapse",
+          "description": "The model selects a locally optimal but globally incorrect token, leading to a reasoning dead-end.",
+          "mitigations": [
+            "Implement Self-Consistency with majority voting.",
+            "Increase temperature to sample diverse reasoning paths."
+          ]
+        },
+        {
+          "name": "Linear Chain Brittleness",
+          "description": "A single error early in a Chain-of-Thought corrupts all downstream reasoning.",
+          "mitigations": [
+            "Use Tree-of-Thoughts for exploratory search and pruning.",
+            "Apply Least-to-Most decomposition to simplify sub-steps."
+          ]
+        },
+        {
+          "name": "Token Overhead Inflation",
+          "description": "Advanced techniques like ToT and Self-Consistency can cost 10x-100x more in tokens.",
+          "mitigations": [
+            "Use uncertainty-based triggers to only activate tools when needed.",
+            "Implement prompt compression (LLMLingua) for long-form context."
+          ]
+        }
+      ],
+      "id": "system-resilience",
+      "intro": "Identifying and mitigating the risks inherent in advanced prompting architectures.",
+      "title": "Resilience & Risk Mitigation"
+    },
+    "structure": {
+      "id": "tool-taxonomy",
+      "intro": "The following table maps techniques to their respective cognitive layers and failure modes.",
+      "table": {
+        "columns": [
+          "Technique",
+          "Tier",
+          "Failure Resolved"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "Few-Shot",
+              "Foundational",
+              "Zero-shot ambiguity"
+            ]
+          },
+          {
+            "cells": [
+              "Chain-of-Thought",
+              "Linear Scaffold",
+              "Implicit logic collapse"
+            ]
+          },
+          {
+            "cells": [
+              "Tree-of-Thoughts",
+              "Exploratory",
+              "No backtracking/Lookahead"
+            ]
+          },
+          {
+            "cells": [
+              "Program-of-Thoughts",
+              "Algorithmic",
+              "Arithmetic unreliability"
+            ]
+          },
+          {
+            "cells": [
+              "Self-Refine",
+              "Metacognitive",
+              "Generator-Verifier gap"
+            ]
+          }
+        ]
+      },
+      "title": "Technique Taxonomy",
+      "variant": "Standard"
+    }
+  }
+}

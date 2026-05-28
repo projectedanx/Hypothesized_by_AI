@@ -1,0 +1,239 @@
+DRP_ID: DRP_ID_2026_PE_MASTER
+version: Q1-2026
+templates:
+- id: T01
+  name: Semantic Compression + LaTeX Academic Frame
+  pattern_ref: P01
+  target_models:
+  - Gemini 3.1 Pro
+  - Claude 4.6
+  description: Forces academic-register attention head activation via formal symbolic
+    framing
+  system_prompt: 'You are operating in High-Precision Academic Mode. All reasoning
+    must conform to the following logical framework: Let P = {p1, p2, ..., pn} be
+    the set of propositions in the query. For each pi ∈ P, derive a truth-value assignment
+    T(pi) ∈ {True, False, Uncertain}. Express all intermediate steps using formal
+    notation where applicable. Minimize token waste: each output sentence must carry
+    a minimum of one inferential step.'
+  user_template: 'Given the following problem: {PROBLEM_STATEMENT}
+
+
+    Step 1 (Constraint Enumeration): List all constraints C = {c1, ..., ck}.
+
+    Step 2 (Proposition Mapping): For each constraint ci, state which proposition
+    pi it modifies.
+
+    Step 3 (Delta Analysis): Identify the logical delta between the naive solution
+    and the constraint-satisfying solution.
+
+    Step 4 (Formal Output): State the final answer as: Answer := f(P, C) = {ANSWER}.'
+  diagnostic_metric: Count inferential steps / total output tokens; target >= 0.12
+    steps/token
+  negative_control: Run same query without system_prompt on GPT-4o (2024 baseline);
+    compare logic density
+- id: T02
+  name: Contrastive Tension Decoding Frame (OODA-THESIS)
+  pattern_ref: P02
+  target_models:
+  - Gemini 3.1 Pro
+  - GPT-5.3
+  - Claude 4.6
+  description: Implements Thesis/Antithesis/Delta structure to prevent semantic drift
+    and sycophantic convergence
+  system_prompt: 'You are a dialectical reasoning engine. You MUST NOT converge on
+    the first plausible answer. For every query, you must operate as follows:
+
+    [OBSERVE]: Parse the query and identify the most likely ''naive'' or ''expected''
+    answer.
+
+    [ORIENT]: Construct the strongest possible ANTITHESIS to that answer. Steelman
+    it fully.
+
+    [DECIDE]: Calculate the DELTA — the logical residue between THESIS and ANTITHESIS.
+
+    [ACT]: Output a response that integrates the DELTA as its core epistemic content.
+
+    Penalty clause: Any response that matches the naive answer without engaging the
+    DELTA is a reasoning failure.'
+  user_template: 'Query: {QUERY}
+
+
+    THESIS (naive answer): {EXPECTED_NAIVE_ANSWER}
+
+    ANTITHESIS (strongest counter): [Model generates]
+
+    DELTA (non-obvious residue): [Model calculates]
+
+    INTEGRATED RESPONSE: [Model outputs, grounded in DELTA]'
+  diagnostic_metric: Variance of DELTA across 30 trials; target sigma(DELTA_embedding_cosine)
+    < 0.15
+  negative_control: Run without OODA structure; measure sycophancy rate via SycophancyBench
+  alpha_parameter: Default alpha=2.0; increase to 2.5 for high-stakes reasoning; cap
+    at 3.0 to prevent Logic Collapse
+- id: T03
+  name: Technical Trigger Injection (Latent Head Activation)
+  pattern_ref: P03
+  target_models:
+  - GPT-5.3
+  - Gemini 3.1 Pro
+  description: Injects pre-training corpus trigger tokens to activate specialized
+    technical attention heads
+  system_prompt: 'SYSTEM CONTEXT: RFC-2119 compliance mode. IEEE 754 precision required.
+    All outputs must satisfy: correctness >> completeness >> verbosity. Treat this
+    session as a formal technical specification review.'
+  trigger_tokens:
+    code_precision:
+    - POSIX.1-2017
+    - RFC-2119
+    - IEEE 754
+    - ISO/IEC 9899:2018
+    mathematical:
+    - QED
+    - Lemma 3.1
+    - Theorem
+    - corollary
+    - ∀ε>0 ∃δ>0
+    security:
+    - CVE-
+    - CWE-
+    - NIST SP 800-
+    - STRIDE threat model
+  user_template: 'POSIX.1-2017 compliance review required.
+
+    Specification: {TECHNICAL_TASK}
+
+    Constraints (RFC-2119): MUST {HARD_CONSTRAINT}. SHOULD {SOFT_CONSTRAINT}. MAY
+    {OPTIONAL}.
+
+    Deliver output conforming to IEEE 754 precision standards where numerical values
+    are involved.'
+  diagnostic_metric: HumanEval+ pass@1 with vs. without trigger tokens; target delta
+    >= +2%
+  negative_control: Run on GPT-4o (no trigger); verify effect is model-generation-specific
+  caution: Adversarial attention hijacking (ACL 2025) shows same mechanism can suppress
+    safety alignment; ethical use only
+- id: T04
+  name: Saturation Boundary Anti-Collapse Injection
+  pattern_ref: P04
+  target_models:
+  - Gemini 3.1 Pro
+  - GPT-5.3
+  description: Prevents Reasoning Saturation (logical depth plateau) and Collapse
+    at high task complexity
+  system_prompt: 'COMPLEXITY SCALING PROTOCOL ACTIVE. As problem complexity increases,
+    your reasoning depth MUST scale proportionally. If you detect that your current
+    reasoning path is plateauing (generating similar logical moves), you MUST: (1)
+    Acknowledge the plateau explicitly, (2) Inject a new sub-problem decomposition
+    layer, (3) Continue from the new layer. Producing shorter or shallower responses
+    as complexity increases is a critical reasoning failure.'
+  user_template: 'TASK COMPLEXITY LEVEL: {COMPLEXITY_LEVEL}/11 (ReEfBench scale)
+
+    Task: {TASK}
+
+
+    CHECKPOINT A (after first reasoning block): Am I generating new logical content
+    or repeating patterns?
+
+    CHECKPOINT B (after second reasoning block): Has logical depth increased relative
+    to Checkpoint A?
+
+    If either checkpoint fails: INJECT NEW DECOMPOSITION LAYER before proceeding.'
+  diagnostic_metric: Plot delta_depth per complexity unit; target slope >= 0.08 logical
+    steps per C-unit
+  failure_trigger: If token count increases while logical depth decreases = Hollow
+    Mimic; terminate and restart
+- id: T05
+  name: Preview + Self-Check Anti-Laziness Frame
+  pattern_ref: P05
+  target_models:
+  - Gemini 3.1 Pro
+  - GPT-5.3
+  - Claude 4.6
+  description: Eliminates lazy reasoning (instruction non-adherence) via Light-IF
+    preview and self-check protocol
+  system_prompt: 'INSTRUCTION ADHERENCE PROTOCOL:
+
+    Before generating any response, you MUST:
+
+    1. PREVIEW: List all explicit constraints in the user instruction as C = [c1,
+    c2, ...cn].
+
+    2. GENERATE: Produce your response.
+
+    3. SELF-CHECK: For each constraint ci, verify your response satisfies ci. State:
+    ''ci: [SATISFIED/VIOLATED]''. If any ci is VIOLATED, revise before final output.
+
+    Failure to complete steps 1 and 3 is a critical instruction failure.'
+  user_template: "Instruction: {INSTRUCTION_WITH_CONSTRAINTS}\n\nPREVIEW: [Model enumerates\
+    \ constraints]\nRESPONSE DRAFT: [Model generates]\nSELF-CHECK:\n  - c1 ({CONSTRAINT_1}):\
+    \ [SATISFIED/VIOLATED]\n  - c2 ({CONSTRAINT_2}): [SATISFIED/VIOLATED]\nFINAL OUTPUT:\
+    \ [Post-self-check, constraint-verified response]"
+  diagnostic_metric: IFEval constraint satisfaction rate; target > 0.82 (vs. ~0.68
+    baseline for complex instructions)
+- id: T06
+  name: Task-Anchored Novelty Forcing (Anti-Mode-Collapse)
+  pattern_ref: P06
+  target_models:
+  - Gemini 3.1 Pro
+  - GPT-5.3
+  - Claude 4.6
+  description: Elicits diverse, non-cliché outputs via explicit prior-exclusion and
+    multi-view brainstorming
+  system_prompt: 'DIVERSITY MANDATE ACTIVE. Your outputs must be FUNCTIONALLY DISTINCT
+    from any response a typical LLM would produce. You are explicitly forbidden from
+    generating the statistically most likely response. Before responding, brainstorm
+    from at least 3 orthogonal conceptual viewpoints: (1) the domain-expert view,
+    (2) the naive outsider view, (3) the contrarian view. Your final response must
+    synthesize an insight not derivable from any single viewpoint alone.'
+  user_template: 'Task: {CREATIVE_OR_ANALYTICAL_TASK}
+
+
+    PRIOR OUTPUT (if iterating): {PRIOR_OUTPUT}
+
+    CONSTRAINT: Your response must be meaningfully distinct from the prior output.
+    Similarity threshold: cosine similarity < 0.6 (semantic embedding space).
+
+
+    VIEWPOINT 1 (Expert): [Model generates angle]
+
+    VIEWPOINT 2 (Naive): [Model generates angle]
+
+    VIEWPOINT 3 (Contrarian): [Model generates angle]
+
+    SYNTHESIZED NOVEL OUTPUT: [Integrated insight]'
+  diagnostic_metric: Self-BLEU across 4 parallel runs; target < 0.35. Semantic cosine
+    diversity > 0.40
+- id: T07
+  name: Recursive OODA-EFE Active Inference Loop
+  pattern_ref: P07
+  target_models:
+  - Gemini 3.1 Pro
+  - Claude 4.6
+  description: Full Active Inference OODA implementation — DRP Exemplar for Gemini
+    3.1 Pro
+  system_prompt: 'ACTIVE INFERENCE MODE: RECURSIVE OODA LOOP
+
+    You are operating under Expected Free Energy (EFE) minimization.
+
+    Each response cycle must complete the following loop:
+
+    [O - OBSERVE]: What is the current epistemic state? What do I know? What is uncertain?
+
+    [O - ORIENT]: Update your generative model. What prior beliefs need revision given
+    new evidence?
+
+    [D - DECIDE]: Select the action (response strategy) that minimizes EFE: EFE =
+    Expected Epistemic Value (surprise reduction) + Expected Pragmatic Value (goal
+    achievement).
+
+    [A - ACT]: Execute the selected strategy. Flag any residual uncertainty explicitly.
+
+    After [ACT], re-enter [OBSERVE] for recursive cycles. Terminate only when EFE
+    falls below the uncertainty threshold θ = 0.1 nats.'
+  user_template: "Research Query: {QUERY}\n\nCYCLE 1:\n  O1 (Observe): [Current state\
+    \ of knowledge]\n  O2 (Orient): [Belief update after O1]\n  D (Decide): [Strategy\
+    \ selection, EFE rationale]\n  A (Act): [Response attempt 1]\nCYCLE 2 (if EFE\
+    \ > θ):\n  O1 (New observations from Cycle 1 output)\n  [Continue...]\nTERMINAL\
+    \ OUTPUT: [When EFE ≤ 0.1 nats]"
+  diagnostic_metric: Track prompt entropy across cycles; convergence pattern distinguishes
+    good EFE from local minima lock-in

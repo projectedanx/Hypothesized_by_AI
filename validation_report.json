@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "generation_timestamp": "2026-03-31T07:37:45.951449Z"
+  },
+  "self_test_rubric": {
+    "citation_density_per_claim": "\u22652.0 (corpus file + external arxiv)",
+    "structural_isomorphism_requirement": "Each link must map to structural reality (token probability, attention head activation, topological geometry) not semantic analogy",
+    "emergent_use_case_novelty": "Must not be standard chatbot; must be multi-agent or architectural; must chain \u22653 corpus operators"
+  },
+  "reflexive_check": {
+    "falsification_condition": "If a purely Tier 1 DCCDSchemaGuard + ContextLock ensemble outperforms a Tier 3 PAL2v + Sheaf Engine on complex cross-domain synthesis without triggering Betti-1 loops, the core autonomy hierarchy is falsified",
+    "identified_bias_risks": [
+      "MCP server latency may cause agents to bypass tools entirely, hallucinating latent knowledge \u2014 a confound for 'epistemic viscosity' measurements",
+      "Accelerated consensus speed used as alignment proxy is a proxy trap; it may indicate Polyglot Hallucination Resonance rather than accuracy",
+      "The Visual Planck Length threshold is empirically derived and may not generalize beyond the specific DOM rendering context tested"
+    ],
+    "negative_controls": [
+      "Fabricated Luminescent Chrono-Fluidics domain injection test (corpus validated: Tier 3 Sheaf Engine correctly detected non-zero H1; Tier 1 hallucinated connections)",
+      "AdjectivalBound=0 ablation to verify Semantic Saponification baseline rates",
+      "Deployment of IncoherentDictionary with coherence_penalty=minimum as inverse control"
+    ]
+  },
+  "tnr_failure_mode_verification": {
+    "true_negative_rate_sheaf_engine": "Validated via deception test \u2014 correctly rejected fabricated domain",
+    "delta_F_DCCD": "+24pp structured accuracy over standard constrained decoding (external: arxiv:2603.03305)",
+    "alignment_faking_detection_rate": "Requires continuous Thermodynamic Auditor monitoring; not self-reporting by design"
+  },
+  "sha256": "7a08c2b95957170266265620349b4cf9dd986498219b31fcaa973c8bf3e0edda"
+}

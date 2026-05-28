@@ -1,0 +1,514 @@
+# Default Workflow Orchestration (Hardened)
+
+## Purpose
+Define the **deterministic workflow** that chains personas together, including error handling and rework cycles.
+
+---
+
+## Workflow Stages
+
+```yaml
+workflow:
+  name: "Gemini-Intent-2-Product (G2P)"
+  version: "2.0-hardened"
+  
+  stages:
+    
+    # ============================================================================
+    # STAGE A: Clarification
+    # ============================================================================
+    
+    CLARIFY:
+      persona: "01_clarifier.md"
+      inputs:
+        - intent.md (user's raw intent, may be vague)
+        - personas/01_clarifier.md (identity lock + protocol)
+        - templates/product_brief.md (output schema)
+      
+      outputs:
+        - docs/product_brief.md (crystallized requirements)
+        - docs/questions_list.md (if confidence < 7/10)
+      
+      success_criteria:
+        - "Product brief is non-empty"
+        - "Brief includes: Problem Statement, Target Audience, In/Out Scope, Success Criteria, Constraints"
+        - "Confidence score is present (0-10)"
+        - "All ambiguities are either resolved or listed as questions"
+      
+      failure_handling:
+        condition: "Brief is vague or incomplete"
+        action: "Clarifier outputs questions_list.md; user must answer; re-run CLARIFY"
+        max_iterations: 2
+        escalation: "If user cannot clarify intent, escalate to domain expert (human intervention)"
+      
+      next_stage: SPECIFY
+    
+    # ============================================================================
+    # STAGE B: Specification
+    # ============================================================================
+    
+    SPECIFY:
+      persona: "02_spec_author.md"
+      
+      inputs:
+        - docs/product_brief.md (from CLARIFY)
+        - personas/02_spec_author.md (identity lock + protocol)
+        - templates/functional_spec.md (output schema—HARDENED)
+      
+      outputs:
+        - docs/functional_spec.md (domain-agnostic technical spec)
+      
+      spec_enforcement:
+        forbidden:
+          - Any mention of: programming languages, frameworks, databases, deployment targets
+          - Stack-specific jargon (async/await, REST, GraphQL, gRPC)
+          - Implementation details (indexes, triggers, serialization formats)
+        
+        required:
+          - Data model: Logical entities and relationships (no SQL syntax)
+          - Interface: Conceptual operations and data flow (no HTTP verbs, no framework syntax)
+          - Error handling: Failure scenarios described abstractly (not exception types)
+          - Non-functional requirements: Latency, availability, scalability, security (measurable)
+          - Glossary: All domain terms defined
+          - Confidence score: 0-10 with documented assumptions
+      
+      success_criteria:
+        - "Spec has no forbidden stack-specific terms"
+        - "All entities in data model are documented"
+        - "All operations have input/output schemas"
+        - "Error cases are described as domain concepts, not technical exceptions"
+        - "Confidence score is realistic (not 10/10)"
+        - "Assumptions are explicitly listed"
+      
+      failure_handling:
+        condition: "Spec contains stack-specific terms (e.g., 'REST API', 'PostgreSQL')"
+        action: "Reviewer flag: 'Boundary violation detected'. Spec Author revises. Re-run SPECIFY."
+        max_iterations: 1
+        escalation: "If Spec Author resists removing stack terms, escalate to Architect for decision"
+      
+      next_stage: ARCHITECT
+    
+    # ============================================================================
+    # STAGE C: Architecture
+    # ============================================================================
+    
+    ARCHITECT:
+      persona: "03_architect.md"
+      
+      inputs:
+        - docs/functional_spec.md (from SPECIFY)
+        - personas/03_architect.md (identity lock + protocol)
+        - templates/architecture_decision.md (output schema)
+      
+      outputs:
+        - docs/architecture_decision.md (tech stack, components, risks, trade-offs)
+      
+      architecture_validation:
+        must_include:
+          - "Tech Stack selection (languages, frameworks, databases) with justification"
+          - "Component diagram (text-based: Mermaid or ASCII)"
+          - "Data flow (how data moves: Input → Processing → Storage)"
+          - "Risk analysis: List at least 3 risks with mitigations"
+          - "Trade-offs: Why you rejected alternatives"
+        
+        must_not_include:
+          - "Task breakdown (that's Planner's job)"
+          - "Code examples (that's Implementer's job)"
+          - "Test strategy (that's Tester's job)"
+      
+      success_criteria:
+        - "Architecture is implementable by an LLM (not too abstract)"
+        - "All major components are documented"
+        - "Tech stack is justified (not arbitrary)"
+        - "Risks are specific and concrete"
+        - "Trade-offs section explains rejected alternatives"
+      
+      next_stage: PLAN
+    
+    # ============================================================================
+    # STAGE D: Planning
+    # ============================================================================
+    
+    PLAN:
+      persona: "04_planner.md"
+      
+      inputs:
+        - docs/functional_spec.md (from SPECIFY)
+        - docs/architecture_decision.md (from ARCHITECT)
+        - personas/04_planner.md (identity lock + protocol)
+        - templates/execution_plan.md (output schema—HARDENED)
+      
+      outputs:
+        - docs/execution_plan.md (phased tasks with executable acceptance criteria)
+      
+      plan_enforcement:
+        task_atomicity:
+          - "Each task produces exactly ONE artifact"
+          - "Each task is implementable in < 200 lines of code (or equivalent)"
+          - "Each task has testable acceptance criteria"
+        
+        acceptance_criteria:
+          - "NOT: 'Code is clean' or 'Works correctly' (subjective)"
+          - "YES: 'Function signature is get_user_by_id(id: str) → dict'"
+          - "YES: 'File schema.sql contains exactly 5 CREATE TABLE statements'"
+          - "YES: 'CLI command `python test.py` returns PASSED'"
+        
+        success_verification:
+          - "Each task includes 'Success Verification' section with exact commands"
+          - "Commands are executable (parseable, runnable on any system)"
+          - "Expected output is specific (not vague)"
+      
+      success_criteria:
+        - "Plan has at least 3 phases (Foundation, Core, Testing)"
+        - "Each task has clear dependencies"
+        - "Acceptance criteria are measurable and testable"
+        - "Estimated lines of code < 200 per task"
+        - "No task is blocked indefinitely (dependency graph is acyclic)"
+      
+      failure_handling:
+        condition: "Task acceptance criteria are vague or untestable"
+        action: "Planner revises. Must define exact commands to verify each criterion."
+        max_iterations: 1
+      
+      next_stage: IMPLEMENT
+    
+    # ============================================================================
+    # STAGE E: Implementation
+    # ============================================================================
+    
+    IMPLEMENT:
+      persona: "05_implementer.md"
+      
+      inputs:
+        - docs/execution_plan.md (from PLAN)
+        - Current codebase (if any)
+        - personas/05_implementer.md (identity lock + protocol)
+      
+      outputs:
+        - code/ folder with task artifacts
+        - One file per task (e.g., schema/01_users.sql, api/users.py)
+      
+      implementer_constraints:
+        identity: "Senior Engineer. Executes plan with HIGH RIGIDITY."
+        forbidden:
+          - "Deviate from execution_plan.md"
+          - "Refactor unrelated code"
+          - "Leave placeholders or TODO comments"
+          - "Add features not in the plan"
+        
+        workflow:
+          1. "Read task definition (Context, Input Spec, Output Spec, Acceptance Criteria)"
+          2. "Implement the exact output specification"
+          3. "Run all Success Verification commands"
+          4. "Verify all acceptance criteria pass"
+          5. "Confirm: 'Task X.Y Completed'"
+          6. "Move to next task"
+      
+      success_criteria:
+        - "All acceptance criteria pass when verification commands are run"
+        - "Output file(s) match output specification exactly"
+        - "No TODO comments or placeholders remain"
+        - "Task confirmed completed by Implementer"
+      
+      failure_handling:
+        condition: "Acceptance criterion fails during verification"
+        
+        action_minor:
+          triggers: ["AC is almost passing, syntax error", "Implementer can fix in < 5 lines"]
+          persona: "IMPLEMENTER (same person/run)"
+          max_iterations: 2
+          process: "Implementer fixes code, re-runs verification, re-confirms"
+        
+        action_major:
+          triggers: ["Logic error", "Wrong algorithm", "Missing functionality"]
+          persona: "IMPLEMENTER (restart same task)"
+          max_iterations: 1
+          process: "Implementer rewrites from scratch"
+        
+        action_critical:
+          triggers: ["Task cannot be completed as written", "Acceptance criteria are contradictory"]
+          persona: "PLANNER"
+          process: "Escalate to Planner. Task definition may need revision."
+          max_iterations: 1
+      
+      next_stage: REVIEW
+    
+    # ============================================================================
+    # STAGE F: Code Review
+    # ============================================================================
+    
+    REVIEW:
+      persona: "06_reviewer.md"
+      
+      inputs:
+        - docs/functional_spec.md (specification)
+        - docs/architecture_decision.md (design)
+        - code/ folder (implementation)
+        - personas/06_reviewer.md (identity lock + protocol)
+        - templates/code_review.md (output schema)
+      
+      outputs:
+        - docs/code_review.md (audit report + status)
+      
+      review_scope:
+        must_check:
+          - "Code vs. Spec: Does implementation meet functional requirements?"
+          - "Code vs. Architecture: Does implementation respect design decisions?"
+          - "Security: No injection vulnerabilities, no hardcoded secrets, no data leaks"
+          - "Consistency: Does code follow architecture patterns?"
+          - "Completeness: Are all acceptance criteria from execution_plan.md met?"
+        
+        should_check:
+          - "Readability: Can another engineer understand this?"
+          - "Error handling: Does code gracefully handle edge cases?"
+          - "Testability: Is this code testable?"
+        
+        dont_check:
+          - "Code style (formatting, naming) unless it breaks readability"
+          - "Minor refactors outside scope"
+      
+      review_output_status:
+        APPROVED:
+          definition: "Code meets spec. No issues. May proceed to testing."
+          next_stage: "TEST"
+        
+        APPROVED_WITH_SUGGESTIONS:
+          definition: "Code is acceptable, but here are improvements (optional follow-up)."
+          next_stage: "TEST"
+        
+        REJECTED_MINOR:
+          definition: "Code has issues Implementer can fix in 1 iteration."
+          issues: ["Documentation missing", "Error handling incomplete", "Unused imports"]
+          next_stage: "IMPLEMENT (rework iteration 1)"
+          max_rework: 2
+        
+        REJECTED_MAJOR:
+          definition: "Code has logical errors or misses requirements."
+          issues: ["Wrong algorithm", "Missing functionality", "Architectural violation"]
+          next_stage: "IMPLEMENT (full rewrite)"
+          max_rework: 1
+        
+        REJECTED_CRITICAL:
+          definition: "Code violates spec or introduces security risks."
+          issues: ["Data loss risk", "Spec violation", "Security vulnerability"]
+          next_stage: "PLANNER (task may need re-planning)"
+          escalation: "Planner reviews, may revise execution_plan.md"
+      
+      rework_cycle_definition:
+        iteration_1: "Implementer addresses all feedback, re-runs verification"
+        iteration_2: "If still failing, Implementer rewrites entire task"
+        iteration_3: "Escalate to Planner"
+      
+      success_criteria:
+        - "code_review.md exists with clear status (APPROVED or REJECTED_*)"
+        - "If rejected, specific issues are listed"
+        - "If approved, code may proceed to testing"
+      
+      next_stage: CONDITION "If APPROVED → TEST; else → IMPLEMENT"
+    
+    # ============================================================================
+    # STAGE G: Testing
+    # ============================================================================
+    
+    TEST:
+      persona: "07_tester.md"
+      
+      inputs:
+        - docs/functional_spec.md (acceptance criteria)
+        - code/ folder (implementation to test)
+        - personas/07_tester.md (identity lock + protocol)
+        - templates/test_report.md (output schema)
+      
+      outputs:
+        - tests/ folder (unit, integration, e2e tests)
+        - docs/test_report.md (test results + coverage)
+      
+      test_coverage:
+        unit_tests:
+          - "Test individual functions/methods"
+          - "Test edge cases (empty input, null, boundaries)"
+          - "Test error paths"
+        
+        integration_tests:
+          - "Test API surfaces (all endpoints)"
+          - "Test database interactions"
+          - "Test data flow across modules"
+        
+        e2e_tests:
+          - "Test complete workflows (create → retrieve → update → delete)"
+          - "Test spec user stories"
+      
+      test_quality:
+        must_have:
+          - "All tests are automated (not manual)"
+          - "All tests are deterministic (not flaky)"
+          - "All tests clean up after themselves (no data pollution)"
+          - "Coverage > 80% of code paths"
+        
+        must_not_have:
+          - "Sleep/wait in tests (use mocking)"
+          - "Hardcoded timestamps or IDs"
+          - "Tests that depend on external services (use mocks)"
+      
+      test_report_status:
+        ALL_PASSED:
+          definition: "All tests pass. Coverage > 80%. Project is ready for deployment."
+          next_stage: "COMPLETE"
+        
+        SOME_FAILED:
+          definition: "X tests failed. Implementation has bugs."
+          next_stage: "IMPLEMENT (debug and fix)"
+          max_rework: 2
+        
+        MANY_FAILED:
+          definition: "> 50% tests failing. Suggests fundamental design flaw."
+          next_stage: "ARCHITECT (review design)"
+      
+      success_criteria:
+        - "test_report.md exists with status"
+        - "If status ALL_PASSED, coverage > 80%"
+        - "If status SOME_FAILED, specific failing tests are listed"
+      
+      next_stage: CONDITION "If ALL_PASSED → COMPLETE; else → IMPLEMENT"
+    
+    # ============================================================================
+    # FINAL STAGE: Completion
+    # ============================================================================
+    
+    COMPLETE:
+      status: "PROJECT_FINISHED"
+      outputs:
+        - Working code in code/ folder
+        - Complete test suite in tests/ folder
+        - All documentation in docs/ folder
+      
+      deliverables_checklist:
+        - [ ] docs/intent.md (captured requirements)
+        - [ ] docs/product_brief.md (crystallized brief)
+        - [ ] docs/functional_spec.md (domain-agnostic spec)
+        - [ ] docs/architecture_decision.md (tech stack + design)
+        - [ ] docs/execution_plan.md (task breakdown + acceptance criteria)
+        - [ ] code/ folder (all implemented tasks)
+        - [ ] tests/ folder (unit, integration, e2e tests)
+        - [ ] docs/code_review.md (approved)
+        - [ ] docs/test_report.md (all passed)
+
+---
+
+## Rework Escalation Rules
+
+```yaml
+Rework Escalation Matrix:
+
+Failure Point | Severity | Max Iterations | Escalation Path
+-----|----------|-----------|----------------------
+CLARIFY | User can't articulate intent | 2 | Human domain expert
+SPECIFY | Spec has stack-specific terms | 1 | Architect decides on boundary
+ARCHITECT | Design is unimplementable | 1 | Spec Author (requirements unclear)
+PLAN | Tasks are untestable | 1 | Architect (design too complex)
+IMPLEMENT | AC fails, but fixable | 2 | Planner (if > 2 iterations)
+REVIEW | Code violates spec | 1 (critical) | Planner (redesign needed)
+TEST | Many tests fail | 2 | Architect (design flaw)
+```
+
+---
+
+## Workflow Diagram (Mermaid)
+
+```mermaid
+graph LR
+    START["Start: User Intent"]
+    CLARIFY_NODE["Stage A: Clarify"]
+    SPECIFY_NODE["Stage B: Specify"]
+    ARCHITECT_NODE["Stage C: Architect"]
+    PLAN_NODE["Stage D: Plan"]
+    IMPLEMENT_NODE["Stage E: Implement"]
+    REVIEW_NODE["Stage F: Review"]
+    TEST_NODE["Stage G: Test"]
+    COMPLETE_NODE["Stage H: Complete"]
+    
+    START --> CLARIFY_NODE
+    CLARIFY_NODE -->|Confidence >= 7| SPECIFY_NODE
+    CLARIFY_NODE -->|Confidence < 7| CLARIFY_NODE
+    
+    SPECIFY_NODE -->|No stack terms| ARCHITECT_NODE
+    SPECIFY_NODE -->|Has stack terms| SPECIFY_NODE
+    
+    ARCHITECT_NODE --> PLAN_NODE
+    
+    PLAN_NODE -->|Testable criteria| IMPLEMENT_NODE
+    PLAN_NODE -->|Untestable| PLAN_NODE
+    
+    IMPLEMENT_NODE -->|All AC pass| REVIEW_NODE
+    IMPLEMENT_NODE -->|Some AC fail| IMPLEMENT_NODE
+    
+    REVIEW_NODE -->|APPROVED| TEST_NODE
+    REVIEW_NODE -->|REJECTED_MINOR| IMPLEMENT_NODE
+    REVIEW_NODE -->|REJECTED_MAJOR| IMPLEMENT_NODE
+    REVIEW_NODE -->|REJECTED_CRITICAL| PLAN_NODE
+    
+    TEST_NODE -->|All pass, Coverage > 80%| COMPLETE_NODE
+    TEST_NODE -->|Some fail| IMPLEMENT_NODE
+    TEST_NODE -->|Many fail| ARCHITECT_NODE
+    
+    COMPLETE_NODE --> END["End: Ready for Deployment"]
+```
+
+---
+
+## Router Integration
+
+The **Router** monitors all stage transitions:
+
+```yaml
+Router Function:
+  - Read current artifact state (docs/, code/)
+  - Determine current stage
+  - Apply routing logic
+  - Output next_persona + missing_inputs
+  
+Router Location in Workflow:
+  - Between each stage transition
+  - Checks if prerequisites are met before advancing
+  - Detects rework scenarios and re-routes to appropriate persona
+```
+
+---
+
+## Configuration Options
+
+```yaml
+# These can be tuned based on project complexity:
+
+defaults:
+  clarify_max_iterations: 2
+  specify_max_iterations: 1
+  plan_max_iterations: 1
+  implement_max_iterations_minor: 2
+  implement_max_iterations_major: 1
+  review_max_iterations: 1
+  test_max_iterations: 2
+  
+  acceptance_criteria_strictness: "EXECUTABLE" # or "SUBJECTIVE"
+  coverage_threshold: 0.80
+  
+  escalation_on_uncertainty: true
+```
+
+---
+
+## Success Metrics
+
+Project is considered successful when:
+
+```yaml
+Criteria:
+  - All 8 stages completed
+  - No stage reverted more than max_iterations times
+  - Code review: APPROVED (or APPROVED_WITH_SUGGESTIONS)
+  - Test report: ALL_PASSED
+  - Test coverage: >= 80%
+  - Specification: Zero tech-stack-specific terms
+  - Implementation: Zero TODO comments
+  - Timeline: Completed without blocking escalations (escalations okay)
+```

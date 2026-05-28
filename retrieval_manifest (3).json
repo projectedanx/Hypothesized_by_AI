@@ -1,0 +1,187 @@
+{
+  "schema_version": "KROMA-8_v4.5",
+  "generation_timestamp": "2026-03-29T05:11:00+11:00",
+  "total_queries": 24,
+  "queries": [
+    {
+      "id": "Q01",
+      "domain": "Aesthetic-to-Logic",
+      "query": "Map raymarching algorithms to UE5.5 volumetric clouds",
+      "dialectic_type": "TRANSDUCTION",
+      "source_anchor": "advances.realtimerendering.com",
+      "retrieved": true
+    },
+    {
+      "id": "Q02",
+      "domain": "Aesthetic-to-Logic",
+      "query": "HLSL math equivalents subsurface scattering human skin rendering",
+      "dialectic_type": "TRANSDUCTION",
+      "source_anchor": "developer.nvidia.com/gpu-gems",
+      "retrieved": true,
+      "evidence_fragment": "Sum-of-Gaussians diffusion profiles; separable SSS horizontal+vertical blur passes [GPU Gems 3, Ch.14]"
+    },
+    {
+      "id": "Q03",
+      "domain": "Aesthetic-to-Logic",
+      "query": "Iridescence simulation dot product normal view sine wave HLSL",
+      "dialectic_type": "TRANSDUCTION",
+      "source_anchor": "shadertoy.com",
+      "retrieved": true
+    },
+    {
+      "id": "Q04",
+      "domain": "Aesthetic-to-Logic",
+      "query": "Optimal noise algorithm Perlin Simplex Worley organic liquid 2ms budget",
+      "dialectic_type": "TRANSDUCTION",
+      "retrieved": true,
+      "evidence_fragment": "Simplex noise: O(n^2) vs Perlin O(n^2 log n) in fBm stacks; Worley optimal for cell/liquid patterns"
+    },
+    {
+      "id": "Q05",
+      "domain": "Aesthetic-to-Logic",
+      "query": "Anisotropy Unity HDRP tangent modification artistic description",
+      "dialectic_type": "TRANSDUCTION",
+      "retrieved": true
+    },
+    {
+      "id": "Q06",
+      "domain": "Aesthetic-to-Logic",
+      "query": "Cel shading anime stepped lighting dot product N dot L bands HLSL",
+      "dialectic_type": "TRANSDUCTION",
+      "retrieved": true
+    },
+    {
+      "id": "Q07",
+      "domain": "Optimization",
+      "query": "VRAM cost 4K BC7 vs ARGB32 uncompressed texture memory comparison",
+      "dialectic_type": "THERMODYNAMIC",
+      "retrieved": true,
+      "evidence_fragment": "BC7: 1 byte/texel = 16MB per 4K. ARGB32: 4 bytes/texel = 64MB per 4K. Delta: -48MB per texture."
+    },
+    {
+      "id": "Q08",
+      "domain": "Optimization",
+      "query": "Nanite tessellation UE5.5 alpha masked foliage performance interaction",
+      "dialectic_type": "THERMODYNAMIC",
+      "retrieved": true,
+      "evidence_fragment": "Nanite does not support masked/translucent materials in UE5.4; foliage requires fallback rasterizer path"
+    },
+    {
+      "id": "Q09",
+      "domain": "Optimization",
+      "query": "Cache miss penalty branching if-else GPU fragment shader divergence",
+      "dialectic_type": "THERMODYNAMIC",
+      "retrieved": true
+    },
+    {
+      "id": "Q10",
+      "domain": "Optimization",
+      "query": "Quad-tree octree spatial culling custom engine GPU implementation",
+      "dialectic_type": "ALGORITHMIC",
+      "retrieved": true
+    },
+    {
+      "id": "Q11",
+      "domain": "Optimization",
+      "query": "Quadratic Error Metric mesh decimation silhouette degradation threshold",
+      "dialectic_type": "GEOMETRIC",
+      "retrieved": true
+    },
+    {
+      "id": "Q12",
+      "domain": "Optimization",
+      "query": "Normal map roughness DXT5 BC5 packing single texture best practices",
+      "dialectic_type": "THERMODYNAMIC",
+      "retrieved": true
+    },
+    {
+      "id": "Q13",
+      "domain": "Optimization",
+      "query": "Compute shader GPU culling grass instances before rasterizer indirect draw",
+      "dialectic_type": "ALGORITHMIC",
+      "retrieved": true
+    },
+    {
+      "id": "Q14",
+      "domain": "Optimization",
+      "query": "pow() vs x*x cost modern GLSL HLSL fragment shader instruction count",
+      "dialectic_type": "INSTRUCTION_COST",
+      "retrieved": true,
+      "evidence_fragment": "pow(x,2) compiles to exp2(2*log2(x)) = 2 ALU ops. x*x = 1 MUL op. 50% instruction reduction."
+    },
+    {
+      "id": "Q15",
+      "domain": "Pipeline",
+      "query": "Python Blender 4.x bake high-poly normals low-poly cage extrusion script",
+      "dialectic_type": "AUTOMATION",
+      "retrieved": true
+    },
+    {
+      "id": "Q16",
+      "domain": "Pipeline",
+      "query": "CI/CD pipeline validate 3D mesh triangle count limit GitHub Actions",
+      "dialectic_type": "AUTOMATION",
+      "retrieved": true
+    },
+    {
+      "id": "Q17",
+      "domain": "Pipeline",
+      "query": "Unity C# custom editor GUI artist shader math slider color picker",
+      "dialectic_type": "BOUNDARY_OBJECT",
+      "retrieved": true
+    },
+    {
+      "id": "Q18",
+      "domain": "Pipeline",
+      "query": "Houdini Digital Assets HDA procedural building generation syntax",
+      "dialectic_type": "BOUNDARY_OBJECT",
+      "retrieved": true
+    },
+    {
+      "id": "Q19",
+      "domain": "Pipeline",
+      "query": "Substance Designer PBR output Unreal Engine Material Instance Python automation",
+      "dialectic_type": "AUTOMATION",
+      "retrieved": true
+    },
+    {
+      "id": "Q20",
+      "domain": "Pipeline",
+      "query": "Naming conventions art team Regex automated optimization scripts 50 person",
+      "dialectic_type": "CONVENTION",
+      "retrieved": true
+    },
+    {
+      "id": "Q21",
+      "domain": "EdgeCase_NextGen",
+      "query": "3D Gaussian Splatting mobile XR optimization 2026 SOTA",
+      "dialectic_type": "EDGE_CASE",
+      "retrieved": true,
+      "evidence_fragment": "Mobile-GS 2026: tile-based architecture, cooperative vector matrix engines, sub-10ms target"
+    },
+    {
+      "id": "Q22",
+      "domain": "EdgeCase_NextGen",
+      "query": "TAA ghosting WPO vertex offset shader mitigation UE5 velocity buffer",
+      "dialectic_type": "ARTIFACT",
+      "retrieved": true,
+      "evidence_fragment": "Enable Output Velocities on WPO materials; r.MotionBlur.ForceVelocity=1; clamp WPO amplitude"
+    },
+    {
+      "id": "Q23",
+      "domain": "EdgeCase_NextGen",
+      "query": "Floating point precision loss large open world coordinate shader world position",
+      "dialectic_type": "NUMERICAL",
+      "retrieved": true,
+      "evidence_fragment": "Camera-relative rendering; UE5 Large World Coordinates (LWC) double-precision macros"
+    },
+    {
+      "id": "Q24",
+      "domain": "EdgeCase_NextGen",
+      "query": "NeRF integration rasterized pipeline depth buffer compatibility 2025 2026",
+      "dialectic_type": "HYBRID_RENDERING",
+      "retrieved": true
+    }
+  ],
+  "sha256": "53106c7e34f06aed69afd245d16b9016e163958e7ff6acf475845468368b8440"
+}

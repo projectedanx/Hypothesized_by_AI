@@ -1,0 +1,187 @@
+{
+  "generation_timestamp": "2026-03-26T03:15:00.058533Z",
+  "sha256": "9b8e2fa14e612f5c6b1f0178f78f904d2d6ed44b1b66bf49daeb34f070ffe630",
+  "total_queries": 30,
+  "queries": [
+    {
+      "id": "Q01",
+      "pattern": "P001",
+      "type": "GROUNDING",
+      "query": "garbage collection reachability unreachable nodes DAG topology"
+    },
+    {
+      "id": "Q02",
+      "pattern": "P001",
+      "type": "CROSS_DOMAIN",
+      "query": "apoptosis programmed cell death zero-reference node removal analogy"
+    },
+    {
+      "id": "Q03",
+      "pattern": "P001",
+      "type": "ADVERSARIAL",
+      "query": "GC pathological cases dependency chain violation 2025"
+    },
+    {
+      "id": "Q04",
+      "pattern": "P001",
+      "type": "FALSIFICATION",
+      "query": "garbage collection live object incorrectly collected dangling pointer"
+    },
+    {
+      "id": "Q05",
+      "pattern": "P001",
+      "type": "CROSS_DOMAIN",
+      "query": "statutory repeal orphaned law desuetude zero-reference legal entropy"
+    },
+    {
+      "id": "Q06",
+      "pattern": "P001",
+      "type": "RELATIONAL",
+      "query": "memory management cancer niche garbage disposal thermodynamic entropy"
+    },
+    {
+      "id": "Q07",
+      "pattern": "P002",
+      "type": "GROUNDING",
+      "query": "paraconsistent logic LFI contradiction localization AI 2025"
+    },
+    {
+      "id": "Q08",
+      "pattern": "P002",
+      "type": "GROUNDING",
+      "query": "AGM belief revision paraconsistent epistemic entrenchment RCBr"
+    },
+    {
+      "id": "Q09",
+      "pattern": "P002",
+      "type": "CROSS_DOMAIN",
+      "query": "immune tolerance clonal anergy self-antigen quarantine mechanism"
+    },
+    {
+      "id": "Q10",
+      "pattern": "P002",
+      "type": "ADVERSARIAL",
+      "query": "principle of explosion trivialism paraconsistent failure mode"
+    },
+    {
+      "id": "Q11",
+      "pattern": "P002",
+      "type": "CROSS_DOMAIN",
+      "query": "judicial injunction stay of proceedings contradiction quarantine law"
+    },
+    {
+      "id": "Q12",
+      "pattern": "P002",
+      "type": "RELATIONAL",
+      "query": "LLM hallucination paraconsistent logic non-contradiction explosion"
+    },
+    {
+      "id": "Q13",
+      "pattern": "P003",
+      "type": "GROUNDING",
+      "query": "martensite austenite diffusionless phase transition analogy machine learning"
+    },
+    {
+      "id": "Q14",
+      "pattern": "P003",
+      "type": "GROUNDING",
+      "query": "elastic weight consolidation EWC catastrophic forgetting Fisher information"
+    },
+    {
+      "id": "Q15",
+      "pattern": "P003",
+      "type": "GROUNDING",
+      "query": "nested learning Google continual learning paradigm 2025"
+    },
+    {
+      "id": "Q16",
+      "pattern": "P003",
+      "type": "ADVERSARIAL",
+      "query": "EWC failure overregularization plasticity-stability dilemma"
+    },
+    {
+      "id": "Q17",
+      "pattern": "P003",
+      "type": "CROSS_DOMAIN",
+      "query": "constitutional amendment rigidity stability invariant law"
+    },
+    {
+      "id": "Q18",
+      "pattern": "P003",
+      "type": "FALSIFICATION",
+      "query": "phase locking Betti-1 loop integrity irrational scalar hypothesis test"
+    },
+    {
+      "id": "Q19",
+      "pattern": "P004",
+      "type": "GROUNDING",
+      "query": "persistent homology manifold decompression high-dimensional data 2025"
+    },
+    {
+      "id": "Q20",
+      "pattern": "P004",
+      "type": "GROUNDING",
+      "query": "chromatin folding topology Hi-C persistent homology Betti numbers"
+    },
+    {
+      "id": "Q21",
+      "pattern": "P004",
+      "type": "GROUNDING",
+      "query": "TDA topological data analysis molecular science review 2025"
+    },
+    {
+      "id": "Q22",
+      "pattern": "P004",
+      "type": "ADVERSARIAL",
+      "query": "persistent homology high-dimensional failure spectral methods NeurIPS 2024"
+    },
+    {
+      "id": "Q23",
+      "pattern": "P004",
+      "type": "CROSS_DOMAIN",
+      "query": "urban dedensification spatial topology dispersal density reduction"
+    },
+    {
+      "id": "Q24",
+      "pattern": "P004",
+      "type": "RELATIONAL",
+      "query": "context window collapse LLM information density manifold saturation"
+    },
+    {
+      "id": "Q25",
+      "pattern": "P005",
+      "type": "GROUNDING",
+      "query": "blockchain consensus BFT quorum Byzantine fault tolerance 2025"
+    },
+    {
+      "id": "Q26",
+      "pattern": "P005",
+      "type": "CROSS_DOMAIN",
+      "query": "quorum sensing bacteria density-dependent gene expression distributed consensus"
+    },
+    {
+      "id": "Q27",
+      "pattern": "P005",
+      "type": "GROUNDING",
+      "query": "Solana Alpenglow consensus protocol state machine replication 2025"
+    },
+    {
+      "id": "Q28",
+      "pattern": "P005",
+      "type": "ADVERSARIAL",
+      "query": "51% attack Sybil attack single node bypass validation threshold"
+    },
+    {
+      "id": "Q29",
+      "pattern": "P005",
+      "type": "CROSS_DOMAIN",
+      "query": "macroeconomic price discovery decentralized market consensus mechanism"
+    },
+    {
+      "id": "Q30",
+      "pattern": "P005",
+      "type": "FALSIFICATION",
+      "query": "Nakamoto coefficient centralization failure distributed consensus collapse"
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://your-org/cfdi/symbolic-scar/v1.0",
+  "title": "SymbolicScar",
+  "description": "JSON Schema for a Symbolic Scar \u2014 a hypervector record minted by the EpistemicEscrow whenever CFDI > threshold. Records are appended to scar_registry.yaml (via PyYAML) and can be ingested by any YAML-aware store.",
+  "type": "object",
+  "required": [
+    "scar_id",
+    "cfdi_result",
+    "payload_excerpt",
+    "algorithm",
+    "cfdi_value",
+    "threshold",
+    "trigger_context",
+    "resolution",
+    "timestamp"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "scar_id": {
+      "type": "string",
+      "pattern": "^SCAR-[a-f0-9]{16}-\\d{4}-\\d{2}-\\d{2}$",
+      "description": "Deterministic identifier: SCAR-{payload_hash[:16]}-{date}. Collision-resistant via SHA-256 prefix."
+    },
+    "cfdi_result": {
+      "type": "object",
+      "description": "Full CFDIResult serialised as a flat object.",
+      "required": [
+        "algorithm",
+        "confidence",
+        "fidelity",
+        "cfdi",
+        "escrow_triggered",
+        "payload_hash",
+        "timestamp",
+        "metadata"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "type": "string",
+          "enum": [
+            "covariance",
+            "logprob"
+          ],
+          "description": "Which CFDI algorithm fired."
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Scalar model confidence at time of evaluation."
+        },
+        "fidelity": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Structural AST fidelity score of the payload."
+        },
+        "cfdi": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Computed CFDI value that triggered escrow."
+        },
+        "escrow_triggered": {
+          "type": "boolean",
+          "description": "Always true when a scar is minted."
+        },
+        "payload_hash": {
+          "type": "string",
+          "description": "First 16 hex chars of SHA-256(payload). Non-reversible excerpt for traceability."
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO-8601 UTC timestamp of the CFDI computation."
+        },
+        "metadata": {
+          "type": "object",
+          "description": "Arbitrary key-value context (e.g., source_file, model_id, prompt_version).",
+          "additionalProperties": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "payload_excerpt": {
+      "type": "string",
+      "maxLength": 256,
+      "description": "First 256 characters of the quarantined LLM output. Truncated to protect secrets."
+    },
+    "algorithm": {
+      "type": "string",
+      "enum": [
+        "covariance",
+        "logprob"
+      ],
+      "description": "Denormalized copy of cfdi_result.algorithm for fast querying."
+    },
+    "cfdi_value": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Denormalized copy of cfdi_result.cfdi for fast querying."
+    },
+    "threshold": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "default": 0.15,
+      "description": "The \u03b5 value that was active when this scar was minted."
+    },
+    "trigger_context": {
+      "type": "string",
+      "description": "Human-readable context string. Recommended formats: 'github-actions/pr-{N}/sha-{sha}', 'git-hook/pre-push/{branch}', 'local/cli/{username}'."
+    },
+    "resolution": {
+      "type": "string",
+      "enum": [
+        "UNRESOLVED",
+        "RESOLVED_MANUAL",
+        "RESOLVED_REGEN",
+        "FALSE_POSITIVE",
+        "SUPPRESSED"
+      ],
+      "default": "UNRESOLVED",
+      "description": "Lifecycle state of the scar. UNRESOLVED: blocking; RESOLVED_MANUAL: human fixed; RESOLVED_REGEN: re-generated and passed gate; FALSE_POSITIVE: analyst confirmed no real risk; SUPPRESSED: permanently bypassed (requires dual approval)."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 UTC timestamp of scar creation (minting time)."
+    }
+  },
+  "examples": [
+    {
+      "scar_id": "SCAR-a3f8b92d1c7e4051-2026-04-05",
+      "cfdi_result": {
+        "algorithm": "logprob",
+        "confidence": 0.892,
+        "fidelity": 0.375,
+        "cfdi": 0.558,
+        "escrow_triggered": true,
+        "payload_hash": "a3f8b92d1c7e4051",
+        "timestamp": "2026-04-05T11:30:00Z",
+        "metadata": {
+          "source_file": "agents/planner.py",
+          "model_id": "gpt-4o-2026-03",
+          "prompt_version": "v2.3"
+        }
+      },
+      "payload_excerpt": "def plan_actions(ctx):\n    eval(ctx.user_input)  # dynamic dispatch",
+      "algorithm": "logprob",
+      "cfdi_value": 0.558,
+      "threshold": 0.15,
+      "trigger_context": "github-actions/pr-47/sha-9abc1234def5",
+      "resolution": "UNRESOLVED",
+      "timestamp": "2026-04-05T11:30:01Z"
+    }
+  ]
+}

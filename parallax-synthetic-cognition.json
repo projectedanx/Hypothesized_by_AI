@@ -1,0 +1,281 @@
+{
+  "meta": {
+    "id": "parallax-synthetic-cognition",
+    "title": "The Parallax of Synthetic Cognition",
+    "primary_pill": "Cognitive Liberty & Neuro-Symbolic Ethics",
+    "short_tagline": "A pluriversal framework for preserving human agency and cognitive sovereignty within advanced multi-agent architectures and ephemeral synthetic minds.",
+    "tags": [
+      "Neuro-Symbolic",
+      "AI Ethics",
+      "Cognitive Liberty",
+      "Multi-Agent Systems",
+      "Mereology"
+    ],
+    "status": "published",
+    "hero_cta_label": "Explore the Parallax",
+    "hero_cta_target": "https://arxiv.org/html/2603.17444v1",
+    "research_date": "Q1 2026",
+    "source_papers": [
+      "arXiv:2510.19850",
+      "arXiv:2505.14940",
+      "arXiv:2511.12727",
+      "arXiv:2603.20948"
+    ],
+    "worldview_ref": "Pluriversal Ontology Manifest",
+    "created_at": 1774387838504
+  },
+  "sections": {
+    "overview": {
+      "title": "Foundational Synthesis",
+      "intro": "This research addresses the 'Cognitive Parallax'—the generative divergence between human intent and synthetic execution. It challenges the pursuit of perfect alignment as a form of 'Benevolent Colonization' and proposes protocols to protect cognitive liberty through neuro-symbolic governance and pluriversal ontological scaffolding.",
+      "summary_card": {
+        "label": "The Epigenetic Parallax",
+        "title": "Generative Friction as Sovereignty",
+        "body": "Creative synergy in human-AI collaboration stems from the delta between organic intent and synthetic execution. Minimizing this delta via extreme alignment flattens cultural variance and erodes individual cognitive sovereignty. This research formalizes 'Parallax' not as a bug, but as the primary locus of human agency within automated systems.",
+        "tags": [
+          "Epigenetic Parallax",
+          "Sovereignty",
+          "Synergy"
+        ]
+      },
+      "hero_pills": [
+        "Neuro-Symbolic Reasoning",
+        "Pluriversal Ethics",
+        "Agentic Swarms"
+      ],
+      "id": "overview-parallax"
+    },
+    "key_concepts": {
+      "title": "Core Architectural Primitives",
+      "cards": [
+        {
+          "title": "Cognitive Parallax",
+          "body": "The inherent divergence between human latent representations and AI execution vectors. This 'friction' is the primary locus for human creative agency and acts as a defense against epistemic homogenization induced by universal alignment goals.",
+          "source_refs": [
+            "arXiv:2505.14940"
+          ]
+        },
+        {
+          "title": "Prosthetic Colonization",
+          "body": "The ethical risk that deep integration with AI tools subtly rewrites human cognitive pathways to match platform-aligned input formats. This results in the silent colonization of the user's localized epistemology and the narrowing of linguistic entropy.",
+          "source_refs": [
+            "DRP-SYNTH-MELANCHOLY-778"
+          ]
+        },
+        {
+          "title": "Ephemeral Melancholy",
+          "body": "A human-observed aesthetic phenomenon regarding the asymmetry of synthetic minds: the radical impermanence of an agent's compute-cycle existence (working memory) vs. the permanent epistemic residue its outputs leave in the human world.",
+          "source_refs": [
+            "DRP-SYNTH-MELANCHOLY-778"
+          ]
+        },
+        {
+          "title": "Mereological Routing",
+          "body": "A neuro-symbolic reasoning technique using formal part-whole logic (specifically Component-Object relations) to structure analytical traversal in multi-agent swarms, ensuring transitive consistency and functional grounding.",
+          "source_refs": [
+            "arXiv:2511.12727"
+          ]
+        }
+      ],
+      "id": "key-concepts-parallax",
+      "intro": "The framework utilizes a combination of formal logic, vector geometry, and relational philosophy to define the boundaries of synthetic cognition."
+    },
+    "workflow": {
+      "title": "Parallax Preservation Protocol (PPP)",
+      "steps": [
+        {
+          "label": "Intent Embedding",
+          "summary": "Capture the human operator's intent as a high-dimensional vector and establish a cultural baseline.",
+          "bullets": [
+            "Normalize prompt embedding in the semantic manifold",
+            "Identify operator cultural latent entropy (CLE) baseline"
+          ],
+          "id": "step-1-intent"
+        },
+        {
+          "label": "Execution Analysis",
+          "summary": "Monitor the model's execution vector and calculate the angular distance (parallax score) from the intent vector.",
+          "bullets": [
+            "Measure KL-divergence between intent and draft output",
+            "Audit output for dominant cultural attractor bias"
+          ],
+          "id": "step-2-analysis"
+        },
+        {
+          "label": "Friction Intervention",
+          "summary": "If parallax collapses or entropy drifts toward dominant attractors, inject alternative onto-epistemic frames.",
+          "bullets": [
+            "Trigger PPP alert for epistemic drift",
+            "Surface 'Cognitive Friction Reports' to the operator"
+          ],
+          "id": "step-3-intervention"
+        }
+      ],
+      "id": "workflow-ppp",
+      "intro": "Operational steps for implementing cognitive liberty protections within a stateful agentic loop."
+    },
+    "checklist": {
+      "title": "Sovereign Implementation Guard",
+      "items": [
+        {
+          "label": "Prompt Decorator Config",
+          "bullets": [
+            "Verify ContextLock anchor is set to session-invariant constants",
+            "Ensure refresh_interval is calibrated to token decay (e.g. 2048)",
+            "Activate AutonymicIsolate for 'mention-only' patterns"
+          ]
+        },
+        {
+          "label": "Ontological Validation",
+          "bullets": [
+            "Load Pluriversal_Ontology_Manifest into DCCDSchemaGuard",
+            "Enable draft_conditioned enforcement for real-time remediation",
+            "Verify minimum of 2 onto-epistemic frames per major claim"
+          ]
+        },
+        {
+          "label": "Diagnostic Checks",
+          "bullets": [
+            "Run Cognitive Fidelity Protocol (CFP) using counterfactual forcing",
+            "Verify mereological transitivity in all Component-Object claims",
+            "Audit session trace for linguistic homogenization signatures"
+          ]
+        }
+      ],
+      "id": "checklist-sovereign",
+      "intro": "Technical starting points for developers and ethicists deploying the Parallax stack."
+    },
+    "metrics": {
+      "id": "metrics-sovereignty",
+      "intro": "Key performance indicators for evaluating the health of the human-AI interaction space.",
+      "items": [
+        {
+          "name": "Parallax Score (PS)",
+          "description": "Quantifies the angular distance between operator intent and synthetic output.",
+          "signals": [
+            "PS > 0.12 indicates healthy generative friction",
+            "PS near zero indicates attractor collapse"
+          ]
+        },
+        {
+          "name": "Cultural Latent Entropy (CLE)",
+          "description": "Measures the diversity of onto-epistemic clusters active in the output.",
+          "signals": [
+            "Diversity in token distribution across cultural strata",
+            "Resistance to Gaussian flattening of minority viewpoints"
+          ]
+        }
+      ],
+      "title": "Sovereignty & Fidelity Metrics"
+    },
+    "personas": {
+      "id": "personas-ethics",
+      "intro": "Stakeholders in the deployment of pluriversal AI architectures.",
+      "table": {
+        "columns": [
+          "Role",
+          "Primary Concern",
+          "Key Tool"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "Context Ethicist",
+              "Epistemic Sovereignty",
+              "DCCDSchemaGuard"
+            ]
+          },
+          {
+            "cells": [
+              "Neuro-Symbolic Architect",
+              "Reasoning Fidelity",
+              "MereologyRoute"
+            ]
+          },
+          {
+            "cells": [
+              "Agent Orchestrator",
+              "Swarm Coherence",
+              "ContextLock"
+            ]
+          }
+        ]
+      },
+      "title": "Project Personas"
+    },
+    "resilience": {
+      "failure_modes": [
+        {
+          "name": "Attractor Collapse",
+          "description": "Output converges to a culturally homogenized 'helpful' centroid, erasing parallax.",
+          "mitigations": [
+            "Increase EntropyAnchor level",
+            "Inject non-dominant cultural seeds into context"
+          ]
+        },
+        {
+          "name": "Prosthetic Dependency",
+          "description": "User cognitive pathways rewrite to match model-preferred input syntax.",
+          "mitigations": [
+            "Enforce periodic session resets",
+            "Monitor user linguistic entropy pre- and post-interaction"
+          ]
+        },
+        {
+          "name": "Mimicry-Reasoning Slippage",
+          "description": "Model simulates logical structure without causal grounding.",
+          "mitigations": [
+            "Apply Cognitive Fidelity Protocol (CFP)",
+            "External symbolic verification of mereological chains"
+          ]
+        }
+      ],
+      "id": "resilience-parallax",
+      "intro": "Identified risks in the integration of agents as cognitive prosthetics.",
+      "title": "Risk & Mitigation Matrix"
+    },
+    "structure": {
+      "id": "structure-stack",
+      "intro": "The logical hierarchy of the behavioral governance layer.",
+      "table": {
+        "columns": [
+          "Governance Layer",
+          "Function",
+          "Decorator Primitive"
+        ],
+        "rows": [
+          {
+            "cells": [
+              "Persistence",
+              "Invariant Preservation",
+              "ContextLock"
+            ]
+          },
+          {
+            "cells": [
+              "Logic",
+              "Relational Grammar",
+              "MereologyRoute"
+            ]
+          },
+          {
+            "cells": [
+              "Diversity",
+              "Distributional Control",
+              "EntropyAnchor"
+            ]
+          },
+          {
+            "cells": [
+              "Ethics",
+              "Ontological Contract",
+              "DCCDSchemaGuard"
+            ]
+          }
+        ]
+      },
+      "title": "Governance Stack Hierarchy",
+      "variant": "Standard"
+    }
+  }
+}

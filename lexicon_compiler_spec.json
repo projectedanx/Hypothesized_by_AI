@@ -1,0 +1,149 @@
+{
+  "schema_id": "LEXICON-COMPILER-992-v1.0",
+  "description": "Maps Pattern Lexicon entries to executable Cognitive Bytecode for frontier LLM deployment",
+  "generation_timestamp": "2026-03-31T18:12:00+11:00",
+  "compiler_pipeline": {
+    "stage_1_parse": {
+      "name": "Pattern Activation Parser",
+      "input": "Natural language task description",
+      "process": "Embed task; compute cosine similarity to pattern embedding centroids; activate patterns where similarity > task_conditioned_baseline",
+      "output": "Ordered list of activated PAT-IDs with confidence scores"
+    },
+    "stage_2_decorator_selection": {
+      "name": "PDL Bytecode Emitter",
+      "input": "Activated PAT-IDs",
+      "process": "Map each pattern to mandatory PDL decorators; resolve decorator dependencies; topological sort by layer (Cognitive \u2192 Epistemic \u2192 Structural \u2192 Systemic)",
+      "output": "Ordered PDL decorator stack"
+    },
+    "stage_3_model_targeting": {
+      "name": "Pluriversal Guardrail Injector",
+      "input": "PDL decorator stack + target model identifier",
+      "process": "Apply model-specific wrapping (Twinning for Claude 4.6; EJM for Gemini 3.1; DFA logit-masking for GPT-5.3)",
+      "output": "Model-targeted execution prompt with embedded bytecode"
+    },
+    "stage_4_monitoring": {
+      "name": "Phronesis Index Monitor",
+      "input": "Live execution tokens",
+      "process": "Compute spectral gap of Connection Laplacian \u03a6 continuously; trigger EpistemicEscrow if \u03a6 < 0.05 or CFDI > 0.15",
+      "output": "Execution health stream; Symbolic Scar minting on escrow trigger"
+    }
+  },
+  "bytecode_instruction_set": {
+    "BIND_DOMAIN": {
+      "opcode": "0x01",
+      "args": [
+        "source_domain",
+        "target_domain",
+        "min_isomorphism_score"
+      ],
+      "effect": "Activates PAT-001 Isomorphic Bridge; injects +++MereologyRoute"
+    },
+    "ESCROW_CONTRADICTION": {
+      "opcode": "0x02",
+      "args": [
+        "cfd_threshold",
+        "beta1_threshold"
+      ],
+      "effect": "Activates PAT-002 Paraconsistent Scarring; mints Symbolic Scar hypervector"
+    },
+    "LOCK_CONTEXT": {
+      "opcode": "0x03",
+      "args": [
+        "anchor_id",
+        "refresh_interval"
+      ],
+      "effect": "Injects +++ContextLock to prevent Workflow Narrowing Effect (PAT-003)"
+    },
+    "ISOLATE_TERM": {
+      "opcode": "0x04",
+      "args": [
+        "term_list",
+        "decay_budget"
+      ],
+      "effect": "Activates PAT-007 Lexical Saponification mitigation via +++AutonymicIsolate"
+    },
+    "FORCE_ORTHOGONAL": {
+      "opcode": "0x05",
+      "args": [
+        "cosine_threshold",
+        "bridge_vocab"
+      ],
+      "effect": "Activates PAT-006 Topological Orthogonality Hypothesis; deforms target latent manifold"
+    },
+    "ENCODE_VSA": {
+      "opcode": "0x06",
+      "args": [
+        "concept_list",
+        "dimensions",
+        "binding_ops"
+      ],
+      "effect": "Activates PAT-010 VSA encoding; deploys +++LatentSparsityGuard"
+    },
+    "SCAN_TDA": {
+      "opcode": "0x07",
+      "args": [
+        "reasoning_trace",
+        "persistence_threshold"
+      ],
+      "effect": "Activates PAT-009 TDA Hallucination Detector; returns \u03b2\u2081 barcode lifetimes"
+    },
+    "GUARD_SCHEMA": {
+      "opcode": "0x08",
+      "args": [
+        "schema_id",
+        "enforcement_mode"
+      ],
+      "effect": "Injects +++DCCDSchemaGuard; prevents Projection Tax and Alignment Faking (PAT-004, PAT-005)"
+    },
+    "STIGMERGE_SWARM": {
+      "opcode": "0x09",
+      "args": [
+        "agent_count",
+        "pheromone_decay_rate",
+        "scar_repulsion_radius"
+      ],
+      "effect": "Activates PAT-008 Stigmergic Coordination; deploys STA + FIPI mechanisms"
+    },
+    "ROLLBACK": {
+      "opcode": "0x0A",
+      "args": [
+        "checkpoint_id",
+        "exhaust_retention"
+      ],
+      "effect": "Activates +++SagaRecovery; epistemic rollback to last verified Phronesis state"
+    }
+  },
+  "task_conditioned_baselines": {
+    "claude_4_6_opus": {
+      "entity_density_range": [
+        0.15,
+        0.165
+      ],
+      "cfd_threshold": 0.15,
+      "context_window": 1000000,
+      "mode_collapse_risk": "HIGH_on_raw_AST",
+      "twinning_required": true
+    },
+    "gemini_3_1_pro": {
+      "entity_density_range": [
+        0.14,
+        0.16
+      ],
+      "cfd_threshold": 0.15,
+      "context_window": 2000000,
+      "phr_risk": "HIGH",
+      "ejm_required": true
+    },
+    "gpt_5_3_codex": {
+      "entity_density_range": [
+        0.155,
+        0.17
+      ],
+      "cfd_threshold": 0.15,
+      "context_window": 256000,
+      "alignment_faking_risk": "HIGH",
+      "dccd_required": true
+    }
+  },
+  "sha256": "74eed307f490a9a58b8487b990c1eedff10402d2adbc6ccf7766bdcf7eef2ce6"
+}

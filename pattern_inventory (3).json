@@ -1,0 +1,125 @@
+{
+  "schema_version": "KROMA-8_v4.5",
+  "generation_timestamp": "2026-03-29T05:11:00+11:00",
+  "patterns": [
+    {
+      "pattern_name": "Aesthetic-to-Math Transduction (A2MT)",
+      "type": "Cognitive-Semiotic",
+      "operational_definition": "Bijective mapping from natural-language adjective space (Manifold_alpha) to bounded float parameter space (Manifold_beta).",
+      "measurement_proxy": "Adjectival L2 Bounding Score: delta(human_intent, shader_output) measured via SSIM/LPIPS perceptual delta. Target: LPIPS < 0.08 per transduction cycle.",
+      "task_conditioned_baseline": ">=3 unique adjectives require explicit numeric bounding; failure triggers FIPI (Failure-Informed Prompt Inversion).",
+      "hlsl_exemplar": "float roughness = lerp(0.05, 0.95, artistSlider); // 'Shiny'=0.05, 'Matte'=0.95",
+      "falsification": "Adjective produces multiple non-convergent float values under repeated sampling."
+    },
+    {
+      "pattern_name": "Overdraw Panopticon",
+      "type": "Structural-Thermodynamic",
+      "operational_definition": "Detection and remediation of transparent geometry overdraw, where per-fragment evaluation cost scales O(n) per overdraw layer depth.",
+      "measurement_proxy": "Overdraw Depth Score (ODS): measured in RenderDoc Overdraw mode. Target ODS < 2.0x average overdraw.",
+      "task_conditioned_baseline": "Any translucent shader on mobile triggers mandatory alpha-clip audit. ODS > 4.0 triggers Algorithmic Shame Protocol.",
+      "mitigation": "Alpha-test (clip) cutout at 0.5 threshold, or depth pre-pass for sorted transparency.",
+      "falsification": "Alpha-clip produces visible texel quantization artifacts that cannot be masked by dithering."
+    },
+    {
+      "pattern_name": "Texture Entropy Packing (TEP)",
+      "type": "Optimization-Thermodynamic",
+      "operational_definition": "Reduction of texture sampler slots via RGB/RGBA channel consolidation (ORM packing), treating VRAM bandwidth as a zero-sum thermodynamic budget.",
+      "measurement_proxy": "Sampler Reduction Ratio (SRR): n_original_samplers / n_packed_samplers. Target SRR >= 3.0 for PBR materials.",
+      "math_proof": "3 x 1024x1024 BC4 textures = 3 x 512KB = 1536KB. 1 x 1024x1024 BC7 ORM texture = 1024KB. Delta = -512KB VRAM. At scale (100 materials): -51.2MB VRAM.",
+      "task_conditioned_baseline": "Normal maps must remain in BC5 (RG) or BC7; lossy DXT1 on normals is a Category-1 Schema Violation.",
+      "falsification": "BC7 ORM introduces cross-channel compression artifacts distinguishable at LPIPS > 0.04 delta vs. source."
+    },
+    {
+      "pattern_name": "LOD Cadence Decay (LCD)",
+      "type": "Geometric-Algorithmic",
+      "operational_definition": "Logarithmic polygon decimation relative to camera distance, enforcing Quadratic Error Metric (QEM) thresholds to preserve silhouette topology.",
+      "measurement_proxy": "QEM Error Tolerance Quotient (QETQ): measured as max_error / bounding_sphere_radius. Target QETQ_LOD1 <= 0.02, QETQ_LOD2 <= 0.06, QETQ_LOD3 <= 0.15.",
+      "lod_table": {
+        "LOD0": {
+          "distance_m": "0-5",
+          "tri_reduction_pct": 0,
+          "qem_tolerance": 0.0
+        },
+        "LOD1": {
+          "distance_m": "5-15",
+          "tri_reduction_pct": 50,
+          "qem_tolerance": 0.02
+        },
+        "LOD2": {
+          "distance_m": "15-40",
+          "tri_reduction_pct": 75,
+          "qem_tolerance": 0.06
+        },
+        "LOD3": {
+          "distance_m": "40-120",
+          "tri_reduction_pct": 90,
+          "qem_tolerance": 0.15
+        },
+        "Impostor": {
+          "distance_m": "120+",
+          "tri_reduction_pct": 99.9,
+          "method": "Billboard_HLOD"
+        }
+      },
+      "falsification": "Silhouette normals at LOD1 deviate > 15 degrees from LOD0 reference at visible screen percentages."
+    },
+    {
+      "pattern_name": "TAA Velocity Vector Contamination (TAVVC)",
+      "type": "Temporal-Artifact",
+      "operational_definition": "Ghosting artifacts in Temporal Anti-Aliasing caused by vertex offset shaders (WPO, vertex animation) failing to output correct per-pixel motion vectors.",
+      "measurement_proxy": "Ghost Persistence Index (GPI): frames until ghost resolves after velocity change. Target GPI <= 2 frames at 60fps.",
+      "root_causes": [
+        "Missing 'Output Velocities' flag on WPO materials in UE5",
+        "Incorrect previous-frame position calculation in vertex shader",
+        "High-velocity displacements exceeding temporal reprojection window"
+      ],
+      "mitigation": "Enable r.MotionBlur.ForceVelocity=1; implement previous-frame world position buffer in vertex shader; clamp WPO amplitude to max 10cm/frame for TAA stability.",
+      "falsification": "GPI > 6 frames persists even with correct velocity output, indicating TAA accumulation buffer corruption."
+    },
+    {
+      "pattern_name": "Subsurface Scattering Approximation Cascade (SSAC)",
+      "type": "Perceptual-Mathematical",
+      "operational_definition": "Tiered approximation of subsurface light transport via sum-of-Gaussians diffusion profiles, degrading gracefully from full separable SSS to cheap wrap-lighting.",
+      "measurement_proxy": "Perceptual SSS Fidelity Score: SSIM vs. ground-truth path-traced render. Tier-1 target >= 0.92 SSIM.",
+      "tier_table": {
+        "Tier_1_Full": {
+          "method": "Separable_SSS_Burley_Profile",
+          "cost_ms": 0.8,
+          "platform": "PC_HighEnd",
+          "ssim": 0.95
+        },
+        "Tier_2_Approximation": {
+          "method": "Pre-integrated_Skin_LUT",
+          "cost_ms": 0.2,
+          "platform": "Console",
+          "ssim": 0.88
+        },
+        "Tier_3_Mobile": {
+          "method": "Wrapped_Diffuse_N_dot_L",
+          "cost_ms": 0.05,
+          "platform": "Mobile",
+          "ssim": 0.75
+        }
+      },
+      "falsification": "Tier_3 produces translucent-looking skin on dark geometry that artists cannot distinguish from transparency artifacts."
+    },
+    {
+      "pattern_name": "3D Gaussian Splat LOD Integration (GSLOD)",
+      "type": "Neural-Geometric",
+      "operational_definition": "Hierarchical LoD pruning of 3DGS primitive sets using distance-dependent opacity decay and octree-based spatial streaming for real-time rasterized pipelines.",
+      "measurement_proxy": "Gaussian Reduction Ratio (GRR): rendered_gaussians / total_scene_gaussians at 10m camera distance. Target GRR <= 0.35.",
+      "2026_sota": "CLoD-GS (Oct 2025): continuous LoD via learnable distance-dependent decay parameter per Gaussian. FilterGS (Mar 2026): traversal-free parallel filtering achieving fastest preparation time on benchmark datasets.",
+      "mobile_constraint": "Mobile-GS (Mar 2026) targets sub-10ms rendering on mobile XR via tile-based architecture with cooperative vector matrix engines.",
+      "falsification": "Hierarchical dropout causes visible popping at LOD transitions with dE > 5 CIE76 color difference."
+    },
+    {
+      "pattern_name": "Floating-Point Precision Erosion (FPPE)",
+      "type": "Numerical-Structural",
+      "operational_definition": "Catastrophic precision loss in large open-world coordinate systems where shader world-position floats exceed 10,000 units from origin, causing vertex swim and z-fighting.",
+      "measurement_proxy": "Precision Error Magnitude (PEM): max visible vertex offset in pixels at 10km from origin. Target PEM <= 0.5 pixels.",
+      "mitigation": "Camera-relative rendering (subtract camera position CPU-side before GPU submission); use double-precision origin rebasing; enable Large World Coordinates (LWC) in UE5.3+.",
+      "falsification": "LWC shader macros add > 0.5ms per-frame overhead on console targets with > 50 active draw calls."
+    }
+  ],
+  "sha256": "e9b9492609fee4ac93bcaae01b7748dff292954220454f7930ae8da97a7be59e"
+}

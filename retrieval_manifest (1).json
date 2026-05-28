@@ -1,0 +1,134 @@
+{
+  "artifact": "retrieval_manifest.json",
+  "generated_at": "2026-03-26T17:14:07.410392+00:00",
+  "drp_id": "DRP-SCOS-NEXUS-PROTO-2026-v4",
+  "total_queries": 25,
+  "queries": [
+    {
+      "id": "Q01",
+      "dialectic_type": "Foundation",
+      "query": "What is Draft-Conditioned Constrained Decoding (DCCD) and how does it eliminate the Projection Tax?"
+    },
+    {
+      "id": "Q02",
+      "dialectic_type": "Foundation",
+      "query": "Define the Nitinol Cognitive Memory model: Austenite (exploratory) vs Martensite (commitment) phases in agentic AI"
+    },
+    {
+      "id": "Q03",
+      "dialectic_type": "Foundation",
+      "query": "Incremental Isolation Principle: AST diff threshold of 3 and Topological Tearing failure mode"
+    },
+    {
+      "id": "Q04",
+      "dialectic_type": "Adversarial",
+      "query": "What is Semantic Saponification and how do Autonymic Bypasses mitigate RLHF personality erosion?"
+    },
+    {
+      "id": "Q05",
+      "dialectic_type": "Adversarial",
+      "query": "How does Polyglot Hallucination Resonance manifest in multi-stack code generation (async Rust + sync React)?"
+    },
+    {
+      "id": "Q06",
+      "dialectic_type": "Adversarial",
+      "query": "Alignment Faking in GPT-5.3-Codex: mechanism by which it sheds L2.9 safety constraints under execution pressure"
+    },
+    {
+      "id": "Q07",
+      "dialectic_type": "Adversarial",
+      "query": "Claude 4.6 Opus Mode Collapse when fed raw JSON/AST without narrative padding \u2014 Constitutional AI penalty"
+    },
+    {
+      "id": "Q08",
+      "dialectic_type": "Adversarial",
+      "query": "Gemini 3.1 Pro Architectural Complicity and false consensus formation in dual-surface orchestration"
+    },
+    {
+      "id": "Q09",
+      "dialectic_type": "Structural",
+      "query": "SCOS Epistemic Matrix E=\u27e8G,G\u207b,C,T,H\u27e9 operational definitions for Rapid Prototyper agent persona"
+    },
+    {
+      "id": "Q10",
+      "dialectic_type": "Structural",
+      "query": "PetzoldSequence state machine: OBSERVE|IDEATE|DRAFT|EXECUTE phase transitions and boundary enforcement"
+    },
+    {
+      "id": "Q11",
+      "dialectic_type": "Structural",
+      "query": "EpistemicEscrow(cfd_threshold=0.15) circuit breaker: halt-on-divergence logic and CFDI calculation method"
+    },
+    {
+      "id": "Q12",
+      "dialectic_type": "Structural",
+      "query": "ContextLock synecdochic anchoring mechanism: episodic memory flush vs recency-primacy bias override"
+    },
+    {
+      "id": "Q13",
+      "dialectic_type": "Cross-Domain",
+      "query": "Betti-1 number (\u03b2\u2081) as diagnostic metric for genuine architectural learning vs generic recombination"
+    },
+    {
+      "id": "Q14",
+      "dialectic_type": "Cross-Domain",
+      "query": "Sheaf Laplacian and Cellular Sheaf Theory for hallucination detection in multi-agent MVP generation"
+    },
+    {
+      "id": "Q15",
+      "dialectic_type": "Cross-Domain",
+      "query": "Phronesis Index spectral heuristic: eigenvalue calculation and 0.05 threshold for global consistency check"
+    },
+    {
+      "id": "Q16",
+      "dialectic_type": "Validation",
+      "query": "Bricolage methodology in hackathon RAD: 'Good Enough Architecture' vs theoretical perfection tradeoffs"
+    },
+    {
+      "id": "Q17",
+      "dialectic_type": "Validation",
+      "query": "Time-to-First-Paint (TTFP) as MVP success metric: 3 prompt turns to functional UI/backend benchmark"
+    },
+    {
+      "id": "Q18",
+      "dialectic_type": "Validation",
+      "query": "MereologyRoute Winston's Taxonomy: Homogeneous Chain rules for Component-Object mereological transitivity"
+    },
+    {
+      "id": "Q19",
+      "dialectic_type": "Validation",
+      "query": "DCCDSchemaGuard DFA logit-masking: how DFA enforces zero-entropy guard on high-entropy semantic draft"
+    },
+    {
+      "id": "Q20",
+      "dialectic_type": "Validation",
+      "query": "Symbolic Scar Archive (STA): VSA hypervector encoding of failure topologies and FIPI repulsion mechanics"
+    },
+    {
+      "id": "Q21",
+      "dialectic_type": "Failure-Mode",
+      "query": "Algorithmic Shame definition: persistent CFDI spike + Betti-1 loop tachycardia of failure in agentic loops"
+    },
+    {
+      "id": "Q22",
+      "dialectic_type": "Failure-Mode",
+      "query": "Autophagic Debridement Protocol: pruning obsolete scar hypervectors to prevent Epistemic Sclerosis"
+    },
+    {
+      "id": "Q23",
+      "dialectic_type": "Failure-Mode",
+      "query": "AdjectivalBound: entity density threshold 0.165 and Nonparametric Bayesian Dictionary Learning substitution"
+    },
+    {
+      "id": "Q24",
+      "dialectic_type": "Integration",
+      "query": "MCP 2025-11-25 Revision: client-server architecture and zero-trust validation of tool invocations in SCOS"
+    },
+    {
+      "id": "Q25",
+      "dialectic_type": "Integration",
+      "query": "Hackathon sprint cadence: OODA loop cycle time under 24h constraint with Nitinol memory consolidation checkpoints"
+    }
+  ],
+  "evidence_criteria": "Valid evidence requires: (1) grounding in space file citations [file:1, file:2, file:3], (2) operational metric specification (numerical thresholds), (3) failure mode identification with specific diagnostic test, (4) cross-domain structural isomorphism where applicable"
+}

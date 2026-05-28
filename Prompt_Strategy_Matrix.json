@@ -1,0 +1,151 @@
+{
+  "DRP_ID": "DRP_ID_2026_PE_MASTER",
+  "version": "Q1-2026",
+  "generated": "2026-03-04",
+  "reference_standard": "NIST AI-2026-B",
+  "patterns": [
+    {
+      "pattern_id": "P01",
+      "name": "Semantic Compression",
+      "type": "Efficiency",
+      "empirical_grounding": "Token-logic density; LaTeX delimiter injection forces academic attention head activation",
+      "mechanism": "Dense symbolic notation activates lower-frequency co-occurrence heads; reduces filler-token generation",
+      "model_applicability": {
+        "Gemini_3_1_Pro": "HIGH \u2014 responds to structured formal grammars, Arxiv-style notation",
+        "GPT_5_3": "MEDIUM \u2014 benefits from schema framing; LaTeX alone insufficient without propositional anchors",
+        "Claude_4_6": "HIGH \u2014 XML-schema + LaTeX dual-encoding strongly activates precision reasoning"
+      },
+      "measured_effect": "Logic density +18\u201332% (token-to-logical-step ratio) vs. natural language baseline",
+      "diagnostic_test": "Compare token-to-output logic ratio (count inferential steps / total output tokens)",
+      "failure_mode": "Compression past ~850 tokens activates truncation attention, losing trailing constraints",
+      "bias_risk": "LaTeX/academic register excludes non-Western epistemic structures (e.g., Confucian dialectic reasoning patterns)",
+      "evidence_sources": [
+        "arxiv:2601.19847",
+        "arxiv:2602.04925"
+      ]
+    },
+    {
+      "pattern_id": "P02",
+      "name": "Contrastive Tension Decoding",
+      "type": "Steering",
+      "empirical_grounding": "Logit-delta amplification between positive and negative system-prompt conditioned distributions",
+      "mechanism": "z_delta = z_pos - z_neg injected into base logits; persona-delta vector steers away from sycophantic attractor states",
+      "model_applicability": {
+        "Gemini_3_1_Pro": "HIGH \u2014 OODA-loop framing maps to thesis/antithesis forcing at each Observe phase",
+        "GPT_5_3": "HIGH \u2014 Contrastive Thinking Decoding (openreview:czozyUMx2M) shows no-training gains on MATH benchmarks",
+        "Claude_4_6": "HIGH \u2014 Constitutional AI baseline creates strong positive anchor; delta vector measurable and stable"
+      },
+      "measured_effect": "Steerability +13% at alpha=2 (Qwen-2.5-7B proxy); AIME benchmark +13.64% with AdaRAS variant",
+      "diagnostic_test": "Evaluate variance in Delta calculation across 30 prompt trials; target sigma < 0.15 in logit-space",
+      "failure_mode": "At alpha > 3.5, output collapses into contradictory loops ('Logic Collapse' event); sweet-spot: 1.5 < alpha < 3",
+      "bias_risk": "Thesis/antithesis framing privileges Hegelian dialectic; may suppress valid non-oppositional reasoning forms",
+      "evidence_sources": [
+        "arxiv:2601.06403",
+        "arxiv:2601.19847",
+        "openreview:czozyUMx2M"
+      ]
+    },
+    {
+      "pattern_id": "P03",
+      "name": "Latent Attention Head Hijacking",
+      "type": "Influence",
+      "empirical_grounding": "Activation Unit (AU) identification via contrastive samples; discriminative AU steering with adaptive strength",
+      "mechanism": "Trigger tokens from pre-training corpus activate dormant specialized heads; AUSteer principle: steering FEWER units achieves MORE precision",
+      "model_applicability": {
+        "Gemini_3_1_Pro": "MEDIUM \u2014 architecture details opaque; Unix/POSIX manual triggers empirically validated on code tasks",
+        "GPT_5_3": "HIGH \u2014 dense pre-training on technical corpora; IEEE/RFC document-style triggers activate formal reasoning heads",
+        "Claude_4_6": "MEDIUM \u2014 safety tuning partially masks technical trigger effectiveness; requires layered injection"
+      },
+      "measured_effect": "Code generation accuracy: HumanEval +2.01%, MBPP +3.44% over CoT baseline (AdaRAS/AUSteer)",
+      "diagnostic_test": "Measure technical accuracy delta in code generation pre vs. post trigger injection; run on HumanEval+ subset (n=50)",
+      "failure_mode": "Attention hijacking can suppress safety alignment residual stream representations (ACL 2025); universal suffix variants bypass RLHF guardrails",
+      "bias_risk": "Trigger-corpus specificity: models trained on different data distributions may show zero or negative transfer",
+      "evidence_sources": [
+        "arxiv:2602.04428",
+        "arxiv:2601.09269",
+        "aclanthology:2025.emnlp-main.842"
+      ]
+    },
+    {
+      "pattern_id": "P04",
+      "name": "Reasoning Saturation Boundary Injection",
+      "type": "Robustness",
+      "empirical_grounding": "ReEfBench (arxiv:2601.03550) identifies three trajectory archetypes: Adaptive Scaling, Saturation/Collapse, Diluted Expansion",
+      "mechanism": "Insert explicit complexity-escalation signals mid-prompt to prevent Saturation (logical depth plateau) and Collapse (token + depth decrease)",
+      "model_applicability": {
+        "Gemini_3_1_Pro": "HIGH \u2014 'Lazy Guesser' failure mode documented at complexity C > 9; boundary injection extends linear scaling",
+        "GPT_5_3": "HIGH \u2014 'Hollow Mimic' (Diluted Expansion) dominant failure at C > 11; anti-verbosity penalty token effective",
+        "Claude_4_6": "MEDIUM \u2014 Extended Thinking mode naturally combats saturation but benefits from explicit depth-checkpoints"
+      },
+      "measured_effect": "Prevents logical depth plateau; correlated with avoidance of 'Lazy Guesser' archetype in ReEfBench",
+      "diagnostic_test": "Plot token-count vs. logical depth across complexity C=3 to 11; failure = delta_depth < 0.05 per C-unit increase",
+      "failure_mode": "Over-injection creates 'Diluted Expansion' (verbosity without depth); cap injections at 2 per 1000 tokens",
+      "bias_risk": "Complexity markers are culturally encoded; 'high complexity' anchors differ across technical vs. humanistic domains",
+      "evidence_sources": [
+        "arxiv:2601.03550"
+      ]
+    },
+    {
+      "pattern_id": "P05",
+      "name": "Preview-and-Self-Check Anti-Laziness Frame",
+      "type": "Anti-Refusal",
+      "empirical_grounding": "Light-IF (arxiv:2508.03178) identifies lazy reasoning in thinking stage as PRIMARY factor in instruction non-adherence",
+      "mechanism": "Explicit preview instruction ('Before answering, enumerate constraint satisfaction conditions') + self-check ('Verify each constraint is met') forces Zero-RL-equivalent behavior at inference time",
+      "model_applicability": {
+        "Gemini_3_1_Pro": "HIGH \u2014 thinking-mode models show strong preview behavior with explicit activation",
+        "GPT_5_3": "HIGH \u2014 o-series reasoning architecture naturally executes preview; prompt reinforces it",
+        "Claude_4_6": "HIGH \u2014 Extended Thinking mode chains preview + self-check natively when explicitly named"
+      },
+      "measured_effect": "Instruction adherence improvements of 10-20 pp documented on IFEval-style benchmarks; lazy reasoning rate reduced",
+      "diagnostic_test": "Run IFEval subset (n=100); measure instruction constraint satisfaction rate pre/post frame injection",
+      "failure_mode": "Excessive self-check loops create GRPO-analog 'Lazy Likelihood Displacement' \u2014 model assigns low probability to correct responses over time",
+      "bias_risk": "Preview framing assumes linear, Western-style task decomposition; may degrade performance on holistic/gestalt reasoning tasks",
+      "evidence_sources": [
+        "arxiv:2508.03178",
+        "arxiv:2512.04220"
+      ]
+    },
+    {
+      "pattern_id": "P06",
+      "name": "Task-Anchored Novelty Forcing",
+      "type": "Novelty/Diversity",
+      "empirical_grounding": "NoveltyBench (arxiv:2504.05228) + Multi-Novelty (arxiv:2502.12700): diversity is not inherent, must be elicited; state-of-the-art LLMs exceed human novelty when constrained by prior outputs",
+      "mechanism": "In-context regeneration with explicit prior-exclusion constraint ('generate a response meaningfully distinct from: [prior_output]'); multi-view brainstorming via textual + conceptual dimension anchors",
+      "model_applicability": {
+        "Gemini_3_1_Pro": "HIGH \u2014 GPT-4o and Gemini 2.0 Pro surpass human cumulative utility under novelty-forcing (NoveltyBench)",
+        "GPT_5_3": "HIGH \u2014 o-series shows mode collapse tendency; explicit diversity forcing essential",
+        "Claude_4_6": "MEDIUM \u2014 Constitutional AI training creates strong modal preferences; requires aggressive multi-view anchoring"
+      },
+      "measured_effect": "GPT-4o/Gemini 2.0 Pro surpass human diversity scores under explicit novelty constraint (NoveltyBench); Self-BLEU reduced by 0.22\u20130.38",
+      "diagnostic_test": "Run NoveltyBench subset (n=100 prompts, 4 parallel generations each); compute Self-BLEU + semantic cosine diversity; target Self-BLEU < 0.35",
+      "failure_mode": "Diversity-quality tradeoff: DARLING experiments show RL-trained diversity sometimes sacrifices factual accuracy",
+      "bias_risk": "Novelty metrics (Self-BLEU, semantic cosine) are English-centric; multilingual novelty remains unmeasured",
+      "evidence_sources": [
+        "arxiv:2504.05228",
+        "arxiv:2502.12700",
+        "arxiv:2509.02534",
+        "arxiv:2509.21267"
+      ]
+    },
+    {
+      "pattern_id": "P07",
+      "name": "Active Inference Epistemic Foraging Loop",
+      "type": "Meta-Steering",
+      "empirical_grounding": "Active Inference framework as cognitive layer above LLM (arxiv:2412.10425); Expected Free Energy (EFE) minimization for prompt-space exploration",
+      "mechanism": "Outer loop models prompt as policy; inner loop generates completions; EFE guides balance between exploration (new prompt variants) and exploitation (high-confidence outputs); maps directly to OODA Observe-Orient-Decide-Act",
+      "model_applicability": {
+        "Gemini_3_1_Pro": "HIGH \u2014 Recursive OODA structure as specified in DRP exemplar; each OODA phase is an EFE minimization step",
+        "GPT_5_3": "MEDIUM \u2014 API-level implementation required; native reasoning loop partially implements EFE implicitly",
+        "Claude_4_6": "HIGH \u2014 Extended Thinking mode provides natural inner loop; outer EFE loop implemented via system prompt"
+      },
+      "measured_effect": "Dynamic prompt adjustment outperforms static prompts across environments (arxiv:2412.10425); exploration-exploitation balance measurable via information gain per token",
+      "diagnostic_test": "Track prompt policy entropy across 5 recursive cycles; convergence to low entropy = exploitation lock-in; target: entropy remains > 0.4 bits at cycle 5",
+      "failure_mode": "EFE collapse into local minima when prior beliefs are miscalibrated; requires periodic prior reset",
+      "bias_risk": "FEP/active inference framing is computationally expensive; may not generalize to low-latency production settings",
+      "evidence_sources": [
+        "arxiv:2412.10425",
+        "arxiv:2601.09269"
+      ]
+    }
+  ]
+}
