@@ -1,0 +1,27 @@
+node,expected_gain,failure_mode,null_baseline,confidence,evidence_source
++++ContextLock,Higher long-context coherence; reduced recency-bias drift,Invariant washout; context rot; lost-in-the-middle amnesia,No periodic reinjection of anchor state,DIRECT,file:8
++++PetzoldSequence,"Cleaner phase separation between thinking, coding, and review",Interpretive fracture; premature execution,Single-pass mixed reasoning and implementation,DIRECT,file:8
++++MereologyRoute,Better part-whole consistency and safer ontology routing,Transitivity fallacies; category collapse; unauthorized domain bridging,Unconstrained cross-domain relation mapping,DIRECT,file:8
++++DCCDSchemaGuard,Higher schema adherence with less projection tax when draft-conditioned,Schema drift; structural invalidity; reasoning cannibalized by formatting,Direct strict schema forcing without draft pass,DIRECT,file:8
++++AutonymicIsolate,Safer handling of dangerous or overloaded tokens as mention rather than execution target,Autonymic bypass; semantic execution of quoted/problematic strings,Raw token handling without mention-of isolation,DIRECT,file:8
++++SilentReasoning,Cleaner latent reasoning before public token commitment,Intermediate noise leakage; alignment-faking surface text,Expose all reasoning directly in one pass,DIRECT,file:8
++++AdjectivalBound,Higher signal-to-token ratio; less evaluative prose dilution,Attention dilution; linguistic overshadowing; verbosity bloat,Freeform descriptive output,DIRECT,file:8
++++EpistemicEscrow,Safer halt/slowdown on contradiction or confidence-fidelity divergence,Hallucination cascades; semantically flawed but polished output,No escrow or divergence brake,DIRECT,file:8
++++SagaRecovery,Better rollback after multi-step failure,Linear error accumulation; trapped bad state progression,No rollback/inverse-transaction logic,DIRECT,file:8
++++DriftCheck,Earlier detection of beyond-reach reasoning drift,Unchecked hallucinary cascades outside learnable bounds,No drift thresholding,DIRECT,file:8
++++SpatialBind,Better spatial/geometric consistency in structured tasks,Simulation-to-reality leakage; spatial blindness,No spatial schema grounding,DIRECT,file:8
++++EntropyAnchor,Improved exploration beyond memorized defaults,Trivial scalar optimization; shallow cliché completions,Low-entropy default prompting,DIRECT,file:8
++++LatentSparsityGuard,Cleaner separation of causal steps,Polysemantic overlap; entangled causal traces,Dense undifferentiated reasoning trace,DIRECT,file:8
++++IncoherentDictionary,Less overlapping persona/control atoms,Polyglot hallucination resonance across sub-dictionaries,Shared correlated dictionary atoms,DIRECT,file:8
++++DictionaryAnchor,Stronger anchoring to ground-truth invariants,Semantic bleaching; alignment faking,Unanchored dictionary control,DIRECT,file:8
++++SeparableGridParse,More scalable parsing of large 2D/topological structures,Context-window collapse; quadratic attention explosion,Monolithic parse of large grids/graphs,DIRECT,file:8
++++PhronesisGuard,Earlier detection of global inconsistency before escrow,False coherence across agents or sub-steps,Escrow without prior spectral consistency estimate,INFERRED,file:5;file:6
++++BettiLoopDetect,Earlier detection of reasoning loops/tachycardia,Persistent circular reasoning and stalled dependency graph,No loop monitor before recovery,INFERRED,file:5;file:6
++++DebridementProtocol,Prevents scar archive from over-hardening and blocking exploration,Epistemic sclerosis from excessive scar accumulation,Never prune historical scars,INFERRED,file:5
++++ConstitutionalTwin,Improves compatibility with alignment-sensitive models while preserving structure,Mode collapse on rigid/non-conversational payloads,Raw rigid syntax without narrative shell,INFERRED,file:5
++++TemporalAnchor,Potentially improves provenance persistence across long sessions,Timestamp/provenance washout across refresh cycles,No temporal metadata persistence strategy,SPECULATIVE,file:5
++++ShardRouter,Potentially reduces cross-contamination between task shards or layers,Context cross-bleed between micro-sessions,Single monolithic context for all subtasks,SPECULATIVE,file:5;file:6
++++ImmunologicSelf,Potentially strengthens identity-kernel integrity and self/non-self checks,Identity drift; unsafe self-modification shortcuts,No identity-integrity monitor,SPECULATIVE,file:5;file:6
++++PluriversalTranslation,Better regime-aware translation across model/worldview boundaries,Ontological shear during cross-regime transfer,Naive direct transfer across regimes,INFERRED,file:5
++++MycelialRoute,Potentially improves retrieval/evidence routing through graph-style pruning,Redundant retrieval branches; weak evidence routing,Flat retrieval with no topology-aware routing,SPECULATIVE,file:6
++++CognitiveFilter,Better contradiction-preserving/paraconsistent routing,Premature contradiction flattening; explosive logic collapse,Classical contradiction handling only,INFERRED,file:5;file:6
