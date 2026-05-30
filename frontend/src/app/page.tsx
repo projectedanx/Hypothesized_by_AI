@@ -47,7 +47,8 @@ export default function Home() {
     { id: 'pluriversal_architect', name: 'Pluriversal Architect Agent' },
     { id: 'ptst_specialist', name: 'PTST Specialist (Twist-Structured)' },
     { id: 'kcpm_oracle', name: 'KCPM Oracle (Kuramoto-Cortical)' },
-    { id: 'lexicon_navigator', name: 'Lexicon Navigator (Cognitive Bytecode)' }
+    { id: 'lexicon_navigator', name: 'Lexicon Navigator (Cognitive Bytecode)' },
+    { id: 'symbiosis_infomorphism_oracle', name: 'Symbiosis Infomorphism Oracle' }
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
