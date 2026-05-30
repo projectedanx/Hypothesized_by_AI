@@ -43,12 +43,13 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
 
   const agents = [
-    { id: 'strategic_integration_pm', name: 'Strategic Integration PM (Deterministic)' },
-    { id: 'pluriversal_architect', name: 'Pluriversal Architect Agent' },
-    { id: 'ptst_specialist', name: 'PTST Specialist (Twist-Structured)' },
-    { id: 'kcpm_oracle', name: 'KCPM Oracle (Kuramoto-Cortical)' },
-    { id: 'lexicon_navigator', name: 'Lexicon Navigator (Cognitive Bytecode)' },
-    { id: 'symbiosis_infomorphism_oracle', name: 'Symbiosis Infomorphism Oracle' }
+    { id: 'vance_lsp_architect', name: 'VANCE (Topological LSP Architect)', color: '#4B0082' },
+    { id: 'strategic_integration_pm', name: 'Strategic Integration PM (Deterministic)', color: '#06b6d4' },
+    { id: 'pluriversal_architect', name: 'Pluriversal Architect Agent', color: '#06b6d4' },
+    { id: 'ptst_specialist', name: 'PTST Specialist (Twist-Structured)', color: '#06b6d4' },
+    { id: 'kcpm_oracle', name: 'KCPM Oracle (Kuramoto-Cortical)', color: '#06b6d4' },
+    { id: 'lexicon_navigator', name: 'Lexicon Navigator (Cognitive Bytecode)', color: '#06b6d4' },
+    { id: 'symbiosis_infomorphism_oracle', name: 'Symbiosis Infomorphism Oracle', color: '#06b6d4' }
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -105,7 +106,8 @@ export default function Home() {
             {agents.map((agent) => (
               <label
                 key={agent.id}
-                className={`flex items-center p-3 rounded-md cursor-pointer transition-colors border border-transparent ${selectedAgent === agent.id ? 'bg-slate-700 border-cyan-500 text-cyan-300 shadow-inner' : 'hover:bg-slate-700'}`}
+                className={`flex items-center p-3 rounded-md cursor-pointer transition-colors border border-transparent ${selectedAgent === agent.id ? 'bg-slate-700 shadow-inner' : 'hover:bg-slate-700'}`}
+                style={selectedAgent === agent.id ? { borderColor: agent.color || '#06b6d4', color: agent.color || '#06b6d4' } : {}}
               >
                 <input
                   type="radio"
@@ -138,7 +140,8 @@ export default function Home() {
           <h2 className="text-xl font-semibold text-slate-800">
             {agents.find(a => a.id === selectedAgent)?.name} Interface
           </h2>
-          <span className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full font-medium border border-cyan-200">
+          <span className="bg-slate-100 text-slate-800 text-xs px-2 py-1 rounded-full font-medium border border-slate-200"
+            style={{ color: agents.find(a => a.id === selectedAgent)?.color || '#0891b2', borderColor: agents.find(a => a.id === selectedAgent)?.color || '#0891b2' }}>
             Active Context: Repository Docs
           </span>
         </header>
@@ -154,7 +157,8 @@ export default function Home() {
           ) : (
             messages.map((msg, idx) => (
               <div key={idx} className={`flex flex-col ${msg.role === 'user' ? 'items-end' : 'items-start'}`}>
-                <div className={`max-w-[80%] rounded-2xl p-4 shadow-sm ${msg.role === 'user' ? 'bg-cyan-600 text-white rounded-br-none' : 'bg-white border border-gray-200 text-gray-800 rounded-bl-none'}`}>
+                <div className={`max-w-[80%] rounded-2xl p-4 shadow-sm ${msg.role === 'user' ? 'text-white rounded-br-none' : 'bg-white border border-gray-200 text-gray-800 rounded-bl-none'}`}
+                  style={msg.role === 'user' ? { backgroundColor: agents.find(a => a.id === selectedAgent)?.color || '#0891b2' } : {}}>
                   <p className="text-sm leading-relaxed whitespace-pre-wrap">{msg.content}</p>
                 </div>
 
@@ -216,9 +220,9 @@ export default function Home() {
           {isLoading && (
             <div className="flex items-start">
               <div className="bg-white border border-gray-200 text-gray-800 rounded-2xl rounded-bl-none p-4 shadow-sm flex items-center space-x-2">
-                <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce"></div>
-                <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+                <div className="w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: agents.find(a => a.id === selectedAgent)?.color || '#06b6d4' }}></div>
+                <div className="w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: agents.find(a => a.id === selectedAgent)?.color || '#06b6d4', animationDelay: '0.2s' }}></div>
+                <div className="w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: agents.find(a => a.id === selectedAgent)?.color || '#06b6d4', animationDelay: '0.4s' }}></div>
                 <span className="text-sm ml-2 text-gray-500">Synthesizing...</span>
               </div>
             </div>
@@ -239,7 +243,10 @@ export default function Home() {
             <button
               type="submit"
               disabled={isLoading || !query.trim()}
-              className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 rounded-xl font-medium transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-w-[120px]"
+              className="text-white px-8 py-4 rounded-xl font-medium transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-w-[120px]"
+              style={{ backgroundColor: agents.find(a => a.id === selectedAgent)?.color || '#0891b2' }}
+              onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
+              onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
             >
               {isLoading ? 'Thinking...' : 'Ask Agent'}
             </button>

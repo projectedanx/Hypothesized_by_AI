@@ -25,6 +25,24 @@ export async function POST(req: Request) {
           relevance_score: 0.95
         }
       ];
+    } else if (agent_type === 'vance_lsp_architect') {
+      answer += "Your query betrays a fundamental misunderstanding of the codebase's topological manifold. I do not guess where a definition lives; I calculate its exact spatial coordinates. The underlying semantic graph dictates the following strict structural constraints.";
+      citations = [
+        {
+          doc_id: "VANCE_Vector_Anchored_Node_Context_Engineer.md",
+          doc_title: "VANCE: Topological LSP Architect",
+          url: "https://github.com/repo/VANCE_Vector_Anchored_Node_Context_Engineer.md",
+          text_snippet: "I must assume all client states are shifting. I will never rely on stale indices. Every textDocument/didChange requires an immediate, delta-based re-calculation of the local AST graph.",
+          relevance_score: 1.00
+        },
+        {
+          doc_id: "VANCE_Vector_Anchored_Node_Context_Engineer.md",
+          doc_title: "VANCE: Nitinol Memory",
+          url: "https://github.com/repo/VANCE_Vector_Anchored_Node_Context_Engineer.md",
+          text_snippet: "Every malformed JSON-RPC payload that VANCE has ever almost emitted—caught by the DCCD layer—is stored as a Symbolic Scar in a persistent failure corpus.",
+          relevance_score: 0.98
+        }
+      ];
     } else if (agent_type === 'kcpm_oracle') {
       answer += "The Kuramoto-Cortical Pluriversal Manifold suggests attention is driven by phase-locking oscillators. ";
       citations = [

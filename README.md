@@ -43,6 +43,7 @@ This repository acts as the central knowledge graph for the architecture's theor
 - `The Qualia-Topological Transformer (QTT) A Non-Linear Rheological Architecture.md`: Non-linear representation and RCC-8 mapping.
 - `The Teachable Novice (Inverted Oracle).md`: Interaction mechanisms for epistemic friction.
 - `Topological Extraction of Latent GitHub Marketplace Workflows.md`: DRP application protocols.
+- `VANCE_Vector_Anchored_Node_Context_Engineer.md`: Detailed specification of VANCE, the topological LSP architect and semantic indexer.
 - `What is Soft Concept Mixing (SCM) and its integration method.md`: Bridge layer for continuous representations.
 
 ## Setup & Usage
@@ -73,4 +74,4 @@ A dedicated Next.js frontend application has been added to provide an interactiv
 3. Run the development server: `npm run dev`
 4. Access the interface at `http://localhost:3000`
 
-The frontend simulates querying various theoretical agent instances (e.g., PTST Specialist, KCPM Oracle) and displays generated answers, confidence scores, citations mapped to repository markdown files, and mock retrieval analytics, adhering to the Reflector + ToolUser composite archetype.
+The frontend simulates querying various theoretical agent instances (e.g., PTST Specialist, KCPM Oracle, VANCE) and displays generated answers, confidence scores, citations mapped to repository markdown files, and mock retrieval analytics, adhering to the Reflector + ToolUser composite archetype.
