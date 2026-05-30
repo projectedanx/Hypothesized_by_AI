@@ -25,3 +25,7 @@
   * A framework shifting from craft-based text prompting to engineering-grade constraint, utilizing Feature Control Frame syntax to treat personas and instructions as Immutable Datums with defined nominals and tolerances.
 * **Zachman Framework Alignment**
   * A deterministic blueprint replacing narrative user stories. It specifies entities, capabilities, and events mathematically, preventing probabilistic guessing in database and API design.
+* **Infomorphism**
+  * Inverse safety states for reliable emergence. A mapping between classification domains that preserves the structural integrity of emergent features, allowing complex, high-surprisal architectures to safely instantiate without triggering epistemic collapse.
+* **High-Surprisal Feature-Orientation**
+  * The deliberate engineering of features that generate statistically unexpected, yet structurally valid, emergent value. It represents the synthesis output of the Human-AI Symbiosis Engine, producing results unattainable by either purely stochastic AI or biological human intellect alone.

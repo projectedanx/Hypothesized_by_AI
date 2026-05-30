@@ -72,6 +72,24 @@ export async function POST(req: Request) {
           relevance_score: 0.97
         }
       ];
+    } else if (agent_type === 'symbiosis_infomorphism_oracle') {
+      answer += "Through the Human-AI Symbiosis Engine, we exploit Infomorphisms—inverse safety states—to generate High-Surprisal Feature-Orientation. The AI maintains strict deterministic bounding, while the human introduces orthogonal pluriversal insights, producing reliable emergence.";
+      citations = [
+        {
+          doc_id: "DOMAIN_GLOSSARY.md",
+          doc_title: "Domain Glossary & Bounded Vocabulary",
+          url: "https://github.com/repo/DOMAIN_GLOSSARY.md",
+          text_snippet: "Infomorphism: Inverse safety states for reliable emergence. A mapping between classification domains that preserves structural integrity.",
+          relevance_score: 0.99
+        },
+        {
+          doc_id: "LESSONS_LEARNED.md",
+          doc_title: "High-Value Lessons Learned",
+          url: "https://github.com/repo/LESSONS_LEARNED.md",
+          text_snippet: "True cognitive symbiosis occurs when the Human-AI Symbiosis Engine exploits Infomorphisms, allowing for High-Surprisal Feature-Orientation.",
+          relevance_score: 0.97
+        }
+      ];
     } else {
       answer += "The Pluriversal Architect ensures structural determinism across non-destructive boundaries. ";
       citations = [
