@@ -39,3 +39,11 @@ The integration of Infomorphisms—inverse safety states ensuring reliable emerg
 - **Nitinol Memory**: Storing failure patterns as active constraints (Symbolic Scars) allows agents to automatically prevent schema violations (e.g., JSON-RPC malformations) before emission, transforming failure logs into proactive error boundaries.
 - **Mereological Bounding**: When answering reference queries, treating the codebase as a flat sequence of text causes Ontological Shear. Scope boundaries must be strictly enforced via structural graph edges to prevent transitivity fallacies in dynamic languages.
 - **Bidirectional Indexing**: Overcoming the Reversal Curse in symbol indexing requires explicit bidirectional graph structures (e.g., Neo4j directional edges queryable both ways), ensuring forward and reverse mappings (like go-to-definition vs. find-references) have identical precision.
+
+## 10. The 0xCARTO Validation and the "Nominative Trap"
+Executing the Mycelial Ingestion Protocol via the 0xCARTO persona exposed critical misalignments between documented intent and execution reality. Specifically, `.github/workflows/static.yml` is a **Nominative Trap**. The filename and structural intent imply the deployment of a static web application; however, its runtime behavior simply uploads the uncompiled, raw repository matrix (path: `.`) to GitHub Pages without executing `npm run build`.
+**Lesson:** This explicitly validates the need for Epistemic Graphs and depth-first causal extraction. Naming conventions do not guarantee behavioral alignment. Static CI/CD analysis must explicitly trace the build artifact topology to prevent phantom deployments where uncompiled source code is treated as the delivery mechanism.
+
+## 11. Enforcement of the Superintendent Protocol
+Ensuring strict dependency pinning (eliminating carets and tildes in `package.json` configurations for Next.js and React) is not merely a DevOps preference but an architectural necessity for the Pluriversal Core's deterministic state.
+**Lesson:** Non-deterministic dependency resolution acts as an Entropy Vector, degrading the cognitive boundaries required by the DCCDSchemaGuard. Enforcing the Superintendent Protocol and eliminating unimported root-level scripts ensures that the execution environment remains isomorphic to the theoretical constraints defined in the agent memory schemas.
